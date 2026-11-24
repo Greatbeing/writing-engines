@@ -20,13 +20,14 @@
 |---|---|---|---|
 | [`human-voice-writing`](human-voice-writing/) | 活人感叙事（三联生活实验室体）v3.0 | 11 篇代表作（2022-2026） | 选题引擎（梗考古/现象命名/反共识观察）+ 21 原子技法 + 结构骨架 + 反 AI 味红线 |
 | [`guanfang-writing`](guanfang-writing/) | 官方时评（浙江宣传体） | 10 篇代表作 | 12 原子操作 + 组合规则 + 风格指纹 + 红线审查 |
+| [`feature-writing`](feature-writing/) | 人物特稿体（《人物》杂志）v1.0 | 10 篇代表作（2020-2023） | 选题四问 + 六块结构骨架 + 十原子技法 + 四种模式 + 特稿伦理红线 |
 
 ## 安装
 
 ```bash
 # OpenClaw
 git clone https://github.com/Greatbeing/writing-skills.git
-cp -r writing-skills/human-voice-writing writing-skills/guanfang-writing ~/.openclaw/workspace/skills/
+cp -r writing-skills/human-voice-writing writing-skills/guanfang-writing writing-skills/feature-writing ~/.openclaw/workspace/skills/
 ```
 
 目录自包含，无代码依赖，拷贝即用。重启后 `/skills` 即可看到。
@@ -37,6 +38,7 @@ cp -r writing-skills/human-voice-writing writing-skills/guanfang-writing ~/.open
 
 - **活人感体**：「写公众号文」「写活人感的文字」「城市观察文」「避免 AI 味」「网感文案」
 - **官方体**：「写时评」「政论文」「主旋律文章」「浙江宣传体」「体制内爆款写作」
+- **特稿体**：「人物特稿」「深度报道」「写一个人的故事」「人物群像」「像人物杂志」
 
 两条内置红线，保证产出不是 AI 腔：
 
@@ -45,7 +47,7 @@ cp -r writing-skills/human-voice-writing writing-skills/guanfang-writing ~/.open
 
 ## 路线图
 
-- [ ] **第三个引擎**——验证「博物馆模式」可复制（特稿体/商业体候选）
+- [x] **第三个引擎**——人物特稿体 v1.0 上线（验证「博物馆模式」可复制 ✓，语料 10 篇全实名核实）
 - [x] **AI 味 checker v0.1**——反 AI 味红线可执行化（`tools/ai-flavor-checker.py`，六维评分 + 分级）
 - [ ] **checker v0.2**——文体感知评分 + 行级改写建议（教练能力，服务产品）
 - [ ] **eval/ 双引擎对照评测**——同一主题多引擎同题写作、对照复盘的标准流程
