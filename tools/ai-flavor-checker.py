@@ -25,22 +25,6 @@ import os
 import re
 import sys
 
-# 管道被截断时安静退出（配合 head 等使用）
-_sigpipe_saved = False
-
-def _noop_broken_pipe():
-    global _sigpipe_saved
-    if not _sigpipe_saved:
-        devnull = os.open(os.devnull, os.O_WRONLY)
-        os.dup2(devnull, sys.stdout.fileno())
-        _sigpipe_saved = True
-
-try:
-    import signal
-    signal.signal(signal.SIGPIPE, lambda *_: _noop_broken_pipe())
-except (ImportError, AttributeError, ValueError):
-    pass
-
 # —— 词表（保守收录，宁可漏检不误报）——
 OFFICIAL_WORDS = [
     "总而言之", "综上所述", "值得注意的是", "不难发现", "显而易见", "毋庸置疑",
@@ -134,4 +118,13 @@ def top(d, k):
     return " ".join(f"{w}×{n}" for w, n in sorted(d.items(), key=lambda x: -x[1])[:k])
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except BrokenPipeError:
+        # 配合 head 等截断管道时安静退出
+        try:
+            devnull = os.open(os.devnull, os.O_WRONLY)
+            os.dup2(devnull, sys.stdout.fileno())
+        except OSError:
+            pass
+        sys.exit(0)
