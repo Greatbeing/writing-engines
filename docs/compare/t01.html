@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同题四体 · t01 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button id="night">夜读</button><a href="../">首页</a></div></div></nav>
+
+<style>
+.cmp{max-width:1280px;margin:0 auto;padding:56px 32px 24px}
+.cmp h1{font:900 30px/1.4 var(--serif);letter-spacing:.08em}
+.cmp .q{margin:14px 0 6px;font:400 17px/1.8 var(--serif)}
+.cmp .mat{font-size:13.5px;color:var(--ink2);margin-bottom:22px}
+.cmp .mat summary{cursor:pointer;color:var(--ink)}
+.cmp .mat li{margin:6px 0 0 1.4em}
+.tabs{display:none;gap:0;border:1px solid var(--ink);margin-bottom:20px}
+.tabs button{flex:1;background:none;border:0;border-right:1px solid var(--rule);padding:10px 4px;font:600 13px var(--serif);letter-spacing:.15em;color:var(--ink2);cursor:pointer}
+.tabs button:last-child{border:0}.tabs button.on{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(var(--n),1fr);border-top:1px solid var(--ink)}
+.col{padding:22px 22px 32px;border-right:1px solid var(--rule);min-width:0}
+.col:last-child{border-right:0}
+.col .tag{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.col.base .tag{color:var(--ink2)}
+.col .sub{font:12px var(--mono);color:var(--ink2);margin:2px 0 10px}
+.col .stat{font:12px var(--mono);color:var(--ink2);padding-bottom:14px;border-bottom:1px dashed var(--rule);margin-bottom:18px}
+.col .body{font-size:15.5px;line-height:1.95}
+.col .body h1{font:600 1.25em/1.5 var(--serif);margin:0 0 1em}
+.col .body h2{font-size:1.05em}
+.col .fold{position:relative;max-height:30em;overflow:hidden}
+.col .fold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5em;background:linear-gradient(transparent,var(--paper))}
+.col.open .fold{max-height:none}.col.open .fold::after{display:none}
+.col .more{margin-top:12px;background:none;border:1px solid var(--rule);color:var(--ink2);font:13px var(--sans);padding:4px 14px;cursor:pointer}
+.col .more:hover{border-color:var(--zhu);color:var(--zhu)}
+.how{max-width:1280px;margin:0 auto;padding:8px 32px 56px;font-size:13px;color:var(--ink2)}
+.how .box{border-top:1px solid var(--ink);padding-top:14px}
+@media(max-width:900px){.tabs{display:flex}.grid{grid-template-columns:1fr;border-top:0}
+ .col{display:none;border:0;padding:0}.col.act{display:block}.col .fold{max-height:none}.col .fold::after,.col .more{display:none}}
+</style>
+<section class="cmp"><h1>同题四体 · t01</h1>
+<p class="q">写一篇公众号文章：最近年轻人流行把逛菜市场当成周末活动，管它叫「菜市场 City Walk」。</p>
+<details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul><li>沈可（沪漂 95 后）：周六早上七点出门，坐四十分钟地铁去一个老菜场，只买了两根葱和一小把香菜。「我不是来买菜的，我是来确认这座城市还有人在认真过日子。」</li><li>郑姐（菜场摊主 干了 22 年）：摊前贴了手写二维码，旁边又压着一沓零钱。「现在来的小年轻，拍照比买菜多。我也不撵，他们拍完总会买点什么。」</li><li>陶然（互联网运营 28 岁）：手机里存着一张菜场平面图，标了哪家豆腐最早出锅。「超市太安静了，菜场会跟你吵架，问你今天到底想吃什么。」</li></ul></details>
+<div class="tabs"><button class="on">裸模型</button><button class="">城市之风</button><button class="">庙堂之风</button><button class="">人间之风</button></div>
+<div class="grid" style="--n:4"><div class="col base act">
+<div class="tag">裸模型</div><div class="sub">不加载任何引擎</div>
+<div class="stat">879 字</div>
+<div class="fold"><div class="body"><h1>菜市场 City Walk：年轻人周末的新目的地</h1>
+<p>周六早上七点，沈可出门了。她坐四十分钟地铁，从城市这头到那头，去一个老菜场。逛了一个多小时，最后买了两根葱，和一小把香菜。</p>
+<p>沪漂，95 后。这个身份放在周末早晨，本该出现在咖啡馆、展览馆或某个网红店门口。但她去了菜场。</p>
+<p>「我不是来买菜的，我是来确认这座城市还有人在认真过日子。」</p>
+<p>这句话说得挺重。一个人在城市里漂着，最容易失去的不是收入，是"生活还在正常运转"的证据。写字楼里没有这种证据，外卖软件里也没有。菜场有——七点的鱼摊刚开箱，水还在滴；豆腐冒着热气；有人为了两毛钱来回拉扯。这些事没有任何效率可言，但它们证明这座城市还醒着。</p>
+<p>郑姐在这个菜场干了二十二年。摊前贴了一张手写二维码，旁边又压着一沓零钱。扫码的和找零的，她都留着。</p>
+<p>「现在来的小年轻，拍照比买菜多。我也不撵，他们拍完总会买点什么。」</p>
+<p>这句话里没有抱怨，只有一种很老的耐心。她见过菜场最热闹的时候，也见过它一点点安静下来。现在来了一群举着手机的年轻人，对着青菜拍半天，她由着他们拍。她知道镜头留不住什么，但人总会顺手带一把菜走。</p>
+<p>陶然是另一种认真。二十八岁，互联网运营，手机里存着一张菜场平面图，标了哪家豆腐最早出锅。</p>
+<p>「超市太安静了，菜场会跟你吵架，问你今天到底想吃什么。」</p>
+<p>超市确实安静。灯是白的，货架是齐的，每样东西都包在塑料膜里，价格标签替你做好了所有决定。你进去，拿，结账，走。</p>
+<p>菜场不一样。豆腐要老的还是嫩的，排骨要前排还是后排，这把菜今天吃还是明天吃——每个问题都得当场回答。回答不上来，摊主会替你着急。</p>
+<p>所谓「菜市场 City Walk」，和城市漫游不是一回事。City Walk 是看：走过一条街，拍几张照片，把自己当观众。逛菜场是被看、被问、被卷进一场关于"今天吃什么"的短兵相接。你没法只当旁观者。</p>
+<p>所以两根葱不是买少了，是买对了。它更像一张收据：我在这里待过，我跟人说过话，我今晚的饭桌上，有一样东西来自这个早晨。</p>
+<p>年轻人涌进菜场，未必是在怀旧。他们更像在找回一种被效率抹掉的东西——那些多余的、慢的、会跟你吵架的部分。</p>
+<p>城市越大，这种部分越少。而菜场还留着。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">城市之风</div><div class="sub">活人感 · human-voice-writing</div>
+<div class="stat">812 字</div>
+<div class="fold"><div class="body"><h1>City Walk 的尽头：菜市场</h1>
+<p>City Walk 本来是有点门槛的。得挑梧桐区，得有咖啡店，走两步得有一面能「出片」的墙，还得约上一个愿意走两万步的人。</p>
+<p>现在年轻人把这条路线挪进了菜市场，管它叫「菜市场 City Walk」。</p>
+<p>他们不买什么，就是走。走完，拎两根葱回家。</p>
+<p>为什么是菜市场？说白了，它是城市里少数不要求你消费的地方。商场要你买，咖啡店要你坐，网红街区连站一会儿都有人排队。菜市场只要你进去。商场里连空气都是调过的，菜市场里连空气都是当天的。地上有水，灯是白炽灯，人声还挺吵，空气里混着鱼腥和葱味——这些在别处叫缺点，在这里叫证据。</p>
+<p>另一层是效率的反面。买菜这件事早就被解决得特别好了：手机下单，半小时送到，连挑都不用挑。可解决得太好的事，会让人有点空。反正菜是送到了，人没出门。</p>
+<p>沪漂 95 后沈可，周六早上 7 点出门，坐 40 分钟地铁去一个老菜场。逛了一个多小时，最后买了两根葱，和一小把香菜。</p>
+<p>「我不是来买菜的，我是来确认这座城市还有人在认真过日子。」</p>
+<p>摊主郑姐在那儿干了 22 年。摊前贴了手写二维码，旁边又压着一沓零钱。</p>
+<p>「现在来的小年轻，拍照比买菜多。我也不撵，他们拍完总会买点什么。」</p>
+<p>你看，她没被冒犯，她算得清账。二维码是给年轻人的，零钱是给老主顾的。两样都压在那儿，谁也没被落下。这是双向的体面。</p>
+<p>互联网运营陶然，28 岁。手机里存着一张菜场平面图，标了哪家豆腐最早出锅。</p>
+<p>「超市太安静了，菜场会跟你吵架，问你今天到底想吃什么。」</p>
+<p>陶然说的「吵架」不是修辞。方便不等于被问到，这是两件事。</p>
+<p>你可以说，这不就是换个地方拍照。两根葱，40 分钟地铁，来回 80 分钟，图什么。</p>
+<p>这账怎么算都不划算。可他们本来也没在算这笔账。</p>
+<p>问题是，他们图的那件事，本来也不该指望菜市场提供。</p>
+<p><strong>不是他们突然爱做饭了，而是他们需要一个还会问「你今天想吃什么」的地方。</strong></p>
+<p>沈可那天回家，葱和香菜大概炒了个蛋。周末这点事儿，其实就看有没有人跟你多说一句话。</p>
+<p>所以，你这个周末，去了哪儿？</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">庙堂之风</div><div class="sub">官方体 · guanfang-writing</div>
+<div class="stat">816 字</div>
+<div class="fold"><div class="body"><h1>菜市场 City Walk：年轻人去菜场，是去听人搭一句话</h1>
+<p>周六早上 7 点，沈可出门，坐 40 分钟地铁去一个老菜场。逛完一圈，手里只有两根葱和一小把香菜。</p>
+<p>这笔账怎么算都不划算。40 分钟换两根葱，楼下超市就有。可看完这段，心里还是软了一下——我们大概都有过这种"不划算"的出门：绕远路，去一个没必要去的地方，在那儿站一会儿。</p>
+<p>她自己说得很清楚：「我不是来买菜的，我是来确认这座城市还有人在认真过日子。」</p>
+<p>这句话把问题换了个问法。与其问年轻人为什么把菜场当景点，不如问：城市里"有人在认真过日子"的现场，是什么时候变少的？</p>
+<p>超市当然更高效。灯亮着，货架齐整，标签清楚，全程不必说一句话。菜场不一样。陶然 28 岁，手机里存着一张菜场平面图，标了哪家豆腐最早出锅。他的理由是：「超市太安静了，菜场会跟你吵架，问你今天到底想吃什么。」</p>
+<p>菜场给的东西，货架给不了。</p>
+<p>一是会搭话。问价、抹零、这把菜老不老，一句一句都是活的。二是有时刻。豆腐几点出锅，鱼几点到，去晚了就是去晚了——菜场有作息，赶得上才叫新鲜。三是有余地。郑姐在菜场干了 22 年，摊前贴了手写二维码，旁边又压着一沓零钱。她说：「现在来的小年轻，拍照比买菜多。我也不撵，他们拍完总会买点什么。」</p>
+<p>手写二维码和零钱压在一起，这个画面很菜场：它不急着淘汰谁，也不急着讨好谁。</p>
+<p>三样东西合起来，其实是一件事：菜场允许你在这里，不完全是为了交易。</p>
+<p>所以"菜市场 City Walk"这个词，得改一改。它不是把菜场变成景点，是把"过日子"变成景点；不是消费降级，是给生活感重新定价。真正值得警惕的也不是拍照，而是拍完就走——一句话没搭上，就把别人的日子收进了自己的相册。</p>
+<p>也不必把它拔得太高。逛一次菜场，治不好焦虑，也降不下房租。但一个人愿意花 40 分钟，去听陌生人问一句"今天想吃什么"，说明他心里还留着一块地方，是留给正常日子的。</p>
+<p>可以拍照，也可以只买两根葱。摊主不撵人，说话的地方就还在。有人肯问你今天想吃什么，日子就还没走远。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">人间之风</div><div class="sub">特稿 · feature-writing</div>
+<div class="stat">783 字</div>
+<div class="fold"><div class="body"><h1>只买两根葱的人</h1>
+<p>周六早上 7 点，沈可出门，坐 40 分钟地铁，去一座老菜场。回来的时候，手里是两根葱，和一小把香菜。</p>
+<p>1995 年出生的沈可，在上海上班。这趟行程是她给自己排的周末活动，她管它叫「菜市场 City Walk」。</p>
+<p>「我不是来买菜的，我是来确认这座城市还有人在认真过日子。」</p>
+<h2>两根葱</h2>
+<p>两根葱，一小把香菜，提在手上几乎没有重量。它们在厨房里是配角，做不成一道菜，只够给一道菜提味。</p>
+<p>为配角走 40 分钟，是这笔账里最不划算的一笔。</p>
+<p>沈可把这趟路走成了固定的：7 点出门，40 分钟地铁，进菜场，买两样东西，再坐 40 分钟回去。一周一次。</p>
+<p>「确认」是个很轻的动作。落在城市上，它需要 40 分钟地铁和两根葱。</p>
+<p>她要确认的事，和菜没有关系。菜场里有人称重，有人找零，有人把零钱压在二维码旁边。这些动作每天都在发生，不为她发生。</p>
+<h2>二维码和零钱</h2>
+<p>郑姐在这个菜场摆了 22 年摊。摊前贴着一张手写的二维码，二维码旁边压着一沓零钱。</p>
+<p>「现在来的小年轻，拍照比买菜多。我也不撵，他们拍完总会买点什么。」</p>
+<p>二维码比那沓零钱新。两种收钱的方式并排放在一个摊上，中间没有过渡。22 年，摊前的人换了样子，收钱多了一种办法，另一种没撤。</p>
+<h2>平面图</h2>
+<p>陶然 28 岁，做互联网运营。她手机里存着一张菜场平面图，上面标了哪家豆腐最早出锅。</p>
+<p>「超市太安静了，菜场会跟你吵架，问你今天到底想吃什么。」</p>
+<p>超市里没有「最早出锅」这回事。豆腐在冷柜里，什么时候去，它都在。菜场不一样，去晚了就是去晚了。</p>
+<p>所以她的图上要标时间。这个信息只能一趟一趟走、一趟一趟记，攒出来。超市不需要图，菜场需要。</p>
+<p>一张平面图，标的是摊位和顺序。逛菜场被她做成了一件要准备的事。</p>
+<p>菜场也不布景。它照常开门，照常收摊，摊主照常把零钱压在二维码旁边。这条路线走的是还在营业的日常。</p>
+<p>7 点出门，40 分钟地铁，两根葱。沈可每周去一次。</p>
+<p>陶然说，菜场会问你今天想吃什么。沈可的答案，是两根葱，和一小把香菜。</p></div></div><button class="more">展开全文</button></div></div></section>
+<div class="how"><div class="box">做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；
+唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。
+这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
+胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/t01">demo/t01/</a></div></div>
+<script>
+document.querySelectorAll('.more').forEach(b=>b.onclick=()=>{const c=b.closest('.col');
+ c.classList.toggle('open');b.textContent=c.classList.contains('open')?'收起':'展开全文'});
+const tb=document.querySelectorAll('.tabs button'),cs=document.querySelectorAll('.col');
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach(x=>x.classList.remove('on'));cs.forEach(x=>x.classList.remove('act'));
+ b.classList.add('on');cs[i].classList.add('act')});
+</script>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>

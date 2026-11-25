@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同题四体 · t07 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button id="night">夜读</button><a href="../">首页</a></div></div></nav>
+
+<style>
+.cmp{max-width:1280px;margin:0 auto;padding:56px 32px 24px}
+.cmp h1{font:900 30px/1.4 var(--serif);letter-spacing:.08em}
+.cmp .q{margin:14px 0 6px;font:400 17px/1.8 var(--serif)}
+.cmp .mat{font-size:13.5px;color:var(--ink2);margin-bottom:22px}
+.cmp .mat summary{cursor:pointer;color:var(--ink)}
+.cmp .mat li{margin:6px 0 0 1.4em}
+.tabs{display:none;gap:0;border:1px solid var(--ink);margin-bottom:20px}
+.tabs button{flex:1;background:none;border:0;border-right:1px solid var(--rule);padding:10px 4px;font:600 13px var(--serif);letter-spacing:.15em;color:var(--ink2);cursor:pointer}
+.tabs button:last-child{border:0}.tabs button.on{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(var(--n),1fr);border-top:1px solid var(--ink)}
+.col{padding:22px 22px 32px;border-right:1px solid var(--rule);min-width:0}
+.col:last-child{border-right:0}
+.col .tag{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.col.base .tag{color:var(--ink2)}
+.col .sub{font:12px var(--mono);color:var(--ink2);margin:2px 0 10px}
+.col .stat{font:12px var(--mono);color:var(--ink2);padding-bottom:14px;border-bottom:1px dashed var(--rule);margin-bottom:18px}
+.col .body{font-size:15.5px;line-height:1.95}
+.col .body h1{font:600 1.25em/1.5 var(--serif);margin:0 0 1em}
+.col .body h2{font-size:1.05em}
+.col .fold{position:relative;max-height:30em;overflow:hidden}
+.col .fold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5em;background:linear-gradient(transparent,var(--paper))}
+.col.open .fold{max-height:none}.col.open .fold::after{display:none}
+.col .more{margin-top:12px;background:none;border:1px solid var(--rule);color:var(--ink2);font:13px var(--sans);padding:4px 14px;cursor:pointer}
+.col .more:hover{border-color:var(--zhu);color:var(--zhu)}
+.how{max-width:1280px;margin:0 auto;padding:8px 32px 56px;font-size:13px;color:var(--ink2)}
+.how .box{border-top:1px solid var(--ink);padding-top:14px}
+@media(max-width:900px){.tabs{display:flex}.grid{grid-template-columns:1fr;border-top:0}
+ .col{display:none;border:0;padding:0}.col.act{display:block}.col .fold{max-height:none}.col .fold::after,.col .more{display:none}}
+</style>
+<section class="cmp"><h1>同题四体 · t07</h1>
+<p class="q">写一篇人物特稿：一个人在同一间小店里做了十年生意。</p>
+<details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul><li>陆德昌（修表匠 52 岁）：在南城一条巷子里修了十年表，铺面不到四平米，冬天手会抖。「现在没人修表了，都换电池。换电池我也换，一次十块，够我中午吃碗面。」</li><li>何老师（常客 68 岁）：每三个月来一次，来的表其实都没坏。「我不是来修表的，我是来找人说话的。他不撵我，我就一直来。」</li><li>陆小雨（他女儿 27 岁）：劝过三次让他关门，最后一次自己哭了。「我算过账，他一年挣的钱不如我三个月。可他一关门，就真的老了。」</li></ul></details>
+<div class="tabs"><button class="on">裸模型</button><button class="">城市之风</button><button class="">庙堂之风</button><button class="">人间之风</button></div>
+<div class="grid" style="--n:4"><div class="col base act">
+<div class="tag">裸模型</div><div class="sub">不加载任何引擎</div>
+<div class="stat">1436 字</div>
+<div class="fold"><div class="body"><h1>四平米</h1>
+<h2>一</h2>
+<p>南城的巷子里，陆德昌修了十年表。</p>
+<p>铺面不到四平米。一个人坐进去，站起来要侧着身；桌子、凳子、工具，把四面墙之间填满，剩下的地方刚够转身。十年，他就坐在这样一个地方，低着头，对着桌上那点零件。外面是巷子，巷子外面是南城，南城在变，四平米里面不变。</p>
+<p>他今年五十二岁。</p>
+<p>冬天的活儿最难做。天冷，手会抖。修表靠的是手稳，手一抖，镊子尖上的东西就不听话，明明看清了，落下去偏一点，就得重来。这毛病他没法跟人讲，讲了也没用——天不会因为谁要修表就暖一点。他只能等，把手在袖子里焐一会儿，等它缓过来，再接着做。一年里最冷的那几十天，他的活儿就做得特别慢。</p>
+<p>慢也得做。有人把表放下，他就得给人家弄好。</p>
+<h2>二</h2>
+<p>「现在没人修表了，都换电池。」</p>
+<p>这话是他自己讲的，讲得很平，像在说天气，不像在说自己干了半辈子的行当。</p>
+<p>「换电池我也换，一次十块，够我中午吃碗面。」</p>
+<p>十块。一碗面。这是他一天里最清楚的一笔账。表不坏了，人就不修表了；人还来，多半是电池没电。他把后盖撬开，换一颗，合上，收十块。这门手艺学的时候要多少年，如今最常做的，是这一件事。他不觉得委屈。有活儿就干，没活儿就坐着，铺子小，坐着也不占谁的地方。</p>
+<p>换电池和修表不一样。修表是把坏的东西救回来，换电池只是让它再走一段。可来的人要的就是再走一段。他就给这一段。</p>
+<h2>三</h2>
+<p>何老师六十八岁，每三个月来一次。</p>
+<p>他带来的表，其实都没坏。这一点，陆德昌知道；何老师自己，也知道。两个人都不点破。表递过来，陆德昌接过去，看一眼，放在桌上；何老师就开始说话。</p>
+<p>「我不是来修表的，我是来找人说话的。」何老师说，「他不撵我，我就一直来。」</p>
+<p>四平米的地方，塞不下第二把椅子。何老师就站在门口，或者半个身子探进来，说一会儿话。说完了，表留下，过几天再来取。三个月一次，一年四次，十年下来就是四十次。四十次里，真坏掉的表大概没有几只。可他每次都来，每次都有话说。</p>
+<p>陆德昌不撵他。他话不多，何老师说，他就听着。有时候手上的活儿不停，眼睛也不抬，但人在。何老师要的也就是这个——一个人在。一个人在一间小铺子里坐着，不催你，不看你的表，不问你为什么来。</p>
+<p>这大概也是这间铺子十年里最稳定的一门生意：一个人愿意听，另一个人愿意说。</p>
+<h2>四</h2>
+<p>陆小雨二十七岁，是他女儿。她劝过他三次，让他把店关了。</p>
+<p>三次。前两次她讲道理，讲得也对：这铺子不挣钱，人耗在里面，图什么。她给他算，给他比，给他想好了关店以后能做什么。陆德昌听着，不反驳，也不答应。第三次她没讲成道理，自己先哭了。</p>
+<p>「我算过账，」她说，「他一年挣的钱不如我三个月。可他一关门，就真的老了。」</p>
+<p>这句话，陆德昌听见了。他没接。</p>
+<p>账他也会算。一年挣多少，一天换几块电池，一个月里有多少天是白坐的，他心里有数，比谁都清楚。可账上算不出来的那一栏，是别的：门一关，他就不是修表的人了。一个人做了十年的事，说停就停，停下来的不只是生意。人还在，手艺还在，可没有那个四平米，没有那张桌子，没有人在门口喊他一声，他就只是一个五十二岁、冬天手会抖的男人。</p>
+<p>女儿怕的是这个，他怕的也是这个。两个人都知道，所以第三次，谁也没再往下说。</p>
+<h2>五</h2>
+<p>十年，四平米。</p>
+<p>冬天手会抖；换一次电池十块，够吃一碗面；有人每三个月来一趟，为的是说几句话；女儿哭过一次，为了让他关门。</p>
+<p>这些事凑在一起，就是这间铺子的全部。它不挣什么钱，也没什么可讲的道理。它只是开着。一个人在里面坐了十年，把坏的东西弄好，把没坏的东西也接过来，听人说话，等人来取。</p>
+<p>巷子里人来人往。陆德昌还坐在里面，低着头，手上做着他的活儿。</p>
+<p>门开着。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">城市之风</div><div class="sub">活人感 · human-voice-writing</div>
+<div class="stat">1206 字</div>
+<div class="fold"><div class="body"><h1>修表的尽头，是换电池</h1>
+<h2>一、四平方米</h2>
+<p>南城那条巷子最里头，有一间不到 4 平方米的店。陆德昌在里面修表，修了 10 年。</p>
+<p>10 年，是他 42 岁到 52 岁的全部。一个人把十年的时间折进四个平方米，这不太像一个决定，更像一个没来得及改口的决定。</p>
+<p>都说这行没了。其实他自己也这么说。</p>
+<p>「现在没人修表了，都换电池。换电池我也换，一次十块，够我中午吃碗面。」</p>
+<p>这句话里藏着他这十年的账。修表收的是手艺钱，越老越难要价；换电池收的是次数钱，一次十块，不涨也不跌。手艺会老，次数不会。说白了，他早就不靠修表吃饭了，靠的是「换」这个动作还留着。</p>
+<p>修表是他的名分，换电池是他的日子。</p>
+<p>十块钱这个数字很省事：换一次电池，正好是一碗面。他把计价单位定在了一顿午饭上。这个单位好记，也好算，一天下来不用翻账本，数数碗就够了。</p>
+<p>冬天是个麻烦。修表要的是稳，可冬天一到，他的手会抖。抖这件事在这行里最不讲道理——它不看你有多少年手艺。手一抖，精细的活就得往后排。他 52 岁，抖得还不算厉害，可这件事只会往一个方向走。</p>
+<h2>二、每三个月来一次的人</h2>
+<p>何老师 68 岁，是这间店的常客。他每 3 个月来一次。</p>
+<p>10 年，120 个月，正好 40 次。这 40 次里，他带来的表，一块都没坏。40 次摊到十年里，一年 4 次。这个频率十年没变过。</p>
+<p>「我不是来修表的，我是来找人说话的。他不撵我，我就一直来。」</p>
+<p>撑住这间店的，有一部分就是「表没坏的人」。表是门票。他拿着门票进来，说几句话，再拿着同一块表出去，三个月后再来。表在他手里是个由头，由头不用坏，坏了反而麻烦。</p>
+<p>陆德昌说「他不撵我」。不撵，是一个修表匠能拿出来的最大的服务。修表要手艺，不撵只要一样东西——他自己得在。</p>
+<h2>三、劝过三次的女儿</h2>
+<p>陆小雨 27 岁，是他女儿。她劝过他 3 次，让他把店关了。最后一次，她自己哭了。</p>
+<p>「我算过账，他一年挣的钱不如我三个月。可他一关门，就真的老了。」</p>
+<p>账确实是对的。一间 4 平方米的店，一天换几次电池，一次十块，够几碗面，这个换算率连小学生都算得清。她说的不是气话，是报表。</p>
+<p>问题是，她哭的地方不在账上。</p>
+<p>劝人这件事，劝到第三次还劝不动，剩下的就不是道理问题了。</p>
+<p>她把「关门」和「老了」算成了同一件事。她算的是整年值不值，他过的是当天有没有人来。在她的账本里，关门是止损；在他的日子里，关门是退场。退场之后，就不会再有人每 3 个月来一次。</p>
+<p>你可以说这不算一门生意，也可以说这不过是一个人的自我感动。可自我感动的人，不会一次收十块钱。他收了钱，说明这是一笔交易；交易还在，他就还没变成被照顾的那一方。</p>
+<h2>四、一碗面</h2>
+<p>这间店能开 10 年，不是因为还有人修表，而是因为还有人需要一间 4 平方米的地方，把一件没坏的东西放下来，说几句话。</p>
+<p>十块钱，一碗面，这是他给自己定的换算率。他中午吃面的时候，店是开着的。吃完他再回去，那四个平方米还在那儿。</p>
+<p>表还会坏，电池还会没电，巷子最里头那间店明天还会开门。他 52 岁，还能干几年不好说。但只要中午那碗面还吃得下，这店就还没到该关的时候。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">庙堂之风</div><div class="sub">官方体 · guanfang-writing</div>
+<div class="stat">1186 字</div>
+<div class="fold"><div class="body"><h1>一间小店的两本账</h1>
+<h2>一、4 平米，10 年</h2>
+<p>巷子里的铺面不到 4 平米。陆德昌 52 岁，在这 4 平米里修了 10 年表。</p>
+<p>一到冬天，他的手会抖。修表最怕手抖，他还是接着修。</p>
+<p>看见这样的铺子，人心里总会动一下：替他不值，替他着急，或者只是忽然想起自己也很久没修过什么了。这些反应都正常，不矫情。</p>
+<p>这样的铺子之所以让人动心，多半是因为它太像一个人没能坚持下来的样子。</p>
+<p>只是往下再想一步，会碰到一个问题：我们替他算的那笔账，和他自己记的那本账，是不是同一本？</p>
+<h2>二、第一本账，10 块钱和一碗面</h2>
+<p>他算过账，算得很细：「现在没人修表了，都换电池。换电池我也换，一次十块，够我中午吃碗面。」</p>
+<p>10 块钱，一碗面。进项刚好抵住一顿午饭，多一分没有，少一分也不行。这本账清楚，甚至有点硬气。</p>
+<p>清楚的好处是不含糊：收多少、花多少、还剩多少，三样都摆在一碗面上。坏处也在这里——账上只有这三样。</p>
+<p>问题还在于它太小。小到把 1 年的进出拢在一起，还不如女儿 3 个月的收入。</p>
+<h2>三、第二本账，每 3 个月来一次的人</h2>
+<p>何老师 68 岁，每 3 个月来一次。带来的表，其实都没坏。</p>
+<p>「我不是来修表的，我是来找人说话的。他不撵我，我就一直来。」</p>
+<p>把一间小店拆开看，它同时在记三笔。修表，是越来越少的那笔；换电池，是 10 块一次的那笔；不撵人，是从来不收钱、也从来不上账的那笔。</p>
+<p>前两笔记在第一本账上。第三笔记在第二本账上。第二本账不记进出，只记一条：还有人愿意来。</p>
+<p>三笔账，前两笔越记越薄，第三笔越记越厚。因为它们记的压根不是同一样东西：前两笔记的是一门生意，第三笔记的是一条巷子。</p>
+<p>一间小店真正的进项，不在 4 平米里，在还有人肯坐下来。</p>
+<h2>四、女儿劝过 3 次</h2>
+<p>陆小雨 27 岁，劝过 3 次，最后一次自己哭了。</p>
+<p>「我算过账，他一年挣的钱不如我三个月。可他一关门，就真的老了。」</p>
+<p>她这本账没有算错。1 年不如 3 个月，是事实，不是态度。她要父亲过得松快一点，这个要求正当得没法驳回。</p>
+<p>所以值得琢磨的，不是她记错了哪一笔，而是我们手里常常只有一本账。一间铺子值不值，看它一个月进多少钱。一个人还有没有用，看他一年进多少。</p>
+<p>账本身没有错，错在只记一本。</p>
+<p>要说的也不是算账的人。女儿算得对，何老师来得也对，陆德昌守着也不算糊涂。三种算法，各有各的道理，只是不在同一本账上。</p>
+<p>这不是谁说服谁的事。劝到第三次还没劝动，本身就说明：在她父亲那里，那本看不见的账更重。</p>
+<h2>五、两本账，得有人记</h2>
+<p>那怎么办？</p>
+<p>不必替他关门，也不必替他坚持。各人有各人的算盘，这件事没有标准答案。</p>
+<p>也不必急着把一间铺子说成什么了不得的东西。它就是一间铺子、一个人、10 年。但它够用来提醒一句：手里那本账，最好别只有一本。这话也是说给我们自己听的。</p>
+<p>如果你家附近也有这样一间铺子，路过时进去换一次电池，10 块。这笔钱改不了他的账，但能让第二本账上多出一行：今天有人来过。</p>
+<p>换一次电池，是 10 块钱的交情。</p>
+<p>没坏也来一趟，是不收钱的交情。</p>
+<p>一间铺子能开成 10 年，靠的是后一种。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">人间之风</div><div class="sub">特稿 · feature-writing</div>
+<div class="stat">1161 字</div>
+<div class="fold"><div class="body"><h1>四平米的十年</h1>
+<h2>四平米</h2>
+<p>南城的巷子里，那间铺面不到四平米。陆德昌 52 岁，坐在里面修表。冬天，他的手会抖。</p>
+<p>一个人在一间不到四平米的铺面里修表，修了 10 年，这件事今天已经不太常见。</p>
+<p>52 岁，南城，一条巷子，一间铺面，修表，10 年。他的简历只有一行。42 岁到 52 岁，他把这段时间全部放在那四平米里。铺面没有换过地方。</p>
+<p>十年里，修表这件事从一门手艺，变成了一个几乎没有人再提出的要求。</p>
+<p>「现在没人修表了，都换电池。」</p>
+<p>手艺失效之后，人通常要挪位置：换一行，换一条街，换一个城市。陆德昌没有挪。铺面留在原地，活往下接了一档——换电池。</p>
+<p>修表是手艺，换电池是服务。手艺要人来找你，服务是谁进来都能做。10 年里，他把前者换成了后者，把价格压到 10 块。</p>
+<p>四平米，10 年。空间没有变，手艺变了。</p>
+<h2>十块钱</h2>
+<p>有人进来，把表递给他。他换电池，收 10 块。</p>
+<p>「换电池我也换，一次十块，够我中午吃碗面。」</p>
+<p>一句话里三样东西是连着的：一次劳动，一个价格，一顿中午饭。它们出现在同一个句子里，说明在他这里，这三样是同一个数量级。10 块，一碗面，中间不用换算。</p>
+<p>10 块是他自己报的价，也是他给自己定的单位。表贵表贱，换的都是电池，收的都是 10 块。</p>
+<p>他把收入和午饭放在一句话里。这个价格刚好够吃饭，也刚好只够吃饭。换电池不留手艺，只留这 10 块。</p>
+<p>修表要手稳。换电池不用。</p>
+<p>他 52 岁，手在冬天会抖。冬天是这双手最不好使的时候。这门手艺留给他的活，正好是不太需要手稳的那一种。</p>
+<h2>每三个月</h2>
+<p>何老师 68 岁，每三个月来一次。</p>
+<p>带来的表，其实都没坏。</p>
+<p>「我不是来修表的，我是来找人说话的。」</p>
+<p>「他不撵我，我就一直来。」</p>
+<p>表没坏。来的人知道，修表的人也知道。知道，还是照来。</p>
+<p>每三个月一次，一年四次。三个月，是一年的四分之一。表没坏，就没有活可做；没有活可做，人还是照来。四平米里坐着的那个人不撵他，他就一直来。</p>
+<p>一个修表匠，接下的活是换电池；接下的另一件事，是每三个月陪一个人说一次话。后一件没有价目。</p>
+<p>何老师说的是人，陆德昌说的是生意。两个人说的不是一件事，来的是同一间铺面。何老师来的时候，这间铺面就从修表的地方，变成了说话的地方。他要的东西，这间铺面恰好还有：一个人在里面。四平米装不下别的东西，装得下一个人。</p>
+<h2>三次</h2>
+<p>陆小雨 27 岁，是陆德昌的女儿。她劝他关门，劝过三次。</p>
+<p>前两次他没有关，第三次她哭了。</p>
+<p>她 17 岁那年，父亲开始在这条巷子里修表。27 岁这年，她来劝他关门。</p>
+<p>「我算过账，他一年挣的钱不如我三个月。」</p>
+<p>「可他一关门，就真的老了。」</p>
+<p>她算的是钱：一年，对三个月。他做一年，她做三个月，数目才打平。两个人的账都算得对，算的不是同一件事。27 岁的人，算一个 52 岁的人的账。</p>
+<p>她担心的不是钱。铺面还开着。</p>
+<h2>冬天</h2>
+<p>冬天，他的手还是会抖。抖完，再把手放回桌上。</p>
+<p>铺面不到四平米，他坐在里面。有人进来换电池，10 块。中午，够吃一碗面。</p>
+<p>十年了。</p></div></div><button class="more">展开全文</button></div></div></section>
+<div class="how"><div class="box">做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；
+唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。
+这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
+胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/t07">demo/t07/</a></div></div>
+<script>
+document.querySelectorAll('.more').forEach(b=>b.onclick=()=>{const c=b.closest('.col');
+ c.classList.toggle('open');b.textContent=c.classList.contains('open')?'收起':'展开全文'});
+const tb=document.querySelectorAll('.tabs button'),cs=document.querySelectorAll('.col');
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach(x=>x.classList.remove('on'));cs.forEach(x=>x.classList.remove('act'));
+ b.classList.add('on');cs[i].classList.add('act')});
+</script>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同题四体 · t10 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button id="night">夜读</button><a href="../">首页</a></div></div></nav>
+
+<style>
+.cmp{max-width:1280px;margin:0 auto;padding:56px 32px 24px}
+.cmp h1{font:900 30px/1.4 var(--serif);letter-spacing:.08em}
+.cmp .q{margin:14px 0 6px;font:400 17px/1.8 var(--serif)}
+.cmp .mat{font-size:13.5px;color:var(--ink2);margin-bottom:22px}
+.cmp .mat summary{cursor:pointer;color:var(--ink)}
+.cmp .mat li{margin:6px 0 0 1.4em}
+.tabs{display:none;gap:0;border:1px solid var(--ink);margin-bottom:20px}
+.tabs button{flex:1;background:none;border:0;border-right:1px solid var(--rule);padding:10px 4px;font:600 13px var(--serif);letter-spacing:.15em;color:var(--ink2);cursor:pointer}
+.tabs button:last-child{border:0}.tabs button.on{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(var(--n),1fr);border-top:1px solid var(--ink)}
+.col{padding:22px 22px 32px;border-right:1px solid var(--rule);min-width:0}
+.col:last-child{border-right:0}
+.col .tag{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.col.base .tag{color:var(--ink2)}
+.col .sub{font:12px var(--mono);color:var(--ink2);margin:2px 0 10px}
+.col .stat{font:12px var(--mono);color:var(--ink2);padding-bottom:14px;border-bottom:1px dashed var(--rule);margin-bottom:18px}
+.col .body{font-size:15.5px;line-height:1.95}
+.col .body h1{font:600 1.25em/1.5 var(--serif);margin:0 0 1em}
+.col .body h2{font-size:1.05em}
+.col .fold{position:relative;max-height:30em;overflow:hidden}
+.col .fold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5em;background:linear-gradient(transparent,var(--paper))}
+.col.open .fold{max-height:none}.col.open .fold::after{display:none}
+.col .more{margin-top:12px;background:none;border:1px solid var(--rule);color:var(--ink2);font:13px var(--sans);padding:4px 14px;cursor:pointer}
+.col .more:hover{border-color:var(--zhu);color:var(--zhu)}
+.how{max-width:1280px;margin:0 auto;padding:8px 32px 56px;font-size:13px;color:var(--ink2)}
+.how .box{border-top:1px solid var(--ink);padding-top:14px}
+@media(max-width:900px){.tabs{display:flex}.grid{grid-template-columns:1fr;border-top:0}
+ .col{display:none;border:0;padding:0}.col.act{display:block}.col .fold{max-height:none}.col .fold::after,.col .more{display:none}}
+</style>
+<section class="cmp"><h1>同题四体 · t10</h1>
+<p class="q">写一篇时评：年轻人该不该躺平，这个争论又热了起来。</p>
+<details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul><li>章宁（离职在家 8 个月 27 岁）：每天睡到十点，下午去图书馆坐三小时，不找工作。「我不是不想干，我是不想再干那种，干完了也不知道自己干了什么的工作。」</li><li>施强（小公司老板 41 岁）：招了三个应届生，半年走了两个。「他们说躺平，其实是要一个说得过去的理由。我二十岁的时候也想要，只是那时候不敢说。」</li><li>王秀兰（他母亲 55 岁）：在纺织厂干到退休，不理解儿子为什么不上班。「我们那时候没得选。他们有得选，选了不干，我心里堵，但我说不出哪儿不对。」</li></ul></details>
+<div class="tabs"><button class="on">裸模型</button><button class="">城市之风</button><button class="">庙堂之风</button><button class="">人间之风</button></div>
+<div class="grid" style="--n:4"><div class="col base act">
+<div class="tag">裸模型</div><div class="sub">不加载任何引擎</div>
+<div class="stat">932 字</div>
+<div class="fold"><div class="body"><h1>躺平之争，争的不是懒</h1>
+<p>“躺平”这个词又热了起来。每隔一阵，它就要被拉出来吵一遍，吵的内容也差不多：一边说年轻人不肯吃苦，一边说这世道不值得拼命。可如果把这场争论当成一场“勤快与懒惰”的道德官司，恐怕一开始就问错了。它真正的分歧，藏在三个人身上。</p>
+<p>二十七岁的章宁，离职在家八个月。每天睡到十点，下午去图书馆坐三个小时，不找工作。他说：「我不是不想干，我是不想再干那种，干完了也不知道自己干了什么的工作。」这句话里没有一个字是拒绝劳动，拒绝的是“干了等于没干”的劳动。他还去图书馆，说明他并没有把自己关掉，只是在等一个能看见结果的位置。把这叫“躺平”，是词不达意；准确地说，这是一个年轻人在为“意义”停摆。</p>
+<p>四十一岁的施强，小公司老板，招了三个应届生，半年走了两个。他没有骂人，反而说：「他们说躺平，其实是要一个说得过去的理由。我二十岁的时候也想要，只是那时候不敢说。」这句“不敢说”很关键。它说明想被理解、想要一个说得过去的理由，不是这一代人才有的新毛病，而是每一代人都有的旧愿望，只是过去没有说出口的余地。所以争论的另一半，不是两代人的价值断裂，而是“能不能说”的门槛变了。</p>
+<p>最难的是章宁的母亲，五十五岁的王秀兰。她在纺织厂干到退休，不理解儿子为什么不上班。她说：「我们那时候没得选。他们有得选，选了不干，我心里堵，但我说不出哪儿不对。」“说不出哪儿不对”这六个字，比任何指责都重。她的堵，未必是觉得儿子懒，而是儿子的一次选择，让她一辈子“没得选”的辛苦忽然需要重新解释——如果可以不干，那当年的咬牙还成不成立？这不是道德问题，是一个人对自己一生的确认被轻轻碰了一下。</p>
+<p>三个人，三种位置，说的其实是同一件事：工作能不能给人一个说得过去的理由。章宁找不到，所以停下来找；施强知道这个理由要紧，所以不苛责；王秀兰一辈子没机会问，所以问不出口。争论之所以反复发热，是因为我们习惯把“要理由”听成“要偷懒”，把“停下来”读成“不负责”。</p>
+<p>所以，与其追问年轻人该不该躺平，不如追问：什么样的工作，值得一个人站起来？如果一份工作干完了不知道干了什么，那么离开它不叫躺平，叫止损。真正该被讨论的，从来不是年轻人的姿态，而是姿态背后那个空着的位置——那个本该由工作本身提供的、说得过去的理由。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">城市之风</div><div class="sub">活人感 · human-voice-writing</div>
+<div class="stat">834 字</div>
+<div class="fold"><div class="body"><h1>躺平的尽头：下午去图书馆坐三小时</h1>
+<p>「躺平」这词又热了。网上两拨人吵得凶，一拨说年轻人不争气，一拨说你们不懂现在的班有多难上。</p>
+<p>但我认识的三个真在里头的人，一个都没在吵。</p>
+<p>第一个是章宁，27 岁，离职在家 8 个月。每天睡到十点，下午去图书馆坐三小时，不找工作。</p>
+<p>他妈不理解。</p>
+<p>我问他到底怎么想的，他说：「我不是不想干，我是不想再干那种，干完了也不知道自己干了什么的工作。」</p>
+<p>这句话不像宣言，像一份验伤报告。</p>
+<p>你可以说他这是矫情——8 个月不上班，日子怎么过。这确实是真问题，我不替他答。但他说的不是「我不干活」，是「我干完了不知道自己干了什么」。这两件事差得很远。</p>
+<p>第二个是施强，41 岁，一家小公司的老板。招了三个应届生，半年走了两个。</p>
+<p>按说他该是最烦躺平的那种老板。结果他说：「他们说躺平，其实是要一个说得过去的理由。我二十岁的时候也想要，只是那时候不敢说。」</p>
+<p>一个老板替离职的人说话，这架就没法按「老板对员工」来站队了。</p>
+<p>第三个是章宁的妈，王秀兰，55 岁，在纺织厂干到退休。</p>
+<p>她的说法是：「我们那时候没得选。他们有得选，选了不干，我心里堵，但我说不出哪儿不对。」</p>
+<p>「说不出哪儿不对」这六个字，比热搜上那些评论都准。她不是反对，她是没有词。</p>
+<p>所以这场架为什么年年热、年年吵不完？</p>
+<p>因为「躺平」这一个词，装了三件不同的事。</p>
+<p>在章宁那儿，它是不想再干一件说不清在干什么的活。在施强那儿，它是年轻人走人时用的一句体面话。在王秀兰那儿，它是有得选却偏不选。</p>
+<p>一个词装三件事，吵架就成了必然：每个人骂的都是自己心里那个躺平，骂的都不是对面那个人。</p>
+<p>说白了，这不是代沟，是同词不同义。</p>
+<p>章宁下午还是去图书馆，坐三小时。他没躺，他只是把「干」这个字重新量了一遍：不是有活在手，是干完了说得出自己干了什么。</p>
+<p>他妈心里还是堵。她还是说不出哪儿不对。</p>
+<p>这场争论还会热下去。真正在里头的人反而不吵——他们只是在等一个能说清楚自己干了什么的地方，或者等一句能说清楚自己为什么堵的话。</p>
+<p>你身边那个被叫作躺平的人，他上一次跟你解释，说的是哪一句？</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">庙堂之风</div><div class="sub">官方体 · guanfang-writing</div>
+<div class="stat">934 字</div>
+<div class="fold"><div class="body"><h1>「躺平」不是答案，是一句还没翻译完的话</h1>
+<p>章宁 27 岁，离职在家 8 个月。每天睡到十点，下午去图书馆坐 3 个小时，不投简历。他说：「我不是不想干，我是不想再干那种，干完了也不知道自己干了什么的工作。」</p>
+<p>他母亲王秀兰 55 岁，在纺织厂干到退休。「我们那时候没得选。他们有得选，选了不干，我心里堵，但我说不出哪儿不对。」</p>
+<p>最要紧的是最后半句。堵，说明她感觉到了；说不出，说明她手里没有那个词。</p>
+<p>招人的那头也在堵。41 岁的施强开了家小公司，招 3 个应届生，半年走了 2 个。他说：「他们说躺平，其实是要一个说得过去的理由。我 20 岁的时候也想要，只是那时候不敢说。」</p>
+<p>三个人说的是三种方言。「该不该躺平」这场争论越吵越热，是因为我们一直拿它当道德题来问——勤快还是懒，扛事还是逃。可它更像一道翻译题。</p>
+<p>章宁拒绝的不是劳动，是劳动做完之后看不见痕迹；母亲不解的不是懒，是儿子手里那个她当年没有的选项。</p>
+<p>「躺平」这个词，眼下同时干着三件事。</p>
+<p>第一，它给拒绝发了一个体面的名字。说「我在躺平」，比说「我看不见自己干了什么」容易得多。</p>
+<p>第二，它把一件说不清的事，压成一个可以吵的立场。有了立场，就不必交代细节。</p>
+<p>第三，它让两代人不必互相说服。母亲骂一句，儿子不还嘴，各自都算赢了一点。</p>
+<p>一个词同时干三件事，它就不再是描述，而是一句替所有人挡话的话。</p>
+<p>真正该被追问的，是那些把岗位切成一格一格的安排：一个人做完一整天，说不出哪一件是他做的。这不是哪家公司的恶意，是岗位设计、考核口径、汇报链条一起磨出来的钝感。批评落在这儿，才落得准。</p>
+<p>而劳动本身没有错，上一代人吃过的苦，更不该被拿来反衬今天的娇气。他们不是没有委屈，是委屈当年排不上号。</p>
+<p>歇一歇不是问题，把「躺平」当成答案才是问题。</p>
+<p>所以出口要小，小到今天就能做。</p>
+<p>不必急着劝章宁们上班，先问一句：上一份工作里，有哪件事是他做完能指给人看的。</p>
+<p>不必急着骂施强们精明，先承认：愿意把「谁在哪一环使了劲」说清楚的老板，本来就少。</p>
+<p>不必急着替王秀兰们辩护，他们的道理不用辩护，缺的只是一个能安放「说不出哪儿不对」的词。</p>
+<p>这场争论会散。散场之后要处理的，不是那个词，是词后面那个还没说完的人。</p>
+<p>上一代的苦有名字，叫「没得选」；这一代的苦还在找名字，暂时被叫成了「躺平」。</p>
+<p>名字找到了，人自己会站起来。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">人间之风</div><div class="sub">特稿 · feature-writing</div>
+<div class="stat">571 字</div>
+<div class="fold"><div class="body"><h1>八个月的下午</h1>
+<p>上午10点，章宁醒。这8个月，他每天都是这个点醒。</p>
+<p>他27岁，离职在家。「躺平」又被拿出来争了，争的是年轻人该不该。章宁不在争论里。</p>
+<h2>十点</h2>
+<p>下午，他去图书馆，坐3个小时。不找工作。</p>
+<p>这8个月，他的日子是这三件事：10点醒，图书馆3个小时，不找工作。</p>
+<p>「我不是不想干。」他说。</p>
+<p>「我是不想再干那种，干完了也不知道自己干了什么的工作。」</p>
+<p>这句话里没有「累」，也没有「钱」。他不要的是「那种」，不是「干」。差别落在「再」字上：不干，和不再干那种，是两件事。</p>
+<p>「那种」是哪一种，这句话没有说。8个月，他也没有去找另一种。</p>
+<h2>招人的人</h2>
+<p>施强41岁，开一家小公司。今年他招了3个应届生，半年走了2个。</p>
+<p>「他们说躺平，其实是要一个说得过去的理由。」他说。</p>
+<p>「我20岁的时候也想要，」他说，「只是那时候不敢说。」</p>
+<p>20岁和41岁，中间隔着21年。21年前他想要而没说的话，现在他招的人说了，说的人不是他。</p>
+<h2>纺织厂</h2>
+<p>王秀兰55岁，在纺织厂干到退休。她是章宁的母亲。儿子不上班，她不理解。</p>
+<p>「我们那时候没得选。」她说。</p>
+<p>「他们有得选，选了不干，我心里堵，」她说，「但我说不出哪儿不对。」</p>
+<p>她说自己的时候用「我们」，说儿子的时候用「他们」。「选」在同一段话里出现两次：一次是没得选，一次是有得选。</p>
+<p>母亲55岁，儿子27岁，中间隔着28年。</p>
+<h2>下午</h2>
+<p>争的人还在争。下午，章宁还是去图书馆，坐3个小时。</p></div></div><button class="more">展开全文</button></div></div></section>
+<div class="how"><div class="box">做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；
+唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。
+这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
+胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/t10">demo/t10/</a></div></div>
+<script>
+document.querySelectorAll('.more').forEach(b=>b.onclick=()=>{const c=b.closest('.col');
+ c.classList.toggle('open');b.textContent=c.classList.contains('open')?'收起':'展开全文'});
+const tb=document.querySelectorAll('.tabs button'),cs=document.querySelectorAll('.col');
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach(x=>x.classList.remove('on'));cs.forEach(x=>x.classList.remove('act'));
+ b.classList.add('on');cs[i].classList.add('act')});
+</script>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>

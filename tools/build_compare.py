@@ -99,14 +99,38 @@ def build(tid, topic, folder):
 
 
 def main():
-    topics = {t["id"]: t for t in json.loads((ROOT / "eval" / "prompts.json").read_text(encoding="utf-8"))["topics"]}
-    n = 0
+    pj = json.loads((ROOT / "eval" / "prompts.json").read_text(encoding="utf-8"))
+    topics = {t["id"]: t for t in pj["topics"]}
+    built = []
     for d in sorted((ROOT / "demo").iterdir()):
         if d.is_dir() and d.name in topics:
             k = build(d.name, topics[d.name], d)
+            built.append((d.name, topics[d.name]["category"], topics[d.name]["prompt"], k))
             print(f"  compare/{d.name}.html  {k} 版")
-            n += 1
-    print(f"built {n} compare page(s)")
+    # 汇总目录
+    items = "".join(f"""<a class="item" href="{t}.html"><div class="feng">{cat} · {k} 版</div>
+<h2>{html.escape(q)}</h2></a>""" for t, cat, q, k in built)
+    idx = f"""<style>{IDX_CSS}</style><section class="list"><h1>同题四体</h1>
+<p class="intro">同一道题、同一份素材，四个版本并排。唯一的变量是加载哪个引擎。<br>
+想看差别，别读方法论，直接对比第一段和标题。</p>{items}
+<div class="warn"><b>这是展示，不是评测。</b>20 篇产出说明差别存在，但没有说明差别是否显著、
+是否稳定。显著性要靠盲评（<a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/DESIGN.md">eval/DESIGN.md</a>），
+目前尚未运行。</div></section>"""
+    (OUT / "index.html").write_text(page("同题四体", idx, "../"), encoding="utf-8")
+    print(f"built {len(built)} compare page(s) + index")
+
+
+IDX_CSS = """
+.list{max-width:820px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:26px 0}
+.item:last-of-type{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 21px/1.65 var(--serif);margin:6px 0 0}
+.item:hover h2{color:var(--zhu)}
+.warn{margin-top:36px;border-left:2px solid var(--zhu);padding:6px 0 6px 18px;font-size:14px;color:var(--ink2)}
+"""
 
 
 if __name__ == "__main__":

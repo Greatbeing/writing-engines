@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同题四体 · t05 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button id="night">夜读</button><a href="../">首页</a></div></div></nav>
+
+<style>
+.cmp{max-width:1280px;margin:0 auto;padding:56px 32px 24px}
+.cmp h1{font:900 30px/1.4 var(--serif);letter-spacing:.08em}
+.cmp .q{margin:14px 0 6px;font:400 17px/1.8 var(--serif)}
+.cmp .mat{font-size:13.5px;color:var(--ink2);margin-bottom:22px}
+.cmp .mat summary{cursor:pointer;color:var(--ink)}
+.cmp .mat li{margin:6px 0 0 1.4em}
+.tabs{display:none;gap:0;border:1px solid var(--ink);margin-bottom:20px}
+.tabs button{flex:1;background:none;border:0;border-right:1px solid var(--rule);padding:10px 4px;font:600 13px var(--serif);letter-spacing:.15em;color:var(--ink2);cursor:pointer}
+.tabs button:last-child{border:0}.tabs button.on{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(var(--n),1fr);border-top:1px solid var(--ink)}
+.col{padding:22px 22px 32px;border-right:1px solid var(--rule);min-width:0}
+.col:last-child{border-right:0}
+.col .tag{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.col.base .tag{color:var(--ink2)}
+.col .sub{font:12px var(--mono);color:var(--ink2);margin:2px 0 10px}
+.col .stat{font:12px var(--mono);color:var(--ink2);padding-bottom:14px;border-bottom:1px dashed var(--rule);margin-bottom:18px}
+.col .body{font-size:15.5px;line-height:1.95}
+.col .body h1{font:600 1.25em/1.5 var(--serif);margin:0 0 1em}
+.col .body h2{font-size:1.05em}
+.col .fold{position:relative;max-height:30em;overflow:hidden}
+.col .fold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5em;background:linear-gradient(transparent,var(--paper))}
+.col.open .fold{max-height:none}.col.open .fold::after{display:none}
+.col .more{margin-top:12px;background:none;border:1px solid var(--rule);color:var(--ink2);font:13px var(--sans);padding:4px 14px;cursor:pointer}
+.col .more:hover{border-color:var(--zhu);color:var(--zhu)}
+.how{max-width:1280px;margin:0 auto;padding:8px 32px 56px;font-size:13px;color:var(--ink2)}
+.how .box{border-top:1px solid var(--ink);padding-top:14px}
+@media(max-width:900px){.tabs{display:flex}.grid{grid-template-columns:1fr;border-top:0}
+ .col{display:none;border:0;padding:0}.col.act{display:block}.col .fold{max-height:none}.col .fold::after,.col .more{display:none}}
+</style>
+<section class="cmp"><h1>同题四体 · t05</h1>
+<p class="q">写一篇公众号文章：相亲时被问「你父母有退休金吗」，这句话正在成为年轻人的一道坎。</p>
+<details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul><li>苏禾（相亲 11 次的女生 29 岁）：第三次见面，对方在餐厅里很自然地问了这个问题。「他问得很有礼貌，我答得也很有礼貌。回家我在楼下坐了半小时。」</li><li>韩松（相亲 3 年的男生 31 岁）：自己也问过，问完就后悔。「我不是嫌她家穷，我是怕以后我一个人扛两家人。这话我说不出口，就变成了问她爸妈。」</li><li>孟姐（婚介所红娘 从业 9 年）：手里的表格上有一栏叫「家庭负担」。「十年前问有没有房，五年前问有没有贷，现在问有没有退休金。问的都是同一件事：以后谁掏钱。」</li></ul></details>
+<div class="tabs"><button class="on">裸模型</button><button class="">城市之风</button><button class="">庙堂之风</button><button class="">人间之风</button></div>
+<div class="grid" style="--n:4"><div class="col base act">
+<div class="tag">裸模型</div><div class="sub">不加载任何引擎</div>
+<div class="stat">816 字</div>
+<div class="fold"><div class="body"><h1>相亲时被问「你父母有退休金吗」</h1>
+<p>苏禾 29 岁，相亲 11 次。第三次见面，在一家不算便宜的餐厅，菜刚上齐，对方放下水杯，很自然地问了一句：「你父母有退休金吗？」</p>
+<p>「他问得很有礼貌，我答得也很有礼貌。回家我在楼下坐了半小时。」</p>
+<p>让她在楼下坐那半小时的，不是这句话本身，而是这句话背后那套已经默默算完的账。她答得再得体，也只是在一张她没见过的表格上，填了一个数字。礼貌是双向的，尴尬也是双向的，只有那个数字是单向的——它一旦说出口，就贴在了她身上。</p>
+<p>韩松 31 岁，相亲 3 年。这个问题他也问过，问完就后悔。</p>
+<p>「我不是嫌她家穷，我是怕以后我一个人扛两家人。这话我说不出口，就变成了问她爸妈。」</p>
+<p>两句话摆在一起，这道坎的形状就出来了：问的人想说的是「我怕扛不动」，说出口的却是「你家有没有」。被问的人听见的是审问，其实对方是在交底——只是交底太难看，只好包装成一个问题，递给对面。于是两个人都觉得自己被冒犯了，又都觉得自己没做错。</p>
+<p>做婚介的孟姐，从业 9 年。她手里的表格上，有一栏叫「家庭负担」。</p>
+<p>「十年前问有没有房，五年前问有没有贷，现在问有没有退休金。问的都是同一件事：以后谁掏钱。」</p>
+<p>房价涨过一轮，贷款压过一轮，如今轮到了养老。问题换了三次衣服，内核一次没换：婚姻被当成一次合并，双方都得先看清对方的负债表。年轻人不是突然变得势利了，是他们自己被四个老人、一份工作、一套房贷按在原地，实在没有余量再去兜底另一家人。所以这句话问得出口，也问得心虚。</p>
+<p>它之所以成为一道坎，还因为它无法被诚实地回答。说「有」，像是在证明自己值得被爱；说「没有」，像是在提前认领一份亏欠。而真正的答案往往卡在中间：有没有退休金，并不决定两个年轻人能不能过好，只决定万一出事时，那口气由谁来喘。可这一层，饭桌上没人说得清，也没人敢先开口。</p>
+<p>苏禾那天在楼下坐完半小时，上楼，回消息，继续见第四个人。她没有怪谁。她只是第一次清楚地意识到，相亲桌上被称量的从来不只是她，还有她身后那两个正在老去的人。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">城市之风</div><div class="sub">活人感 · human-voice-writing</div>
+<div class="stat">852 字</div>
+<div class="fold"><div class="body"><h1>相亲时被问「你父母有退休金吗」，这句话正在成为年轻人的一道坎</h1>
+<p>相亲桌上，正题从来不在第一道菜。</p>
+<p>苏禾 29 岁，相亲 11 次。这句话是在第三次见面的时候来的。餐厅里，菜上到一半，对方放下筷子，很自然地问：你父母有退休金吗。</p>
+<p>「他问得很有礼貌，我答得也很有礼貌。回家我在楼下坐了半小时。」</p>
+<p>半小时。比一顿饭还长。</p>
+<p>这句话现在有学名了，叫「家庭负担」。</p>
+<p>难堪的地方不在这句话本身，在它被问得太自然。自然到你能听出来，这问题在他心里排过队。礼貌也是双向的，他礼貌地问，你礼貌地答，一顿饭谁也没失态。真正难受的部分不在饭桌上，在回家以后，一个人，在楼下。</p>
+<p>房、贷、退休金，这三样在相亲桌上轮流坐庄。房子问的是家底，贷款问的是窟窿，退休金问的是人老了以后那张按月到账的卡。账期越拉越长，问题就越问越细。</p>
+<p>说白了，不是相亲变精了，是算账的年限变长了。</p>
+<p>问的人也未必好受。韩松 31 岁，相亲 3 年，自己也问过，问完就后悔。</p>
+<p>「我不是嫌她家穷，我是怕以后我一个人扛两家人。这话我说不出口，就变成了问她爸妈。」</p>
+<p>一句说不出口的话，翻译成一道客观题，问出去，两个人都体面。体面是体面，账还在那儿。</p>
+<p>孟姐在婚介所当红娘，干了 9 年。她手里的登记表上，真有一栏叫这个。</p>
+<p>「十年前问有没有房，五年前问有没有贷，现在问有没有退休金。问的都是同一件事：以后谁掏钱。」</p>
+<p>一个人问，可能是他精明。九年里，这栏问的东西换过三回，说明这不是谁多心。</p>
+<p>有人要说了：这不就是把婚姻做成资产负债表吗。</p>
+<p>是。但你也可以反过来看：以前不问，不等于以前没有这笔账，只是被「到时候再说」盖住了。现在问出来，至少它是一道能商量、能算的题。</p>
+<p>真正难的地方在这儿：被问的人未必穷，可这话一旦问出口，就说明两边都开始算长期了。算长期是好事，只是算的人还没学会怎么开口。</p>
+<p>不是年轻人变势利了，而是「以后」这两个字，第一次有了具体长度。</p>
+<p>一张表填完，两家往后的钱在纸上过一遍。过得去就往下走，过不去就早点散。</p>
+<p>楼下那半小时，大概就是在算这笔账。算完，上楼，第二天照常上班。</p>
+<p>你被问过这句吗。当时你是答的那个，还是问的那个。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">庙堂之风</div><div class="sub">官方体 · guanfang-writing</div>
+<div class="stat">851 字</div>
+<div class="fold"><div class="body"><h1>相亲桌上的退休金之问，是年轻人在提前对账</h1>
+<p>苏禾 29 岁，相亲 11 次。第三次见面，对方在餐厅里很自然地问了一句：「你父母有退休金吗？」她后来回忆：「他问得很有礼貌，我答得也很有礼貌。回家我在楼下坐了半小时。」</p>
+<p>那半小时里坐着的，恐怕不止她一个人。这句话让人坐不住，不是因为无礼——恰恰相反，它太有礼貌了；而是因为它把两个还没开始相处的人，直接带进了核对环节。</p>
+<p>做了 9 年红娘的孟姐，手里的表格上有一栏叫「家庭负担」。「十年前问有没有房，五年前问有没有贷，现在问有没有退休金。问的都是同一件事：以后谁掏钱。」</p>
+<p>先别急着说这届年轻人势利。把这三问按时间排开，会看见另一条线：房是资产，贷是负债，退休金是现金流。问得越来越细，是因为要算的账越来越长。一对小夫妻，四位老人，一份工资——不是谁心眼小，是结构就摆在那里。</p>
+<p>这句话本身也不单纯，它至少叠着三层：老人的养老有没有兜底，将来病床前谁有时间，这些成本由一个人出还是两个人分。三个问题被压成一句家常话，谁都不好在饭桌上展开，于是都用礼貌盖住，各自回家消化。</p>
+<p>相亲 3 年的韩松也问过，问完就后悔：「我不是嫌她家穷，我是怕以后我一个人扛两家人。这话我说不出口，就变成了问她爸妈。」这句坦白里没有算计，只有怕——怕自己扛不动，又不好意思说扛不动。</p>
+<p>所以「门当户对」不是被年轻人捡回来了，是它换了算法：过去比的是家底厚不厚，现在比的是抗风险能力强不强。前者看父母的存折，后者看两个人能不能把话摊开。</p>
+<p>真正该被追问的，是那张表格。把「家庭负担」列成一栏，用勾选代替交谈，把一件需要两个人慢慢聊清楚的事压成一个格子——效率是高了，可它也教会年轻人用查账的方式去认识一个人。至于开口的年轻人，和拿着退休金的父母，都不该被责怪：一个在替未来担心，一个已经把能给的都给了。</p>
+<p>这道坎要过去，不妨从三件小事开始：把「你父母有退休金吗」换成「以后老人的事，我们怎么分」；把一次试探换成一次摊开；把对一个人的估值，换成对两个人的约定。</p>
+<p>毕竟，婚姻不是找一个没有负担的人，而是找一个人，愿意和你一起把负担说清楚。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">人间之风</div><div class="sub">特稿 · feature-writing</div>
+<div class="stat">813 字</div>
+<div class="fold"><div class="body"><h1>楼下那半小时</h1>
+<p>「你父母有退休金吗。」</p>
+<p>这句话是在餐厅里问出来的。苏禾二十九岁，相亲十一次，那是她和对方的第三次见面。对方问得很自然，像在确认一件早该确认的事。</p>
+<p>她答得也很自然。</p>
+<p>后来她把这件事讲成一句话：「他问得很有礼貌，我答得也很有礼貌。回家我在楼下坐了半小时。」</p>
+<p>这句话不粗鲁，甚至算客气。它不问家底，不问收入，只问两位老人老了以后，每个月有没有一笔固定的钱进来。可它落到桌上的时候，问的人和答的人都停了一下。</p>
+<p>问的是父母，答的是自己。父母的退休金是既成的事，答的人改不了，只能把它说出来。问的人在问将来，答的人手里没有答案。</p>
+<h2>一、问的人</h2>
+<p>韩松三十一岁，相亲三年。这句话他也问过。</p>
+<p>「我不是嫌她家穷，我是怕以后我一个人扛两家人。」</p>
+<p>问完他就后悔了。那句话本来不是这个意思，可它没有别的说法。</p>
+<p>「这话我说不出口，就变成了问她爸妈。」</p>
+<p>一句说不出口的话，换成一句说得出口的话，落到桌上，就成了一个问题。问的人在等一个数，答的人在算一笔账。谁先开口，谁就把这道题递了过去。</p>
+<h2>二、表格</h2>
+<p>孟姐做红娘九年。她手里的表格上有一栏，叫「家庭负担」。</p>
+<p>九年里，那一栏问过三样东西。</p>
+<p>「十年前问有没有房，五年前问有没有贷，现在问有没有退休金。」</p>
+<p>「问的都是同一件事：以后谁掏钱。」</p>
+<p>一栏三个问法。填表的是年轻人，填进去的是父母。</p>
+<p>栏目的名字一直没换，换的是问法。房是眼下住的，贷是眼下欠的，退休金在二十年以外。前面两样还能去挣，后面那样已经定了。</p>
+<h2>三、答的人</h2>
+<p>苏禾的故事停在楼下。</p>
+<p>十一次相亲，十一次坐下、介绍、回答。答得体面不难，难的是答完以后。桌上那个人问的不是她，是二十年后的两个人。她替父母答不了，替自己保证不了，只能答一句很有礼貌的话。</p>
+<p>她没说那句客气话是什么。她只讲两个「很有礼貌」，一个是他问的，一个是她答的。</p>
+<p>问的人和答的人，其实是同一批人。二十九岁的坐在这边答，三十一岁的坐在那边问。差的是谁先开口。</p>
+<p>饭吃完，各自回家。</p>
+<p>关于那半小时，她没有多讲。</p>
+<p>「回家我在楼下坐了半小时。」</p></div></div><button class="more">展开全文</button></div></div></section>
+<div class="how"><div class="box">做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；
+唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。
+这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
+胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/t05">demo/t05/</a></div></div>
+<script>
+document.querySelectorAll('.more').forEach(b=>b.onclick=()=>{const c=b.closest('.col');
+ c.classList.toggle('open');b.textContent=c.classList.contains('open')?'收起':'展开全文'});
+const tb=document.querySelectorAll('.tabs button'),cs=document.querySelectorAll('.col');
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach(x=>x.classList.remove('on'));cs.forEach(x=>x.classList.remove('act'));
+ b.classList.add('on');cs[i].classList.add('act')});
+</script>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>
