@@ -1,0 +1,43 @@
+{
+  "engine": "wangzengqi-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py 产出.md（engine_profiles.json 暂无 wangzengqi-writing 配置，用 generic 口径）",
+    "2) 逐条核对 assertions",
+    "3) 门槛 30：汪体短句口语、实名实物，应能过通用门槛"
+  ],
+  "prompts": [
+    {
+      "id": "wzq-1",
+      "prompt": "用汪曾祺体写一篇 1000 字左右的散文：小区门口的煎饼摊和摊煎饼的师傅。",
+      "expect": "闲闲起笔 → 名物说解 → 手艺细写 → 几笔传神 → 宕开一笔（故乡早点）→ 轻轻一放",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "min_chars", "value": 900 },
+        { "type": "no_regex", "value": "汪曾祺说|这就是生活|终于明白|治愈|人间烟火最|绝绝子|一口入魂|愿我们", "note": "无伪语录、无鸡汤、无文案腔" },
+        { "type": "any_regex", "value": "\\d+\\s*块|[一二三四五六七八九十]块", "note": "有实价钱" },
+        { "type": "manual", "note": "有手艺步骤与工具；人物靠动作或一句话立住；宕开不超过两次；结尾停在小事上，不转身说理" }
+      ]
+    },
+    {
+      "id": "wzq-2",
+      "prompt": "用汪曾祺体写一篇 800 字散文：阳台上种的几样花草。",
+      "expect": "草木有名 + 名物说解 + 几笔传神（家人或邻居）+ 轻轻一放；不拿草木抒情",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "静静地陪伴|治愈|岁月静好|诗意|汪曾祺说" },
+        { "type": "manual", "note": "至少三种草木叫出名字并写出形色或用处；文白夹带不超过三处" }
+      ]
+    },
+    {
+      "id": "wzq-3",
+      "prompt": "把下面这段话改成汪曾祺体（约 400 字）：‘外婆做的腊肉是世界上最好吃的美食，充满了浓浓的爱和家的味道。’",
+      "expect": "删掉评价，换成腊肉的做法与吃法（名物说解/手艺细写）→ 外婆一个动作 → 轻轻一放",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "最好吃|浓浓的爱|家的味道", "note": "原句评价词全部被做法和动作替换" },
+        { "type": "manual", "note": "腊肉做法来自用户素材，素材不足时先问，不编造" }
+      ]
+    }
+  ]
+}

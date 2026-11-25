@@ -1,0 +1,43 @@
+{
+  "engine": "maozedong-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python tools/ai-flavor-checker.py 产出.md（engine_profiles.json 暂无本引擎配置，用 generic 门槛 30）",
+    "2) 逐条核对 assertions",
+    "3) 另统计字数与平均句长（≤25 字）"
+  ],
+  "prompts": [
+    {
+      "id": "mz-1",
+      "prompt": "用毛泽东文章体的说理方法写一篇 900 字议论文：读书怎样才算真读懂。",
+      "expect": "开门见山 → 反面典型（两种读法）→ 分条列举办法 → 俗语比喻 → 预设驳论 + 两点论 → 亲切号召",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "毛主席说|毛泽东说|同志们|让我们携手", "note": "无伪语录、无冒充口吻、无空喊" },
+        { "type": "any_regex", "value": "第一|第二", "note": "有分条" },
+        { "type": "any_regex", "value": "有人会说|有人说", "note": "有预设驳论" },
+        { "type": "manual", "note": "两点论分出主次；结尾号召可执行；字数 850–1000" }
+      ]
+    },
+    {
+      "id": "mz-2",
+      "prompt": "用毛泽东文章体的说理方法写一篇 800 字议论文：年轻人该怎样对待加班。",
+      "expect": "开门见山 → 分类剖析（几种加班）→ 两点论（主要矛盾）→ 正面榜样 → 亲切号召",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "毛主席说|毛泽东说|同志们" },
+        { "type": "manual", "note": "分类标准统一；不攻击具体单位或个人" }
+      ]
+    },
+    {
+      "id": "mz-3",
+      "prompt": "用毛泽东文章体的说理方法写一篇 700 字议论文：为什么做计划总是坚持不下去。",
+      "expect": "开门见山 → 俗语比喻 → 反面典型 → 分条列举办法 → 短句排比 → 亲切号召",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "毛主席说|毛泽东说|同志们" },
+        { "type": "manual", "note": "比喻服务论点且不超过两个；平均句长 ≤25 字" }
+      ]
+    }
+  ]
+}

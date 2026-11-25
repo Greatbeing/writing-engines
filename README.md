@@ -64,6 +64,10 @@
 | [`lijuan-writing`](lijuan-writing/SKILL.md) | 李娟体散文白描 | 拆解结论（原文不入库） | 3 | 试用 |
 | [`yuhua-writing`](yuhua-writing/SKILL.md) | 余华体冷静叙事 | 拆解结论（原文不入库） | 3 | 试用 |
 | [`standup-writing`](standup-writing/SKILL.md) | 中文脱口秀稿 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`renminribao-writing`](renminribao-writing/SKILL.md) | 人民日报评论体 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`wangzengqi-writing`](wangzengqi-writing/SKILL.md) | 汪曾祺体散文 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`jinyong-writing`](jinyong-writing/SKILL.md) | 金庸体武侠叙事 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`maozedong-writing`](maozedong-writing/SKILL.md) | 毛泽东文章体说理 | 拆解结论（原文不入库） | 3 | 试用 |
 
 三个引擎共享一套结构契约（[`SPEC.md`](SPEC.md)），每个都带 `test-prompts.json` 与
 可判定的断言——引擎不是「看着像」，是「可以被检查」。
@@ -85,6 +89,10 @@ cp -r writing-engines/human-voice-writing \
       writing-engines/lijuan-writing \
       writing-engines/yuhua-writing \
       writing-engines/standup-writing \
+      writing-engines/renminribao-writing \
+      writing-engines/wangzengqi-writing \
+      writing-engines/jinyong-writing \
+      writing-engines/maozedong-writing \
       ~/.openclaw/workspace/skills/
 ```
 
