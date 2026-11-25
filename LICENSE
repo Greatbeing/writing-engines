@@ -19,25 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-适用范围（说明，本身不构成授权条款的修改）
-==========================================
-
-本许可适用于本仓库的**全部原创内容**：三个引擎的 SKILL.md、references/、
-SPEC.md、eval/ 的设计文档与脚本、tools/ 下的代码、README 与 CHANGELOG。
-此处的 "Software" 应理解为「本仓库的全部作品（the Work）」，代码与文字一体适用。
-
-我们的意图很简单：**随便用，包括商用，只要保留上面这段署名与许可声明。**
-
-不在本许可范围
---------------
-`sources/INDEX.md` 中提及的作品篇名、媒体名，以及各引擎里不超过 50 字的例证引文，
-其著作权属于原作者与首发媒体。这些内容仅用于评论、教学与技法溯源，属于合理引用，
-**本仓库无权也不对其再许可**。如需使用原文，请向原媒体取得授权。
-
-署名建议
---------
-> 技法参考：Greatbeing/writing-engines — https://github.com/Greatbeing/writing-engines
-
-SPDX-License-Identifier: MIT

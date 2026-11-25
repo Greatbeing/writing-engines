@@ -144,6 +144,7 @@ v0.2 修了 v0.1 最要命的一个毛病：v0.1 会惩罚活人感引擎自己�
 
 - **全部原创内容**（SKILL.md、references/、SPEC、eval、tools 代码）：**MIT** —
   见 [`LICENSE`](LICENSE)。随便用，包括商用，保留署名与许可声明即可。
+  适用范围与第三方材料的说明见 [`NOTICE.md`](NOTICE.md)。
 - **第三方文章**：不收录全文，仅存篇目元数据与技法映射；例证单条 ≤ 50 字并标注出处。
   著作权归原作者与首发媒体，**不在本仓库的授权范围内**。
   详见 [`sources/INDEX.md`](sources/INDEX.md)
