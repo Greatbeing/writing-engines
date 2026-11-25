@@ -1,0 +1,43 @@
+{
+  "engine": "sushi-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py --engine sushi-writing 产出.md",
+    "2) 逐条核对 assertions"
+  ],
+  "prompts": [
+    {
+      "id": "ss-1",
+      "prompt": "用苏轼白话体写一篇 600 字随笔：加班到凌晨，走出写字楼发现下雪了。",
+      "expect": "即事起兴 → 窘中写乐 → 一次转身（变与不变或转念一歇）→ 自嘲收束",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "吾|余[^额下]|矣|哉", "note": "不得半文半白" },
+        { "type": "no_regex", "value": "我们应该|要学会|人生就是|愿你", "note": "不说教不鸡汤" },
+        { "type": "any_regex", "value": "\\d+\\s*(点|分|号|块|楼)|凌晨|周[一二三四五六日]", "note": "有具体时间或地点" },
+        { "type": "manual", "note": "结尾是家常话或自嘲，不是金句" }
+      ]
+    },
+    {
+      "id": "ss-2",
+      "prompt": "用苏轼白话体写一篇 800 字随笔：被调到一个清闲的边缘岗位。",
+      "expect": "窘中写乐 + 闲人自认 + 物各有主；有真实窘迫，不卖惨不凡尔赛",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "吾|矣|哉" },
+        { "type": "no_regex", "value": "我们应该|要学会|人生就是|愿你" },
+        { "type": "manual", "note": "先写窘迫再写乐处，转身只有一次" }
+      ]
+    },
+    {
+      "id": "ss-3",
+      "prompt": "用苏轼白话体写一篇 500 字小品：和老朋友在江边吃烧烤，他说自己混得不好。",
+      "expect": "主客问答：客的悲观有道理 → 变与不变 → 物各有主 → 自嘲收束",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "吾|矣|哉" },
+        { "type": "manual", "note": "客只悲观一次、作者只答一次，不像访谈" }
+      ]
+    }
+  ]
+}

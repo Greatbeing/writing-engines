@@ -57,6 +57,7 @@
 | [`guanfang-writing`](guanfang-writing/SKILL.md) | 官方时评（浙江宣传体） | 10 篇（拆解结论入库，原文不入） | 12 | 可用 |
 | [`feature-writing`](feature-writing/SKILL.md) | 人物特稿（《人物》杂志体） | 10 篇（2020–2023） | 10 | 可用 |
 | [`gongwen-writing`](gongwen-writing/SKILL.md) | 党政机关公文（GB/T 9704-2012，15 个法定文种） | 9 个文种模板 | 6 | 可用 |
+| [`sushi-writing`](sushi-writing/SKILL.md) | 苏轼白话体随笔（散文小品＋尺牍） | 13 篇（公版） | 3 | 试用 |
 
 三个引擎共享一套结构契约（[`SPEC.md`](SPEC.md)），每个都带 `test-prompts.json` 与
 可判定的断言——引擎不是「看着像」，是「可以被检查」。
@@ -71,6 +72,7 @@ cp -r writing-engines/human-voice-writing \
       writing-engines/guanfang-writing \
       writing-engines/feature-writing \
       writing-engines/gongwen-writing \
+      writing-engines/sushi-writing \
       ~/.openclaw/workspace/skills/
 ```
 
