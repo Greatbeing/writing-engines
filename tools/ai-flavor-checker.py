@@ -82,6 +82,10 @@ COLLOQUIAL = [
 RE_HARD_PATTERN = re.compile(r"在(?:这个|当今|当下)[^，。！？]{0,12}(?:时代|社会|背景)")
 RE_FORMULA = re.compile(r"(?:不是|并非|而非)[^。！？\n]{1,30}?而是")
 RE_DIGITS = re.compile(r"\d+(?:\.\d+)?")
+# 「这一」多数时候是指示代词（这一类、这一次、这一代人），不是连接词。
+# v0.2 把它整词计入软档，凡「这一」必扣分——实测在正常中文里假阳性极多
+# （19 篇稿子里大批命中 3 分左右，全是「这一类」「这一条」）。这里按后接量词排除。
+RE_YIZHE_DEMON = re.compile(r"这一[类种点块次条年天切步代部些边头回场层]")
 RE_SENT_SPLIT = re.compile(r"(?<=[。！？!?])")
 
 
@@ -193,7 +197,10 @@ def measure(text):
 
     hard = count_list(flat, HARD_OFFICIAL)
     hard_n = sum(hard.values()) + len(RE_HARD_PATTERN.findall(flat))
-    soft_n = sum(count_list(flat, SOFT_OFFICIAL).values())
+    _soft = count_list(flat, SOFT_OFFICIAL)
+    if "这一" in _soft:
+        _soft["这一"] = max(0, _soft["这一"] - len(RE_YIZHE_DEMON.findall(flat)))
+    soft_n = sum(_soft.values())
     abs_n = sum(count_list(flat, ABSTRACT).values())
     col_n = sum(count_list(flat, COLLOQUIAL).values())
     digit_n = len(RE_DIGITS.findall(flat))
@@ -214,7 +221,7 @@ def measure(text):
         "formula_n": formula_n,
         "long_ratio": (long_n / n_sent) if n_sent else 0.0,
         "parallel_run": par_run,
-        "hits": {"hard": hard, "soft": count_list(flat, SOFT_OFFICIAL),
+        "hits": {"hard": hard, "soft": _soft,
                  "abs": count_list(flat, ABSTRACT), "col": count_list(flat, COLLOQUIAL)},
     }
 
