@@ -13,6 +13,7 @@
 | `build_articles.py` | 把引擎 `examples/*.md` 生成为官网文章页 | — |
 | `build_compare.py` | 把 `demo/<题号>/` 的四版生成为同题对照页 | — |
 | `run_prompts.py` | 按各引擎 `test-prompts.json` 的断言核对 `examples/` 产出（`--all`） | v0.1 |
+| `diagnose.py` | 诊断一篇稿子：命中的原子族估计 + 最缺的三族 + 练习链接 | v0.1 |
 | `tests/test_checker.py` | checker 的回归测试 | v0.2 |
 
 ## ai-flavor-checker.py v0.2
@@ -123,5 +124,28 @@ python3 tools/run_prompts.py jinyong-writing
 ```
 
 自动判定 checker_max / min_chars / length_max / no_regex / any_regex / count_min / count_max，manual 只列出。**字数口径统一为 checker 的「规模」字数**（去 markdown 与空白，含标点）。
+
+## diagnose.py：这篇稿子缺哪几族
+
+checker 告诉你「像不像 AI」，不告诉你「用了哪些动作」。`diagnose.py` 补这一段：
+
+```bash
+python tools/diagnose.py 稿子.md
+python tools/diagnose.py --engine luxun-writing 稿子.md
+python tools/diagnose.py --json 稿子.md
+python tools/diagnose.py --list-families
+```
+
+它输出四样东西：字数/句数/均句长、checker 分（generic + 可选引擎）、
+命中的族估计（按强度排序，每族给「依据」与「证据」）、最缺的三个族（按
+「族内原子数 × 未命中强度」排序）并链接到 `learn/` 的对应练习。
+
+**它是启发式，不是判断。** 只数表面证据：首句长度与具体物、数字的货币/度量单位、
+引号术语、转折词、末句形态、类指与习惯副词、首尾共享词。反讽、留白、言外之意
+都判不出，好坏更判不出。输出里每族都写了依据，就是为了让你能反驳它。
+「独有」的 37 个原子不在估计范围内——那要读各引擎自己的原子表。
+
+对练习册/合集运行（如 `learn/01-练习-认原子.md`）时统计对象是全文，
+只用于确认工具能跑通，不代表其中任何一段。
 
 跨引擎原子总库在 `atoms/LIBRARY.md`（按族汇总）与 `atoms/index.json`（机器可读）；`lint_skill.py` 的 A1–A3 校验各引擎原子文件的族标签与 index 一致。
