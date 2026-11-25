@@ -163,7 +163,7 @@ def main():
 <h2>{html.escape(a['title'])}</h2><p>{html.escape(a['excerpt'])}</p>
 <div class="meta">{a['date']} · {a['chars']} 字 · {a['mins']} 分钟</div></a>""" for a in arts)
     idx = f"""<section class="list"><h1>文章</h1>
-<p class="intro">引擎写出来的东西。不讲方法，只看成品。</p>{items}</section>"""
+<p class="intro">引擎写出来的东西。不讲方法，只看成品。<br>想看差别：<a href="../compare/t09.html">同题四体 · 同一份素材，四种写法 →</a></p>{items}</section>"""
     (OUT / "index.html").write_text(page("文章", idx, "../"), encoding="utf-8")
     print(f"built {len(arts)} articles -> {OUT.relative_to(ROOT)}")
     for a in arts:
