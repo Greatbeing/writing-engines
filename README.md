@@ -59,6 +59,11 @@
 | [`gongwen-writing`](gongwen-writing/SKILL.md) | 党政机关公文（GB/T 9704-2012，15 个法定文种） | 9 个文种模板 | 6 | 可用 |
 | [`sushi-writing`](sushi-writing/SKILL.md) | 苏轼白话体随笔（散文小品＋尺牍） | 13 篇（公版） | 3 | 试用 |
 | [`luxun-writing`](luxun-writing/SKILL.md) | 鲁迅体白话杂文 | 14 篇（公版） | 3 | 试用 |
+| [`wangxiaobo-writing`](wangxiaobo-writing/SKILL.md) | 王小波体幽默说理杂文 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`zhangailing-writing`](zhangailing-writing/SKILL.md) | 张爱玲体散文与小说描写 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`lijuan-writing`](lijuan-writing/SKILL.md) | 李娟体散文白描 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`yuhua-writing`](yuhua-writing/SKILL.md) | 余华体冷静叙事 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`standup-writing`](standup-writing/SKILL.md) | 中文脱口秀稿 | 拆解结论（原文不入库） | 3 | 试用 |
 
 三个引擎共享一套结构契约（[`SPEC.md`](SPEC.md)），每个都带 `test-prompts.json` 与
 可判定的断言——引擎不是「看着像」，是「可以被检查」。
@@ -75,6 +80,11 @@ cp -r writing-engines/human-voice-writing \
       writing-engines/gongwen-writing \
       writing-engines/sushi-writing \
       writing-engines/luxun-writing \
+      writing-engines/wangxiaobo-writing \
+      writing-engines/zhangailing-writing \
+      writing-engines/lijuan-writing \
+      writing-engines/yuhua-writing \
+      writing-engines/standup-writing \
       ~/.openclaw/workspace/skills/
 ```
 

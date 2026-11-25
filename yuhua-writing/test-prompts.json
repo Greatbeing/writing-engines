@@ -1,0 +1,43 @@
+{
+  "engine": "yuhua-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py --engine yuhua-writing 产出.md",
+    "2) 逐条核对 assertions",
+    "3) 门槛 30：口语叙事天然短句、低书面腔，应比杂文更低"
+  ],
+  "prompts": [
+    {
+      "id": "yh-1",
+      "prompt": "用余华体写一篇 1200 字小小说：一个补车胎的老人，一辈子只买过三个西瓜。",
+      "expect": "转述套层 → 重复结构（三个西瓜）× 数字与账目 → 口语对话推进 → 死亡轻写 → 荒诞消解 → 平静收尾",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "min_chars", "value": 1100 },
+        { "type": "no_regex", "value": "余华说|撕心裂肺|泪流满面|悲痛欲绝|活着的意义|这就是人生|让我们", "note": "无伪语录、无情绪词、无升华" },
+        { "type": "any_regex", "value": "第一个|第二个|第三个", "note": "有三次重复结构" },
+        { "type": "manual", "note": "死亡不超过两句且紧接日常动作；有一处让人想笑的地方" }
+      ]
+    },
+    {
+      "id": "yh-2",
+      "prompt": "用余华体写一篇 1000 字短篇：一对兄弟轮流照顾瘫痪的母亲，账记在一本作业本上。",
+      "expect": "物件贯穿（作业本）+ 数字与账目 + 口语对话推进 + 自嘲式幽默；不嘲弄病人",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "余华说|泪流满面|心如刀割|让我们" },
+        { "type": "manual", "note": "幽默对着处境或人物自嘲，不对着瘫痪本身" }
+      ]
+    },
+    {
+      "id": "yh-3",
+      "prompt": "用余华体写一篇 800 字小小说：一个人死后，在殡仪馆排队等号，遇见了欠他钱的邻居。",
+      "expect": "死亡轻写（亡者第一人称）→ 荒诞消解 → 口语对话推进 → 平静收尾",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "余华说|活着的意义|这就是人生" },
+        { "type": "manual", "note": "不改编真实事件或真实死者；荒诞不超过两三处" }
+      ]
+    }
+  ]
+}

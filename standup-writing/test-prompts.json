@@ -1,0 +1,43 @@
+{
+  "engine": "standup-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py 产出.md（engine_profiles.json 暂无 standup-writing 配置，用 generic）",
+    "2) 逐条核对 assertions",
+    "3) 门槛 30：口播稿口语词多、句子短，应比杂文更低"
+  ],
+  "prompts": [
+    {
+      "id": "su-1",
+      "prompt": "用脱口秀稿体写一段 3–5 分钟的单口：打工人的“已读不回”焦虑。",
+      "expect": "观察切口 → 自嘲 → 三段式 → 夸张推演 → act-out → callback",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "综上所述|值得注意的是|让我们|热爱生活|哈哈", "note": "无书面腔、无鸡汤、不自己笑" },
+        { "type": "any_regex", "value": "（停顿）|（学|（压低", "note": "有 act-out / 停顿提示" },
+        { "type": "any_regex", "value": "我这个人|我也|我就是", "note": "有自嘲" },
+        { "type": "manual", "note": "结尾有 callback；无地域、性别、疾病梗；不点名真人" }
+      ]
+    },
+    {
+      "id": "su-2",
+      "prompt": "写一段 1 分钟短视频口播：一人分饰“我”和“我的闹钟”。",
+      "expect": "观察切口 + act-out 角色轮换 + 反转收尾",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "综上所述|让我们|哈哈" },
+        { "type": "manual", "note": "角色切换用（）标清；平均句长 ≤ 15 字" }
+      ]
+    },
+    {
+      "id": "su-3",
+      "prompt": "用吐槽会式 roast 写 2 分钟：吐槽“公司年会”这件事。",
+      "expect": "先抬后打 → 类比错位 → 最后一刀转向自己",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "女人就是|男人都|.地人都", "note": "无性别、地域梗" },
+        { "type": "manual", "note": "冒犯向上（机制、老板式权力）或向内；不点名真实公司或个人" }
+      ]
+    }
+  ]
+}

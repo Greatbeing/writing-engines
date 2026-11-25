@@ -1,0 +1,42 @@
+{
+  "engine": "zhangailing-writing",
+  "checker_threshold": 35,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py --engine zhangailing-writing 产出.md",
+    "2) 逐条核对 assertions",
+    "3) 门槛 35：比喻与格言式断语天然偏书面"
+  ],
+  "prompts": [
+    {
+      "id": "zal-1",
+      "prompt": "用张爱玲体写一篇 800 字散文：合租房里的一台冰箱。",
+      "expect": "格言起笔 → 俗物入文 → 以物写心 → 色彩点睛 → 冷眼算盘 → 反转体谅 → 格言收束",
+      "assertions": [
+        { "type": "checker_max", "value": 35 },
+        { "type": "no_regex", "value": "的罢|张爱玲说|让我们|岁月静好|温柔以待|旗袍|留声机", "note": "无民国腔、无伪语录、无鸡汤" },
+        { "type": "any_regex", "value": "像", "note": "有比喻" },
+        { "type": "manual", "note": "心理落在物件上，全文无“她很孤独”式直陈；首尾各一句断语" }
+      ]
+    },
+    {
+      "id": "zal-2",
+      "prompt": "用张爱玲体写一篇 1000 字短篇片段：相亲饭局上的两个人。",
+      "expect": "冷眼算盘 + 色彩点睛 + 声光切景 + 反转体谅；不审判人物",
+      "assertions": [
+        { "type": "checker_max", "value": 35 },
+        { "type": "no_regex", "value": "的罢|张爱玲说|让我们|愿你" },
+        { "type": "manual", "note": "双方的算计都写到；至少一处精确颜色；不羞辱人物" }
+      ]
+    },
+    {
+      "id": "zal-3",
+      "prompt": "用张爱玲体写一篇 600 字散文：搬家时清出来的旧物。",
+      "expect": "格言起笔 → 以物写心 → 苍凉底色 → 格言收束",
+      "assertions": [
+        { "type": "checker_max", "value": 35 },
+        { "type": "no_regex", "value": "的罢|张爱玲说|让我们|岁月静好" },
+        { "type": "manual", "note": "苍凉只放一笔，不伤春悲秋；比喻不超过五处" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "engine": "wangxiaobo-writing",
+  "checker_threshold": 35,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py --engine wangxiaobo-writing 产出.md",
+    "2) 逐条核对 assertions",
+    "3) 门槛 35：说理文的推理连接词天然偏书面"
+  ],
+  "prompts": [
+    {
+      "id": "wxb-1",
+      "prompt": "用王小波体写一篇 800 字杂文：开会时拍照比开会本身还重要。",
+      "expect": "亲历小事起笔 → 平静说荒唐 → 一本正经推演 → 科学类比 → 有趣尺度 → 自嘲垫底 → 俏皮收尾",
+      "assertions": [
+        { "type": "checker_max", "value": 35 },
+        { "type": "no_regex", "value": "王小波说|让我们|值得深思|相信未来|愿每个人", "note": "无伪语录、无鸡汤" },
+        { "type": "any_regex", "value": "假如|如果|按照这个", "note": "有推理链" },
+        { "type": "any_regex", "value": "有趣|无趣|乐趣", "note": "有趣尺度出现" },
+        { "type": "manual", "note": "笑点来自推理而非段子；靶子是做法不是具体个人或单位" }
+      ]
+    },
+    {
+      "id": "wxb-2",
+      "prompt": "用王小波体写一篇 900 字随笔：为什么每个 App 都要我“完善个人资料”。",
+      "expect": "动物寓言或科学类比 + 一本正经推演 + 沉默者立场；不点名具体公司",
+      "assertions": [
+        { "type": "checker_max", "value": 35 },
+        { "type": "no_regex", "value": "王小波说|让我们|值得深思" },
+        { "type": "manual", "note": "推理链至少三步；有一处自嘲" }
+      ]
+    },
+    {
+      "id": "wxb-3",
+      "prompt": "用王小波体写一篇 700 字短评，回应“读闲书没用，不如多刷题”。",
+      "expect": "戏仿腔调摆出对方说法 → 一本正经推演 → 有趣尺度 → 俏皮收尾",
+      "assertions": [
+        { "type": "checker_max", "value": 35 },
+        { "type": "no_regex", "value": "王小波说|让我们|愿每个人" },
+        { "type": "manual", "note": "对方观点被公平呈现；结尾轻，不说教" }
+      ]
+    }
+  ]
+}
