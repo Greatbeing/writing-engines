@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相亲饭局 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button><button data-fs="1" aria-label="放大字号">A＋</button><button id="night" aria-label="夜读">夜读</button><a href="../articles/">目录</a></div></div></nav>
+<div id="bar"></div>
+<article>
+<div class="head"><div class="feng">散文之风 · 张爱玲体</div>
+<h1>相亲饭局</h1>
+<div class="meta"> · 约 1200 字 · 读完约 3 分钟</div></div>
+<div class="body"><p>相亲饭局上，菜是点给对方看的，不是点给自己吃的。</p>
+<p>餐厅是男方定的，商场六楼的一家江浙菜，人均一百二，不算贵，也不算便宜，正好是一个不想被人看低、又不想被人当冤大头的价钱。他提前十分钟到，挑了靠窗的位子，把菜单从头翻到尾，又从尾翻回头，像在核对一份合同。</p>
+<p>她晚到了七分钟。七分钟是她在楼下奶茶店门口算好的，早到显得急，晚到十分钟以上又显得没诚意。她穿一件燕麦色的毛衣，领口别着一枚小小的珍珠胸针，是她妈的。她妈说，第一次见面，要素，又不能寒酸。</p>
+<p>“你点吧。”他把菜单推过去。</p>
+<p>“你点，我不挑。”她又推回来。</p>
+<p>菜单在两个人中间来回走了一趟，像一份谁也不肯先签字的文件。最后是他点的：松鼠鳜鱼、蟹粉豆腐、一个清炒时蔬，再加一个腌笃鲜。他点鳜鱼的时候看了她一眼，她没有说话，他就知道点对了。贵的菜要有一个，显出他的诚意；素的菜也要有一个，显出他过日子不铺张。</p>
+<p>她看着他点菜，心里也有一本账。他没有问她吃不吃辣，说明他不大会照顾人；可他也没有点最贵的那道龙井虾仁，说明他不爱充场面。这两笔一抵，账面上是平的。</p>
+<p>介绍人事先把两边的底都交过了。他在一家物流公司做主管，有房，房贷还剩十八年；她在小学教英语，有编制，父母退休金加起来一万出头。这些他们都知道，所以谁也不提，只说天气，说这家的鱼做得酸了一点，说最近地铁又涨价了。</p>
+<p>松鼠鳜鱼端上来，炸得金黄，浇着一层番茄色的汁，亮得有点假，像商场橱窗里的塑料样品。他给她夹了一块鱼腹，那是最嫩的地方。她道了谢，把鱼刺一根一根挑出来，排在骨碟边上，排得很齐，像是在交作业。</p>
+<p>他注意到她挑刺挑得仔细，觉得她是个能过日子的人。她注意到他夹完鱼腹，自己吃的是鱼尾，觉得他大概是个肯让的人，又疑心他是做给她看的。</p>
+<p>两个人都在看，都知道对方在看。</p>
+<p>手机在桌上震了一下。是她的，介绍人发来一个问号。她没回，把手机扣过去，屏幕朝下。他看见了，没有问。</p>
+<p>腌笃鲜最后上来，一大砂锅，汤是奶白色的，春笋切成滚刀块，咸肉的红边泡得发了白。他给她盛了一碗，她说够了够了，他又多舀了一勺笋。</p>
+<p>“我妈也爱做这个。”他说。</p>
+<p>这句话说完，他自己先愣了一下，好像不该在这时候提到妈。她却笑了，说：“我妈不会做，我们家都是我爸做饭。”</p>
+<p>这是那天晚上两个人说的唯一一句不在账本上的话。</p>
+<p>结账的时候，他抢着扫了码，四百三十六。她说下次她请。下次这两个字一出口，两个人都听见了，都假装没听见。</p>
+<p>下楼的电梯里只有他们两个。电梯门是不锈钢的，照出两个模糊的人影，一高一矮，隔着一拳的距离。电梯叮的一声到了一楼，门开了，外面商场的音乐涌进来，放的是一首去年很红的歌。</p>
+<p>其实他们谁也没有错。三十出头的人，手里没有多少可以输的东西，只好每一样都掂一掂。掂得仔细，不是因为精，是因为怕。</p>
+<p>门口他问她怎么回去，她说坐地铁，他说送她到地铁站，她说不用。他就站在商场门口，看着她走进人群里，那件燕麦色的毛衣很快就看不见了。</p>
+<p>相亲的饭，吃的是一顿饭的工夫，算的是半辈子的账。</p></div></article>
+<div class="note"><div class="box">本文是引擎 <code>zhangailing-writing</code> 的模型产出示例，不是语料原文。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/blob/master/zhangailing-writing/examples/zal-2-相亲饭局.md">zhangailing-writing/examples/zal-2-相亲饭局.md</a></div></div>
+<div class="pager"><a href="zhangailing-39.html">← 冰箱</a><a href="zhangailing-41.html">旧物 →</a></div>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三个西瓜 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button><button data-fs="1" aria-label="放大字号">A＋</button><button id="night" aria-label="夜读">夜读</button><a href="../articles/">目录</a></div></div></nav>
+<div id="bar"></div>
+<article>
+<div class="head"><div class="feng">叙事之风 · 余华体</div>
+<h1>三个西瓜</h1>
+<div class="meta"> · 约 1221 字 · 读完约 3 分钟</div></div>
+<div class="body"><p>我在县城汽车站旁边认识陈福生的时候，他已经六十八岁了，在一棵梧桐树底下补自行车胎。他说他这辈子买过三个西瓜，说完自己先笑了，露出四颗牙。</p>
+<p>他说第一个西瓜是一九七九年买的。那年他二十三岁，刚娶了桂英。桂英说想吃西瓜，他走了十二里路到镇上，花了四毛钱，挑了一个最大的，抱回来的时候两条胳膊都麻了。</p>
+<p>“你买这么大干什么？”桂英说。</p>
+<p>“大的划算。”他说。</p>
+<p>“划算个屁，吃不完要坏的。”</p>
+<p>桂英嘴上这么说，那天晚上吃了半个，剩下半个用篮子吊在井里，第二天又吃了。陈福生说，那是他见过桂英吃东西吃得最多的一回。</p>
+<p>第二个西瓜是一九九一年买的。儿子小军考上了县一中，全村就考上两个。陈福生又走了十二里路，这回花了一块二，还是挑最大的。路上他算了算，西瓜涨了三倍，他补一个胎还是五毛，这账不对。可他还是买了。</p>
+<p>小军抱着西瓜说：“爹，这么大，你哪来的钱？”</p>
+<p>“卖了半袋谷子。”他说。</p>
+<p>“那过年吃什么？”</p>
+<p>“过年再说过年的事。”</p>
+<p>那天一家三口坐在门槛上吃西瓜，籽吐了一地，鸡跑过来啄。桂英拿扫帚赶鸡，鸡不走，桂英就笑，说这鸡比你爹还馋。</p>
+<p>第三个西瓜他讲得很慢。</p>
+<p>二〇〇三年夏天，小军在省城的工地上从脚手架上掉了下来。陈福生赶到的时候，小军已经躺在一个铁柜子里了。包工头给了他三万二千块钱，用报纸包着，报纸上印着一个女明星，在笑。陈福生把钱揣进怀里，在医院门口的水果摊上买了一个西瓜，花了八块。</p>
+<p>他说他到现在也不知道那天为什么要买西瓜。</p>
+<p>他抱着西瓜坐了一夜的长途车回来。桂英在村口等他，看见他抱着西瓜，没看见小军，就什么都知道了。</p>
+<p>桂英说：“西瓜贵了吧？”</p>
+<p>“八块。”他说。</p>
+<p>“八块。”桂英说，“够买十六斤米。”</p>
+<p>那个西瓜他们切开了，谁也没吃，放在小军的床头，一直放到烂了，招了一屋子苍蝇。桂英一边赶苍蝇一边骂，骂苍蝇，骂西瓜，骂他乱花钱，就是不骂别的。</p>
+<p>桂英是二〇一〇年走的。走之前说想喝口米汤，他去灶屋熬，米汤熬好了，桂英已经不用喝了。他就自己喝了，喝完把碗洗了，扣在灶台上。</p>
+<p>后来他一个人过。早上补胎，中午吃一碗面，加一个鸡蛋，晚上不吃，他说人老了，晚上吃了睡不着，不吃也睡不着，那就不吃，省一顿。</p>
+<p>他把小军那三万二千块钱存进了信用社，存折压在桂英的枕头底下。十几年里他取过两回，一回给桂英看病，一回给桂英买棺材。他说剩下的不动了，留着给自己买个好点的骨灰盒，“不能比桂英的差，差了她要骂。”</p>
+<p>每年夏天，镇上卖西瓜的三轮车开到汽车站门口，喇叭里喊“又沙又甜，不甜不要钱”。他就低着头补胎，补完一个，再补一个。卖瓜的认得他，问他买不买，他说不买，卖瓜的说你天天说不买，他说我天天说的都是真话。</p>
+<p>我问他，那后来呢，后来还买西瓜吗。</p>
+<p>他把一个补好的车胎按进水盆里，看了看，没冒泡。</p>
+<p>“不买了，”他说，“一个人买西瓜，太大了，吃不完要坏的。”</p>
+<p>说完他又笑了，说这句话是桂英说的，说了四十多年，他总算听进去了。</p>
+<p>我想说点什么，他已经低头去找下一个胎了。</p>
+<p>有个学生来取车，他收了三块钱，往铁皮盒子里一丢，叮当响了一声。我的车也到了。</p></div></article>
+<div class="note"><div class="box">本文是引擎 <code>yuhua-writing</code> 的模型产出示例，不是语料原文。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/blob/master/yuhua-writing/examples/yh-1-三个西瓜.md">yuhua-writing/examples/yh-1-三个西瓜.md</a></div></div>
+<div class="pager"><a href="feature-19.html">← 选题评估：开了十年便利店的老板（素材：仅朋友圈截图）</a><a href="yuhua-21.html">作业本 →</a></div>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>

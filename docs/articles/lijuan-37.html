@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一场雪 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+</style></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风</a><div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button><button data-fs="1" aria-label="放大字号">A＋</button><button id="night" aria-label="夜读">夜读</button><a href="../articles/">目录</a></div></div></nav>
+<div id="bar"></div>
+<article>
+<div class="head"><div class="feng">散文之风 · 李娟体</div>
+<h1>第一场雪</h1>
+<div class="meta"> · 约 854 字 · 读完约 2 分钟</div></div>
+<div class="body"><p>早上六点四十，我拉开窗帘，外面白了。</p>
+<p>我愣了大概有十秒钟，然后去叫我妈。我妈在厨房里煮挂面，头也不回，说：“下雪了你就不上班了？”</p>
+<p>我说不是，我就是告诉你一声。</p>
+<p>她说她六点就看见了，楼下的车顶上一指厚，还用说吗。</p>
+<p>我只好自己去穿衣服。秋裤，毛衣，羽绒服，围巾，帽子。穿完了站在镜子前，像一个装得太满的垃圾袋。我妈看了一眼，说：“你这是要去南极。”</p>
+<p>出了单元门，雪还在下。雪很小，一粒一粒的，不像书上写的鹅毛，像谁在天上筛面粉，筛得不太认真。地上已经积了一层，踩上去吱吱响。我走了几步，回头看，身后一串脚印，歪歪扭扭的，像一个喝了酒的人走的。可我明明没喝。</p>
+<p>楼下的电动车全成了白馒头，一排十几个，整整齐齐。只有一辆车座上被人用手指写了个“王”字。我不知道是谁写的，也不知道写给谁。</p>
+<p>小区门口的保安老李在扫雪。他扫得很慢，扫一下，停一下，看看天。天还在往下撒，他扫过的地方，过一会儿又白了。我觉得他这活儿是永远干不完的，就跟我上班一样。</p>
+<p>去公交站要走八百米。平时我走九分钟，那天走了十六分钟。有一段下坡，我是侧着身子一点一点挪下去的，两只手张开，像一只要起飞又不太敢的鸭子。旁边一个小学生，背着书包，直接从坡上滑了下去，滑得很好看。他到了坡底，回头看了我一眼。</p>
+<p>我假装在看手机。</p>
+<p>公交车晚了十二分钟。站台上挤了二十多个人，都缩着脖子，没人说话，呼出来的气一团一团地往上飘。雪落在每个人的肩膀上，落在帽子上，落在一个大叔的眉毛上。大叔也不擦，就那么白着眉毛站着，像一下子老了十岁。</p>
+<p>车终于来了。我挤上去，靠着窗。车慢慢开上高架，我往外看，整个城都是白的。高楼是白的，桥是白的，远处那一大片我从来叫不上名字的厂房，也是白的。路上的车开得都很小心，红色的尾灯一串一串，慢慢地挪。</p>
+<p>这么大的城，一夜之间被雪盖住了，盖得这么平，这么不讲理。我们这一车人，坐在里面，小得就像雪里的几粒灰。</p>
+<p>可灰也得去上班。</p>
+<p>到了单位，电梯口站着我们科长。他看了看我，说：“你帽子上还顶着雪呢。”</p>
+<p>我伸手一摸，摸下来一小撮，已经化成水了，顺着手指往下滴。</p>
+<p>我把它甩在了地上。</p></div></article>
+<div class="note"><div class="box">本文是引擎 <code>lijuan-writing</code> 的模型产出示例，不是语料原文。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/blob/master/lijuan-writing/examples/lj-2-第一场雪.md">lijuan-writing/examples/lj-2-第一场雪.md</a></div></div>
+<div class="pager"><a href="lijuan-36.html">← 阳台上的菜地</a><a href="lijuan-38.html">lj-3-外婆 →</a></div>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+</script></body></html>

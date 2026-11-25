@@ -11,9 +11,22 @@ import markdown
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "articles"
 ENGINES = {  # 引擎目录 -> (风名, 文体, 短名)
-    "human-voice-writing": ("城市之风", "活人感", "human"),
-    "guanfang-writing":    ("庙堂之风", "官方体", "guanfang"),
-    "feature-writing":     ("人间之风", "特稿",   "feature"),
+    # 风名与 docs/index.html 的分组一致：议论 / 叙事 / 散文 / 实用 / 公文
+    "guanfang-writing":    ("庙堂之风", "官方体",   "guanfang"),
+    "luxun-writing":       ("议论之风", "鲁迅体",   "luxun"),
+    "wangxiaobo-writing":  ("议论之风", "王小波体", "wangxiaobo"),
+    "renminribao-writing": ("议论之风", "人民日报", "renminribao"),
+    "maozedong-writing":   ("议论之风", "说理文",   "maozedong"),
+    "feature-writing":     ("人间之风", "特稿",     "feature"),
+    "yuhua-writing":       ("叙事之风", "余华体",   "yuhua"),
+    "jinyong-writing":     ("叙事之风", "金庸体",   "jinyong"),
+    "human-voice-writing": ("城市之风", "活人感",   "human"),
+    "sushi-writing":       ("散文之风", "苏轼体",   "sushi"),
+    "wangzengqi-writing":  ("散文之风", "汪曾祺体", "wangzengqi"),
+    "lijuan-writing":      ("散文之风", "李娟体",   "lijuan"),
+    "zhangailing-writing": ("散文之风", "张爱玲体", "zhangailing"),
+    "standup-writing":     ("实用之风", "脱口秀",   "standup"),
+    "gongwen-writing":     ("公文之风", "公文",     "gongwen"),
 }
 
 LOGO = ('<svg viewBox="0 0 96 56" width="{w}" fill="none" stroke-linecap="round" aria-hidden="true">'
