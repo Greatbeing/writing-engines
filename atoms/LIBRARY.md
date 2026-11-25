@@ -2,9 +2,9 @@
 
 > 方案 a：各引擎原子文件保留原样，只在每个原子下加 `**族**：X`。本页按族汇总；机器可读版见 [index.json](index.json)，一致性由 `tools/lint_skill.py`（A1–A3）校验。
 
-共 143 个原子｜18 族｜独有 37 个。
+共 153 个原子｜18 族｜独有 42 个。
 
-## 小处起笔（8）
+## 小处起笔（9）
 
 **通用定义**：从一个极小、具体、人人见过的东西或一件亲历小事切入，让大题目先有落脚点。
 
@@ -25,6 +25,7 @@
 - [renminribao·以小见大](../renminribao-writing/references/atom-ops.md)（5. 以小见大
 ）
 - [human-voice·场景微电影](../human-voice-writing/references/atoms.md)（5 场景微电影）
+- [acheng·物事起笔](../acheng-writing/references/atom-ops.md)（1. 物事起笔）
 
 ## 自嘲（7）
 
@@ -47,7 +48,7 @@
 - [yuhua·自嘲式幽默](../yuhua-writing/references/atom-ops.md)（9. 自嘲式幽默
 ）
 
-## 不收的收尾（6）
+## 不收的收尾（7）
 
 **通用定义**：结尾不升华、不号召、不总结，停在一个动作、画面、家常话或冷话上，余味自留。
 
@@ -64,6 +65,7 @@
 - [wangxiaobo·俏皮收尾](../wangxiaobo-writing/references/atom-ops.md)（10. 俏皮收尾
 ）
 - [human-voice·松弛哲学收尾](../human-voice-writing/references/atoms.md)（12 松弛哲学收尾）
+- [acheng·冷收](../acheng-writing/references/atom-ops.md)（10. 冷收）
 
 ## 金句断语（10）
 
@@ -241,7 +243,7 @@
 - [lijuan·拟人与对话万物](../lijuan-writing/references/atom-ops.md)（7. 拟人与对话万物
 ）
 
-## 冷笔白描（9）
+## 冷笔白描（11）
 
 **通用定义**：只写名词、动词、时间、数字与步骤，不加形容词与评价，让读者自己起反应。
 
@@ -265,6 +267,8 @@
 ）
 - [zhangailing·冷眼算盘](../zhangailing-writing/references/atom-ops.md)（5. 冷眼算盘
 ）
+- [acheng·吃相](../acheng-writing/references/atom-ops.md)（2. 吃相）
+- [acheng·动作代心理](../acheng-writing/references/atom-ops.md)（3. 动作代心理）
 
 ## 命名（5）
 
@@ -280,7 +284,7 @@
 - [human-voice·动词化网梗](../human-voice-writing/references/atoms.md)（2 动词化网梗）
 - [human-voice·理论家族](../human-voice-writing/references/atoms.md)（14 理论家族）
 
-## 典型画像（7）
+## 典型画像（8）
 
 **通用定义**：几笔立住一个「这样的人」：动作、口头禅、标签，正反典型或人物样本。
 
@@ -298,6 +302,7 @@
 ）
 - [wangzengqi·几笔传神](../wangzengqi-writing/references/atom-ops.md)（4. 几笔传神
 ）
+- [acheng·一句立人](../acheng-writing/references/atom-ops.md)（4. 一句立人）
 
 ## 号召落点（2）
 

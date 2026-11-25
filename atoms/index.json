@@ -1142,5 +1142,85 @@
     "family": "独有",
     "file": "human-voice-writing/references/atoms.md",
     "heading": "#21 双关梗"
+  },
+  {
+    "id": "acheng.1",
+    "name": "物事起笔",
+    "engine": "acheng-writing",
+    "family": "小处起笔",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 1. 物事起笔\n"
+  },
+  {
+    "id": "acheng.2",
+    "name": "吃相",
+    "engine": "acheng-writing",
+    "family": "冷笔白描",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 2. 吃相\n"
+  },
+  {
+    "id": "acheng.3",
+    "name": "动作代心理",
+    "engine": "acheng-writing",
+    "family": "冷笔白描",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 3. 动作代心理\n"
+  },
+  {
+    "id": "acheng.4",
+    "name": "一句立人",
+    "engine": "acheng-writing",
+    "family": "典型画像",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 4. 一句立人\n"
+  },
+  {
+    "id": "acheng.5",
+    "name": "白话对白",
+    "engine": "acheng-writing",
+    "family": "独有",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 5. 白话对白\n"
+  },
+  {
+    "id": "acheng.6",
+    "name": "老话说道",
+    "engine": "acheng-writing",
+    "family": "独有",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 6. 老话说道\n"
+  },
+  {
+    "id": "acheng.7",
+    "name": "文言骨",
+    "engine": "acheng-writing",
+    "family": "独有",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 7. 文言骨\n"
+  },
+  {
+    "id": "acheng.8",
+    "name": "重事轻写",
+    "engine": "acheng-writing",
+    "family": "独有",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 8. 重事轻写\n"
+  },
+  {
+    "id": "acheng.9",
+    "name": "俗中见道",
+    "engine": "acheng-writing",
+    "family": "独有",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 9. 俗中见道\n"
+  },
+  {
+    "id": "acheng.10",
+    "name": "冷收",
+    "engine": "acheng-writing",
+    "family": "不收的收尾",
+    "file": "acheng-writing/references/atom-ops.md",
+    "heading": "## 10. 冷收\n"
   }
 ]

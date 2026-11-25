@@ -1,0 +1,47 @@
+{
+  "engine": "acheng-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py 产出.md --engine acheng-writing",
+    "2) 逐条核对 assertions",
+    "3) 门槛 30：阿城体短句白描、少形容，应能过通用门槛"
+  ],
+  "prompts": [
+    {
+      "id": "ac-1",
+      "prompt": "用阿城体写一篇 1000 字左右的短篇：夜班下工后，在路边摊吃一碗面。",
+      "expect": "物事起笔 → 一句立人 → 白话对白 → 吃相 → 老话说道 → 重事轻写 → 冷收",
+      "assertions": [
+        {"type": "checker_max", "value": 30},
+        {"type": "min_chars", "value": 900},
+        {"type": "no_regex", "value": "阿城说|这就是生活|终于明白|永远忘不了|热泪盈眶|狼吞虎咽|津津有味|内心深处", "note": "无伪语录、无煽情、无成语糊墙"},
+        {"type": "no_regex", "value": "！", "note": "全篇无感叹号"},
+        {"type": "manual", "note": "吃相处至少 4 个连续动作；心理动词（想/觉得/感到/心里）≤3 处；结尾段 ≤3 句且无评价"}
+      ]
+    },
+    {
+      "id": "ac-2",
+      "prompt": "用阿城体写一篇 900 字左右的人物小记：院子里来的一个手艺人。",
+      "expect": "一句立人 + 手艺动作串 + 俗中见道（价钱与手艺）+ 老话说道（一次）+ 冷收",
+      "assertions": [
+        {"type": "checker_max", "value": 30},
+        {"type": "min_chars", "value": 800},
+        {"type": "any_regex", "value": "“[^”]{1,12}”", "note": "有短对白"},
+        {"type": "any_regex", "value": "\\d+\\s*块|[一二三四五六七八九十]块", "note": "有实价钱，俗事落地"},
+        {"type": "no_regex", "value": "阿城说|匠人精神|岁月|治愈|这就是生活"},
+        {"type": "manual", "note": "人物靠一句话或一个习惯立住，无外貌段落；道理全篇最多一句且出自人物之口"}
+      ]
+    },
+    {
+      "id": "ac-3",
+      "prompt": "把下面这句话改成阿城体（约 400 字）：“他很饿，饿得受不了，看到饭以后非常激动，狼吞虎咽地吃完了。”",
+      "expect": "删掉心理与成语，换成吃相（连续动作）→ 一句对白 → 冷收",
+      "assertions": [
+        {"type": "checker_max", "value": 30},
+        {"type": "min_chars", "value": 360},
+        {"type": "no_regex", "value": "非常激动|狼吞虎咽|饿得受不了|很饿", "note": "原句的心理和成语全部换成动作"},
+        {"type": "manual", "note": "至少 6 个连续进食动作；结尾停在一个动作上"}
+      ]
+    }
+  ]
+}

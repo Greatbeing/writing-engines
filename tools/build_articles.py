@@ -20,6 +20,7 @@ ENGINES = {  # 引擎目录 -> (风名, 文体, 短名)
     "feature-writing":     ("人间之风", "特稿",     "feature"),
     "yuhua-writing":       ("叙事之风", "余华体",   "yuhua"),
     "jinyong-writing":     ("叙事之风", "金庸体",   "jinyong"),
+    "acheng-writing":      ("叙事之风", "阿城体",   "acheng"),
     "human-voice-writing": ("城市之风", "活人感",   "human"),
     "sushi-writing":       ("散文之风", "苏轼体",   "sushi"),
     "wangzengqi-writing":  ("散文之风", "汪曾祺体", "wangzengqi"),
