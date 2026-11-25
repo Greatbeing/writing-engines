@@ -51,7 +51,7 @@
   的签名装置。现在它们在自家引擎里是加分项。
 - **新增 `engine_profiles.json`**：按引擎配置权重与门槛。这就是 `PRODUCT.md`
   里说的「文体感知评分」——不用 LLM 也能做。
-- **新增 `tools/tests/test_checker.py`**：14 条断言，含「同段落在不同引擎下
+- **新增 `tools/tests/test_checker.py`**：17 条断言，含「同段落在不同引擎下
   判定关系正确」这一 v0.1 必然失败的用例。
 - **新增 `tools/lint_skill.py`**：把 `SPEC.md` 变成 `--strict` 可执行的门槛。
 

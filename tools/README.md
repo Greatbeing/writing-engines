@@ -36,7 +36,7 @@ v0.1 有一个自相矛盾的毛病：它惩罚了三家引擎自己要求的装
 | 短文本 | 130 字里一个「因此」＝ 23 分 | 不足 400 字按 400 归一 |
 | 门槛 | 全局 30 | 按引擎：活人感 30／特稿 30／**官方体 45** |
 | 排比检测 | 只看句尾字，三句都以「了」结尾就误报 | 句尾相同 **且** 长度接近 |
-| 测试 | 无 | 14 条断言（`tests/test_checker.py`） |
+| 测试 | 无 | 17 条断言（`tests/test_checker.py`） |
 
 ### 实测基准
 
@@ -66,8 +66,9 @@ python3 tools/lint_skill.py human-voice-writing --strict
 python3 tools/lint_skill.py --repo
 ```
 
-检查 9 项（E1–E9）：frontmatter 完整、name 与目录一致、description 长度、
-必需七节齐全、体积、references 指针、无版本记录小节、无 `.backup/`、无语料全文。
+检查 10 项（E1–E10）：frontmatter 完整、name 与目录一致、description 长度、
+必需七节齐全、体积、references 指针、无版本记录小节、无 `.backup/`、无语料全文、
+`examples/` 有完整产出。
 
 `--strict` 让警告也算失败，用作 USD 准入线（见 `CONTRIBUTING.md`）。
 
