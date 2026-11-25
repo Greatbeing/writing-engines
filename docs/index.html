@@ -167,6 +167,18 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .9s,transform .9s}
 .reveal.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+/* 章节号落小印：风 一 → 朱印砸下，标题墨显，左侧细线划下 */
+.s .no{position:relative}
+.s .no::before{content:"";display:inline-block;width:9px;height:9px;background:var(--zhu);margin-right:10px;vertical-align:1px;
+  border-radius:1px;transform:rotate(-8deg)}
+.s.reveal .no::before{opacity:0;transform:scale(2.6) rotate(-24deg);transition:opacity .25s .25s,transform .45s cubic-bezier(.3,1.7,.5,1) .25s}
+.s.reveal.on .no::before{opacity:1;transform:scale(1) rotate(-8deg)}
+.s.reveal .no b{opacity:0;filter:blur(6px);transition:opacity .9s .45s,filter .9s .45s}
+.s.reveal.on .no b{opacity:1;filter:none}
+.s.reveal .no::after{content:"";position:absolute;left:4px;top:26px;width:1px;height:0;background:var(--rule);transition:height 1.2s cubic-bezier(.7,0,.2,1) .5s}
+.s.reveal.on .no::after{height:64px}
+@media(max-width:720px){.s .no::after{display:none}}
+@media(prefers-reduced-motion:reduce){.s.reveal .no::before,.s.reveal .no b{opacity:1;filter:none;transform:rotate(-8deg);transition:none}}
 
 /* ── 进入动效：风过 → 落印 → 揭纸 → 字从墨里显出来 ── */
 :root{--d:.15s}

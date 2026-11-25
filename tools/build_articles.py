@@ -107,6 +107,31 @@ if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
 """
 
 
+# 内页入场：缩短版——顶部墨线划过、品牌风痕重描、朱印落款、正文墨显（约 1.2s，不遮屏）
+ENTER_CSS = """
+.js nav .brand svg path{stroke-dasharray:140;stroke-dashoffset:140;animation:e-draw .9s cubic-bezier(.6,0,.2,1) forwards}
+.js nav .brand svg path:nth-child(2){animation-delay:.12s}.js nav .brand svg path:nth-child(3){animation-delay:.24s}
+@keyframes e-draw{to{stroke-dashoffset:0}}
+.js nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;animation:e-rule 1.1s cubic-bezier(.7,0,.2,1) .1s forwards}
+nav{position:sticky}
+@keyframes e-rule{to{transform:scaleX(1)}}
+.e-seal{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;background:var(--zhu);color:#F5F1E8;
+  font:900 10px/1 var(--serif);border-radius:2px;vertical-align:middle;transform:rotate(-6deg)}
+.js .e-seal{opacity:0;transform:scale(2) rotate(-16deg);animation:e-stamp .38s cubic-bezier(.3,1.6,.5,1) .55s forwards}
+@keyframes e-stamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
+.js .e-in{opacity:0;animation:e-ink .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.35s + var(--k,0) * 90ms)}
+@keyframes e-ink{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-seal,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
+"""
+ENTER_HEAD = "<script>document.documentElement.classList.add('js')</script>"
+ENTER_JS = """
+(()=>{let k=0;document.querySelectorAll('main > *, body > section, body > article, body > .how').forEach(el=>{
+  if(k>5)return;el.classList.add('e-in');el.style.setProperty('--k',k++)});
+ setTimeout(()=>document.querySelectorAll('.e-in').forEach(el=>{el.classList.remove('e-in')}),2200)})();
+"""
+
+
 def page(title, body, rel, reader=False):
     tools = ('<div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button>'
              '<button data-fs="1" aria-label="放大字号">A＋</button>'
@@ -121,12 +146,12 @@ def page(title, body, rel, reader=False):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<style>{CSS}</style></head><body>
-<nav><div class="in"><a class="brand" href="{rel}">{LOGO.format(w=26)}采风</a>{tools}</div></nav>
+<style>{CSS}{ENTER_CSS}</style>{ENTER_HEAD}</head><body>
+<nav><div class="in"><a class="brand" href="{rel}">{LOGO.format(w=26)}采风<span class="e-seal" aria-hidden="true">采</span></a>{tools}</div></nav>
 {'<div id="bar"></div>' if reader else ''}
 {body}
 <footer>{LOGO.format(w=40)}采风 · CAIFENG</footer>
-<script>{JS}</script></body></html>
+<script>{JS}{ENTER_JS}</script></body></html>
 """
 
 
