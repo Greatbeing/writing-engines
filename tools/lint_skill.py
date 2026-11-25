@@ -20,6 +20,7 @@
   E8 仓库内不得有 .backup/ 目录或 *N.txt 式的语料全文
   E9 不得存在 sources/local/ 下的 .txt（版权边界）
   E10 examples/ 至少 1 个 > 1KB 的完整产出（片段不算示例，见 SPEC §1）
+  A1-A3 原子文件每个原子须有族标签，且与 atoms/index.json 一致
   E11 SKILL.md 里写的每个 `路径` 都必须真实存在（死链接会让 agent 读空）
 
 退出码：0 全通过 / 1 有错误 / 2 参数错误
@@ -219,6 +220,60 @@ def repo_level_lint():
     return issues
 
 
+def atom_family_lint():
+    """A1 每个原子必须有族行；A2 族与 atoms/index.json 一致；A3 index 覆盖全部原子。"""
+    import json
+    issues = []
+    idx_path = ROOT / "atoms" / "index.json"
+    if not idx_path.exists():
+        return [Issue("A0", "error", "缺 atoms/index.json")]
+    index = {a["id"]: a for a in json.loads(idx_path.read_text(encoding="utf-8"))}
+    seen = set()
+    for f in sorted(ROOT.glob("*-writing/references/atom-ops.md")):
+        key = f.parts[-3].replace("-writing", "")
+        lines = f.read_text(encoding="utf-8").splitlines()
+        for i, line in enumerate(lines):
+            m = re.match(r"^## (\d+)\. ", line)
+            if not m:
+                continue
+            aid = f"{key}.{m.group(1)}"
+            seen.add(aid)
+            fam = None
+            for nxt in lines[i + 1:i + 4]:
+                fm = re.match(r"^\*\*族\*\*：(.+?)\s*$", nxt)
+                if fm:
+                    fam = fm.group(1)
+                    break
+            rel = f.relative_to(ROOT)
+            if fam is None:
+                issues.append(Issue("A1", "error", f"{rel}: {line.strip()} 缺 **族** 行"))
+            elif aid not in index:
+                issues.append(Issue("A3", "error", f"{aid} 不在 atoms/index.json"))
+            elif index[aid]["family"] != fam:
+                issues.append(Issue("A2", "error",
+                                    f"{aid} 族「{fam}」≠ index.json「{index[aid]['family']}」"))
+    hv = ROOT / "human-voice-writing" / "references" / "atoms.md"
+    if hv.exists():
+        for line in hv.read_text(encoding="utf-8").splitlines():
+            m = re.match(r"^\| (\d+) \|", line)
+            if not m:
+                continue
+            aid = f"human-voice.{m.group(1)}"
+            seen.add(aid)
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            fam = cells[-1] if len(cells) >= 5 else None
+            if not fam:
+                issues.append(Issue("A1", "error", f"{aid} 缺族列"))
+            elif aid not in index:
+                issues.append(Issue("A3", "error", f"{aid} 不在 atoms/index.json"))
+            elif index[aid]["family"] != fam:
+                issues.append(Issue("A2", "error",
+                                    f"{aid} 族「{fam}」≠ index.json「{index[aid]['family']}」"))
+    for aid in sorted(set(index) - seen):
+        issues.append(Issue("A3", "error", f"index.json 有 {aid}，原子文件里找不到"))
+    return issues
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="引擎合规检查（SPEC.md 的执行版）")
     ap.add_argument("engines", nargs="*", help="引擎目录名")
@@ -240,6 +295,11 @@ def main(argv=None):
     all_issues = []
     if not args.engines or args.repo:
         all_issues += repo_level_lint()
+        atom_issues = atom_family_lint()
+        print("atoms/ 族标签:" if atom_issues else "atoms/ 族标签: 通过")
+        for i in atom_issues:
+            print(i)
+        all_issues += atom_issues
     for d in targets:
         if not d.is_dir():
             all_issues.append(Issue("E0", "error", f"目录不存在：{d}"))

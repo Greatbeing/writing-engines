@@ -1,0 +1,1146 @@
+[
+  {
+    "id": "guanfang.1",
+    "name": "接情绪（Acknowledge）",
+    "engine": "guanfang-writing",
+    "family": "独有",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 1. 接情绪（Acknowledge）\n"
+  },
+  {
+    "id": "guanfang.2",
+    "name": "反转定调（Reframe the Question）",
+    "engine": "guanfang-writing",
+    "family": "换层级",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 2. 反转定调（Reframe the Question）\n"
+  },
+  {
+    "id": "guanfang.3",
+    "name": "数据压舱（Anchoring with Data）",
+    "engine": "guanfang-writing",
+    "family": "数据压舱",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 3. 数据压舱（Anchoring with Data）\n"
+  },
+  {
+    "id": "guanfang.4",
+    "name": "场景钩 / 故事钩（Scene Hook）",
+    "engine": "guanfang-writing",
+    "family": "小处起笔",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 4. 场景钩 / 故事钩（Scene Hook）\n"
+  },
+  {
+    "id": "guanfang.5",
+    "name": "拆机制（Deconstruct to Enumerable）",
+    "engine": "guanfang-writing",
+    "family": "分类拆解",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 5. 拆机制（Deconstruct to Enumerable）\n"
+  },
+  {
+    "id": "guanfang.6",
+    "name": "升维 / 重新定义（Elevate & Redefine）",
+    "engine": "guanfang-writing",
+    "family": "换层级",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 6. 升维 / 重新定义（Elevate & Redefine）\n"
+  },
+  {
+    "id": "guanfang.7",
+    "name": "古今双轨对照（Dialectic Contrast）",
+    "engine": "guanfang-writing",
+    "family": "古今对照",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 7. 古今双轨对照（Dialectic Contrast）\n"
+  },
+  {
+    "id": "guanfang.8",
+    "name": "具体-抽象双层结构（Concrete-Abstract Sandwich）",
+    "engine": "guanfang-writing",
+    "family": "换层级",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 8. 具体-抽象双层结构（Concrete-Abstract Sandwich）\n"
+  },
+  {
+    "id": "guanfang.9",
+    "name": "三句表态 / 排比收尾（Trilogy Stance）",
+    "engine": "guanfang-writing",
+    "family": "排比/三段",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 9. 三句表态 / 排比收尾（Trilogy Stance）\n"
+  },
+  {
+    "id": "guanfang.10",
+    "name": "金句压缩（Compress to Aphorism）",
+    "engine": "guanfang-writing",
+    "family": "金句断语",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 10. 金句压缩（Compress to Aphorism）\n"
+  },
+  {
+    "id": "guanfang.11",
+    "name": "情绪套利（Sentiment Arbitrage）——选题算法",
+    "engine": "guanfang-writing",
+    "family": "独有",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 11. 情绪套利（Sentiment Arbitrage）——选题算法\n"
+  },
+  {
+    "id": "guanfang.12",
+    "name": "平视共谋（Peer Positioning）",
+    "engine": "guanfang-writing",
+    "family": "独有",
+    "file": "guanfang-writing/references/atom-ops.md",
+    "heading": "## 12. 平视共谋（Peer Positioning）\n"
+  },
+  {
+    "id": "jinyong.1",
+    "name": "出场立人",
+    "engine": "jinyong-writing",
+    "family": "典型画像",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 1. 出场立人\n"
+  },
+  {
+    "id": "jinyong.2",
+    "name": "动作分镜",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 2. 动作分镜\n"
+  },
+  {
+    "id": "jinyong.3",
+    "name": "招式命名",
+    "engine": "jinyong-writing",
+    "family": "命名",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 3. 招式命名\n"
+  },
+  {
+    "id": "jinyong.4",
+    "name": "悬念埋扣",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 4. 悬念埋扣\n"
+  },
+  {
+    "id": "jinyong.5",
+    "name": "反转揭底",
+    "engine": "jinyong-writing",
+    "family": "反转揭底",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 5. 反转揭底\n"
+  },
+  {
+    "id": "jinyong.6",
+    "name": "群像江湖",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 6. 群像江湖\n"
+  },
+  {
+    "id": "jinyong.7",
+    "name": "情义两难",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 7. 情义两难\n"
+  },
+  {
+    "id": "jinyong.8",
+    "name": "历史嵌入",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 8. 历史嵌入\n"
+  },
+  {
+    "id": "jinyong.9",
+    "name": "回目对仗",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 9. 回目对仗\n"
+  },
+  {
+    "id": "jinyong.10",
+    "name": "对白显性",
+    "engine": "jinyong-writing",
+    "family": "独有",
+    "file": "jinyong-writing/references/atom-ops.md",
+    "heading": "## 10. 对白显性\n"
+  },
+  {
+    "id": "lijuan.1",
+    "name": "天真视角",
+    "engine": "lijuan-writing",
+    "family": "独有",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 1. 天真视角\n"
+  },
+  {
+    "id": "lijuan.2",
+    "name": "琐事铺满",
+    "engine": "lijuan-writing",
+    "family": "冷笔白描",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 2. 琐事铺满\n"
+  },
+  {
+    "id": "lijuan.3",
+    "name": "风物白描",
+    "engine": "lijuan-writing",
+    "family": "冷笔白描",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 3. 风物白描\n"
+  },
+  {
+    "id": "lijuan.4",
+    "name": "自嘲",
+    "engine": "lijuan-writing",
+    "family": "自嘲",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 4. 自嘲\n"
+  },
+  {
+    "id": "lijuan.5",
+    "name": "家人喜剧",
+    "engine": "lijuan-writing",
+    "family": "冷笔白描",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 5. 家人喜剧\n"
+  },
+  {
+    "id": "lijuan.6",
+    "name": "一本正经的夸张",
+    "engine": "lijuan-writing",
+    "family": "正经夸张",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 6. 一本正经的夸张\n"
+  },
+  {
+    "id": "lijuan.7",
+    "name": "拟人与对话万物",
+    "engine": "lijuan-writing",
+    "family": "比喻",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 7. 拟人与对话万物\n"
+  },
+  {
+    "id": "lijuan.8",
+    "name": "镜头拉远",
+    "engine": "lijuan-writing",
+    "family": "换层级",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 8. 镜头拉远\n"
+  },
+  {
+    "id": "lijuan.9",
+    "name": "一句轻叹",
+    "engine": "lijuan-writing",
+    "family": "独有",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 9. 一句轻叹\n"
+  },
+  {
+    "id": "lijuan.10",
+    "name": "停在动作上",
+    "engine": "lijuan-writing",
+    "family": "不收的收尾",
+    "file": "lijuan-writing/references/atom-ops.md",
+    "heading": "## 10. 停在动作上\n"
+  },
+  {
+    "id": "luxun.1",
+    "name": "小处切入",
+    "engine": "luxun-writing",
+    "family": "小处起笔",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 1. 小处切入\n"
+  },
+  {
+    "id": "luxun.2",
+    "name": "正话反说",
+    "engine": "luxun-writing",
+    "family": "正经夸张",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 2. 正话反说\n"
+  },
+  {
+    "id": "luxun.3",
+    "name": "揭底一句",
+    "engine": "luxun-writing",
+    "family": "金句断语",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 3. 揭底一句\n"
+  },
+  {
+    "id": "luxun.4",
+    "name": "类型化命名",
+    "engine": "luxun-writing",
+    "family": "命名",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 4. 类型化命名\n"
+  },
+  {
+    "id": "luxun.5",
+    "name": "引其言而驳",
+    "engine": "luxun-writing",
+    "family": "预设驳论",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 5. 引其言而驳\n"
+  },
+  {
+    "id": "luxun.6",
+    "name": "历史照今",
+    "engine": "luxun-writing",
+    "family": "古今对照",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 6. 历史照今\n"
+  },
+  {
+    "id": "luxun.7",
+    "name": "典型画像",
+    "engine": "luxun-writing",
+    "family": "典型画像",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 7. 典型画像\n"
+  },
+  {
+    "id": "luxun.8",
+    "name": "自剖",
+    "engine": "luxun-writing",
+    "family": "自嘲",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 8. 自剖\n"
+  },
+  {
+    "id": "luxun.9",
+    "name": "冷笔白描",
+    "engine": "luxun-writing",
+    "family": "冷笔白描",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 9. 冷笔白描\n"
+  },
+  {
+    "id": "luxun.10",
+    "name": "不收的收尾",
+    "engine": "luxun-writing",
+    "family": "不收的收尾",
+    "file": "luxun-writing/references/atom-ops.md",
+    "heading": "## 10. 不收的收尾\n"
+  },
+  {
+    "id": "maozedong.1",
+    "name": "开门见山",
+    "engine": "maozedong-writing",
+    "family": "独有",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 1. 开门见山\n"
+  },
+  {
+    "id": "maozedong.2",
+    "name": "分类剖析",
+    "engine": "maozedong-writing",
+    "family": "分类拆解",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 2. 分类剖析\n"
+  },
+  {
+    "id": "maozedong.3",
+    "name": "分条列举",
+    "engine": "maozedong-writing",
+    "family": "分类拆解",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 3. 分条列举\n"
+  },
+  {
+    "id": "maozedong.4",
+    "name": "俗语比喻",
+    "engine": "maozedong-writing",
+    "family": "比喻",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 4. 俗语比喻\n"
+  },
+  {
+    "id": "maozedong.5",
+    "name": "两点论",
+    "engine": "maozedong-writing",
+    "family": "预设驳论",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 5. 两点论\n"
+  },
+  {
+    "id": "maozedong.6",
+    "name": "反面典型",
+    "engine": "maozedong-writing",
+    "family": "典型画像",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 6. 反面典型\n"
+  },
+  {
+    "id": "maozedong.7",
+    "name": "正面榜样",
+    "engine": "maozedong-writing",
+    "family": "典型画像",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 7. 正面榜样\n"
+  },
+  {
+    "id": "maozedong.8",
+    "name": "预设驳论",
+    "engine": "maozedong-writing",
+    "family": "预设驳论",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 8. 预设驳论\n"
+  },
+  {
+    "id": "maozedong.9",
+    "name": "短句排比",
+    "engine": "maozedong-writing",
+    "family": "排比/三段",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 9. 短句排比\n"
+  },
+  {
+    "id": "maozedong.10",
+    "name": "亲切号召",
+    "engine": "maozedong-writing",
+    "family": "号召落点",
+    "file": "maozedong-writing/references/atom-ops.md",
+    "heading": "## 10. 亲切号召\n"
+  },
+  {
+    "id": "renminribao.1",
+    "name": "高位定调",
+    "engine": "renminribao-writing",
+    "family": "独有",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 1. 高位定调\n"
+  },
+  {
+    "id": "renminribao.2",
+    "name": "时空坐标",
+    "engine": "renminribao-writing",
+    "family": "独有",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 2. 时空坐标\n"
+  },
+  {
+    "id": "renminribao.3",
+    "name": "历史纵深",
+    "engine": "renminribao-writing",
+    "family": "古今对照",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 3. 历史纵深\n"
+  },
+  {
+    "id": "renminribao.4",
+    "name": "数据并举",
+    "engine": "renminribao-writing",
+    "family": "数据压舱",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 4. 数据并举\n"
+  },
+  {
+    "id": "renminribao.5",
+    "name": "以小见大",
+    "engine": "renminribao-writing",
+    "family": "小处起笔",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 5. 以小见大\n"
+  },
+  {
+    "id": "renminribao.6",
+    "name": "四字格凝练",
+    "engine": "renminribao-writing",
+    "family": "金句断语",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 6. 四字格凝练\n"
+  },
+  {
+    "id": "renminribao.7",
+    "name": "对仗收束",
+    "engine": "renminribao-writing",
+    "family": "金句断语",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 7. 对仗收束\n"
+  },
+  {
+    "id": "renminribao.8",
+    "name": "排比递进",
+    "engine": "renminribao-writing",
+    "family": "排比/三段",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 8. 排比递进\n"
+  },
+  {
+    "id": "renminribao.9",
+    "name": "辩证回应",
+    "engine": "renminribao-writing",
+    "family": "预设驳论",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 9. 辩证回应\n"
+  },
+  {
+    "id": "renminribao.10",
+    "name": "号召落点",
+    "engine": "renminribao-writing",
+    "family": "号召落点",
+    "file": "renminribao-writing/references/atom-ops.md",
+    "heading": "## 10. 号召落点\n"
+  },
+  {
+    "id": "standup.1",
+    "name": "观察切口",
+    "engine": "standup-writing",
+    "family": "小处起笔",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 1. 观察切口\n"
+  },
+  {
+    "id": "standup.2",
+    "name": "铺垫-包袱",
+    "engine": "standup-writing",
+    "family": "反转揭底",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 2. 铺垫-包袱\n"
+  },
+  {
+    "id": "standup.3",
+    "name": "反转",
+    "engine": "standup-writing",
+    "family": "反转揭底",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 3. 反转\n"
+  },
+  {
+    "id": "standup.4",
+    "name": "三段式",
+    "engine": "standup-writing",
+    "family": "排比/三段",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 4. 三段式\n"
+  },
+  {
+    "id": "standup.5",
+    "name": "自嘲",
+    "engine": "standup-writing",
+    "family": "自嘲",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 5. 自嘲\n"
+  },
+  {
+    "id": "standup.6",
+    "name": "夸张推演",
+    "engine": "standup-writing",
+    "family": "正经夸张",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 6. 夸张推演\n"
+  },
+  {
+    "id": "standup.7",
+    "name": "act-out",
+    "engine": "standup-writing",
+    "family": "独有",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 7. act-out\n"
+  },
+  {
+    "id": "standup.8",
+    "name": "callback",
+    "engine": "standup-writing",
+    "family": "回环呼应",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 8. callback\n"
+  },
+  {
+    "id": "standup.9",
+    "name": "类比错位",
+    "engine": "standup-writing",
+    "family": "比喻",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 9. 类比错位\n"
+  },
+  {
+    "id": "standup.10",
+    "name": "短句落点",
+    "engine": "standup-writing",
+    "family": "金句断语",
+    "file": "standup-writing/references/atom-ops.md",
+    "heading": "## 10. 短句落点\n"
+  },
+  {
+    "id": "sushi.1",
+    "name": "即事起兴",
+    "engine": "sushi-writing",
+    "family": "小处起笔",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 1. 即事起兴\n"
+  },
+  {
+    "id": "sushi.2",
+    "name": "闲人自认",
+    "engine": "sushi-writing",
+    "family": "自嘲",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 2. 闲人自认\n"
+  },
+  {
+    "id": "sushi.3",
+    "name": "窘中写乐",
+    "engine": "sushi-writing",
+    "family": "独有",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 3. 窘中写乐\n"
+  },
+  {
+    "id": "sushi.4",
+    "name": "主客问答",
+    "engine": "sushi-writing",
+    "family": "预设驳论",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 4. 主客问答\n"
+  },
+  {
+    "id": "sushi.5",
+    "name": "变与不变",
+    "engine": "sushi-writing",
+    "family": "换层级",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 5. 变与不变\n"
+  },
+  {
+    "id": "sushi.6",
+    "name": "转念一歇",
+    "engine": "sushi-writing",
+    "family": "独有",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 6. 转念一歇\n"
+  },
+  {
+    "id": "sushi.7",
+    "name": "物各有主",
+    "engine": "sushi-writing",
+    "family": "独有",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 7. 物各有主\n"
+  },
+  {
+    "id": "sushi.8",
+    "name": "自嘲收束",
+    "engine": "sushi-writing",
+    "family": "自嘲",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 8. 自嘲收束\n"
+  },
+  {
+    "id": "sushi.9",
+    "name": "翻一层（少量用）",
+    "engine": "sushi-writing",
+    "family": "换层级",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 9. 翻一层（少量用）\n"
+  },
+  {
+    "id": "sushi.10",
+    "name": "亲证存疑",
+    "engine": "sushi-writing",
+    "family": "独有",
+    "file": "sushi-writing/references/atom-ops.md",
+    "heading": "## 10. 亲证存疑\n"
+  },
+  {
+    "id": "wangxiaobo.1",
+    "name": "一本正经推演",
+    "engine": "wangxiaobo-writing",
+    "family": "正经夸张",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 1. 一本正经推演\n"
+  },
+  {
+    "id": "wangxiaobo.2",
+    "name": "亲历小事起笔",
+    "engine": "wangxiaobo-writing",
+    "family": "小处起笔",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 2. 亲历小事起笔\n"
+  },
+  {
+    "id": "wangxiaobo.3",
+    "name": "科学类比",
+    "engine": "wangxiaobo-writing",
+    "family": "比喻",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 3. 科学类比\n"
+  },
+  {
+    "id": "wangxiaobo.4",
+    "name": "动物寓言",
+    "engine": "wangxiaobo-writing",
+    "family": "比喻",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 4. 动物寓言\n"
+  },
+  {
+    "id": "wangxiaobo.5",
+    "name": "有趣尺度",
+    "engine": "wangxiaobo-writing",
+    "family": "独有",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 5. 有趣尺度\n"
+  },
+  {
+    "id": "wangxiaobo.6",
+    "name": "自嘲垫底",
+    "engine": "wangxiaobo-writing",
+    "family": "自嘲",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 6. 自嘲垫底\n"
+  },
+  {
+    "id": "wangxiaobo.7",
+    "name": "沉默者立场",
+    "engine": "wangxiaobo-writing",
+    "family": "独有",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 7. 沉默者立场\n"
+  },
+  {
+    "id": "wangxiaobo.8",
+    "name": "戏仿腔调",
+    "engine": "wangxiaobo-writing",
+    "family": "正经夸张",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 8. 戏仿腔调\n"
+  },
+  {
+    "id": "wangxiaobo.9",
+    "name": "平静说荒唐",
+    "engine": "wangxiaobo-writing",
+    "family": "正经夸张",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 9. 平静说荒唐\n"
+  },
+  {
+    "id": "wangxiaobo.10",
+    "name": "俏皮收尾",
+    "engine": "wangxiaobo-writing",
+    "family": "不收的收尾",
+    "file": "wangxiaobo-writing/references/atom-ops.md",
+    "heading": "## 10. 俏皮收尾\n"
+  },
+  {
+    "id": "wangzengqi.1",
+    "name": "闲闲起笔",
+    "engine": "wangzengqi-writing",
+    "family": "小处起笔",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 1. 闲闲起笔\n"
+  },
+  {
+    "id": "wangzengqi.2",
+    "name": "名物说解",
+    "engine": "wangzengqi-writing",
+    "family": "独有",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 2. 名物说解\n"
+  },
+  {
+    "id": "wangzengqi.3",
+    "name": "手艺细写",
+    "engine": "wangzengqi-writing",
+    "family": "冷笔白描",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 3. 手艺细写\n"
+  },
+  {
+    "id": "wangzengqi.4",
+    "name": "几笔传神",
+    "engine": "wangzengqi-writing",
+    "family": "典型画像",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 4. 几笔传神\n"
+  },
+  {
+    "id": "wangzengqi.5",
+    "name": "宕开一笔",
+    "engine": "wangzengqi-writing",
+    "family": "独有",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 5. 宕开一笔\n"
+  },
+  {
+    "id": "wangzengqi.6",
+    "name": "风俗铺陈",
+    "engine": "wangzengqi-writing",
+    "family": "独有",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 6. 风俗铺陈\n"
+  },
+  {
+    "id": "wangzengqi.7",
+    "name": "草木有名",
+    "engine": "wangzengqi-writing",
+    "family": "冷笔白描",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 7. 草木有名\n"
+  },
+  {
+    "id": "wangzengqi.8",
+    "name": "短句口语",
+    "engine": "wangzengqi-writing",
+    "family": "独有",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 8. 短句口语\n"
+  },
+  {
+    "id": "wangzengqi.9",
+    "name": "文白相间",
+    "engine": "wangzengqi-writing",
+    "family": "独有",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 9. 文白相间\n"
+  },
+  {
+    "id": "wangzengqi.10",
+    "name": "轻轻一放",
+    "engine": "wangzengqi-writing",
+    "family": "不收的收尾",
+    "file": "wangzengqi-writing/references/atom-ops.md",
+    "heading": "## 10. 轻轻一放\n"
+  },
+  {
+    "id": "yuhua.1",
+    "name": "零度叙述",
+    "engine": "yuhua-writing",
+    "family": "冷笔白描",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 1. 零度叙述\n"
+  },
+  {
+    "id": "yuhua.2",
+    "name": "重复结构",
+    "engine": "yuhua-writing",
+    "family": "回环呼应",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 2. 重复结构\n"
+  },
+  {
+    "id": "yuhua.3",
+    "name": "死亡轻写",
+    "engine": "yuhua-writing",
+    "family": "冷笔白描",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 3. 死亡轻写\n"
+  },
+  {
+    "id": "yuhua.4",
+    "name": "荒诞消解",
+    "engine": "yuhua-writing",
+    "family": "正经夸张",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 4. 荒诞消解\n"
+  },
+  {
+    "id": "yuhua.5",
+    "name": "口语对话推进",
+    "engine": "yuhua-writing",
+    "family": "独有",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 5. 口语对话推进\n"
+  },
+  {
+    "id": "yuhua.6",
+    "name": "数字与账目",
+    "engine": "yuhua-writing",
+    "family": "数据压舱",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 6. 数字与账目\n"
+  },
+  {
+    "id": "yuhua.7",
+    "name": "转述套层",
+    "engine": "yuhua-writing",
+    "family": "独有",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 7. 转述套层\n"
+  },
+  {
+    "id": "yuhua.8",
+    "name": "物件贯穿",
+    "engine": "yuhua-writing",
+    "family": "回环呼应",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 8. 物件贯穿\n"
+  },
+  {
+    "id": "yuhua.9",
+    "name": "自嘲式幽默",
+    "engine": "yuhua-writing",
+    "family": "自嘲",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 9. 自嘲式幽默\n"
+  },
+  {
+    "id": "yuhua.10",
+    "name": "平静收尾",
+    "engine": "yuhua-writing",
+    "family": "不收的收尾",
+    "file": "yuhua-writing/references/atom-ops.md",
+    "heading": "## 10. 平静收尾\n"
+  },
+  {
+    "id": "zhangailing.1",
+    "name": "格言起笔",
+    "engine": "zhangailing-writing",
+    "family": "金句断语",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 1. 格言起笔\n"
+  },
+  {
+    "id": "zhangailing.2",
+    "name": "刁钻比喻",
+    "engine": "zhangailing-writing",
+    "family": "比喻",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 2. 刁钻比喻\n"
+  },
+  {
+    "id": "zhangailing.3",
+    "name": "以物写心",
+    "engine": "zhangailing-writing",
+    "family": "独有",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 3. 以物写心\n"
+  },
+  {
+    "id": "zhangailing.4",
+    "name": "色彩点睛",
+    "engine": "zhangailing-writing",
+    "family": "独有",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 4. 色彩点睛\n"
+  },
+  {
+    "id": "zhangailing.5",
+    "name": "冷眼算盘",
+    "engine": "zhangailing-writing",
+    "family": "冷笔白描",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 5. 冷眼算盘\n"
+  },
+  {
+    "id": "zhangailing.6",
+    "name": "俗物入文",
+    "engine": "zhangailing-writing",
+    "family": "独有",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 6. 俗物入文\n"
+  },
+  {
+    "id": "zhangailing.7",
+    "name": "苍凉底色",
+    "engine": "zhangailing-writing",
+    "family": "独有",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 7. 苍凉底色\n"
+  },
+  {
+    "id": "zhangailing.8",
+    "name": "声光切景",
+    "engine": "zhangailing-writing",
+    "family": "独有",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 8. 声光切景\n"
+  },
+  {
+    "id": "zhangailing.9",
+    "name": "反转体谅",
+    "engine": "zhangailing-writing",
+    "family": "反转揭底",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 9. 反转体谅\n"
+  },
+  {
+    "id": "zhangailing.10",
+    "name": "格言收束",
+    "engine": "zhangailing-writing",
+    "family": "金句断语",
+    "file": "zhangailing-writing/references/atom-ops.md",
+    "heading": "## 10. 格言收束\n"
+  },
+  {
+    "id": "human-voice.1",
+    "name": "共识假装",
+    "engine": "human-voice-writing",
+    "family": "反转揭底",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#1 共识假装"
+  },
+  {
+    "id": "human-voice.2",
+    "name": "动词化网梗",
+    "engine": "human-voice-writing",
+    "family": "命名",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#2 动词化网梗"
+  },
+  {
+    "id": "human-voice.3",
+    "name": "三连具体物",
+    "engine": "human-voice-writing",
+    "family": "排比/三段",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#3 三连具体物"
+  },
+  {
+    "id": "human-voice.4",
+    "name": "市场／职场语言挪用",
+    "engine": "human-voice-writing",
+    "family": "正经夸张",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#4 市场／职场语言挪用"
+  },
+  {
+    "id": "human-voice.5",
+    "name": "场景微电影",
+    "engine": "human-voice-writing",
+    "family": "小处起笔",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#5 场景微电影"
+  },
+  {
+    "id": "human-voice.6",
+    "name": "群像人格化",
+    "engine": "human-voice-writing",
+    "family": "典型画像",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#6 群像人格化"
+  },
+  {
+    "id": "human-voice.7",
+    "name": "人物样本公式",
+    "engine": "human-voice-writing",
+    "family": "典型画像",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#7 人物样本公式"
+  },
+  {
+    "id": "human-voice.8",
+    "name": "质疑→反驳",
+    "engine": "human-voice-writing",
+    "family": "预设驳论",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#8 质疑→反驳"
+  },
+  {
+    "id": "human-voice.9",
+    "name": "递进梗",
+    "engine": "human-voice-writing",
+    "family": "排比/三段",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#9 递进梗"
+  },
+  {
+    "id": "human-voice.10",
+    "name": "回环结构",
+    "engine": "human-voice-writing",
+    "family": "回环呼应",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#10 回环结构"
+  },
+  {
+    "id": "human-voice.11",
+    "name": "造词命名",
+    "engine": "human-voice-writing",
+    "family": "命名",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#11 造词命名"
+  },
+  {
+    "id": "human-voice.12",
+    "name": "松弛哲学收尾",
+    "engine": "human-voice-writing",
+    "family": "不收的收尾",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#12 松弛哲学收尾"
+  },
+  {
+    "id": "human-voice.13",
+    "name": "网络梗考古",
+    "engine": "human-voice-writing",
+    "family": "独有",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#13 网络梗考古"
+  },
+  {
+    "id": "human-voice.14",
+    "name": "理论家族",
+    "engine": "human-voice-writing",
+    "family": "命名",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#14 理论家族"
+  },
+  {
+    "id": "human-voice.15",
+    "name": "金句前置独立行",
+    "engine": "human-voice-writing",
+    "family": "金句断语",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#15 金句前置独立行"
+  },
+  {
+    "id": "human-voice.16",
+    "name": "短促口语断言",
+    "engine": "human-voice-writing",
+    "family": "金句断语",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#16 短促口语断言"
+  },
+  {
+    "id": "human-voice.17",
+    "name": "荒诞解读",
+    "engine": "human-voice-writing",
+    "family": "正经夸张",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#17 荒诞解读"
+  },
+  {
+    "id": "human-voice.18",
+    "name": "科技梗引用",
+    "engine": "human-voice-writing",
+    "family": "独有",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#18 科技梗引用"
+  },
+  {
+    "id": "human-voice.19",
+    "name": "观念对比对仗",
+    "engine": "human-voice-writing",
+    "family": "古今对照",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#19 观念对比对仗"
+  },
+  {
+    "id": "human-voice.20",
+    "name": "低姿态金句",
+    "engine": "human-voice-writing",
+    "family": "金句断语",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#20 低姿态金句"
+  },
+  {
+    "id": "human-voice.21",
+    "name": "双关梗",
+    "engine": "human-voice-writing",
+    "family": "独有",
+    "file": "human-voice-writing/references/atoms.md",
+    "heading": "#21 双关梗"
+  }
+]

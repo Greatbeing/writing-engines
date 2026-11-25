@@ -123,3 +123,5 @@ python3 tools/run_prompts.py jinyong-writing
 ```
 
 自动判定 checker_max / min_chars / length_max / no_regex / any_regex / count_min / count_max，manual 只列出。**字数口径统一为 checker 的「规模」字数**（去 markdown 与空白，含标点）。
+
+跨引擎原子总库在 `atoms/LIBRARY.md`（按族汇总）与 `atoms/index.json`（机器可读）；`lint_skill.py` 的 A1–A3 校验各引擎原子文件的族标签与 index 一致。
