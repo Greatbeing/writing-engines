@@ -13,8 +13,11 @@
 *.json     linguist-documentation
 sources/**  linguist-documentation
 
-# 演示页与成果卡片是文档，不是应用代码
+# 演示页与成果卡片是文档，不是应用代码。
+# detectable=false 是双保险：documentation 已经能把它排除出语言统计，
+# 但 GitHub 的 languages 接口有较长缓存，两个属性一起写更稳。
 *.html     linguist-documentation
+*.html     linguist-detectable=false
 
 tools/*.py linguist-language=Python
 eval/*.py  linguist-language=Python
