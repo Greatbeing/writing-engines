@@ -12,6 +12,7 @@
 | `check_quotes.py` | 核对人物引语是否真出自素材（查编造与篡改） | v0.1 |
 | `build_articles.py` | 把引擎 `examples/*.md` 生成为官网文章页 | — |
 | `build_compare.py` | 把 `demo/<题号>/` 的四版生成为同题对照页 | — |
+| `run_prompts.py` | 按各引擎 `test-prompts.json` 的断言核对 `examples/` 产出（`--all`） | v0.1 |
 | `tests/test_checker.py` | checker 的回归测试 | v0.2 |
 
 ## ai-flavor-checker.py v0.2
@@ -113,3 +114,12 @@ python3 tools/check_quotes.py --selftest
 注入验证过三种篡改——编造整句、改数字、改一个词——全部能抓到。
 
 **局限**：只查引号内。不在引号里的编造（凭空写「她当时愣住了」）它看不见。
+
+## run_prompts.py
+
+```bash
+python3 tools/run_prompts.py --all
+python3 tools/run_prompts.py jinyong-writing
+```
+
+自动判定 checker_max / min_chars / length_max / no_regex / any_regex / count_min / count_max，manual 只列出。**字数口径统一为 checker 的「规模」字数**（去 markdown 与空白，含标点）。

@@ -15,43 +15,288 @@
       "pass_below": 30,
       "_note": "无引擎指定时的兜底。大致等价 v0.1 的判定尺度。",
       "penalty": {
-        "hard": 1.0, "soft": 1.0, "abstract": 1.0,
-        "long": 1.0, "parallel": 1.0, "formula": 1.0
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
       },
-      "reward": { "colloquial": 1.0, "concrete": 1.0, "dialogue": 1.0 }
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
     },
-
     "human-voice-writing": {
       "label": "活人感叙事（三联生活实验室体）",
       "pass_below": 30,
       "_note": "引号访谈与「不是A而是B」是厂牌签名装置，必须奖励/豁免，不能扣分。",
       "penalty": {
-        "hard": 1.0, "soft": 0.7, "abstract": 1.0,
-        "long": 1.0, "parallel": 1.0, "formula": 0.0
+        "hard": 1.0,
+        "soft": 0.7,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 0.0
       },
-      "reward": { "colloquial": 1.0, "concrete": 1.0, "dialogue": 2.0 }
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 2.0
+      }
     },
-
     "guanfang-writing": {
       "label": "官方时评（浙江宣传体）",
       "pass_below": 45,
       "_note": "官方体自带书面腔与排比，这是文体特征不是失败。门槛放宽到 45；「不是A而是B」是原子 6 升维，豁免。",
       "penalty": {
-        "hard": 0.8, "soft": 0.4, "abstract": 0.7,
-        "long": 0.8, "parallel": 0.6, "formula": 0.0
+        "hard": 0.8,
+        "soft": 0.4,
+        "abstract": 0.7,
+        "long": 0.8,
+        "parallel": 0.6,
+        "formula": 0.0
       },
-      "reward": { "colloquial": 0.3, "concrete": 1.0, "dialogue": 1.0 }
+      "reward": {
+        "colloquial": 0.3,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
     },
-
     "feature-writing": {
       "label": "人物特稿（《人物》杂志体）",
       "pass_below": 30,
       "_note": "特稿靠事实压强、禁用口语词，故口语奖励归零；长句是常态，惩罚减半；抽象词（抒情大词）惩罚加重。",
       "penalty": {
-        "hard": 1.0, "soft": 0.9, "abstract": 1.2,
-        "long": 0.5, "parallel": 0.6, "formula": 0.8
+        "hard": 1.0,
+        "soft": 0.9,
+        "abstract": 1.2,
+        "long": 0.5,
+        "parallel": 0.6,
+        "formula": 0.8
       },
-      "reward": { "colloquial": 0.0, "concrete": 1.5, "dialogue": 1.0 }
+      "reward": {
+        "colloquial": 0.0,
+        "concrete": 1.5,
+        "dialogue": 1.0
+      }
+    },
+    "gongwen-writing": {
+      "label": "公文写作",
+      "pass_below": 45,
+      "_note": "v0.3 登记：权重沿用官方体档，待原文校准。",
+      "penalty": {
+        "hard": 0.8,
+        "soft": 0.4,
+        "abstract": 0.7,
+        "long": 0.8,
+        "parallel": 0.6,
+        "formula": 0.0
+      },
+      "reward": {
+        "colloquial": 0.3,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "jinyong-writing": {
+      "label": "金庸体武侠叙事",
+      "pass_below": 35,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "lijuan-writing": {
+      "label": "李娟体散文",
+      "pass_below": 30,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "luxun-writing": {
+      "label": "鲁迅杂文体",
+      "pass_below": 35,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "maozedong-writing": {
+      "label": "毛泽东文章体说理",
+      "pass_below": 30,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "renminribao-writing": {
+      "label": "人民日报评论体",
+      "pass_below": 45,
+      "_note": "v0.3 登记：权重沿用官方体档，待原文校准。",
+      "penalty": {
+        "hard": 0.8,
+        "soft": 0.4,
+        "abstract": 0.7,
+        "long": 0.8,
+        "parallel": 0.6,
+        "formula": 0.0
+      },
+      "reward": {
+        "colloquial": 0.3,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "standup-writing": {
+      "label": "脱口秀文本",
+      "pass_below": 30,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "sushi-writing": {
+      "label": "苏轼体散文",
+      "pass_below": 30,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "wangxiaobo-writing": {
+      "label": "王小波体",
+      "pass_below": 35,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "wangzengqi-writing": {
+      "label": "汪曾祺体散文",
+      "pass_below": 30,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "yuhua-writing": {
+      "label": "余华体叙事",
+      "pass_below": 30,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
+    },
+    "zhangailing-writing": {
+      "label": "张爱玲体",
+      "pass_below": 35,
+      "_note": "v0.3 登记：权重沿用通用档，待原文校准。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
     }
   }
 }
