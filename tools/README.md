@@ -11,6 +11,7 @@
 | `lint_skill.py` | 检查一个引擎是否符合 `SPEC.md`（E1–E11） | v0.2 |
 | `check_quotes.py` | 核对人物引语是否真出自素材（查编造与篡改） | v0.1 |
 | `corpus_stats.py` | 语料统计（句长/标点/词表）→ `corpus/<engine>/语言DNA.md` | v0.1 |
+| `rewrite_hints.py` | 行级改写建议：哪一句、什么问题、怎么改 | v0.1 |
 | `build_articles.py` | 把引擎 `examples/*.md` 生成为官网文章页 | — |
 | `build_compare.py` | 把 `demo/<题号>/` 的四版生成为同题对照页 | — |
 | `run_prompts.py` | 按各引擎 `test-prompts.json` 的断言核对 `examples/` 产出（`--all`） | v0.1 |
@@ -150,3 +151,45 @@ python tools/diagnose.py --list-families
 只用于确认工具能跑通，不代表其中任何一段。
 
 跨引擎原子总库在 `atoms/LIBRARY.md`（按族汇总）与 `atoms/index.json`（机器可读）；`lint_skill.py` 的 A1–A3 校验各引擎原子文件的族标签与 index 一致。
+
+## rewrite_hints.py：从「几分」到「哪一句、改成什么」
+
+`ai-flavor-checker` 告诉你「AI 味 72 分，硬档命中 3 处」。这句话对想学写作的人没用——
+他不知道是哪三处，也不知道改成什么。
+
+`rewrite_hints.py` 把定位和改法一起给出：
+
+```bash
+python tools/rewrite_hints.py 稿子.md
+python tools/rewrite_hints.py 稿子.md --engine luxun-writing
+python tools/rewrite_hints.py 稿子.md --md 报告.md
+python tools/rewrite_hints.py --selftest
+```
+
+输出长这样（AI 腔样本实测）：
+
+```
+── 第 2 句 ──
+   在当今这个快速变化的时代，我们不难发现，赋能已经成为衡量价值的重要维度。
+   [硬档黑话] 这类词不是错字，是「看起来像结论，其实什么都没说」。
+     怎么改：要么换成具体动作，要么整句删掉——多数情况下删掉后句子更清楚。
+     · 「赋能」→ 帮上忙／起到作用
+     · 「不难发现」→ （直接删掉）
+   [抽象名词] 一句话里出现两个以上，通常是在用大词代替具体的事。
+     · 「价值」→ 具体是什么？
+```
+
+**白名单原则**：只处理清单里列出的 6 类规则（硬档黑话／连接词偏多／抽象名词／
+「不是A而是B」公式／长句断句点／排比同构）。没命中的句子一个字都不动，
+不重排段落，不改结构。建议要人过一遍再改，不自动写回原文件。
+
+与 checker 共用同一套词表与分句逻辑（直接 import），两边判定不会打架。
+
+### 顺手修掉的假阳性：「这一」
+
+v0.2 把「这一」整词计入软档，凡出现必扣分。实测正常中文里假阳性极多——
+19 篇稿子大批命中 3 分左右，全是「这一类」「这一条」「这一次」这类**指示代词**，
+不是连接词。
+
+现在按后接量词排除（`这一[类种点块次条年天切步代部些边头回场层]`）。
+修正后 33 篇语料无一因此扣分，checker 自检与 18 条回归测试全部通过。
