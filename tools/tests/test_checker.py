@@ -192,6 +192,25 @@ class TestCorpusRegression(unittest.TestCase):
                     f"{path.name} 得分 {res['total']}，超过 {engine} 门槛",
                 )
 
+    def test_registered_engine_corpus_passes(self):
+        """v0.3 登记的各引擎：fixtures/local/<engine 前缀>-<n>.txt 必须过自家门槛。
+
+        首行是来源注释（# 来源：URL），不计入打分。
+        """
+        for path in sorted(LOCAL.glob("*-[0-9].txt")):
+            engine = path.stem.rsplit("-", 1)[0] + "-writing"
+            if engine not in PROFILES:
+                continue
+            prof = PROFILES[engine]
+            lines = path.read_text(encoding="utf-8").splitlines()
+            body = "\n".join(l for l in lines if not l.startswith("# 来源"))
+            with self.subTest(file=path.name):
+                res = aifc.score_text(body, prof)
+                self.assertLess(
+                    res["total"], prof["pass_below"],
+                    f"{path.name} 得分 {res['total']}，超过 {engine} 门槛",
+                )
+
     def test_feature_corpus_passes(self):
         engine = "feature-writing"
         prof = PROFILES[engine]

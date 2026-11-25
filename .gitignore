@@ -7,6 +7,7 @@
 **/sources/local/
 **/references/sources/local/
 tests/fixtures/local/
+tools/tests/fixtures/local/
 
 # 评测的真实产出：可能含未脱敏的模型输出与评分者信息
 eval/runs/

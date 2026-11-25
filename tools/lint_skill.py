@@ -200,6 +200,9 @@ def lint_engine(engine_dir, strict=False):
     return issues
 
 
+LOCAL_FIXTURES = ROOT / "tools" / "tests" / "fixtures" / "local"
+
+
 def repo_level_lint():
     issues = []
     for need in ("LICENSE", "README.md", "SPEC.md", "CHANGELOG.md", ".gitignore"):
@@ -208,6 +211,9 @@ def repo_level_lint():
     # 语料全文
     for txt in ROOT.rglob("*.txt"):
         if ".git" in txt.parts:
+            continue
+        # 本地校准语料：已在 .gitignore，永不入库，不算违规
+        if LOCAL_FIXTURES in txt.parents:
             continue
         if txt.stat().st_size > 5000:
             issues.append(Issue("R2", "error",
