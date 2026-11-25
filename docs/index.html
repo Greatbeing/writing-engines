@@ -94,6 +94,31 @@ td:last-child{color:var(--ink)}
 .card .use em{font-style:normal;color:var(--zhu)}
 @media(max-width:860px){.cards{grid-template-columns:1fr}.card{border-right:0;border-bottom:1px solid var(--rule)}}
 
+/* 引擎分组 */
+.group{margin-top:44px}
+.group:first-of-type{margin-top:14px}
+.group h4.gt{font:600 20px/1.7 var(--serif);letter-spacing:.06em}
+.group h4.gt small{font:12px var(--mono);color:var(--ink2);letter-spacing:.15em;margin-left:10px}
+.group .gd{font-size:14.5px;color:var(--ink2);max-width:36em;margin:6px 0 18px}
+.cards.g4,.cards.g2{grid-template-columns:repeat(2,1fr)}
+.cards.g1{grid-template-columns:1fr}
+.cards.g5{grid-template-columns:repeat(6,1fr)}
+.cards.g5>.card{grid-column:span 2}
+.cards.g5>.card:nth-child(n+4){grid-column:span 3}
+.cards.g5>.card,.cards.g4>.card{border-bottom:1px solid var(--rule)}
+.cards.g5>.card:nth-child(n+4),.cards.g4>.card:nth-child(n+3){border-bottom:0}
+.cards.g5>.card:last-child{border-right:1px solid var(--rule)}
+@media(max-width:860px){.cards.g4,.cards.g2,.cards.g1{grid-template-columns:1fr}
+ .cards.g5{grid-template-columns:1fr}
+ .cards.g5>.card,.cards.g5>.card:nth-child(n+4){grid-column:auto}
+ .cards.g5>.card,.cards.g4>.card,.cards.g5>.card:nth-child(n+4),.cards.g4>.card:nth-child(n+3){border-bottom:1px solid var(--rule)}
+ .cards.g5>.card:last-child{border-right:0}}
+
+/* 原子族标签 */
+.fams{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 8px}
+.fams span{border:1px solid var(--rule);padding:2px 10px;font-size:12.5px;color:var(--ink2);letter-spacing:.04em}
+.fams span b{color:var(--ink);font-weight:600}
+
 /* 五步 */
 ol.steps{list-style:none;counter-reset:s;border-top:1px solid var(--ink)}
 ol.steps li{counter-increment:s;display:grid;grid-template-columns:72px 1fr;padding:22px 0;border-bottom:1px solid var(--rule)}
@@ -133,6 +158,7 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
     <li><a href="#yuan">何为采风</a></li>
     <li><a href="#engine">引擎</a></li>
     <li><a href="#list">清单</a></li>
+    <li><a href="#atoms">原子库</a></li>
     <li><a href="#build">造法</a></li>
     <li><a href="#use">安装</a></li>
     <li><a href="articles/">文章</a></li>
@@ -153,6 +179,7 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
     <h1>采其风，<br>得其法。</h1>
     <p class="en">Collect the style. Build the engine.</p>
     <p class="sub">每一种文风背后，都有一套没说出口的规则。我们把它采下来，造成引擎。</p>
+    <p class="en" style="margin-top:20px">15 engines · 143 atoms · 19 families</p>
     <div class="cta">
       <a class="btn solid" href="#use">开始使用</a>
       <a class="btn" href="https://github.com/Greatbeing/writing-engines">查看源码</a>
@@ -210,6 +237,7 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
         <tr><td>能不能自检</td><td>不能，只能凭感觉</td><td>指纹可数、红线可查、checker 可打分</td></tr>
         <tr><td>会不会生长</td><td>用完即弃</td><td>每次实战反哺</td></tr>
         <tr><td>覆盖范围</td><td>一个腔调</td><td>一种文体的全部构件</td></tr>
+        <tr><td>换一种文体</td><td>从头再写一份</td><td>换一套原子排序，用的是同一批原子</td></tr>
       </tbody>
     </table>
     <p class="verdict">模板是尸检报告，<span class="zhu">引擎是手术。</span></p>
@@ -219,35 +247,175 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
 <section class="s reveal" id="list">
   <div class="no">风 四<b>引擎清单</b></div>
   <div>
-    <div class="cards">
-      <article class="card">
-        <span class="feng">城 市 之 风</span>
-        <h4>活人感</h4>
-        <div class="slug">human-voice-writing</div>
-        <p>城市观察文。具体的人、具体的物、具体的抱怨、具体的快乐；幽默、口语、松弛收尾。可用来给已有文本去 AI 腔。</p>
-        <div class="use"><em>适用</em> 公众号叙事文 · 城市观察 · 网感文案</div>
-      </article>
-      <article class="card">
-        <span class="feng">庙 堂 之 风</span>
-        <h4>官方体</h4>
-        <div class="slug">guanfang-writing</div>
-        <p>体制内爆款写作法。12 个原子操作 + 组合规则 + 风格指纹；选题困难时用「情绪套利三问」自己找题。</p>
-        <div class="use"><em>适用</em> 时评 · 政论 · 主旋律 · 纪念文</div>
-      </article>
-      <article class="card">
-        <span class="feng">人 间 之 风</span>
-        <h4>特稿</h4>
-        <div class="slug">feature-writing</div>
-        <p>人物特稿体。特稿不是写人，是写「处境与变化」——人是处境的总和，时间是核心变量。附选题四问。</p>
-        <div class="use"><em>适用</em> 人物特稿 · 深度报道 · 人物群像</div>
-      </article>
+    <h3>15 个引擎，分五种文体归属。</h3>
+    <p>每个引擎都走同一份七节契约（<code>SPEC.md</code>）、都带 <code>test-prompts.json</code> 与可判定的断言。分级只有两种：<b>可用</b>（过契约、过断言、有完整产出）与<b>试用</b>（结构齐备，但样本与实战反馈还少）。卡上写的是这个引擎真正管的事，不是形容词。</p>
+
+    <div class="group">
+      <h4 class="gt">议论 <small>ARGUMENT</small></h4>
+      <p class="gd">讲一个道理，让它在别人心里立住。差别不在「有没有观点」，在立场、证据与锋利度：时评吃情绪，社论吃站位，杂文吃眼光。</p>
+      <div class="cards g5">
+        <article class="card">
+          <span class="feng">庙 堂 之 风</span>
+          <h4>官方体</h4>
+          <div class="slug">guanfang-writing</div>
+          <p>体制内爆款写作法。12 个原子操作 + 组合规则 + 风格指纹；选题困难时用「情绪套利三问」自己找题。核心不是文体模式库，是可生成新文章的认知引擎。</p>
+          <div class="use"><em>适用</em> 时评 · 政论 · 主旋律 · 纪念文</div>
+        </article>
+        <article class="card">
+          <span class="feng">社 论 之 风</span>
+          <h4>人民日报评论</h4>
+          <div class="slug">renminribao-writing</div>
+          <p>高位定调、历史纵深、四字格与排比递进、辩证回应。与官方体的边界写在能力边界里：要爆款、破圈用它；要庄重、可上头版用这个。</p>
+          <div class="use"><em>适用</em> 社论 · 评论员文章 · 人民时评</div>
+        </article>
+        <article class="card">
+          <span class="feng">讲 理 之 风</span>
+          <h4>毛泽东文章体</h4>
+          <div class="slug">maozedong-writing</div>
+          <p>开门见山、分类剖析、分条列举、两点论、俗语比喻、短句排比。只学怎么写，不学立场；冒充口吻、编造语录一律拒绝。</p>
+          <div class="use"><em>适用</em> 议论文 · 说理短文 · 演讲稿</div>
+        </article>
+        <article class="card">
+          <span class="feng">冷 眼 之 风</span>
+          <h4>鲁迅体</h4>
+          <div class="slug">luxun-writing</div>
+          <p>小处切入、正话反说、揭底一句、冷笔白描。把人人习以为常的东西，指给你看它的骨头。原文公版（鲁迅 1936 年逝世）。</p>
+          <div class="use"><em>适用</em> 杂文 · 短评 · 社会现象批评</div>
+        </article>
+        <article class="card">
+          <span class="feng">趣 味 之 风</span>
+          <h4>王小波体</h4>
+          <div class="slug">wangxiaobo-writing</div>
+          <p>一本正经地推演，推到荒谬处让人笑出来，再以「有趣」为尺度。科学类比、动物寓言、沉默者立场。不冒充口吻，网上伪语录拿不准就不引。</p>
+          <div class="use"><em>适用</em> 说理杂文 · 随笔 · 反驳「正确的废话」</div>
+        </article>
+      </div>
     </div>
-    <p style="margin-top:24px;color:var(--ink2);font-size:14.5px">三个引擎都能<b>反向用</b>：给它一篇现成文章，它按原子链拆解、做红线体检，告诉你用了哪几招、哪几处露怯、怎么改。</p>
+
+    <div class="group">
+      <h4 class="gt">叙事 <small>NARRATIVE</small></h4>
+      <p class="gd">写人与处境的变化。共同点是时间在推进、细节在承重、结尾不升华；分野在温度和距离——特稿近身，余华退后，金庸把冲突架在人情与局势上。</p>
+      <div class="cards g3">
+        <article class="card">
+          <span class="feng">人 间 之 风</span>
+          <h4>特稿</h4>
+          <div class="slug">feature-writing</div>
+          <p>人物特稿体。特稿不是写人，是写「处境与变化」——人是处境的总和，时间是核心变量。附选题四问：先判断这个题够不够格写。</p>
+          <div class="use"><em>适用</em> 人物特稿 · 深度报道 · 人物群像</div>
+        </article>
+        <article class="card">
+          <span class="feng">零 度 之 风</span>
+          <h4>余华体</h4>
+          <div class="slug">yuhua-writing</div>
+          <p>零度叙述、重复结构、死亡轻写、口语对话推进。写死的时候不眨眼，读者替他哭。把煽情的苦难叙事改冷、改轻、改出重复的节奏。</p>
+          <div class="use"><em>适用</em> 短篇叙事 · 小小说 · 普通人的苦难</div>
+        </article>
+        <article class="card">
+          <span class="feng">江 湖 之 风</span>
+          <h4>金庸体</h4>
+          <div class="slug">jinyong-writing</div>
+          <p>出场立人、动作分镜、悬念埋扣、群像江湖、情义两难。武功是性格，江湖是人情。人物、门派、招式均须原创，不写原著续写与同人。</p>
+          <div class="use"><em>适用</em> 原创武侠片段 · 叙事手法迁移</div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h4 class="gt">散文 <small>ESSAY</small></h4>
+      <p class="gd">写自己的日子与身边的风物。共同点是从小处落笔、以白描为主、情绪不外放；差别在「我」的姿态——东坡会转身，汪曾祺不转身，李娟蹲下来看，张爱玲在一旁看得清。</p>
+      <div class="cards g4">
+        <article class="card">
+          <span class="feng">旷 达 之 风</span>
+          <h4>苏轼白话体</h4>
+          <div class="slug">sushi-writing</div>
+          <p>即事起兴、窘中写乐、主客问答、转念一歇。东坡的好不在辞藻，在「看得开」的那一下转身。原文公版，用今天的白话写。</p>
+          <div class="use"><em>适用</em> 白话随笔 · 游记 · 读书杂感</div>
+        </article>
+        <article class="card">
+          <span class="feng">淡 笔 之 风</span>
+          <h4>汪曾祺体</h4>
+          <div class="slug">wangzengqi-writing</div>
+          <p>闲闲起笔、名物说解、手艺细写、文白相间、轻轻一放。情绪始终是平的，不转身、不说理。把一篇用力过猛的抒情散文改淡。</p>
+          <div class="use"><em>适用</em> 吃食草木 · 手艺人 · 节令风俗</div>
+        </article>
+        <article class="card">
+          <span class="feng">天 真 之 风</span>
+          <h4>李娟体</h4>
+          <div class="slug">lijuan-writing</div>
+          <p>天真视角、琐事铺满、风物白描、镜头拉远、一句轻叹。把一件谁都不当回事的小事，看得像第一次看见。写的是学习者自己的日子。</p>
+          <div class="use"><em>适用</em> 家人小记 · 季节风物 · 日常散文</div>
+        </article>
+        <article class="card">
+          <span class="feng">苍 凉 之 风</span>
+          <h4>张爱玲体</h4>
+          <div class="slug">zhangailing-writing</div>
+          <p>格言起收、刁钻比喻、以物写心、冷眼算盘。把人心里那点算盘放到一件衣服、一盏灯上。产出是今天的白话，不写民国腔与旗袍月亮。</p>
+          <div class="use"><em>适用</em> 都市散文 · 人情小品 · 短篇片段</div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h4 class="gt">实用 <small>APPLIED</small></h4>
+      <p class="gd">面向具体场景的写作，有传播上的硬约束：一段要让人读下去，一段要让人听下去。前者靠具体，后者靠节奏。</p>
+      <div class="cards g2">
+        <article class="card">
+          <span class="feng">城 市 之 风</span>
+          <h4>活人感</h4>
+          <div class="slug">human-voice-writing</div>
+          <p>城市观察文。具体的人、具体的物、具体的抱怨、具体的快乐；幽默、口语、松弛收尾。21 个原子，也能反向给已有文本去 AI 腔。</p>
+          <div class="use"><em>适用</em> 公众号叙事文 · 城市观察 · 网感文案</div>
+        </article>
+        <article class="card">
+          <span class="feng">舞 台 之 风</span>
+          <h4>脱口秀稿</h4>
+          <div class="slug">standup-writing</div>
+          <p>观察切口、铺垫—包袱、三段式、act-out、callback。好笑不是说笑话，是让观众比你先一步想到，又在最后一秒发现想错了。不模仿具体演员。</p>
+          <div class="use"><em>适用</em> 单口稿 · 开放麦 · 短视频口播</div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h4 class="gt">公文 <small>OFFICIAL DOCUMENT</small></h4>
+      <p class="gd">有法定格式与行文关系的一类。先守规矩，再谈表达：文种选错，写得多好都不对；格式不齐，语气再准也不算成品。</p>
+      <div class="cards g1">
+        <article class="card">
+          <span class="feng">规 矩 之 风</span>
+          <h4>公文</h4>
+          <div class="slug">gongwen-writing</div>
+          <p>对齐 GB/T 9704-2012 与 15 个法定文种。九步流程：需求澄清、文种判定、素材盘点、情境化语气、篇幅控制、规范结构、默念自查。不越位、不代决，只给写法。</p>
+          <div class="use"><em>适用</em> 通知 · 报告 · 请示 · 函 · 会议纪要</div>
+        </article>
+      </div>
+    </div>
+
+    <p style="margin-top:32px;color:var(--ink2);font-size:14.5px">15 个引擎都能<b>反向用</b>：给它一篇现成文章，它按原子链拆解、做红线体检，告诉你用了哪几招、哪几处露怯、怎么改。分级与阈值见 <a href="https://github.com/Greatbeing/writing-engines/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p>
+  </div>
+</section>
+
+<section class="s reveal" id="atoms">
+  <div class="no">风 五<b>原子总库</b></div>
+  <div>
+    <h3>15 个引擎不是 15 套话术，是同一批原子的不同排序。</h3>
+    <p>把各引擎的原子表摊开对照，重复率比想象的高：鲁迅的「小处切入」、汪曾祺的「闲闲起笔」、脱口秀的「观察切口」、官方体的「场景钩」，做的是同一个动作——从一个极小、人人见过的东西切进去。于是有了跨引擎的<b>原子总库</b>：各引擎的原子文件保持原样，只在每个原子下加一行族标签，再按族汇总。</p>
+    <p>族里记的是<b>通用定义</b>，引擎里记的是<b>变体差异</b>——同一个动作，鲁迅冷、汪曾祺闲、脱口秀要观众「对对对」。这就是这个仓库最重要的一句话：</p>
+    <blockquote>不同作者 = 同一批原子的不同组合。<cite>— 风格不是另一套零件，是同一批零件的另一种顺序与密度</cite></blockquote>
+    <div class="fams">
+      <span><b>小处起笔</b> 8</span><span><b>自嘲</b> 7</span><span><b>不收的收尾</b> 6</span><span><b>金句断语</b> 10</span><span><b>排比/三段</b> 6</span><span><b>分类拆解</b> 3</span><span><b>反转揭底</b> 5</span><span><b>换层级</b> 6</span><span><b>古今对照</b> 4</span><span><b>预设驳论</b> 6</span><span><b>数据压舱</b> 3</span><span><b>正经夸张</b> 9</span><span><b>比喻</b> 6</span><span><b>冷笔白描</b> 9</span><span><b>命名</b> 5</span><span><b>典型画像</b> 7</span><span><b>号召落点</b> 2</span><span><b>回环呼应</b> 4</span><span><b>独有</b> 37</span>
+    </div>
+    <ul class="chain">
+      <li>引擎里的原子总量 → <b>162 个</b>（15 个引擎）</li>
+      <li>已标族、汇入总库 → <b>143 个 / 19 族</b>（13 个引擎）</li>
+      <li>尚未分族 → <b>19 个</b>（特稿 10 + 公文 9，还在各自的 SKILL.md 里）</li>
+    </ul>
+    <p style="margin-top:20px">人读的汇总页是 <code>atoms/LIBRARY.md</code>，机器读的是 <code>atoms/index.json</code>。两边对不对得上不靠自觉：<code>lint_skill.py</code> 的 A1–A3 三条检查，族标签缺一行、与索引不一致、索引里有而原子文件里找不到，都会报错。</p>
+    <p style="color:var(--ink2);font-size:14.5px">「独有」不是一个族，是<b>37 个只在单一引擎出现的动作</b>——金庸的动作分镜、张爱玲的色彩点睛、李娟的天真视角都在这里。它们是总库的下一批候选：再有两个引擎用到同一个动作，就该给它一个族名。</p>
   </div>
 </section>
 
 <section class="s reveal" id="build">
-  <div class="no">风 五<b>造一个引擎</b></div>
+  <div class="no">风 六<b>造一个引擎</b></div>
   <div>
     <h3>引擎不是攒出来的，是造出来的。</h3>
     <ol class="steps">
@@ -263,30 +431,33 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
 </section>
 
 <section class="s reveal" id="use">
-  <div class="no">风 六<b>安装与使用</b></div>
+  <div class="no">风 七<b>安装与使用</b></div>
   <div>
     <p><code>SKILL.md</code> + frontmatter 是通用格式。以 OpenClaw 为例：</p>
 <pre><button class="copy">COPY</button><span class="k">git</span> clone https://github.com/Greatbeing/writing-engines.git
-<span class="k">cp</span> -r writing-engines/human-voice-writing \
-      writing-engines/guanfang-writing \
-      writing-engines/feature-writing \
-      ~/.openclaw/workspace/skills/</pre>
+<span class="c"># 15 个引擎目录各自自包含，按需拷，也可以全拷</span>
+<span class="k">cp</span> -r writing-engines/*-writing ~/.openclaw/workspace/skills/</pre>
     <p>Claude Code 或其它支持 <code>SKILL.md</code> 的宿主：把引擎目录放进对应的 skills 路径即可。目录自包含，无代码依赖。</p>
     <p>一句话需求进，一篇文章出。写完可以自检：</p>
 <pre><button class="copy">COPY</button><span class="c"># 按引擎给一篇文章打 AI 味分</span>
-<span class="k">python</span> tools/ai-flavor-checker.py article.md --engine human-voice-writing</pre>
+<span class="k">python</span> tools/ai-flavor-checker.py article.md --engine human-voice-writing
+<span class="c"># 全库合规 / 断言 / 回归测试</span>
+<span class="k">python</span> tools/lint_skill.py --all
+<span class="k">python</span> tools/run_prompts.py --all
+<span class="k">python</span> tools/tests/test_checker.py</pre>
   </div>
 </section>
 
 <section class="s reveal">
-  <div class="no">风 七<b>评测</b></div>
+  <div class="no">风 八<b>评测</b></div>
   <div>
-    <p>评测流程已就位：盲评、按引擎打分、回归测试。但第一轮<b>还没跑</b>。</p>
+    <p>评测流程已就位：盲评、按引擎打分、回归测试。但第一轮<b>还没跑</b>——首轮只排 3 个成熟引擎（活人感／官方体／特稿），其余 12 个尚未参评，所以现在没有任何「用了比不用好多少」的数字。</p>
     <div class="tbd">
       <div><div class="v">TBD</div><div class="l">用了比不用好多少</div></div>
       <div><div class="v">17</div><div class="l">条 checker 回归断言</div></div>
       <div><div class="v">10</div><div class="l">项收录检查</div></div>
     </div>
+    <p>现在能看的是<a href="compare/">同题四体</a>：5 道题、每题 4 版并排（裸模型 + 3 个引擎），同一份素材，唯一的变量是加载哪个引擎。<b>它说明差别存在，不说明差别显著</b>——显著性要等盲评。</p>
     <p style="color:var(--ink2);font-size:14.5px">数字出来之前，这里不写形容词。结果会更新在 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a>。</p>
   </div>
 </section>

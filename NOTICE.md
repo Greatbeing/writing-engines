@@ -4,8 +4,9 @@
 
 ## 一、许可覆盖什么
 
-MIT 适用于本仓库的**全部原创内容**：三个引擎的 `SKILL.md`、`references/`、
-`SPEC.md`、`eval/` 的设计文档与脚本、`tools/` 下的代码、`README` 与 `CHANGELOG`。
+MIT 适用于本仓库的**全部原创内容**：15 个引擎（`*-writing/`）的 `SKILL.md`、`references/`、
+`examples/` 中的原创示范与 `atoms/` 原子总库、`SPEC.md`、`eval/` 的设计文档与脚本、
+`tools/` 下的代码、`README` 与 `CHANGELOG`。
 
 此处的 "Software" 应理解为「本仓库的全部作品（the Work）」——代码与文字一体适用。
 我们的意图很简单：**随便用，包括商用，只要保留 `LICENSE` 里的署名与许可声明。**

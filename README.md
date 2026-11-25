@@ -56,21 +56,42 @@
 | [`human-voice-writing`](human-voice-writing/SKILL.md) | 活人感城市观察文（三联生活实验室体） | 11 篇（2024–2026） | 21 | 可用 |
 | [`guanfang-writing`](guanfang-writing/SKILL.md) | 官方时评（浙江宣传体） | 10 篇（拆解结论入库，原文不入） | 12 | 可用 |
 | [`feature-writing`](feature-writing/SKILL.md) | 人物特稿（《人物》杂志体） | 10 篇（2020–2023） | 10 | 可用 |
-| [`gongwen-writing`](gongwen-writing/SKILL.md) | 党政机关公文（GB/T 9704-2012，15 个法定文种） | 9 个文种模板 | 6 | 可用 |
-| [`sushi-writing`](sushi-writing/SKILL.md) | 苏轼白话体随笔（散文小品＋尺牍） | 13 篇（公版） | 3 | 试用 |
-| [`luxun-writing`](luxun-writing/SKILL.md) | 鲁迅体白话杂文 | 14 篇（公版） | 3 | 试用 |
-| [`wangxiaobo-writing`](wangxiaobo-writing/SKILL.md) | 王小波体幽默说理杂文 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`zhangailing-writing`](zhangailing-writing/SKILL.md) | 张爱玲体散文与小说描写 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`lijuan-writing`](lijuan-writing/SKILL.md) | 李娟体散文白描 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`yuhua-writing`](yuhua-writing/SKILL.md) | 余华体冷静叙事 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`standup-writing`](standup-writing/SKILL.md) | 中文脱口秀稿 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`renminribao-writing`](renminribao-writing/SKILL.md) | 人民日报评论体 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`wangzengqi-writing`](wangzengqi-writing/SKILL.md) | 汪曾祺体散文 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`jinyong-writing`](jinyong-writing/SKILL.md) | 金庸体武侠叙事 | 拆解结论（原文不入库） | 3 | 试用 |
-| [`maozedong-writing`](maozedong-writing/SKILL.md) | 毛泽东文章体说理 | 拆解结论（原文不入库） | 3 | 试用 |
+| [`gongwen-writing`](gongwen-writing/SKILL.md) | 党政机关公文（GB/T 9704-2012，15 个法定文种） | 9 个文种模板 | 9 | 可用 |
+| [`sushi-writing`](sushi-writing/SKILL.md) | 苏轼白话体随笔（散文小品＋尺牍） | 13 篇（公版） | 10 | 试用 |
+| [`luxun-writing`](luxun-writing/SKILL.md) | 鲁迅体白话杂文 | 14 篇（公版） | 10 | 试用 |
+| [`wangxiaobo-writing`](wangxiaobo-writing/SKILL.md) | 王小波体幽默说理杂文 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`zhangailing-writing`](zhangailing-writing/SKILL.md) | 张爱玲体散文与小说描写 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`lijuan-writing`](lijuan-writing/SKILL.md) | 李娟体散文白描 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`yuhua-writing`](yuhua-writing/SKILL.md) | 余华体冷静叙事 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`standup-writing`](standup-writing/SKILL.md) | 中文脱口秀稿 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`renminribao-writing`](renminribao-writing/SKILL.md) | 人民日报评论体 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`wangzengqi-writing`](wangzengqi-writing/SKILL.md) | 汪曾祺体散文 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`jinyong-writing`](jinyong-writing/SKILL.md) | 金庸体武侠叙事 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`maozedong-writing`](maozedong-writing/SKILL.md) | 毛泽东文章体说理 | 拆解结论（原文不入库） | 10 | 试用 |
 
-三个引擎共享一套结构契约（[`SPEC.md`](SPEC.md)），每个都带 `test-prompts.json` 与
+结构分两层：**4 个可用**（活人感／官方体／特稿／公文——过契约、过断言、有完整产出、
+有实战反馈）＋ **11 个试用**（七节齐备、断言可跑，但样本与反馈还少）。
+「可用／试用」是内部评审口径，不是能力上限；盲评一跑完，这个分级会换成胜率数字。
+
+15 个引擎共享一套结构契约（[`SPEC.md`](SPEC.md)），每个都带 `test-prompts.json` 与
 可判定的断言——引擎不是「看着像」，是「可以被检查」。
+
+## 原子总库：19 族 143 个原子
+
+把 15 个引擎的原子表摊开对照，重复率比想象的高：鲁迅的「小处切入」、汪曾祺的
+「闲闲起笔」、脱口秀的「观察切口」、官方体的「场景钩」，是同一个动作。所以有了
+跨引擎的原子总库（[`atoms/LIBRARY.md`](atoms/LIBRARY.md)、机器可读版
+[`atoms/index.json`](atoms/index.json)）：
+
+- 引擎里的原子总量 **162 个**（15 个引擎，其中活人感 21、官方体 12、特稿 10、公文 9，其余各 10）
+- 已标族、汇入总库 **143 个 / 19 族**（13 个引擎；`feature-writing` 与 `gongwen-writing` 的
+  19 个原子还在各自 SKILL.md 里，尚未分族）
+- 族里写**通用定义**，引擎里写**变体差异**
+
+一句话：**不同作者 = 同一批原子的不同组合。** 风格不是另一套零件，是同一批零件的
+另一种顺序与密度。各引擎的原子文件保持原样，只加一行 `**族**：X`；
+`tools/lint_skill.py` 的 A1–A3 检查族标签与索引是否一致——缺行、不一致、索引有而
+原子文件无，都会报错。这不是文档约定，是可执行的检查。
 
 ## 安装
 
@@ -108,8 +129,14 @@ Claude Code 或其它支持 `SKILL.md` 的宿主：把引擎目录放进对应�
 | 活人感 | 写公众号文／城市观察／避免 AI 味／网感文案 | 需要实名采访的特稿、政务时评 |
 | 官方体 | 写时评／政论文／主旋律／体制内爆款 | 生活随笔、口语化观察文 |
 | 特稿 | 写人物特稿／深度报道／人物群像 | 只有二手转述、无现场无采访 |
+| 公文 | 写通知／报告／请示／函／会议纪要，或转国标版式 docx | 党报评论、新媒体时评 |
+| 人民日报评论 | 写社论／评论员文章／人民时评，给评论「提站位」 | 公文、杂文、特稿，冒充人民日报署名 |
+| 鲁迅体 | 写杂文／短评／社会现象批评，把温吞的评论改出锋芒 | 官方时评、松弛随笔、民国腔仿古 |
 
-三个引擎都能**反向用**：给它一篇现成文章，它按原子链拆解 + 做红线体检，
+其余 9 个引擎各自带触发词与「不适用」路由，写在各自 `SKILL.md` 的 `description` 里
+（3–4 个触发分支，一条不适用路由）。这几行不是全部——只是先给三种最常见的口径。
+
+15 个引擎都能**反向用**：给它一篇现成文章，它按原子链拆解 + 做红线体检，
 告诉你这篇用了哪几招、哪几处露怯、怎么改。
 
 ## 造一个引擎
@@ -121,7 +148,7 @@ Claude Code 或其它支持 `SKILL.md` 的宿主：把引擎目录放进对应�
 → 实战（真实文章验证）→ 反哺（反馈回写技法库）
 ```
 
-第三步「压缩」过去没有产物定义，于是三个引擎长出了三种结构。现在有了：
+第三步「压缩」过去没有产物定义，于是头三个引擎长出了三种结构。现在有了：
 [`SPEC.md`](SPEC.md) 规定七节结构、体积上限（按字符不按字节）、
 description／红线／指纹各自的写法。`tools/lint_skill.py` 让它可执行。
 
@@ -140,12 +167,16 @@ description／红线／指纹各自的写法。`tools/lint_skill.py` 让它可�
 | 工具 | 干什么 |
 |---|---|
 | [`tools/ai-flavor-checker.py`](tools/ai-flavor-checker.py) | AI 味评分（v0.2，**按引擎**打分，可当门禁） |
-| [`tools/lint_skill.py`](tools/lint_skill.py) | 检查引擎是否符合 `SPEC.md`（10 项，`--strict` 作准入线） |
-| [`tools/tests/test_checker.py`](tools/tests/test_checker.py) | checker 的回归测试（17 条断言） |
+| [`tools/lint_skill.py`](tools/lint_skill.py) | 检查引擎是否符合 `SPEC.md`（E1–E11 十一项 + A1–A3 原子族标签，`--strict` 作准入线） |
+| [`tools/run_prompts.py`](tools/run_prompts.py) | 按各引擎 `test-prompts.json` 的断言自动核对 `examples/` 产出，`--all` 跑全库 |
+| [`tools/tests/test_checker.py`](tools/tests/test_checker.py) | checker 的回归测试（18 条断言） |
+| [`tools/build_articles.py`](tools/build_articles.py) | 把引擎 `examples/*.md` 生成为官网文章页 `docs/articles/` |
+| [`tools/build_compare.py`](tools/build_compare.py) | 把 `demo/<题号>/` 的四版生成为同题对照页 `docs/compare/` |
 
 ```bash
 python3 tools/ai-flavor-checker.py --engine human-voice-writing 文章.md
 python3 tools/lint_skill.py --all
+python3 tools/run_prompts.py --all
 python3 tools/tests/test_checker.py
 ```
 
@@ -166,11 +197,15 @@ python3 tools/tests/test_checker.py
 
 流程、题目、统一素材包、泄露拦截、汇总脚本、判据都已写好。
 **第一轮还没跑**，[`eval/RESULTS.md`](eval/RESULTS.md) 里全是 `TBD`——
-所以「用了比不用好多少」目前还没有数字。这是下一步唯一在做的事。
+所以「用了比不用好多少」目前还没有数字。
+
+范围要说清楚：首轮只排 3 个成熟引擎（活人感／官方体／特稿），
+另外 12 个引擎**一次都没参评**。所以现在的评测证据只覆盖 15 个引擎里的 1/5，
+而全库 143 个原子、19 个族，都是按可检查的规格写出来的，不是按胜率筛出来的。
 
 判据事先定死了，包括一条自我证伪条件：
 
-> 如果三个引擎的输出无法区分（H2 失败），那么「文体的操作系统」这个说法
+> 如果首轮这三个引擎的输出无法区分（H2 失败），那么「文体的操作系统」这个说法
 > 就应该降级为「一个通用写作引擎，三种侧重」。
 
 先定证伪条件，再看数据。不然看到数据总能自圆其说。
@@ -179,18 +214,27 @@ python3 tools/tests/test_checker.py
 
 按「每步都留下可展示物」排序，不是按「想做什么」排序。
 
-- [x] 三个引擎（活人感 21 原子 / 官方体 12 / 特稿 10）
-- [x] 引擎契约 `SPEC.md` + 合规检查器
-- [x] checker v0.2（按引擎打分）+ 回归测试
-- [ ] **`eval` 第一轮盲评** ← 当前唯一在做的事
-- [ ] checker 全量校准（用 21 篇原文做负样本）
-- [ ] 同题三体 demo（一眼看出差别，最好的分发物）
-- [ ] 学习路径原型（拆解课／模仿课／创作课）
-- [ ] 第 4 个引擎 ← **明确押后**，理由见 [`PRODUCT.md`](PRODUCT.md)
+已完成：
+
+- [x] 15 个引擎（活人感 21 原子 / 官方体 12 / 特稿 10 / 公文 9 / 其余各 10）
+- [x] 引擎契约 `SPEC.md` + 合规检查器（E1–E11 + A1–A3）
+- [x] 跨引擎原子总库 `atoms/`：19 族 / 143 原子，族标签由 lint 守
+- [x] checker v0.2（按引擎打分）+ 回归测试（18 条断言）
+- [x] checker 全量校准（21 篇原文作负样本，「原文必须过自家门槛」）
+- [x] 工具链：`lint_skill` / `run_prompts` / `build_articles` / `build_compare` / `check_quotes`
+- [x] 同题四体 demo（5 题 × 4 版，`docs/compare/`）——是展示，不是评测
+
+未完成：
+
+- [ ] **`eval` 首轮盲评** ← 当前唯一在做的事（3 个引擎，不是 15 个）
+- [ ] 盲评扩到 15 个引擎（含跨族对照：同一族原子在不同文体的表现差异）
+- [ ] 教学层：学习路径原型（拆解课／模仿课／创作课）——目前完全空白
+- [ ] 原文核对：金庸、余华、李娟、张爱玲、王小波、汪曾祺、毛选等版权期引擎的
+      引文均为「未逐字核对」，`tools/check_quotes.py` 只能查素材内编造，查不了原文
 
 ## 许可与语料
 
-- **全部原创内容**（SKILL.md、references/、SPEC、eval、tools 代码）：**MIT** —
+- **全部原创内容**（SKILL.md、references/、atoms/ 原子总库、SPEC、eval、tools 代码）：**MIT** —
   见 [`LICENSE`](LICENSE)。随便用，包括商用，保留署名与许可声明即可。
   适用范围与第三方材料的说明见 [`NOTICE.md`](NOTICE.md)。
 - **第三方文章**：不收录全文，仅存篇目元数据与技法映射；例证单条 ≤ 50 字并标注出处。

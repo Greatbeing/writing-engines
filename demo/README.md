@@ -5,23 +5,25 @@
 
 ## 现有
 
-三个引擎各有一篇完整产出，已上线官网文章栏目：
+三个成熟引擎各有一篇完整产出，已上线官网文章栏目：
 
 → https://greatbeing.github.io/writing-engines/articles/
 
 （`guanfang-writing/examples/2026-11-02-skill评分报告.html` 是 skill 自评分卡，不是文章示例，不在此列。）
 
-## 缺的那一件：同题三体
+## 已做的那一件：同题四体
 
-路线图上优先级最高的一张页面。做法很便宜：
+这一页已经做完了，不是计划：`demo/t01`、`t05`、`t07`、`t09`、`t10` 五个题目目录，
+每题四版（裸模型 / 活人感 / 官方体 / 特稿），由 `tools/build_compare.py` 生成为
+`docs/compare/` 的对照页。上线地址：
 
-1. 从 `eval/prompts.json` 取 3 个题（各挑一个文体最擅长的题）
-2. 每题贴 4 段：裸模型 / 活人感 / 官方体 / 特稿
-3. 用 `<details>` 折叠长文，首屏只留每段的第一句
-4. 页脚放一行 `eval/RESULTS.md` 的胜率数字（跑完之后）
+→ https://greatbeing.github.io/writing-engines/compare/
 
-**为什么值得做**：这是唯一一个「不需要装 agent、不需要读 README」就能感受到差别的
-产物。它同时也是 `eval` 的副产品——跑完盲评，40 篇产出已经在手上，做成页面只是排版。
+做法：每题从 `eval/prompts.json` 取题与统一素材包，四版由四个独立 agent 分别生成，
+唯一变量是加载哪个引擎；页面用折叠长文，首屏只留每段的开头。
+
+**这是展示，不是评测**：它说明差别存在，不说明差别显著、不说明稳定。
+胜率与显著性以 `eval/RESULTS.md` 的盲评为准（尚未运行）。
 
 **注意**：demo 页里贴的是**模型输出**，不是语料原文。语料原文不入库
 （见 `sources/INDEX.md`）。
