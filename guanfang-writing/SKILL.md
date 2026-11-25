@@ -143,4 +143,5 @@ description: |
 - `references/golden-sentences.md` — 金句句式模板库
 - `references/red-lines.md` — 红线与分寸
 - `sources/INDEX.md` — 语料篇目与技法映射（不存全文）
-- `examples/2026-11-02-官方体改写前后对照.html` — 完整产出示例（改写前后对照卡片）
+- `examples/2026-11-25-AI焦虑时评.md` — 完整产出示例（t09 时评，原子链见文末）
+- `examples/2026-11-02-skill评分报告.html` — skill 自评分报告（Darwin 评分卡，非文章示例）

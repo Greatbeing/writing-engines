@@ -5,13 +5,11 @@
 
 ## 现有
 
-官方体已经有一份改写前后的对照卡片，放在它自己的引擎目录里（因为它同时是
-那个引擎的 `examples/` 完整产出示例，见 `SPEC.md` §1）：
+三个引擎各有一篇完整产出，已上线官网文章栏目：
 
-→ [`../guanfang-writing/examples/2026-11-02-官方体改写前后对照.html`](../guanfang-writing/examples/2026-11-02-官方体改写前后对照.html)
+→ https://greatbeing.github.io/writing-engines/articles/
 
-**待办**：确认它在浏览器里渲染正常，然后把这个链接放上 README 首屏。
-一个能让人 30 秒内看懂「好在哪」的页面，比 README 里再多三段方法论有用。
+（`guanfang-writing/examples/2026-11-02-skill评分报告.html` 是 skill 自评分卡，不是文章示例，不在此列。）
 
 ## 缺的那一件：同题三体
 
