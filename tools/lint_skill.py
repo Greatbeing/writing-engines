@@ -20,6 +20,7 @@
   E8 仓库内不得有 .backup/ 目录或 *N.txt 式的语料全文
   E9 不得存在 sources/local/ 下的 .txt（版权边界）
   E10 examples/ 至少 1 个 > 1KB 的完整产出（片段不算示例，见 SPEC §1）
+  E11 SKILL.md 里写的每个 `路径` 都必须真实存在（死链接会让 agent 读空）
 
 退出码：0 全通过 / 1 有错误 / 2 参数错误
 说明：本文件在无 Python 沙箱内写成，未经实际执行。
@@ -172,7 +173,19 @@ def lint_engine(engine_dir, strict=False):
             issues.append(Issue("E9", "error",
                                 f"{local.relative_to(ROOT)}/ 非空，语料全文不得入库"))
 
-    # E10 examples/
+    # E11 引用路径必须存在
+    # 死链是最隐蔽的一种错：lint 全绿、引擎看起来完整，但 agent 顺着指针去读时扑空，
+    # 只能凭 SKILL.md 里那点摘要硬写。feature-writing 的 references/ref-index.md 就这样
+    # 缺了一整个目录，直到 subagent 报告「要读的文件夹不存在」才被发现。
+    for ref in sorted(set(re.findall(r"`([^`\s]+\.(?:md|json|py|txt|html))`", body))):
+        if ref.startswith(("http", "~", "/")) or "*" in ref:
+            continue
+        # 三个合法的解析位置：引擎目录下、引擎的 references/ 下、仓库根下。
+        # 最后一个是必须的——sources/INDEX.md 是全库共享的语料索引；
+        # 中间那个是为了容忍正文里写简称（`case-studies.md` 指 references/case-studies.md）。
+        cands = [engine_dir / ref, engine_dir / "references" / ref, ROOT / ref]
+        if not any(c.exists() for c in cands):
+            issues.append(Issue("E11", "error", f"SKILL.md 引用的路径不存在：{ref}"))
     # 一个引擎没有完整产出示例，等于「只给了方法没给标准」——写出来的人无法自比。
     ex_dir = engine_dir / "examples"
     solid = [p for p in ex_dir.glob("*") if p.is_file() and p.stat().st_size > 1024] \

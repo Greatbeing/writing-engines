@@ -87,9 +87,10 @@ def build(tid, topic, folder):
 <details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul>{mats}</ul></details>
 <div class="tabs">{''.join(tabs)}</div>
 <div class="grid" style="--n:{len(cols)}">{''.join(cols)}</div></section>
-<div class="how"><div class="box">做法：四版拿到完全相同的题目与素材，唯一的变量是加载哪个引擎。
-裸模型与活人感、特稿两版由独立 agent 分别生成（裸模型不读仓库任何文件）；官方体版为人工按引擎流程撰写，非独立生成。
-这是展示，不是评测——胜率以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准。
+<div class="how"><div class="box">做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；
+唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。
+这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
+胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
 源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/{tid}">demo/{tid}/</a></div></div>
 <script>{JS}</script>"""
     OUT.mkdir(parents=True, exist_ok=True)
