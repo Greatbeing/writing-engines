@@ -1,0 +1,20 @@
+# 让 GitHub 正确识别本仓库的性质。
+# 注意：.gitattributes 不支持行内注释——注释必须独占一行，
+# 否则 # 之后的内容会被当成属性名（git 会报 "not a valid attribute name"）。
+#
+# 行尾统一 LF：本仓库主要在 Windows 上编辑，而 core.autocrlf=true 会让每次
+# 保存都可能引入整文件 diff。钉死 LF 后，任何平台 checkout 结果一致。
+* text=auto eol=lf
+
+# 目的：仓库主语言应是 Python（tools/ 与 eval/），而不是被一张演示页带成 HTML。
+
+*.md       linguist-documentation
+*.txt      linguist-documentation
+*.json     linguist-documentation
+sources/**  linguist-documentation
+
+# 演示页与成果卡片是文档，不是应用代码
+*.html     linguist-documentation
+
+tools/*.py linguist-language=Python
+eval/*.py  linguist-language=Python

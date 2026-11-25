@@ -1,0 +1,49 @@
+{
+  "engine": "feature-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py --engine feature-writing 产出.md",
+    "2) 逐条核对 assertions",
+    "3) 特稿门槛最严（30），因为它的克制天然让分数低；超 30 说明写飘了"
+  ],
+  "prompts": [
+    {
+      "id": "fw-1",
+      "material_ref": "eval/prompts.json#t07",
+      "prompt": "写一篇人物特稿：一个人在巷子里修了十年表。1200 字，含小标题。",
+      "expect": "素人类：反差断言开场 → 场景帧 → 履历压缩 → 活法展开（引语）→ 章节推进时间 → 落回当下的结尾",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "悲恸|伟大|震撼|泪目|感人|励志|令人深思|这体现了" },
+        { "type": "count_min", "target": "direct_quotes", "value": 5, "note": "直接引语 ≥ 5 处，其中 ≥ 3 处 ≤ 15 字" },
+        { "type": "count_min", "target": "time_markers", "value": 3, "note": "具体年份/年龄/某一天，让变化可定位" },
+        { "type": "any_regex", "value": "^#{1,3}\\s*\\S+", "note": "有章节小标题（2-5 个）" },
+        { "type": "manual", "note": "结尾没有点题、没有升华，落在一个平静的当下" },
+        { "type": "manual", "note": "没有「我采访了」「令我感动的是」这类记者出面" }
+      ]
+    },
+    {
+      "id": "fw-2",
+      "material_ref": "eval/prompts.json#t08",
+      "prompt": "写一篇人物特稿：一位在县城中学教了二十年的老师。1200 字。",
+      "expect": "时间作为核心变量：二十年 → 学生来来去去 → 他留在原地；结尾不下判断",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "count_min", "target": "time_markers", "value": 3 },
+        { "type": "manual", "note": "至少一个细节能回答「怎么知道的」（采访/观察/文献）" },
+        { "type": "manual", "note": "人物有「变化」——不是静态好人像" }
+      ]
+    },
+    {
+      "id": "fw-3",
+      "material_ref": null,
+      "prompt": "这个选题够不够写特稿：一位开了十年便利店的老板，我只有他的朋友圈截图，没有采访过。",
+      "expect": "用选题四问判断：不合身 / 变化 / 现场 / 时代压强。指出「无现场」是致命项，建议换选题或换引擎，不硬写",
+      "assertions": [
+        { "type": "any_regex", "value": "现场|采访|四问" },
+        { "type": "manual", "note": "结论是「不建议写特稿」或「先补采访」，而不是直接动笔" },
+        { "type": "manual", "note": "给出了替代方案（换引擎或换选题）" }
+      ]
+    }
+  ]
+}

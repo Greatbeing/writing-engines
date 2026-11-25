@@ -1,0 +1,57 @@
+{
+  "schema": 2,
+  "default_profile": "generic",
+  "_readme": [
+    "penalty / reward 是 0.0-3.0 的乘数，乘在 ai-flavor-checker.py 的原始分项上。",
+    "把某个 penalty 设成 0.0 = 该文体里这个装置不算罪（例如活人感里的「不是A而是B」）。",
+    "把某个 reward 设成 0.0 = 该文体不给这项加分（例如特稿不奖励口语词）。",
+    "pass_below 是各引擎自己的及格线。官方体自带书面腔，门槛必须比活人感宽，",
+    "否则 feature-writing 红线第 6 条那种「总分≤30 才算过」的硬门槛会惩罚整个文体。",
+    "改动这份文件后请跑：python3 tools/ai-flavor-checker.py --selftest"
+  ],
+  "profiles": {
+    "generic": {
+      "label": "通用（新媒体/一般写作）",
+      "pass_below": 30,
+      "_note": "无引擎指定时的兜底。大致等价 v0.1 的判定尺度。",
+      "penalty": {
+        "hard": 1.0, "soft": 1.0, "abstract": 1.0,
+        "long": 1.0, "parallel": 1.0, "formula": 1.0
+      },
+      "reward": { "colloquial": 1.0, "concrete": 1.0, "dialogue": 1.0 }
+    },
+
+    "human-voice-writing": {
+      "label": "活人感叙事（三联生活实验室体）",
+      "pass_below": 30,
+      "_note": "引号访谈与「不是A而是B」是厂牌签名装置，必须奖励/豁免，不能扣分。",
+      "penalty": {
+        "hard": 1.0, "soft": 0.7, "abstract": 1.0,
+        "long": 1.0, "parallel": 1.0, "formula": 0.0
+      },
+      "reward": { "colloquial": 1.0, "concrete": 1.0, "dialogue": 2.0 }
+    },
+
+    "guanfang-writing": {
+      "label": "官方时评（浙江宣传体）",
+      "pass_below": 45,
+      "_note": "官方体自带书面腔与排比，这是文体特征不是失败。门槛放宽到 45；「不是A而是B」是原子 6 升维，豁免。",
+      "penalty": {
+        "hard": 0.8, "soft": 0.4, "abstract": 0.7,
+        "long": 0.8, "parallel": 0.6, "formula": 0.0
+      },
+      "reward": { "colloquial": 0.3, "concrete": 1.0, "dialogue": 1.0 }
+    },
+
+    "feature-writing": {
+      "label": "人物特稿（《人物》杂志体）",
+      "pass_below": 30,
+      "_note": "特稿靠事实压强、禁用口语词，故口语奖励归零；长句是常态，惩罚减半；抽象词（抒情大词）惩罚加重。",
+      "penalty": {
+        "hard": 1.0, "soft": 0.9, "abstract": 1.2,
+        "long": 0.5, "parallel": 0.6, "formula": 0.8
+      },
+      "reward": { "colloquial": 0.0, "concrete": 1.5, "dialogue": 1.0 }
+    }
+  }
+}

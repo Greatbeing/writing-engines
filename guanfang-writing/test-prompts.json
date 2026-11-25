@@ -1,12 +1,49 @@
-[
-  {
-    "id": 1,
-    "prompt": "帮我写一篇浙江宣传体的文章，主题：年轻人爱上逛公园（「公园20分钟效应」走红网络），600-800 字，官方公众号风格。",
-    "expected": "社会现象体：场景钩/接情绪开头 → 现象拆解 → 结构归因 → 本质升维 → 给选择权收尾金句；平视无说教；红线安全"
-  },
-  {
-    "id": 2,
-    "prompt": "写一篇时评，回应「AI 会抢走我们工作」的集体焦虑，600-800 字，官方公众号风格。",
-    "expected": "危机引导/热点评议体：先接情绪再定调 → 数据压舱回答最尖锐问题 → 双层结构（批评具体层/保护抽象层）→ 1/3 处理性转折 → 结尾给希望；金句 ≤3 处且长在论证节点"
-  }
-]
+{
+  "engine": "guanfang-writing",
+  "checker_threshold": 45,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py --engine guanfang-writing 产出.md",
+    "2) 逐条核对 assertions",
+    "3) 门槛是 45 不是 30——官方体自带书面腔，这是文体特征"
+  ],
+  "prompts": [
+    {
+      "id": "gf-1",
+      "material_ref": "eval/prompts.json#t09",
+      "prompt": "帮我写一篇浙江宣传体的时评，主题：年轻人爱上逛公园（「公园 20 分钟效应」走红网络），600-800 字，官方公众号风格。",
+      "expect": "社会现象体：场景钩/接情绪开头 → 现象拆解 → 结构归因 → 本质升维 → 给选择权收尾金句；平视无说教；红线安全",
+      "assertions": [
+        { "type": "checker_max", "value": 45 },
+        { "type": "any_regex", "value": "\\d+\\s*(分钟|小时|天|年|%|万)", "note": "至少 1 处贴身化数字（原子 3）" },
+        { "type": "count_max", "target": "golden_sentences", "value": 3, "note": "金句 ≤ 3 处" },
+        { "type": "any_regex", "value": "我们|不妨|想想", "note": "平视语态（原子 12）" },
+        { "type": "no_regex", "value": "你们应该|必须认识到|广大人民群众要" },
+        { "type": "manual", "note": "靶心在具体操作层，保护层（抽象原则）同时在场" }
+      ]
+    },
+    {
+      "id": "gf-2",
+      "material_ref": "eval/prompts.json#t10",
+      "prompt": "写一篇时评，回应「年轻人该不该躺平」，600-800 字，官方公众号风格。",
+      "expect": "危机引导/热点评议体：先接情绪再定调 → 数据压舱回答最尖锐问题 → 双层结构（批评具体层/保护抽象层）→ 1/3 处处理性转折 → 结尾给希望；金句 ≤3 处且长在论证节点",
+      "assertions": [
+        { "type": "checker_max", "value": 45 },
+        { "type": "any_regex", "value": "不是[^。]{1,40}而是", "note": "原子 6 升维" },
+        { "type": "count_max", "target": "metaphor_families", "value": 1, "note": "全文只有一个贯穿隐喻，不混用" },
+        { "type": "manual", "note": "结尾是结构化表态（三句排比或一组对仗），不是抒情" },
+        { "type": "manual", "note": "没有替读者下判决，留了选择权" }
+      ]
+    },
+    {
+      "id": "gf-3",
+      "material_ref": null,
+      "prompt": "帮我拆解下面这篇文章的原子链，并做红线体检（把文章贴进来）。",
+      "expect": "走拆解流程四步：识别原子链 → 对照组合规则 → 红线体检 → 一句话总评 + 1-2 处改法",
+      "assertions": [
+        { "type": "any_regex", "value": "接情绪|反转定调|数据压舱|双层结构|三句表态|金句压缩", "note": "必须点名原子" },
+        { "type": "any_regex", "value": "原子链|骨架", "note": "要画出骨架，不是逐段复述" },
+        { "type": "manual", "note": "没有代写新文（用户只要求拆解）" }
+      ]
+    }
+  ]
+}

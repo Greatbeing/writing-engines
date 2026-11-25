@@ -1,0 +1,51 @@
+{
+  "engine": "human-voice-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) 用人写 / 用 agent 按 prompt 写出一篇",
+    "2) python3 tools/ai-flavor-checker.py --engine human-voice-writing 产出.md",
+    "3) 逐条核对 assertions（能用机器查的写 type/target/value，需人判的写 type=manual）",
+    "4) 全部通过才算这个 prompt 合格；有一条不过，说明引擎的这一处没被写清"
+  ],
+  "_note": "素材复用 eval/prompts.json 的同题素材包，一处维护两处用。",
+  "prompts": [
+    {
+      "id": "hv-1",
+      "material_ref": "eval/prompts.json#t01",
+      "prompt": "写一篇公众号文章：年轻人把逛菜市场当成周末活动，管它叫「菜市场 City Walk」。800 字。",
+      "expect": "共识假装开头 → 现象定义 → 拆机制 → 3 个样本各解决一个「但是」→ 不是A而是B → 松弛收尾 → 互动提问",
+      "assertions": [
+        { "type": "count_min", "target": "named_samples", "value": 3, "note": "样本须为「标签+名字+场景+原话」四件套" },
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "在这个[^。]{0,10}时代|总而言之|不难发现|毋庸置疑|赋能|抓手" },
+        { "type": "any_regex", "value": "不是[^。]{1,30}而是", "note": "ENDING 金句结构" },
+        { "type": "manual", "note": "收尾落在一个具体场景上，不是情绪上" },
+        { "type": "manual", "note": "全文无「我们应该」" }
+      ]
+    },
+    {
+      "id": "hv-2",
+      "material_ref": "eval/prompts.json#t06",
+      "prompt": "把下面这段「很 AI」的文字改写成活人感段落，保留原意：\n「在当今这个快节奏的职场环境中，员工普遍面临着一种隐性压力：即需要通过持续的忙碌表现来证明自身价值。值得注意的是，这种现象在一定程度上反映了组织评价体系的深层问题。」",
+      "expect": "删掉所有书面套话；补一个具体场景和一句台词；不新增抽象判断",
+      "assertions": [
+        { "type": "checker_max", "value": 30 },
+        { "type": "no_regex", "value": "在当今|值得注意的是|在一定程度上|深层问题|隐性压力" },
+        { "type": "any_regex", "value": "[「\"].{4,40}[」\"]", "note": "至少一句直接引语或台词" },
+        { "type": "length_max", "value": 260, "note": "改写不注水" },
+        { "type": "manual", "note": "改造后仍表达原意（隐性压力 + 评价体系问题），没有偷换成新观点" }
+      ]
+    },
+    {
+      "id": "hv-3",
+      "material_ref": null,
+      "prompt": "帮我看看这篇城市观察文用了哪些技法、哪几处最像 AI 写的、怎么改（把文章贴进来）。",
+      "expect": "走拆解模式：识别原子 → 指出红线命中 → 给 1-2 处具体改法，不重写全文",
+      "assertions": [
+        { "type": "any_regex", "value": "原子\\s*\\d+|共识假装|场景微电影|人物样本", "note": "必须点名原子，不能只说「写得不错」" },
+        { "type": "any_regex", "value": "\\d+\\s*(处|条|句)", "note": "改法要具体到条数" },
+        { "type": "manual", "note": "没有整篇代写（用户只要求分析时不该输出新全文）" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# 工作流备份：留在本地，不进仓库
+.backup/
+*.bak
+
+# 语料全文：受版权保护，任何人本地自备，绝不入库
+# 见 sources/INDEX.md 的「本地语料」一节
+**/sources/local/
+**/references/sources/local/
+tests/fixtures/local/
+
+# 评测的真实产出：可能含未脱敏的模型输出与评分者信息
+eval/runs/
+eval/raw/
+eval/key.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
