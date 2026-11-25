@@ -10,6 +10,7 @@
 | `ai-flavor-checker.py` | 给一段文本打 AI 味分（按引擎） | v0.2 |
 | `lint_skill.py` | 检查一个引擎是否符合 `SPEC.md`（E1–E11） | v0.2 |
 | `check_quotes.py` | 核对人物引语是否真出自素材（查编造与篡改） | v0.1 |
+| `corpus_stats.py` | 语料统计（句长/标点/词表）→ `corpus/<engine>/语言DNA.md` | v0.1 |
 | `build_articles.py` | 把引擎 `examples/*.md` 生成为官网文章页 | — |
 | `build_compare.py` | 把 `demo/<题号>/` 的四版生成为同题对照页 | — |
 | `run_prompts.py` | 按各引擎 `test-prompts.json` 的断言核对 `examples/` 产出（`--all`） | v0.1 |
