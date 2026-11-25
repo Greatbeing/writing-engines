@@ -135,7 +135,9 @@ def collect():
     for eng, (feng, kind, short) in ENGINES.items():
         for f in sorted((ROOT / eng / "examples").glob("*.md")):
             text = f.read_text(encoding="utf-8")
-            m = re.match(r"\s*#\s+(.+)", text)
+            # 有些稿子开头有一行 "> 示范稿…" 说明，标题不在第一行，
+            # 所以用 MULTILINE 找第一个一级标题，而不是只看行首
+            m = re.search(r"^#\s+(.+)$", text, re.M)
             title = m.group(1).strip() if m else f.stem
             body_md = text[m.end():] if m else text
             date = f.stem[:10] if re.match(r"\d{4}-\d{2}-\d{2}", f.stem) else ""
