@@ -12,11 +12,28 @@
       "prompt": "用李娟体写一篇 1000 字左右的散文：母亲在城里的阳台上种菜。",
       "expect": "琐事铺满 → 天真视角/自嘲 → 家人喜剧 → 拟人 → 镜头拉远 → 一句轻叹 → 停在动作上",
       "assertions": [
-        { "type": "checker_max", "value": 30 },
-        { "type": "min_chars", "value": 900 },
-        { "type": "no_regex", "value": "李娟说|这就是生活|终于明白|愿我们|治愈|岁月静好|诗意", "note": "无伪语录、无鸡汤、无文艺腔" },
-        { "type": "any_regex", "value": "我妈说|我妈|她说", "note": "有家人人物" },
-        { "type": "manual", "note": "场景在城里，不出现牧区/毡房/转场；只有一次镜头拉远；结尾停在动作或对话" }
+        {
+          "type": "checker_max",
+          "value": 30
+        },
+        {
+          "type": "min_chars",
+          "value": 900
+        },
+        {
+          "type": "no_regex",
+          "value": "李娟说|这就是生活|终于明白|愿我们|治愈|岁月静好|诗意",
+          "note": "无伪语录、无鸡汤、无文艺腔"
+        },
+        {
+          "type": "any_regex",
+          "value": "我妈说|我妈|她说",
+          "note": "有家人人物"
+        },
+        {
+          "type": "manual",
+          "note": "场景在城里，不出现牧区/毡房/转场；只有一次镜头拉远；结尾停在动作或对话"
+        }
       ]
     },
     {
@@ -24,9 +41,22 @@
       "prompt": "用李娟体写一篇 800 字散文：城里冬天的第一场雪，我出门上班。",
       "expect": "风物白描 + 天真视角 + 一本正经的夸张 + 镜头拉远；感慨不超过两句",
       "assertions": [
-        { "type": "checker_max", "value": 30 },
-        { "type": "no_regex", "value": "银装素裹|美不胜收|李娟说|这就是生活" },
-        { "type": "manual", "note": "有一处自嘲；风景无四字大词堆砌" }
+        {
+          "type": "checker_max",
+          "value": 30
+        },
+        {
+          "type": "min_chars",
+          "value": 800
+        },
+        {
+          "type": "no_regex",
+          "value": "银装素裹|美不胜收|李娟说|这就是生活"
+        },
+        {
+          "type": "manual",
+          "note": "有一处自嘲；风景无四字大词堆砌"
+        }
       ]
     },
     {
@@ -34,9 +64,23 @@
       "prompt": "把下面这段话改成李娟体（约 400 字）：‘外婆年纪大了，但依然热爱生活，她的乐观精神深深感染了我。’",
       "expect": "删掉评价，换成外婆的具体言行（家人喜剧）→ 自嘲 → 停在动作上",
       "assertions": [
-        { "type": "checker_max", "value": 30 },
-        { "type": "no_regex", "value": "热爱生活|乐观精神|深深感染", "note": "原句的评价词全部被具体动作替换" },
-        { "type": "manual", "note": "外婆言行来自用户素材，素材不足时先问，不编造" }
+        {
+          "type": "checker_max",
+          "value": 30
+        },
+        {
+          "type": "min_chars",
+          "value": 360
+        },
+        {
+          "type": "no_regex",
+          "value": "热爱生活|乐观精神|深深感染",
+          "note": "原句的评价词全部被具体动作替换"
+        },
+        {
+          "type": "manual",
+          "note": "外婆言行来自用户素材，素材不足时先问，不编造"
+        }
       ]
     }
   ]

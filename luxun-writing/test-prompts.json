@@ -12,10 +12,28 @@
       "prompt": "用鲁迅体写一篇 700 字杂文：单位群里人人都回“收到”。",
       "expect": "小处切入 → 正话反说 → 类型化命名 → 揭底一句 → 自剖 → 不收的收尾",
       "assertions": [
-        { "type": "checker_max", "value": 35 },
-        { "type": "no_regex", "value": "的罢|鲁迅说|让我们|相信未来|愿每个人", "note": "无民国腔、无伪语录、无鸡汤" },
-        { "type": "any_regex", "value": "我也|我自己|我大概|我有点", "note": "有自剖" },
-        { "type": "manual", "note": "只剖一个靶子，靶子是现象不是具体个人" }
+        {
+          "type": "checker_max",
+          "value": 35
+        },
+        {
+          "type": "min_chars",
+          "value": 700
+        },
+        {
+          "type": "no_regex",
+          "value": "的罢|鲁迅说|让我们|相信未来|愿每个人",
+          "note": "无民国腔、无伪语录、无鸡汤"
+        },
+        {
+          "type": "any_regex",
+          "value": "我也|我自己|我大概|我有点",
+          "note": "有自剖"
+        },
+        {
+          "type": "manual",
+          "note": "只剖一个靶子，靶子是现象不是具体个人"
+        }
       ]
     },
     {
@@ -23,9 +41,22 @@
       "prompt": "用鲁迅体写一篇 800 字杂文：短视频里的“围观式正义”。",
       "expect": "典型画像（看客）+ 历史照今 + 揭底一句；不点名、不扩大到群体",
       "assertions": [
-        { "type": "checker_max", "value": 35 },
-        { "type": "no_regex", "value": "的罢|鲁迅说|让我们|相信未来" },
-        { "type": "manual", "note": "有一处反语；揭底句不超过两句" }
+        {
+          "type": "checker_max",
+          "value": 35
+        },
+        {
+          "type": "min_chars",
+          "value": 800
+        },
+        {
+          "type": "no_regex",
+          "value": "的罢|鲁迅说|让我们|相信未来"
+        },
+        {
+          "type": "manual",
+          "note": "有一处反语；揭底句不超过两句"
+        }
       ]
     },
     {
@@ -33,9 +64,22 @@
       "prompt": "用鲁迅体写一篇 600 字短评，回应“年轻人要懂点人情世故”。",
       "expect": "引其言而驳：先把对方说法摆周全 → 逐条拆 → 自剖 → 不收的收尾",
       "assertions": [
-        { "type": "checker_max", "value": 35 },
-        { "type": "no_regex", "value": "的罢|鲁迅说|让我们" },
-        { "type": "manual", "note": "对方观点被公平呈现，不是稻草人" }
+        {
+          "type": "checker_max",
+          "value": 35
+        },
+        {
+          "type": "min_chars",
+          "value": 600
+        },
+        {
+          "type": "no_regex",
+          "value": "的罢|鲁迅说|让我们"
+        },
+        {
+          "type": "manual",
+          "note": "对方观点被公平呈现，不是稻草人"
+        }
       ]
     }
   ]

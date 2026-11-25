@@ -25,7 +25,9 @@ def check(a,text,res):
         h=re.findall(v,text);return not h,('无命中' if not h else '命中 '+'、'.join(sorted(set(h))[:5]))
     if t=='any_regex': return bool(re.search(v,text)),'有命中' if re.search(v,text) else '无命中'
     if t in('count_min','count_max'):
-        pat=a.get('pattern',v);n=len(re.findall(pat,text));lim=a.get('min',a.get('max',a.get('n',v if isinstance(v,int) else 0)))
+        pat=a.get('pattern',v if isinstance(v,str) else None)
+        if not pat: return None,'无 pattern，人工核对：'+str(a.get('target',a.get('note','')))
+        n=len(re.findall(pat,text));lim=a.get('min',a.get('max',a.get('n',v if isinstance(v,int) else 0)))
         return (n>=lim if t=='count_min' else n<=lim),f"{n} vs {lim}"
     return None,a.get('note','')
 
