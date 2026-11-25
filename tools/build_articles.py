@@ -159,7 +159,7 @@ def page(title, body, rel, reader=False):
 def collect():
     arts = []
     for eng, (feng, kind, short) in ENGINES.items():
-        for f in sorted((ROOT / eng / "examples").glob("*.md")):
+        for k, f in enumerate(sorted((ROOT / eng / "examples").glob("*.md")), 1):
             text = f.read_text(encoding="utf-8")
             # 有些稿子开头有一行 "> 示范稿…" 说明，标题不在第一行，
             # 所以用 MULTILINE 找第一个一级标题，而不是只看行首
@@ -170,7 +170,7 @@ def collect():
             paras = [p.strip() for p in body_md.split("\n\n") if p.strip() and not p.lstrip().startswith(("#", ">", "|", "-"))]
             plain = re.sub(r"[*_`]", "", paras[0]) if paras else ""
             chars = len(re.sub(r"\s|[#>*_`|\-]", "", body_md))
-            slug = f"{date}-{short}" if date else f"{short}-{len(arts)}"
+            slug = f"{date}-{short}" if date else f"{short}-{k}"  # 引擎内编号：加引擎不会挪动别家的链接
             arts.append(dict(src=f.relative_to(ROOT).as_posix(), title=title, md=body_md, date=date,
                              feng=feng, kind=kind, eng=eng, excerpt=plain[:90] + ("…" if len(plain) > 90 else ""),
                              chars=chars, mins=max(1, round(chars / 450)), slug=slug))

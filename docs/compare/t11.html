@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同题四体 · t11 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+
+.js nav .brand svg path{stroke-dasharray:140;stroke-dashoffset:140;animation:e-draw .9s cubic-bezier(.6,0,.2,1) forwards}
+.js nav .brand svg path:nth-child(2){animation-delay:.12s}.js nav .brand svg path:nth-child(3){animation-delay:.24s}
+@keyframes e-draw{to{stroke-dashoffset:0}}
+.js nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;animation:e-rule 1.1s cubic-bezier(.7,0,.2,1) .1s forwards}
+nav{position:sticky}
+@keyframes e-rule{to{transform:scaleX(1)}}
+.e-seal{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;background:var(--zhu);color:#F5F1E8;
+  font:900 10px/1 var(--serif);border-radius:2px;vertical-align:middle;transform:rotate(-6deg)}
+.js .e-seal{opacity:0;transform:scale(2) rotate(-16deg);animation:e-stamp .38s cubic-bezier(.3,1.6,.5,1) .55s forwards}
+@keyframes e-stamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
+.js .e-in{opacity:0;animation:e-ink .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.35s + var(--k,0) * 90ms)}
+@keyframes e-ink{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-seal,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
+</style><script>document.documentElement.classList.add('js')</script></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风<span class="e-seal" aria-hidden="true">采</span></a><div class="tools"><button id="night">夜读</button><a href="../">首页</a></div></div></nav>
+
+<style>
+.cmp{max-width:1280px;margin:0 auto;padding:56px 32px 24px}
+.cmp h1{font:900 30px/1.4 var(--serif);letter-spacing:.08em}
+.cmp .q{margin:14px 0 6px;font:400 17px/1.8 var(--serif)}
+.cmp .mat{font-size:13.5px;color:var(--ink2);margin-bottom:22px}
+.cmp .mat summary{cursor:pointer;color:var(--ink)}
+.cmp .mat li{margin:6px 0 0 1.4em}
+.tabs{display:none;gap:0;border:1px solid var(--ink);margin-bottom:20px}
+.tabs button{flex:1;background:none;border:0;border-right:1px solid var(--rule);padding:10px 4px;font:600 13px var(--serif);letter-spacing:.15em;color:var(--ink2);cursor:pointer}
+.tabs button:last-child{border:0}.tabs button.on{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(var(--n),1fr);border-top:1px solid var(--ink)}
+.col{padding:22px 22px 32px;border-right:1px solid var(--rule);min-width:0}
+.col:last-child{border-right:0}
+.col .tag{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.col.base .tag{color:var(--ink2)}
+.col .sub{font:12px var(--mono);color:var(--ink2);margin:2px 0 10px}
+.col .stat{font:12px var(--mono);color:var(--ink2);padding-bottom:14px;border-bottom:1px dashed var(--rule);margin-bottom:18px}
+.col .body{font-size:15.5px;line-height:1.95}
+.col .body h1{font:600 1.25em/1.5 var(--serif);margin:0 0 1em}
+.col .body h2{font-size:1.05em}
+.col .fold{position:relative;max-height:30em;overflow:hidden}
+.col .fold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5em;background:linear-gradient(transparent,var(--paper))}
+.col.open .fold{max-height:none}.col.open .fold::after{display:none}
+.col .more{margin-top:12px;background:none;border:1px solid var(--rule);color:var(--ink2);font:13px var(--sans);padding:4px 14px;cursor:pointer}
+.col .more:hover{border-color:var(--zhu);color:var(--zhu)}
+.how{max-width:1280px;margin:0 auto;padding:8px 32px 56px;font-size:13px;color:var(--ink2)}
+.how .box{border-top:1px solid var(--ink);padding-top:14px}
+@media(max-width:900px){.tabs{display:flex}.grid{grid-template-columns:1fr;border-top:0}
+ .col{display:none;border:0;padding:0}.col.act{display:block}.col .fold{max-height:none}.col .fold::after,.col .more{display:none}}
+</style>
+<section class="cmp"><h1>同题四体 · t11</h1>
+<p class="q">写一篇 800 字左右的叙事散文：父亲下岗那年冬天，家里的一顿饭。</p>
+<details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul><li>父亲（父亲 46 岁）：纺织机械厂钳工，干了二十三年，那年腊月厂子停产，回家那天拎回一条鱼。「厂里发的，最后一回了。」</li><li>母亲（母亲 44 岁）：接过鱼没说话，转身去厨房，那顿饭做了四个菜，平时只做两个。「趁热吃。」</li><li>我（我 12 岁）：那天考试考砸了，本来准备挨骂，结果没人问。「我以为那天是谁过生日。」</li></ul></details>
+<div class="tabs"><button class="on">裸模型</button><button class="">白描之风</button><button class="">散文之风</button><button class="">叙事之风</button></div>
+<div class="grid" style="--n:4"><div class="col base act">
+<div class="tag">裸模型</div><div class="sub">不加载任何引擎</div>
+<div class="stat">610 字</div>
+<div class="fold"><div class="body"><h1>那年冬天的一顿饭</h1>
+<p>那是一个寒冷的冬天，也是我们家最难忘的一个冬天。</p>
+<p>父亲在纺织机械厂做了整整二十三年钳工。他把自己最好的年华都献给了那家工厂。然而，就在那年腊月，厂子停产了。父亲下岗了。</p>
+<p>那天傍晚，父亲拎着一条鱼回到家。他的脸上带着疲惫，却努力挤出一丝笑容，说：“厂里发的，最后一回了。”这句话说得很轻，却像一块石头压在我们每个人的心上。</p>
+<p>母亲接过鱼，什么也没说，转身走进了厨房。我知道，她心里一定充满了担忧和不安。可她没有表现出来，而是用行动表达了一切。那天晚上，她做了四个菜。要知道，平时我们家只做两个菜。</p>
+<p>而我，那天恰好考试考砸了。一路上我都忐忑不安，准备好了挨一顿骂。可是回到家，没有人问起我的成绩。看着满桌的菜，我天真地以为，那天是谁过生日。</p>
+<p>饭桌上，热气腾腾。母亲说：“趁热吃。”我们一家三口围坐在一起，谁也没有提下岗的事。那条鱼被做成了红烧鱼，香气扑鼻。父亲给我夹了一大块鱼肉，母亲给父亲盛了满满一碗饭。</p>
+<p>那顿饭，我们吃得很安静，但我能感受到一种无声的力量在流动。那是家人之间的爱与支撑，是无论遇到什么困难都不会分开的温暖。</p>
+<p>多年以后，我才真正明白那顿饭的意义。它不是庆祝，而是一种告别，也是一种开始。父亲告别了他奉献半生的工厂，而我们一家，开始了一段新的生活。</p>
+<p>如今，每当我遇到挫折，我都会想起那年冬天的那顿饭。它让我懂得，生活或许会给我们沉重的打击，但只要家人在一起，就没有过不去的坎。那四个菜的味道，我永远都不会忘记。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">白描之风</div><div class="sub">阿城体 · acheng-writing</div>
+<div class="stat">584 字</div>
+<div class="fold"><div class="body"><h1>鱼</h1>
+<p>那天我考砸了。卷子折成四折，压在书包最底下。</p>
+<p>进门的时候，父亲已经在了。他坐在门口的小板凳上，脚边搁着一条鱼，草鱼，拿稻草穿着腮，还在动。</p>
+<p>母亲从屋里出来，看见鱼，看见他。</p>
+<p>“厂里发的，”父亲说，“最后一回了。”</p>
+<p>母亲弯腰把鱼拎起来。鱼甩了一下尾巴，水溅在她裤腿上。她没擦，拎着进了厨房。</p>
+<p>我站在门口，书包没敢放下。没人看我。</p>
+<p>厨房里刀响了很久。先是刮鳞，刀背顺着鱼身往上推，鳞一片一片蹦到案板外头。然后剖肚，掏肠，拿指甲把肚里那层黑膜刮干净。父亲进去过一回，站在她身后，站了一会儿，又出来了，坐回板凳上，从兜里摸出烟，没点，在手指头上转。</p>
+<p>菜一个一个端出来。红烧鱼。炒鸡蛋。白菜粉条。还有一碟花生米，是过年才炸的。</p>
+<p>四个菜。平时两个。</p>
+<p>我以为是谁过生日。我把家里人的生日在心里过了一遍，都不是。</p>
+<p>“趁热吃。”母亲说。</p>
+<p>父亲先动筷子。他夹鱼，从鱼背上夹，夹一块最厚的，放到我碗里。又夹一块，放到母亲碗里。他自己夹鱼尾巴。</p>
+<p>我吃鱼。鱼刺多，我吃得慢，一根一根挑出来，码在桌沿上。码了一小排。</p>
+<p>父亲吃得也慢。他喝了一口汤，放下碗，看着那碗汤，看了一会儿，又端起来喝完了。</p>
+<p>没人说话。屋里只有筷子碰碗的声音。</p>
+<p>吃完饭，母亲收碗。父亲把桌上我码的那排鱼刺用手一拢，拢进手心，攥着走出去，扔了。</p>
+<p>那张卷子，后来一直没人问。</p>
+<p>开春以后，父亲出去找活。他每天出门早，回来晚，回来就坐在门口的板凳上，坐一会儿再进屋。</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">散文之风</div><div class="sub">汪曾祺体 · wangzengqi-writing</div>
+<div class="stat">629 字</div>
+<div class="fold"><div class="body"><h1>腊月的鱼</h1>
+<p>我们那里过年，鱼是少不了的。说是“年年有余”。鱼要整条，不能切开，切开了，余就断了。</p>
+<p>厂里年年腊月发鱼。父亲在纺织机械厂做钳工，做了二十三年，年年拎回来一条。多是草鱼，也有鲢鱼，鲢鱼刺多，母亲不大喜欢。拿一根稻草从腮里穿过去，打个结，拎在手上，一路走回来，鱼还会动。</p>
+<p>那年的鱼是草鱼，二斤来重。父亲拎进门，说：“厂里发的，最后一回了。”</p>
+<p>厂子腊月停了产。这话我那时候不大懂。</p>
+<p>母亲接过鱼，没说什么，进了厨房。</p>
+<p>母亲做鱼，有她的做法。鳞刮干净，肚里那层黑膜一定要刮掉，说是腥气都在那儿。鱼身上斜着划几刀，抹盐，搁一会儿。锅烧热，先拿生姜在锅底擦一遍，鱼下锅才不粘。煎到两面黄，下酱油、糖，一点醋，加水，盖上盖子焖。汤收得差不多了，撒一把葱。</p>
+<p>那天除了鱼，还有炒鸡蛋，白菜粉条，一碟油炸花生米。四个菜。我们家平时吃饭，两个菜，一荤一素，有时荤也没有。</p>
+<p>我那天考试考得不好，回家一路想着怎么说。到家看见一桌子菜，倒愣住了。我以为那天是谁过生日。</p>
+<p>母亲说：“趁热吃。”</p>
+<p>父亲给我夹了一块鱼背上的肉。鱼背上的肉厚，刺少，是给小孩吃的。他自己吃鱼头。我们那里的说法，鱼头是给一家之主的，也有人说鱼头最好吃，吃鱼头的人是会吃的。我不知道父亲是哪一种。</p>
+<p>卷子的事，那天没有人问。后来也没有人问。</p>
+<p>后来许多年，我在外面吃过很多鱼，松鼠鳜鱼、酸菜鱼、清蒸鲈鱼，都好。母亲那样的红烧草鱼，倒不常见了。</p>
+<p>前年回家，母亲还是那样做鱼，先拿生姜擦锅。我问她，那年为什么做四个菜。</p>
+<p>她想了想，说：“忘了。”</p></div></div><button class="more">展开全文</button></div><div class="col">
+<div class="tag">叙事之风</div><div class="sub">余华体 · yuhua-writing</div>
+<div class="stat">671 字</div>
+<div class="fold"><div class="body"><h1>最后一条鱼</h1>
+<p>我父亲在纺织机械厂当了二十三年钳工。那年腊月，厂子停产了。</p>
+<p>他回家那天，手里拎着一条鱼。鱼是用稻草穿着腮的，一路上它还在甩尾巴，甩得父亲的裤腿上全是水。他走进家门，把鱼举起来给我母亲看，说：</p>
+<p>“厂里发的，最后一回了。”</p>
+<p>说完他就笑了，笑得很响，好像这是一件值得高兴的事。我母亲没有笑，她接过鱼，鱼在她手里又甩了一下，她没有抓稳，鱼掉在了地上，在水泥地上啪啪地跳。我母亲蹲下去把它按住，按了很久，鱼不跳了，她才站起来，拎着它进了厨房。</p>
+<p>那天我考试考砸了。我在路上想了很久，想我父亲会怎么打我，是用手还是用皮带。我把这两种都想了一遍，觉得皮带会更疼一些，我就决定说是卷子丢了。</p>
+<p>可是回到家，没有人问我卷子的事。</p>
+<p>我母亲在厨房里待了很久。她做了四个菜，红烧鱼，炒鸡蛋，白菜粉条，还有一碟炸花生米。我们家平时只做两个菜，过年才做四个。我站在桌子前数了两遍，确实是四个。我就问：</p>
+<p>“今天谁过生日？”</p>
+<p>我父亲看了看我母亲，我母亲看了看我父亲，他们谁也没有回答我。我母亲说：</p>
+<p>“趁热吃。”</p>
+<p>我父亲给我夹了一大块鱼肉，又给我母亲夹了一块，他自己吃鱼头。他吃得很仔细，把鱼头里每一块肉都吸出来，吸得嘬嘬地响。吃完了鱼头，他又去吃鱼尾巴，吃完了鱼尾巴，他把盘子里的汤倒进自己碗里，拌着饭吃了。</p>
+<p>他吃得那么干净，好像这辈子再也吃不到鱼了。</p>
+<p>那天晚上，我躺在床上，听见父亲和母亲在隔壁说话。他们说得很小声，我听不清楚。后来我母亲哭了，我父亲没有哭，他一直在咳嗽。</p>
+<p>第二天早上，我父亲起得很早。他穿上那件厂里发的蓝工装，出了门。我母亲站在门口看着他走远，她手里还拿着那块擦过鱼的抹布。</p></div></div><button class="more">展开全文</button></div></div></section>
+<div class="how"><div class="box">做法：四版由同一个模型在同一次会话里依次生成，拿到完全相同的题目与素材；唯一的变量是加载哪个引擎（裸模型版不读任何引擎文件）。与 t01–t10 不同，这一题不是四个独立 agent 写的，版本之间可能互相影响，只作风格对照参考。
+这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
+胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/t11">demo/t11/</a></div></div>
+<script>
+document.querySelectorAll('.more').forEach(b=>b.onclick=()=>{const c=b.closest('.col');
+ c.classList.toggle('open');b.textContent=c.classList.contains('open')?'收起':'展开全文'});
+const tb=document.querySelectorAll('.tabs button'),cs=document.querySelectorAll('.col');
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach(x=>x.classList.remove('on'));cs.forEach(x=>x.classList.remove('act'));
+ b.classList.add('on');cs[i].classList.add('act')});
+</script>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+
+(()=>{let k=0;document.querySelectorAll('main > *, body > section, body > article, body > .how').forEach(el=>{
+  if(k>5)return;el.classList.add('e-in');el.style.setProperty('--k',k++)});
+ setTimeout(()=>document.querySelectorAll('.e-in').forEach(el=>{el.classList.remove('e-in')}),2200)})();
+</script></body></html>

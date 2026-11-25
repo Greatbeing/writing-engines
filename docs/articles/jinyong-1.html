@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一回　孤灯照雪辨来客　断篙横江识故人 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+
+.js nav .brand svg path{stroke-dasharray:140;stroke-dashoffset:140;animation:e-draw .9s cubic-bezier(.6,0,.2,1) forwards}
+.js nav .brand svg path:nth-child(2){animation-delay:.12s}.js nav .brand svg path:nth-child(3){animation-delay:.24s}
+@keyframes e-draw{to{stroke-dashoffset:0}}
+.js nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;animation:e-rule 1.1s cubic-bezier(.7,0,.2,1) .1s forwards}
+nav{position:sticky}
+@keyframes e-rule{to{transform:scaleX(1)}}
+.e-seal{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;background:var(--zhu);color:#F5F1E8;
+  font:900 10px/1 var(--serif);border-radius:2px;vertical-align:middle;transform:rotate(-6deg)}
+.js .e-seal{opacity:0;transform:scale(2) rotate(-16deg);animation:e-stamp .38s cubic-bezier(.3,1.6,.5,1) .55s forwards}
+@keyframes e-stamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
+.js .e-in{opacity:0;animation:e-ink .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.35s + var(--k,0) * 90ms)}
+@keyframes e-ink{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-seal,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
+</style><script>document.documentElement.classList.add('js')</script></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风<span class="e-seal" aria-hidden="true">采</span></a><div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button><button data-fs="1" aria-label="放大字号">A＋</button><button id="night" aria-label="夜读">夜读</button><a href="../articles/">目录</a></div></div></nav>
+<div id="bar"></div>
+<article>
+<div class="head"><div class="feng">叙事之风 · 金庸体</div>
+<h1>第一回　孤灯照雪辨来客　断篙横江识故人</h1>
+<div class="meta"> · 约 1682 字 · 读完约 4 分钟</div></div>
+<div class="body"><p>崇祯十七年三月，黄河封冻刚开，冰排还在河心里挤来挤去，响得像有人在远处推磨。</p>
+<p>孟津渡口只剩一盏灯。灯挂在韩老七的船篷上，韩老七坐在灯底下补网。他六十来岁，左耳缺了半只，补网的手却极稳，梭子穿过去，从不挂住第二根线。渡口的人都知道，韩老七的船，天黑不开，给多少钱都不开。</p>
+<p>这一晚有人偏要他开。</p>
+<p>来的是个书生，二十出头，棉袍湿了半截，背上用麻绳捆着一只乌木匣子。他把一锭银子放在船头，说：“老丈，过河。”</p>
+<p>韩老七看了看银子，又看了看他的鞋。鞋底沾的是城里的青砖灰，不是渡口的黄泥。“京里来的？”</p>
+<p>书生一怔，点头。</p>
+<p>“京里来的人，这几天往南跑的多，往北跑的少。”韩老七把梭子插进网眼里，“你往北，是要去送死，还是要去送东西？”</p>
+<p>书生没有答，只把匣子往怀里紧了紧。</p>
+<p>韩老七叹口气，起身解缆。缆绳刚落水，岸上的雪地里便响起了马蹄声。三骑，一前两后。前头那人披着灰狐裘，腰里横一柄不出鞘的长刀；后头两个，一个矮胖如瓮，一个只剩右臂，左袖空空地掖在腰带里。</p>
+<p>灰裘人勒马，在灯影边上停住，笑道：“韩七哥，二十年不见，你倒学会摆渡了。”</p>
+<p>韩老七手里的篙停在半空。</p>
+<p>“沈三。”他说，“你的刀还是不出鞘？”</p>
+<p>“对付七哥，总要出一回的。”沈三翻身下马，“人留下，匣子留下，七哥的船照样开。往后渡口的银子，我包了。”</p>
+<p>书生脸色发白，低声道：“老丈，匣中是……”</p>
+<p>“别说。”韩老七打断他，“你一说，我就非管不可了。”</p>
+<p>矮胖子先动手。他身形看着笨，脚下却快，三步抢到船边，双掌一错，直推船帮，要把船连人掀进冰河。韩老七不退，竹篙往岸上一点，船身借力横移三尺。矮胖子双掌推了个空，收势不住，一只脚已踏进浅水，冰碴子没过脚踝。</p>
+<p>第二篙跟着到。篙尖贴着水面扫过去，溅起一片冰水，正泼在矮胖子脸上。他闭眼的一刹那，篙尾已翻上来，在他膝弯里轻轻一敲。矮胖子扑通跪进水里，再也站不起来。</p>
+<p>“逆水三篙。”独臂人沉声道，“第三篙呢？”</p>
+<p>“第三篙，留给你们沈大哥。”</p>
+<p>独臂人不答话，单手抽出一条铁链，链头是个拳大的流星锤，在头顶抡了两圈，呼呼带风，直砸船篷上那盏灯。灯一灭，河上便只剩雪光。韩老七年纪大了，眼神未必及得上年轻人。</p>
+<p>韩老七却像早知道他要打灯。他左手一抄，竟把灯笼摘了下来，往书生怀里一塞：“拿稳。”右手竹篙斜挑，挑的不是锤，是链子中段。铁链缠上竹篙，绕了三匝。独臂人用力一夺，竹篙应声而断，半截篙连着铁链飞上半空，落进河心的冰排里，没了。</p>
+<p>书生“啊”了一声。</p>
+<p>韩老七手里只剩三尺断篙。</p>
+<p>沈三这才拔刀。刀出鞘时没有声音，雪片落在刀面上，不化。</p>
+<p>“七哥，”他说，“当年咱们在宣府，十三个人守一座烽台，活下来两个。你缺了半只耳朵，我少了一个兄弟。”他朝独臂人扬了扬下巴，“他哥哥。那年你说，朝廷欠咱们一笔账。如今朝廷没了，这笔账，我替自己收。”</p>
+<p>韩老七沉默了很久。冰排在河心撞了一下，咚的一声。</p>
+<p>“匣子里是什么，你知道？”</p>
+<p>“知道。宣府镇历年阵亡将士的名册，还有欠饷的底账。”沈三道，“送到南京，是一份功劳；送到闯营，是一份更大的功劳。”</p>
+<p>“那十三个人的名字，也在里头。”韩老七说，“你哥哥的名字也在。”他转头看独臂人，“你哥哥叫孙大有，死的那天是腊月初九，饿了四天，手里攥着半块马料豆饼。这些，名册上都记着。你拿去换赏钱，他就白死了第二回。”</p>
+<p>独臂人的锤链垂了下来。</p>
+<p>沈三的刀却没有垂。“七哥，你讲情，我讲理。乱世里，名字不值钱。”</p>
+<p>“那就不讲了。”</p>
+<p>韩老七一脚把书生踹进船舱，自己踏上岸。断篙在手里转了半圈，横在胸前，这便是第三篙的起手。</p>
+<p>两人相距一丈，谁也没动。雪落在韩老七的残耳上，积了薄薄一层。独臂人退到柳树底下，矮胖子还跪在水里，牙齿磕得咯咯响，谁也没有上前。</p>
+<p>后来渡口的人说起那一夜，说法各不相同。有人说听见一声金铁交鸣，有人说什么也没听见。只有天亮时摆渡的人看见：岸边雪地里插着一柄长刀，刀身断成两截；灰狐裘挂在柳树上，人和马都不见了。韩老七的船已经泊在北岸，船头放着一锭银子，没人动过。</p>
+<p>书生后来在南京做了个小官。别人问他那晚的事，他只说：渡他过河的老人，到岸后一句话也没说，把灯笼要回去，又挂上了船篷。</p>
+<p>至于第三篙到底是什么样子，他说，他在船舱里，没看见。</p></div></article>
+<div class="note"><div class="box">本文是引擎 <code>jinyong-writing</code> 的模型产出示例，不是语料原文。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/blob/master/jinyong-writing/examples/jy-1-雪夜渡.md">jinyong-writing/examples/jy-1-雪夜渡.md</a></div></div>
+<div class="pager"><a href="yuhua-3.html">← 等号</a><a href="jinyong-2.html">对面 →</a></div>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+
+(()=>{let k=0;document.querySelectorAll('main > *, body > section, body > article, body > .how').forEach(el=>{
+  if(k>5)return;el.classList.add('e-in');el.style.setProperty('--k',k++)});
+ setTimeout(()=>document.querySelectorAll('.e-in').forEach(el=>{el.classList.remove('e-in')}),2200)})();
+</script></body></html>

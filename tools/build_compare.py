@@ -18,6 +18,9 @@ VERSIONS = [  # 文件名, 标签, 副标, 是否引擎
     ("human-voice.md", "城市之风", "活人感 · human-voice-writing", True),
     ("guanfang.md",    "庙堂之风", "官方体 · guanfang-writing", True),
     ("feature.md",     "人间之风", "特稿 · feature-writing", True),
+    ("acheng.md",      "白描之风", "阿城体 · acheng-writing", True),
+    ("wangzengqi.md",  "散文之风", "汪曾祺体 · wangzengqi-writing", True),
+    ("yuhua.md",       "叙事之风", "余华体 · yuhua-writing", True),
 ]
 
 CSS = """
@@ -64,6 +67,18 @@ def chars(md):
     return len(re.sub(r"\s|[#>*_`|\-]", "", md))
 
 
+HOW_DEFAULT = ("做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；"
+               "唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。")
+
+
+def how_html(tid, topic):
+    how = topic.get("how", HOW_DEFAULT)
+    return (f'<div class="how"><div class="box">{how}\n'
+            '这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。\n'
+            '胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。\n'
+            f'源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/{tid}">demo/{tid}/</a></div></div>')
+
+
 def build(tid, topic, folder):
     cols, tabs = [], []
     for i, (fn, tag, sub, eng) in enumerate(VERSIONS):
@@ -87,11 +102,7 @@ def build(tid, topic, folder):
 <details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul>{mats}</ul></details>
 <div class="tabs">{''.join(tabs)}</div>
 <div class="grid" style="--n:{len(cols)}">{''.join(cols)}</div></section>
-<div class="how"><div class="box">做法：四版由四个独立 agent 分别生成，拿到完全相同的题目与素材；
-唯一的变量是加载哪个引擎（裸模型版不读仓库任何文件，三个引擎版各只读自己的 SKILL.md 与 references）。
-这是展示，不是评测——它说明了差别存在，但没有说明差别是否显著。
-胜率与显著性以 <a href="https://github.com/Greatbeing/writing-engines/blob/master/eval/RESULTS.md">eval/RESULTS.md</a> 的盲评为准（尚未运行）。
-源文件：<a href="https://github.com/Greatbeing/writing-engines/tree/master/demo/{tid}">demo/{tid}/</a></div></div>
+{how_html(tid, topic)}
 <script>{JS}</script>"""
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{tid}.html").write_text(page(f"同题四体 · {tid}", content, "../"), encoding="utf-8")
@@ -101,6 +112,10 @@ def build(tid, topic, folder):
 def main():
     pj = json.loads((ROOT / "eval" / "prompts.json").read_text(encoding="utf-8"))
     topics = {t["id"]: t for t in pj["topics"]}
+    # 展示专用题：不进盲评题库，题目与素材放在 demo/<题号>/topic.json
+    for tj in sorted((ROOT / "demo").glob("*/topic.json")):
+        t = json.loads(tj.read_text(encoding="utf-8"))
+        topics.setdefault(t["id"], t)
     built = []
     for d in sorted((ROOT / "demo").iterdir()):
         if d.is_dir() and d.name in topics:
