@@ -24,3 +24,8 @@ venv/
 Thumbs.db
 .idea/
 .vscode/
+
+eval/blind/
+eval/key.json
+eval/assign.json
+eval/rankings*.csv

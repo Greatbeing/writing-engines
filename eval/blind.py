@@ -112,26 +112,45 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="生成盲评包")
     ap.add_argument("--check", action="store_true", help="只检查，不写文件")
     ap.add_argument("--force", action="store_true", help="有硬泄露也继续")
+    ap.add_argument("--from", dest="src", choices=["runs", "demo"], default="runs",
+                    help="产出位置：runs（eval/runs/*.out.md）或 demo（demo/<题号>/<短名>.md）")
+    ap.add_argument("--topics", default="", help="只处理这些题号，逗号分隔；默认全部")
+    # 说明：--topics 是为「题量尚未补齐时先做一轮小规模盲评」而加的。
+    # 只要 key.json 与 assign.json 覆盖了所选题目，子集就是自洽的。
     args = ap.parse_args(argv)
 
     prompts = json.loads((HERE / "prompts.json").read_text(encoding="utf-8"))["topics"]
     topics = [t["id"] for t in prompts]
+    if args.topics:
+        want = [t.strip() for t in args.topics.split(",") if t.strip()]
+        unknown = [t for t in want if t not in topics]
+        if unknown:
+            sys.exit(f"[error] 未知题号：{', '.join(unknown)}")
+        topics = want
     key = load_key(topics)
     assign = load_assign(topics)
+
+    # demo 模式下，引擎名对应 demo/<题号>/ 下的短文件名
+    DEMO_NAME = {"baseline": "baseline", "human-voice-writing": "human-voice",
+                 "guanfang-writing": "guanfang", "feature-writing": "feature"}
+
+    def out_path(tid, eng):
+        if args.src == "runs":
+            return RUNS / f"{tid}--{eng}.out.md"
+        return HERE.parent / "demo" / tid / f"{DEMO_NAME[eng]}.md"
 
     # 1) 缺件检查
     missing = []
     for tid in topics:
         for eng in ENGINES:
-            p = RUNS / f"{tid}--{eng}.out.md"
+            p = out_path(tid, eng)
             if not p.exists() or p.stat().st_size < 50:
-                missing.append(f"{tid}--{eng}.out.md")
+                missing.append(str(p.relative_to(HERE.parent)))
     if missing:
         print(f"[error] 缺 {len(missing)} 份输出（或文件过小）：", file=sys.stderr)
         for m in missing:
             print(f"   {m}", file=sys.stderr)
-        print("\n先跑 eval/tasks.py 生成任务书，每份各生成一次，存到 eval/runs/。",
-              file=sys.stderr)
+        print("\nruns 模式先跑 eval/tasks.py；demo 模式见 demo/<题号>/。", file=sys.stderr)
         return 2
 
     # 2) 泄露检查 + 建内存里的盲评包
@@ -141,7 +160,7 @@ def main(argv=None):
     for tid in topics:
         texts = {}
         for eng in ENGINES:
-            raw = (RUNS / f"{tid}--{eng}.out.md").read_text(encoding="utf-8", errors="replace")
+            raw = out_path(tid, eng).read_text(encoding="utf-8", errors="replace")
             # 引擎名 → 标签，方向：key[tid] 是 {label: engine}，这里反查
             label = next(l for l, e in key[tid].items() if e == eng)
             body = strip_fence(raw)
@@ -175,7 +194,7 @@ def main(argv=None):
               "建议人工扫一眼。", file=sys.stderr)
 
     if args.check:
-        print(f"[ok] 40 份齐全；硬泄露 {hard_n} 处，软疑似 {soft_n} 处。未写文件。")
+        print(f"[ok] {len(topics) * 4} 份齐全；硬泄露 {hard_n} 处，软疑似 {soft_n} 处。未写文件。")
         return 0
 
     # 3) 写盲评包
