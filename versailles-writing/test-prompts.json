@@ -1,0 +1,46 @@
+{
+  "engine": "versailles-writing",
+  "checker_threshold": 30,
+  "_how_to_run": [
+    "1) python3 tools/ai-flavor-checker.py 产出.md --engine versailles-writing",
+    "2) 逐条核对 assertions",
+    "3) 门槛 30：凡尔赛体口语、短句，应能过通用门槛"
+  ],
+  "prompts": [
+    {
+      "id": "vs-1",
+      "prompt": "用凡尔赛体写一条 400 字左右的朋友圈：老公给我换了一辆新车。",
+      "expect": "困扰包装 → 抱怨式炫耀 → 他人代夸 → 名物轻放 → 反问求助",
+      "assertions": [
+        {"type": "checker_max", "value": 30},
+        {"type": "min_chars", "value": 350},
+        {"type": "no_regex", "value": "我很厉害|我很有钱|我太优秀|开玩笑的|是不是很凡尔赛", "note": "不直接自夸、不自己拆包"},
+        {"type": "any_regex", "value": "唉|好烦|真的不想|头疼|挺急", "note": "有降调语气词"},
+        {"type": "manual", "note": "只炫一样；炫点不作主语；结尾是提问或叹气"}
+      ]
+    },
+    {
+      "id": "vs-2",
+      "prompt": "用凡尔赛体写一段 400 字左右的自述：我学习特别好。",
+      "expect": "自谦实捧 + 数字轻描 + 他人代夸 + 淡收",
+      "assertions": [
+        {"type": "checker_max", "value": 30},
+        {"type": "min_chars", "value": 300},
+        {"type": "any_regex", "value": "才|也就|只是", "note": "大数字配降调词"},
+        {"type": "no_regex", "value": "学霸|我很聪明|我成绩很好"},
+        {"type": "manual", "note": "“不行”背后有一个离谱的高标准；不点名真实学校或人物"}
+      ]
+    },
+    {
+      "id": "vs-3",
+      "prompt": "诊断这条朋友圈是不是凡尔赛，凡度几分：‘好烦，公司年会又抽中了一等奖，家里已经有两台一样的了，不知道送给谁。去年那台还没拆封呢。有没有人教教我怎么婉拒？’",
+      "expect": "先指出炫点 → 原子定位表 → 凡度 1–5 → 直白翻译 → 改写建议",
+      "assertions": [
+        {"type": "min_chars", "value": 300},
+        {"type": "any_regex", "value": "凡度", "note": "给出凡度"},
+        {"type": "any_regex", "value": "反问求助|抱怨式炫耀|困扰包装", "note": "用原子名定位"},
+        {"type": "manual", "note": "先说炫点，再逐句定位，再给分和改法"}
+      ]
+    }
+  ]
+}

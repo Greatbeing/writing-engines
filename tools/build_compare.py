@@ -21,6 +21,8 @@ VERSIONS = [  # 文件名, 标签, 副标, 是否引擎
     ("acheng.md",      "白描之风", "阿城体 · acheng-writing", True),
     ("wangzengqi.md",  "散文之风", "汪曾祺体 · wangzengqi-writing", True),
     ("yuhua.md",       "叙事之风", "余华体 · yuhua-writing", True),
+    ("versailles.md",  "凡尔赛之风", "凡尔赛体 · versailles-writing", True),
+    ("standup.md",     "实用之风", "脱口秀 · standup-writing", True),
 ]
 
 CSS = """

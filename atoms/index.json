@@ -1222,5 +1222,85 @@
     "family": "不收的收尾",
     "file": "acheng-writing/references/atom-ops.md",
     "heading": "## 10. 冷收\n"
+  },
+  {
+    "id": "versailles.1",
+    "name": "不经意带出",
+    "engine": "versailles-writing",
+    "family": "独有",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 1. 不经意带出\n"
+  },
+  {
+    "id": "versailles.2",
+    "name": "抱怨式炫耀",
+    "engine": "versailles-writing",
+    "family": "反转揭底",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 2. 抱怨式炫耀\n"
+  },
+  {
+    "id": "versailles.3",
+    "name": "自谦实捧",
+    "engine": "versailles-writing",
+    "family": "自嘲",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 3. 自谦实捧\n"
+  },
+  {
+    "id": "versailles.4",
+    "name": "他人代夸",
+    "engine": "versailles-writing",
+    "family": "独有",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 4. 他人代夸\n"
+  },
+  {
+    "id": "versailles.5",
+    "name": "名物轻放",
+    "engine": "versailles-writing",
+    "family": "独有",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 5. 名物轻放\n"
+  },
+  {
+    "id": "versailles.6",
+    "name": "数字轻描",
+    "engine": "versailles-writing",
+    "family": "数据压舱",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 6. 数字轻描\n"
+  },
+  {
+    "id": "versailles.7",
+    "name": "困扰包装",
+    "engine": "versailles-writing",
+    "family": "正经夸张",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 7. 困扰包装\n"
+  },
+  {
+    "id": "versailles.8",
+    "name": "反问求助",
+    "engine": "versailles-writing",
+    "family": "独有",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 8. 反问求助\n"
+  },
+  {
+    "id": "versailles.9",
+    "name": "降维对比",
+    "engine": "versailles-writing",
+    "family": "独有",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 9. 降维对比\n"
+  },
+  {
+    "id": "versailles.10",
+    "name": "淡收",
+    "engine": "versailles-writing",
+    "family": "不收的收尾",
+    "file": "versailles-writing/references/atom-ops.md",
+    "heading": "## 10. 淡收\n"
   }
 ]

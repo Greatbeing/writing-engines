@@ -2,7 +2,7 @@
 
 > 方案 a：各引擎原子文件保留原样，只在每个原子下加 `**族**：X`。本页按族汇总；机器可读版见 [index.json](index.json)，一致性由 `tools/lint_skill.py`（A1–A3）校验。
 
-共 153 个原子｜18 族｜独有 42 个。
+共 163 个原子｜18 族｜独有 47 个。
 
 ## 小处起笔（9）
 
@@ -27,7 +27,7 @@
 - [human-voice·场景微电影](../human-voice-writing/references/atoms.md)（5 场景微电影）
 - [acheng·物事起笔](../acheng-writing/references/atom-ops.md)（1. 物事起笔）
 
-## 自嘲（7）
+## 自嘲（8）
 
 **通用定义**：叙述者把自己放低、写笨写怂、承认自己也在被批评的人群里，换来与读者平视。
 
@@ -47,8 +47,9 @@
 ）
 - [yuhua·自嘲式幽默](../yuhua-writing/references/atom-ops.md)（9. 自嘲式幽默
 ）
+- [versailles·自谦实捧](../versailles-writing/references/atom-ops.md)（3. 自谦实捧）
 
-## 不收的收尾（7）
+## 不收的收尾（8）
 
 **通用定义**：结尾不升华、不号召、不总结，停在一个动作、画面、家常话或冷话上，余味自留。
 
@@ -66,6 +67,7 @@
 ）
 - [human-voice·松弛哲学收尾](../human-voice-writing/references/atoms.md)（12 松弛哲学收尾）
 - [acheng·冷收](../acheng-writing/references/atom-ops.md)（10. 冷收）
+- [versailles·淡收](../versailles-writing/references/atom-ops.md)（10. 淡收）
 
 ## 金句断语（10）
 
@@ -121,7 +123,7 @@
 - [maozedong·分条列举](../maozedong-writing/references/atom-ops.md)（3. 分条列举
 ）
 
-## 反转揭底（5）
+## 反转揭底（6）
 
 **通用定义**：在铺垫或冲突顶点把预期、立场或真相翻面。
 
@@ -136,6 +138,7 @@
 - [human-voice·共识假装](../human-voice-writing/references/atoms.md)（1 共识假装）
 - [zhangailing·反转体谅](../zhangailing-writing/references/atom-ops.md)（9. 反转体谅
 ）
+- [versailles·抱怨式炫耀](../versailles-writing/references/atom-ops.md)（2. 抱怨式炫耀）
 
 ## 换层级（6）
 
@@ -188,7 +191,7 @@
 ）
 - [human-voice·质疑→反驳](../human-voice-writing/references/atoms.md)（8 质疑→反驳）
 
-## 数据压舱（3）
+## 数据压舱（4）
 
 **通用定义**：用具体、可感知、可查证的数字替代形容词或概念论据。
 
@@ -200,8 +203,9 @@
 ）
 - [yuhua·数字与账目](../yuhua-writing/references/atom-ops.md)（6. 数字与账目
 ）
+- [versailles·数字轻描](../versailles-writing/references/atom-ops.md)（6. 数字轻描）
 
-## 正经夸张（9）
+## 正经夸张（10）
 
 **通用定义**：用认真、平静的语气说明显荒唐或夸大的事，或把大词/术语挪到琐事里认真用，让荒谬自己露出来。
 
@@ -223,6 +227,7 @@
 - [human-voice·荒诞解读](../human-voice-writing/references/atoms.md)（17 荒诞解读）
 - [yuhua·荒诞消解](../yuhua-writing/references/atom-ops.md)（4. 荒诞消解
 ）
+- [versailles·困扰包装](../versailles-writing/references/atom-ops.md)（7. 困扰包装）
 
 ## 比喻（6）
 

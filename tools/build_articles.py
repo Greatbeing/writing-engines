@@ -27,6 +27,7 @@ ENGINES = {  # 引擎目录 -> (风名, 文体, 短名)
     "lijuan-writing":      ("散文之风", "李娟体",   "lijuan"),
     "zhangailing-writing": ("散文之风", "张爱玲体", "zhangailing"),
     "standup-writing":     ("实用之风", "脱口秀",   "standup"),
+    "versailles-writing":  ("实用之风", "凡尔赛体", "versailles"),
     "gongwen-writing":     ("公文之风", "公文",     "gongwen"),
 }
 

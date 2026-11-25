@@ -315,6 +315,24 @@
         "concrete": 1.0,
         "dialogue": 1.0
       }
+    },
+    "versailles-writing": {
+      "label": "凡尔赛体",
+      "pass_below": 30,
+      "_note": "2026-11 新增，未做原文校准（不收网友原帖），权重沿用通用口径。",
+      "penalty": {
+        "hard": 1.0,
+        "soft": 1.0,
+        "abstract": 1.0,
+        "long": 1.0,
+        "parallel": 1.0,
+        "formula": 1.0
+      },
+      "reward": {
+        "colloquial": 1.0,
+        "concrete": 1.0,
+        "dialogue": 1.0
+      }
     }
   }
 }
