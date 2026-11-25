@@ -1,8 +1,15 @@
-# 写作引擎库 · writing-engines
+<p align="center">
+  <img src="docs/logo.svg" width="240" alt="采风">
+</p>
 
-> 把优秀写作**解构**成可执行的 agent skill。
-> 不是提示词模板，是**文体的操作系统**。
->
+<h1 align="center">采风 · Caifeng</h1>
+
+<p align="center"><b>采其风，得其法。</b><br>
+<sub>Collect the style. Build the engine.</sub></p>
+
+<p align="center">每一种文风背后，都有一套没说出口的规则。我们把它采下来，造成引擎。<br>
+<a href="https://greatbeing.github.io/writing-engines/">官网</a> · 写作引擎库 writing-engines</p>
+
 > 一句话：**模式归纳是尸检，原子操作是手术。**
 
 ---
