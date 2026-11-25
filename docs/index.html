@@ -31,22 +31,41 @@ nav ul{display:flex;gap:28px;list-style:none;font-size:13px;color:var(--ink2);le
 nav ul a{border:0}nav ul a:hover{color:var(--zhu)}
 @media(max-width:720px){nav ul{display:none}}
 
-/* 首屏 */
-.hero{min-height:88vh;display:grid;grid-template-columns:1fr auto;align-items:center;gap:48px;padding:80px 0 64px;border-bottom:1px solid var(--ink)}
-.hero svg.mark{width:min(420px,70vw);height:auto;display:block;margin-bottom:48px}
+/* 首屏：左文右图，两栏平衡 */
+.hero{min-height:84vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  align-items:center;gap:clamp(32px,5vw,80px);padding:84px 0 72px;border-bottom:1px solid var(--ink)}
+.hero-copy{max-width:34em}
+.hero h1{font:900 clamp(40px,6.2vw,84px)/1.12 var(--serif);letter-spacing:.06em}
+.hero .en{font:400 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--ink2);margin:18px 0 26px}
+.hero .sub{max-width:26em;font-size:16.5px;color:var(--ink2)}
+.hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 22px;border:1px solid var(--ink);font-size:14px;letter-spacing:.15em}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn:hover{border-color:var(--zhu);color:var(--zhu)}.btn.solid:hover{background:var(--zhu);color:var(--paper)}
+
+/* 右侧视觉锚：风痕 + 三个数字 + 竖排题签 */
+.hero-aside{display:grid;grid-template-columns:minmax(0,1fr) auto;
+  gap:clamp(16px,2.4vw,28px);align-items:start}
+.aside-main{display:flex;flex-direction:column;align-items:flex-end;gap:clamp(22px,3.2vw,34px)}
+.hero svg.mark{width:100%;max-width:400px;height:auto;display:block}
 .mark path{stroke-dasharray:140;stroke-dashoffset:140;animation:draw 1.6s cubic-bezier(.6,0,.2,1) forwards}
 .mark path:nth-child(2){animation-delay:.25s}.mark path:nth-child(3){animation-delay:.5s}
 @keyframes draw{to{stroke-dashoffset:0}}
 @media(prefers-reduced-motion:reduce){.mark path{animation:none;stroke-dashoffset:0}}
-.hero h1{font:900 clamp(44px,7vw,88px)/1.15 var(--serif);letter-spacing:.08em}
-.hero .en{font:400 13px var(--mono);letter-spacing:.32em;text-transform:uppercase;color:var(--ink2);margin:20px 0 32px}
-.hero .sub{max-width:30em;font-size:17px;color:var(--ink2)}
-.hero .cta{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:10px 22px;border:1px solid var(--ink);font-size:14px;letter-spacing:.15em}
-.btn.solid{background:var(--ink);color:var(--paper)}
-.btn:hover{border-color:var(--zhu);color:var(--zhu)}.btn.solid:hover{background:var(--zhu);color:var(--paper)}
-.tiqian{writing-mode:vertical-rl;font:600 15px/1 var(--serif);letter-spacing:.6em;border:1px solid var(--ink);padding:28px 14px;align-self:start;margin-top:20px;position:relative}
-@media(max-width:720px){.hero{grid-template-columns:1fr}.tiqian{display:none}}
+.figs{display:flex;gap:clamp(14px,2.2vw,26px);text-align:right}
+.fig{display:flex;flex-direction:column;gap:3px}
+.fig b{font:900 clamp(22px,2.4vw,30px)/1 var(--serif);letter-spacing:.01em}
+.fig span{font:10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.tiqian{writing-mode:vertical-rl;font:600 14px/1 var(--serif);letter-spacing:.6em;
+  border:1px solid var(--ink);padding:26px 12px;margin-top:2px}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:0;padding:56px 0 56px;gap:40px}
+  .hero-aside{grid-template-columns:1fr;gap:26px}
+  .aside-main{align-items:flex-start;gap:26px}
+  .hero svg.mark{max-width:260px}
+  .figs{text-align:left}
+  .tiqian{display:none}
+}
 
 /* 章节 */
 section.s{display:grid;grid-template-columns:200px 1fr;gap:48px;padding:96px 0;border-bottom:1px solid var(--rule)}
@@ -170,22 +189,30 @@ footer .sign img{width:44px;transform:rotate(-4deg)}
 <main class="wrap">
 
 <header class="hero">
-  <div>
-    <svg class="mark" viewBox="0 0 120 48" fill="none" stroke-linecap="round" role="img" aria-label="采风标志：三道风痕">
-      <path d="M10 16 C40 10, 70 22, 110 14" stroke="#1A1A1A" stroke-width="1.6"/>
-      <path d="M18 25 C46 19, 74 31, 100 23" stroke="#1A1A1A" stroke-width="1.2"/>
-      <path d="M26 34 C50 29, 72 39, 90 32" stroke="#B23A2B" stroke-width="1.6"/>
-    </svg>
+  <div class="hero-copy">
     <h1>采其风，<br>得其法。</h1>
     <p class="en">Collect the style. Build the engine.</p>
     <p class="sub">每一种文风背后，都有一套没说出口的规则。我们把它采下来，造成引擎。</p>
-    <p class="en" style="margin-top:20px">15 engines · 143 atoms · 19 families</p>
     <div class="cta">
       <a class="btn solid" href="#use">开始使用</a>
       <a class="btn" href="https://github.com/Greatbeing/writing-engines">查看源码</a>
     </div>
   </div>
-  <div class="tiqian">写作引擎库</div>
+  <aside class="hero-aside">
+    <div class="aside-main">
+      <svg class="mark" viewBox="0 0 120 48" fill="none" stroke-linecap="round" role="img" aria-label="采风标志：三道风痕">
+        <path d="M10 16 C40 10, 70 22, 110 14" stroke="#1A1A1A" stroke-width="1.6"/>
+        <path d="M18 25 C46 19, 74 31, 100 23" stroke="#1A1A1A" stroke-width="1.2"/>
+        <path d="M26 34 C50 29, 72 39, 90 32" stroke="#B23A2B" stroke-width="1.6"/>
+      </svg>
+      <div class="figs">
+        <div class="fig"><b>15</b><span>engines</span></div>
+        <div class="fig"><b>143</b><span>atoms</span></div>
+        <div class="fig"><b>19</b><span>families</span></div>
+      </div>
+    </div>
+    <div class="tiqian">写作引擎库</div>
+  </aside>
 </header>
 
 <section class="s reveal" id="yuan">
