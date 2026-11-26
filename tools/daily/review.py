@@ -80,6 +80,31 @@ def extract_issues(review):
     return issues[:8]
 
 
+def extract_gems(review, article):
+    """从评审里取「惊艳句」与「这一课」。
+
+    惊艳句必须逐字出现在原文里（防止评审改写或编造），每篇最多 2 句，8–80 字。
+    这一课 ≤60 字，写「无」或空即不收。
+    """
+    def section(name):
+        m = re.search(rf"^##\s*{name}\s*\n(.*?)(?=^##\s|\Z)", review, re.S | re.M)
+        return m.group(1).strip() if m else ""
+
+    gems = []
+    sec = section("惊艳句")
+    if sec and not re.fullmatch(r"[（(]?无[)）。.]?", sec):
+        for m in re.finditer(r"^>\s*(.+?)\s*$\n+(?:理由[：:]\s*(.+))?", sec, re.M):
+            text = m.group(1).strip().strip("「」“”\"")
+            why = (m.group(2) or "").strip()
+            if 8 <= len(text) <= 80 and text in article and len(gems) < 2:
+                gems.append({"text": text, "why": why})
+    lesson = section("这一课").splitlines()[0].strip() if section("这一课") else ""
+    lesson = lesson.strip("（）() ")
+    if lesson in ("", "无", "无。") or len(lesson) > 60:
+        lesson = ""
+    return gems, lesson
+
+
 def pick_run(st, date):
     runs = [r for r in st.get("runs", []) if r.get("date") == date]
     return runs[-1] if runs else None
@@ -137,10 +162,18 @@ def main():
 ## 最该改的一句
 （引出原句，给出改法）
 
+## 惊艳句
+（从原文中逐字摘出，最多 2 句；格式：`> 原句` 下一行 `理由：……`。
+标准极高：必须同时满足——①读到会停下来重读；②换一个字就变差；③不是套话、不是金句腔、不是排比；④离开上下文单独拿出来仍然成立。
+宁缺毋滥：大多数文章一句都没有，没有就只写「无」。）
+
+## 这一课
+（一条可复用的写作经验，一句话，≤60 字，必须是能照着做的动作，如「写一个地方只写一样东西」；不许写道理和感悟。没有够格的就写「无」。）
+
 ## 评分
 X / 5（只给数字）
 
-要求：判定要能被别人复核；不要重写全文；不要超过 600 字。
+要求：判定要能被别人复核；不要重写全文；不要超过 800 字。
 """, encoding="utf-8")
 
     if a.dry_run:
@@ -171,6 +204,11 @@ X / 5（只给数字）
 """, encoding="utf-8")
 
     issues = extract_issues(review)
+    gems, lesson = extract_gems(review, body)
+    st["gems"] = [g for g in st.get("gems", []) if g.get("date") != a.date] + [
+        {"date": a.date, "engine": engine, "title": run["title"], **g} for g in gems]
+    st["lessons"] = [x for x in st.get("lessons", []) if x.get("date") != a.date] + (
+        [{"date": a.date, "engine": engine, "title": run["title"], "text": lesson}] if lesson else [])
     st.setdefault("reviews", []).append({
         "date": a.date, "engine": engine, "title": run["title"],
         "stars": stars, "file": out.relative_to(ROOT).as_posix(), "by": "god",
@@ -179,6 +217,7 @@ X / 5（只给数字）
     })
     save_state(st)
 
+    subprocess.run([sys.executable, "tools/build_daily.py"], cwd=ROOT, capture_output=True)
     subprocess.run(["git", "add", "-A"], cwd=ROOT, capture_output=True)
     subprocess.run(["git", "commit", "-m", f"review({engine}): {run['title']} {stars}/5"],
                    cwd=ROOT, capture_output=True)

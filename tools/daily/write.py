@@ -271,6 +271,7 @@ def main():
         return 0
 
     winner = None
+    attempts = []  # 逐稿记录，供批改台展示「为什么被打回」
     for attempt in range(1, a.max_try + 1):
         try:
             text = call_llm(sysf, usrf)
@@ -286,6 +287,8 @@ def main():
         if score is not None and score >= limit:
             bad.append(f"checker {score} ≥ {limit}")
         print(f"[daily] 第 {attempt} 稿《{title}》 分={score} " + ("通过" if not bad else "打回：" + "；".join(bad)))
+        attempts.append({"n": attempt, "title": title, "score": score,
+                         "bad": bad, "passed": not bad, "text": text})
         if not bad:
             winner = (path, title, score)
             break
@@ -307,11 +310,17 @@ def main():
         return 3
 
     path, title, score = winner
+    proc_dir = DAILY / "process"
+    proc_dir.mkdir(parents=True, exist_ok=True)
+    (proc_dir / f"{today}.json").write_text(json.dumps(
+        {"date": today, "engine": engine, "attempts": attempts}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
     r = sh([sys.executable, "tools/build_articles.py"], timeout=600)
     if r.returncode != 0:
         print("[daily] 站点构建失败，未推送：\n" + (r.stderr or "")[-600:], file=sys.stderr)
         return 4
 
+    sh([sys.executable, "tools/build_daily.py"], timeout=300)
     # 同一天重跑时替换旧记录，不要把同一天堆成多篇
     st["runs"] = [r for r in st.get("runs", []) if r.get("date") != today]
     st["runs"].append({
