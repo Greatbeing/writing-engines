@@ -107,13 +107,21 @@ def recent_issues(st, limit=6):
 def sys_prompt(engine, issues=None):
     avoid = ""
     if issues:
-        avoid = ("\n\n近期评审反复指出的问题（这一次务必避开，逐条自查）：\n"
+        avoid = ("\n\n近期评审反复指出的问题（这一次要对准，不是清零）：\n"
                  + "\n".join(f"- {x}" for x in issues) + "\n")
     return f"""你是一位严守写作引擎规范的中文作者。你只输出文章，不解释、不寒暄、不评论自己。{avoid}
 
 下面是你要执行的引擎文档。**风格指纹**与**红线**两节是硬约束：
 
 {skill_body(engine)}
+
+## 一条硬规则：不要为了达标而清零
+
+「风格指纹」里给的是**区间**，不是越少越好。例如「口语词 ≤3 处」意味着
+**1 到 3 处**——写到 0 处同样不合格；「金句 ≤3 处」不是不许有金句；
+「比喻 ≤2 个」不是不许打比方的意思，是别超。
+
+逐条自检时，每一项都要落在指纹写的区间内：**没超，也要有。**
 """
 
 
@@ -288,7 +296,9 @@ def main():
         print("[daily] 站点构建失败，未推送：\n" + (r.stderr or "")[-600:], file=sys.stderr)
         return 4
 
-    st.setdefault("runs", []).append({
+    # 同一天重跑时替换旧记录，不要把同一天堆成多篇
+    st["runs"] = [r for r in st.get("runs", []) if r.get("date") != today]
+    st["runs"].append({
         "date": today, "engine": engine, "title": title, "score": score,
         "file": path.relative_to(ROOT).as_posix(), "by": "being",
     })
