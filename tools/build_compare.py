@@ -18,6 +18,7 @@ VERSIONS = [  # 文件名, 标签, 副标, 是否引擎
     ("sanlian.md", "城市之风", "活人感 · sanlian-writing", True),
     ("zhexuan.md",    "庙堂之风", "官方体 · zhexuan-writing", True),
     ("feature.md",     "人间之风", "特稿 · feature-writing", True),
+    ("luxun.md",       "议论之风", "鲁迅体 · luxun-writing", True),
     ("acheng.md",      "白描之风", "阿城体 · acheng-writing", True),
     ("wangzengqi.md",  "散文之风", "汪曾祺体 · wangzengqi-writing", True),
     ("yuhua.md",       "叙事之风", "余华体 · yuhua-writing", True),
@@ -83,7 +84,12 @@ def how_html(tid, topic):
 
 def build(tid, topic, folder):
     cols, tabs = [], []
-    for i, (fn, tag, sub, eng) in enumerate(VERSIONS):
+    # 题目可用 topic.json 的 "versions" 指定列顺序（文件名列表），不指定就用默认顺序
+    vers = VERSIONS
+    order = topic.get("versions")
+    if order:
+        vers = sorted([v for v in VERSIONS if v[0] in order], key=lambda v: order.index(v[0]))
+    for i, (fn, tag, sub, eng) in enumerate(vers):
         f = folder / fn
         if not f.exists():
             continue
@@ -99,7 +105,7 @@ def build(tid, topic, folder):
     mats = "".join(f"<li>{html.escape(m['name'])}（{html.escape(m['tag'])}）：{html.escape(m['scene'])}。「{html.escape(m['quote'])}」</li>"
                    for m in topic.get("material", []))
     content = f"""<style>{CSS}</style>
-<section class="cmp"><h1>同题四体 · {tid}</h1>
+<section class="cmp"><h1>{html.escape(topic.get("title") or ("同题四体 · " + tid))}</h1>
 <p class="q">{html.escape(topic['prompt'])}</p>
 <details class="mat"><summary>四个版本拿到的同一份素材（合成，人物虚构）</summary><ul>{mats}</ul></details>
 <div class="tabs">{''.join(tabs)}</div>
@@ -122,7 +128,7 @@ def main():
     for d in sorted((ROOT / "demo").iterdir()):
         if d.is_dir() and d.name in topics:
             k = build(d.name, topics[d.name], d)
-            built.append((d.name, topics[d.name]["category"], topics[d.name]["prompt"], k))
+            built.append((d.name, topics[d.name]["category"], topics[d.name].get("title") or topics[d.name]["prompt"], k))
             print(f"  compare/{d.name}.html  {k} 版")
     # 汇总目录
     items = "".join(f"""<a class="item" href="{t}.html"><div class="feng">{cat} · {k} 版</div>
