@@ -35,6 +35,19 @@
         "ENDING 收尾（结尾只落回“半只鸡/今晚吃完”，未现指定四类意象）"
       ],
       "verdict": "needs_fix"
+    },
+    {
+      "date": "2026-11-26",
+      "engine": "sanlian-writing",
+      "title": "周末早上，年轻人开始在早餐店「打卡」坐两小时",
+      "stars": 3,
+      "file": "drafts/daily/reviews/2026-11-26.md",
+      "by": "god",
+      "issues": [
+        "口语词（全文无“主打/确实/说白了/真香/自洽”）",
+        "网感词 ≤3（标题“打卡”+正文“白嫖/第三空间/松弛”共 4 个）"
+      ],
+      "verdict": "borderline"
     }
   ]
 }
