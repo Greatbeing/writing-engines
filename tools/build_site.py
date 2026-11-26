@@ -149,6 +149,55 @@ INTRO_HTML = (
 )
 
 
+# 原子动效：hero 右侧的三道风痕由墨点（原子）组成。
+# 墨点先散落在纸面上，再沿各自的笔道归位、聚成三道风痕（拆解→重组）；
+# 鼠标靠近时墨点被拨散，移开后重新归位。减弱动效时只显示静态笔画。
+ATOM_CSS = """
+.h-hero .atoms{width:100%;max-width:380px;justify-self:center;align-self:center;overflow:visible;touch-action:none}
+.h-hero .atoms .ghost{opacity:0;transition:opacity 1.2s ease}
+.h-hero .atoms.done .ghost{opacity:.9}
+.h-hero .atoms .cap{font:400 3px var(--mono);letter-spacing:.6px;fill:var(--ink2);opacity:0;transition:opacity .8s ease}
+.h-hero .atoms.done .cap{opacity:1}
+@media(prefers-reduced-motion:reduce){.h-hero .atoms circle{display:none}.h-hero .atoms .ghost{opacity:1}}
+"""
+ATOM_SVG = (
+    '<svg class="atoms" viewBox="-8 -10 112 80" fill="none" stroke-linecap="round" aria-hidden="true">'
+    '<path class="ghost" d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/>'
+    '<path class="ghost" d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/>'
+    '<path class="ghost" d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/>'
+    '<g class="dots"></g>'
+    '<text class="cap" x="-6" y="66">ATOMS → ENGINE</text></svg>'
+)
+ATOM_JS = """
+(()=>{const sv=document.querySelector('.h-hero .atoms');if(!sv)return;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){sv.classList.add('done');return}
+const NS='http://www.w3.org/2000/svg',g=sv.querySelector('.dots'),paths=[...sv.querySelectorAll('.ghost')];
+const P=[];paths.forEach((p,k)=>{const L=p.getTotalLength(),n=[46,36,26][k],r=[1.25,1.0,1.25][k],col=p.getAttribute('stroke');
+ for(let i=0;i<n;i++){const t=(i+.5)/n*L,q=p.getPointAtLength(t);
+  const c=document.createElementNS(NS,'circle');c.setAttribute('r',(r*(.75+Math.random()*.5)).toFixed(2));c.setAttribute('fill',col);g.appendChild(c);
+  const a=Math.random()*6.283,d=18+Math.random()*34;
+  P.push({c,hx:q.x,hy:q.y,x:48+Math.cos(a)*d*1.3,y:28+Math.sin(a)*d,vx:0,vy:0,ph:Math.random()*6.283,
+   delay:k*260+Math.random()*420})}});
+let t0=null,mx=-999,my=-999,settled=false;
+sv.addEventListener('pointermove',e=>{const b=sv.getBoundingClientRect(),vb=sv.viewBox.baseVal;
+ mx=vb.x+(e.clientX-b.left)/b.width*vb.width;my=vb.y+(e.clientY-b.top)/b.height*vb.height});
+sv.addEventListener('pointerleave',()=>{mx=my=-999});
+const start=document.documentElement.classList.contains('intro')?2700:250;
+function step(ts){if(t0===null)t0=ts;const el=ts-t0-start;let moving=0;
+ for(const p of P){const live=el>p.delay;let fx=0,fy=0;
+  if(live){fx=(p.hx-p.x)*.045;fy=(p.hy-p.y)*.045}
+  else{fx=Math.cos(ts/900+p.ph)*.02;fy=Math.sin(ts/1100+p.ph)*.02}
+  const dx=p.x-mx,dy=p.y-my,d2=dx*dx+dy*dy;if(d2<140){const f=(140-d2)/140*.9;fx+=dx*f*.12;fy+=dy*f*.12}
+  p.vx=(p.vx+fx)*.82;p.vy=(p.vy+fy)*.82;p.x+=p.vx;p.y+=p.vy;
+  const br=live?Math.sin(ts/1400+p.ph)*.12:0;
+  p.c.setAttribute('cx',p.x.toFixed(2));p.c.setAttribute('cy',(p.y+br).toFixed(2));
+  if(Math.abs(p.vx)+Math.abs(p.vy)>.02||!live)moving++}
+ if(!settled&&el>1800&&moving===0){settled=true;sv.classList.add('done')}
+ requestAnimationFrame(step)}
+requestAnimationFrame(step)})();
+"""
+
+
 def home(c):
     doors = [
         (0, "壹", "写作引擎", "拆法", "engines/",
@@ -171,7 +220,7 @@ def home(c):
 <p class="en">Collect the style · Learn the method · Find your own</p>
 <div class="rule"></div>
 <p class="sub">采风是一个教人写作的项目。先把名家的文风拆成原子，再把原子讲成课，最后用评测验证——目的不是让你像谁，是让你写出自己的风格。</p></div>
-{mark(None, 380)}</section>
+{ATOM_SVG}</section>
 <section class="doors">{d}</section>
 <section class="loop"><h3>三件事，<br>是同一件事的三步。</h3>
 <ol><li><b>拆。</b>读一位作者，把他反复使用的动作找出来，写成能照做的原子，装进引擎。</li>
@@ -247,7 +296,7 @@ def main():
     c = counts()
     ba.SECTION = ""
     (DOCS / "index.html").write_text(
-        page("采其风，得其法，自成一体", f"<style>{CSS}{INTRO_CSS}</style>" + INTRO_HTML + home(c), ""), encoding="utf-8")
+        page("采其风，得其法，自成一体", f"<style>{CSS}{INTRO_CSS}{ATOM_CSS}</style>" + INTRO_HTML + home(c) + f"<script>{ATOM_JS}</script>", ""), encoding="utf-8")
     ba.SECTION = "eval"
     (DOCS / "eval").mkdir(exist_ok=True)
     (DOCS / "eval/index.html").write_text(
