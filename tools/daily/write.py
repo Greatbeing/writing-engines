@@ -96,11 +96,16 @@ def existing_titles(engine, st=None, days=30):
 
 def recent_issues(st, limit=6):
     """把最近几次评审指出的问题汇总，避免同一个毛病反复犯。"""
-    out = []
+    # 同一项指纹只留最新一次评审的说法：旧评审说“超量”、新评审说“没有”，
+    # 两条一起喂进去会互相打架。
+    latest = {}
     for rv in st.get("reviews", [])[-5:]:
         for it in rv.get("issues", []) or []:
-            if it and it not in out:
-                out.append(it)
+            if not it:
+                continue
+            key = it.split("（")[0].strip() or it
+            latest[key] = it          # 后出现的覆盖前面的
+    out = list(latest.values())
     # 把「超标」类问题改写成区间目标：直接喂失败描述，模型会理解成“清零”，
     # 而指纹里写的是区间（≤3 意味着 1–3 处），归零同样不合格。
     res = []
