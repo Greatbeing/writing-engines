@@ -1,6 +1,8 @@
 {
   "2026-11-18-human": "2026-11-18-sanlian",
   "2026-11-25-guanfang": "2026-11-25-zhexuan",
+  "guanfang-2": "zhexuan-2",
+  "guanfang-3": "zhexuan-3",
   "guanfang-4": "zhexuan-4",
   "human-2": "sanlian-2",
   "human-3": "sanlian-3",
@@ -8,7 +10,7 @@
   "maozedong-1": "mao-1",
   "maozedong-2": "mao-2",
   "maozedong-3": "mao-3",
-  "renminribao-1": "guanfang-1",
-  "renminribao-2": "guanfang-2",
-  "renminribao-3": "guanfang-3"
+  "renminribao-1": "rmrb-1",
+  "renminribao-2": "rmrb-2",
+  "renminribao-3": "rmrb-3"
 }

@@ -1,12 +1,12 @@
 ---
 name: yuhua-writing
 description: |
-  余华体：把《活着》《许三观卖血记》《兄弟》《第七天》式的叙事方法，蒸馏成可复用的短篇叙事写法。核心是 10 个原子操作 + 组合规则 + 风格指纹。
+  余华体：冷静叙事的短篇写法，零度叙述、重复结构、死亡轻写、口语对话推进。10 个原子 + 组合规则 + 风格指纹。
   三个用法：
   ①写短篇叙事、小小说（800–2000 字），以普通人的苦难与活下去为题
   ②给一篇叙事“加余华味”：改写、诊断缺了哪几个原子
   ③拆解一篇小说用了哪些余华式手法
-  不适用：杂文时评（用 luxun-writing）、官方时评（用 zhexuan-writing）、松弛随笔（用 sushi-writing / sanlian-writing）、人物特稿（用 feature-writing）、早期先锋小说式的暴力实验、真实灾难或真实受难者的再创作。
+  不适用：杂文时评（用 luxun-writing / zhexuan-writing）；松弛随笔（用 sushi-writing / sanlian-writing）；人物特稿（用 feature-writing）；真实受难者的再创作。
 ---
 # 余华体——认知引擎版
 

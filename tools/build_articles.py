@@ -15,7 +15,7 @@ ENGINES = {  # 引擎目录 -> (风名, 文体, 短名)
     "zhexuan-writing":         ("庙堂之风", "官方体",   "zhexuan"),
     "luxun-writing":           ("议论之风", "鲁迅体",   "luxun"),
     "wangxiaobo-writing":      ("议论之风", "王小波体", "wangxiaobo"),
-    "guanfang-writing":        ("议论之风", "人民日报", "guanfang"),
+    "guanfang-writing":        ("议论之风", "人民日报", "rmrb"),
     "mao-writing":             ("议论之风", "说理文",   "mao"),
     "feature-writing":         ("人间之风", "特稿",     "feature"),
     "yuhua-writing":           ("叙事之风", "余华体",   "yuhua"),
