@@ -30,7 +30,7 @@ Environment=HOME=$HOME
 Environment=WRITING_HOME=$HOME_DIR
 Environment=PATH=/data/home/.local/bin:/usr/local/bin:/usr/bin:/bin
 EnvironmentFile=-$ENVF
-ExecStart=/bin/bash -lc "$PY $HOME_DIR/tools/daily/$2.py"
+ExecStart=/bin/bash -lc "$PY -u $HOME_DIR/tools/daily/$2.py"
 StandardOutput=append:$HOME_DIR/drafts/daily/logs/$1.out
 StandardError=append:$HOME_DIR/drafts/daily/logs/$1.err
 TimeoutStartSec=5400
