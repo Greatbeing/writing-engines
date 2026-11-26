@@ -99,6 +99,55 @@ CSS = """
  .tool{grid-template-columns:1fr;gap:8px}.home,.ev{padding-left:20px;padding-right:20px}}
 """
 
+# 开场：宣纸上三道风痕依次落笔，各配一句——采其风、得其法、自成一体；朱红最后落定，纸幕上卷露出首页。
+# 每次会话只放一次；点击或按键即跳过；减弱动效时不放。约 3s。
+INTRO_CSS = """
+#intro{display:none}
+html.intro #intro{display:flex;position:fixed;inset:0;z-index:60;background:var(--paper);align-items:center;justify-content:center;
+  cursor:pointer;animation:in-lift .9s cubic-bezier(.76,0,.24,1) 2.25s forwards}
+html.intro body{overflow:hidden}
+@keyframes in-lift{to{transform:translateY(-100%)}}
+.in-wrap{display:grid;grid-template-columns:auto auto;align-items:center;gap:clamp(20px,3vw,40px)}
+.in-wrap svg{width:min(52vw,440px);height:auto;overflow:visible}
+.in-wrap path{stroke-dasharray:140;stroke-dashoffset:140;animation:in-draw .7s cubic-bezier(.65,0,.25,1) forwards}
+.in-wrap path:nth-child(1){animation-delay:.15s}.in-wrap path:nth-child(2){animation-delay:.6s}.in-wrap path:nth-child(3){animation-delay:1.05s}
+@keyframes in-draw{to{stroke-dashoffset:0}}
+.in-ch{display:grid;grid-template-rows:repeat(3,1fr);height:min(30vw,256px);font:600 clamp(15px,1.6vw,19px)/1 var(--serif);color:var(--ink2);letter-spacing:.2em}
+.in-ch span{display:flex;align-items:center;opacity:0;transform:translateX(-6px);animation:in-ch .6s ease forwards}
+.in-ch span:nth-child(1){animation-delay:.55s}.in-ch span:nth-child(2){animation-delay:1s}
+.in-ch span:nth-child(3){animation-delay:1.45s;color:var(--zhu)}
+@keyframes in-ch{to{opacity:1;transform:none}}
+.in-foot{position:absolute;left:0;right:0;bottom:12vh;text-align:center;font:400 11px var(--mono);letter-spacing:.5em;
+  color:var(--ink2);opacity:0;animation:in-ch .8s ease 1.5s forwards}
+html.intro .h-hero h1 span{opacity:0;animation:in-ink 1s cubic-bezier(.2,.7,.2,1) forwards}
+html.intro .h-hero h1 span:nth-child(1){animation-delay:2.7s}
+html.intro .h-hero h1 span:nth-child(2){animation-delay:2.88s}
+html.intro .h-hero h1 span:nth-child(3){animation-delay:3.06s}
+@keyframes in-ink{from{opacity:0;filter:blur(10px);transform:translateY(.2em)}to{opacity:1;filter:none;transform:none}}
+html.intro .h-hero .mk path{animation-delay:2.9s}
+html.intro .h-hero .mk path:nth-child(2){animation-delay:3.1s}
+html.intro .h-hero .mk path:nth-child(3){animation-delay:3.3s}
+html.skip #intro{animation:in-lift .5s cubic-bezier(.76,0,.24,1) forwards!important}
+@media(prefers-reduced-motion:reduce){html.intro #intro{display:none}html.intro body{overflow:auto}
+  html.intro .h-hero h1 span{animation:none;opacity:1}}
+"""
+INTRO_HTML = (
+    '<script>(function(h){try{if(!sessionStorage.cfIntro&&!matchMedia("(prefers-reduced-motion: reduce)").matches){'
+    'h.classList.add("intro");sessionStorage.cfIntro=1}}catch(e){}})(document.documentElement)</script>'
+    '<div id="intro" aria-hidden="true"><div class="in-wrap">'
+    '<svg viewBox="0 0 96 56" fill="none" stroke-linecap="round">'
+    '<path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.2"/>'
+    '<path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="1.7"/>'
+    '<path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.2"/></svg>'
+    '<div class="in-ch"><span>采其风</span><span>得其法</span><span>自成一体</span></div></div>'
+    '<p class="in-foot">CAIFENG</p></div>'
+    '<script>(function(){const h=document.documentElement;if(!h.classList.contains("intro"))return;'
+    'const i=document.getElementById("intro");const end=()=>{h.classList.add("skip");'
+    'setTimeout(()=>{h.classList.remove("intro","skip");i.remove()},520)};'
+    'i.addEventListener("click",end);addEventListener("keydown",end,{once:true});'
+    'i.addEventListener("animationend",e=>{if(e.animationName==="in-lift"){h.classList.remove("intro");i.remove()}})})()</script>'
+)
+
 
 def home(c):
     doors = [
@@ -198,7 +247,7 @@ def main():
     c = counts()
     ba.SECTION = ""
     (DOCS / "index.html").write_text(
-        page("采其风，得其法，自成一体", f"<style>{CSS}</style>" + home(c), ""), encoding="utf-8")
+        page("采其风，得其法，自成一体", f"<style>{CSS}{INTRO_CSS}</style>" + INTRO_HTML + home(c), ""), encoding="utf-8")
     ba.SECTION = "eval"
     (DOCS / "eval").mkdir(exist_ok=True)
     (DOCS / "eval/index.html").write_text(
