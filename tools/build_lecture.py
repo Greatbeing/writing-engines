@@ -99,8 +99,12 @@ def main():
         items.append((slug, title, (one.group(1) if one else "").strip()))
         print(f"  lecture/{slug}.html  {title}")
 
+    def cn(n):
+        d = "一二三四五六七八九"
+        return d[n-1] if n < 10 else ("十" if n == 10 else "十" + d[n-11] if n < 20 else str(n))
+
     lst = "".join(
-        f'<a class="item" href="{s}.html"><div class="no">第{"一二三四五六七八九十"[i]}讲</div>'
+        f'<a class="item" href="{s}.html"><div class="no">第{cn(i+1)}讲</div>'
         f"<h2>{html.escape(t)}</h2>"
         + (f'<div class="one">{html.escape(o)}</div>' if o else "")
         + "</a>"
@@ -108,7 +112,7 @@ def main():
     idx = (f'<section class="list"><h1>采风 · 讲义</h1>'
            f'<p class="lead">把写作变成可以学的手艺。<br>一讲只教一个动作，写完就能改。</p>'
            f'<div class="brandline">采其风，得其法，成其体</div>{lst}</section>'
-           f'<div class="foot"><div class="box"></div><p>第一季{"一二三四五六七八九十"[len(items)-1]}讲：'
+           f'<div class="foot"><div class="box"></div><p>三季共{cn(len(items))}讲：'
            + "、".join(t.split()[1][0] for _, t, _ in items if len(t.split()) > 1) + "。"
            f"每讲五节——一个动作、名家怎么写、AI 写成什么样、改一遍、你的练习。</p></div>"
            f"<style>{CSS}</style>")
