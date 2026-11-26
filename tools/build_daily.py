@@ -87,6 +87,7 @@ mark.gem{background:none;border-bottom:2px solid var(--zhu);padding-bottom:1px;c
 .tabs a{border-bottom:1px solid var(--rule)}.tabs a:hover{border-color:var(--zhu);color:var(--zhu)}
 .empty{color:var(--ink2);font-size:14.5px}
 .fix{border:1px solid var(--rule);padding:16px 20px;margin:0 0 18px}
+.fix.patch{border-style:dashed}.fix .note{font-size:13px;color:var(--ink2);margin-top:10px}
 .fix .lab{font:12px var(--mono);letter-spacing:.14em;color:var(--ink2);margin-top:6px}
 .fix .before{font:400 16.5px/1.9 var(--serif);color:var(--ink2);text-decoration:line-through;text-decoration-color:var(--ink2)}
 .fix .after{font:400 16.5px/1.9 var(--serif);border-left:2px solid var(--zhu);padding-left:12px}
@@ -148,7 +149,9 @@ def best_fix(path):
     if not (a and b):
         return None
     after = re.sub(r"[（(][^（）()]*[)）]\s*$", "", b.group(1).strip()).strip()
-    return a.group(1).strip(), after
+    k = re.search(r"类型[:：]\s*(\S+)", sec)
+    kind = "指纹修补" if (k and "修补" in k.group(1)) or (not k and "补齐" in b.group(1)) else "改写"
+    return a.group(1).strip(), after, kind
 
 
 def day_page(date, run, review, proc, gems, lesson):
@@ -194,10 +197,12 @@ def day_page(date, run, review, proc, gems, lesson):
     parts.append("<h2>三、评改</h2>")
     fix = best_fix(ROOT / review["file"]) if review and review.get("file") else None
     if fix:
-        parts.append('<div class="fix"><div class="lab">改前</div>'
+        parts.append(f'<div class="fix{" patch" if fix[2] == "指纹修补" else ""}"><div class="lab">改前</div>'
                      f'<div class="before">{esc(fix[0])}</div>'
-                     '<div class="lab">改后</div>'
-                     f'<div class="after">{esc(fix[1])}</div></div>')
+                     f'<div class="lab">改后 · {esc(fix[2])}</div>'
+                     f'<div class="after">{esc(fix[1])}</div>'
+                     + ('<div class="note">这条只为补齐风格指纹，句子本身没有变好——仅作参考。</div>' if fix[2] == "指纹修补" else "")
+                     + '</div>')
     rb = review_body(ROOT / review["file"]) if review and review.get("file") else ""
     parts.append(f'<div class="rev">{rb}</div>' if rb else '<p class="empty">评审尚未完成。</p>')
 
