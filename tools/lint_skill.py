@@ -203,6 +203,16 @@ def lint_engine(engine_dir, strict=False):
 LOCAL_FIXTURES = ROOT / "tools" / "tests" / "fixtures" / "local"
 
 
+def _git_ignored(path):
+    """被 .gitignore 排除的文件按定义不会入库，R2 不该管它。"""
+    try:
+        r = subprocess.run(["git", "check-ignore", "-q", str(path)],
+                           cwd=str(ROOT), capture_output=True)
+        return r.returncode == 0
+    except Exception:                                  # noqa: BLE001
+        return False
+
+
 def repo_level_lint():
     issues = []
     for need in ("LICENSE", "README.md", "SPEC.md", "CHANGELOG.md", ".gitignore"):
@@ -214,6 +224,8 @@ def repo_level_lint():
             continue
         # 本地校准语料：已在 .gitignore，永不入库，不算违规
         if LOCAL_FIXTURES in txt.parents:
+            continue
+        if _git_ignored(txt):
             continue
         if txt.stat().st_size > 5000:
             issues.append(Issue("R2", "error",

@@ -26,10 +26,13 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
 ROOT = Path(os.environ.get("WRITING_HOME", Path(__file__).resolve().parents[2])).resolve()
+# 提示词临时文件放在仓库外：它包含整份 SKILL.md，放在仓库内会被 lint 的「语料全文」规则误判
+WORK = Path(tempfile.mkdtemp(prefix="writing-daily-"))
 DAILY = ROOT / "drafts" / "daily"
 STATE = DAILY / "state.json"
 REVDIR = DAILY / "reviews"
@@ -105,8 +108,8 @@ def main():
     cfg = json.loads((ROOT / "tools" / "engine_profiles.json").read_text(encoding="utf-8"))
     limit = (cfg["profiles"].get(engine) or cfg["profiles"]["generic"]).get("pass_below", 30)
 
-    sysf = DAILY / "_rev_sys.txt"
-    usrf = DAILY / "_rev_usr.txt"
+    sysf = WORK / "rev_sys.txt"
+    usrf = WORK / "rev_usr.txt"
     sysf.write_text(
         "你是一位严苛的中文文学编辑。只输出评审本身，不要寒暄。"
         "评审要具体到句子，不说‘结构不错’这类空话。",

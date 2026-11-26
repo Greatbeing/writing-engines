@@ -24,10 +24,13 @@ import random
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
 ROOT = Path(os.environ.get("WRITING_HOME", Path(__file__).resolve().parents[2])).resolve()
+# 提示词临时文件放在仓库外：它包含整份 SKILL.md，放在仓库内会被 lint 的「语料全文」规则误判
+WORK = Path(tempfile.mkdtemp(prefix="writing-daily-"))
 DAILY = ROOT / "drafts" / "daily"
 STATE = DAILY / "state.json"
 LOGDIR = DAILY / "logs"
@@ -256,7 +259,7 @@ def main():
     LOGDIR.mkdir(parents=True, exist_ok=True)
     prune_logs()
 
-    sysf, usrf = DAILY / "_sys.txt", DAILY / "_usr.txt"
+    sysf, usrf = WORK / "sys.txt", WORK / "usr.txt"
     issues = recent_issues(st)
     sysf.write_text(sys_prompt(engine, issues), encoding="utf-8")
     usrf.write_text(usr_prompt(engine, avoid), encoding="utf-8")
