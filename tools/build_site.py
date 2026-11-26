@@ -276,7 +276,7 @@ def unify_nav(t):
     """引擎页沿用旧首页的手写导航：换成全站统一导航，页内锚点挪到导航下的一行子目录。"""
     anchors = re.findall(r'<li><a href="(#[^"]+)">([^<]+)</a></li>', t)
     sub = "".join(f'<a href="{h}">{n}</a>' for h, n in anchors if h != "#yuan")
-    sub += '<a href="../articles/">范文</a><a href="../compare/">同题四体</a>'
+    sub += '<a href="../atoms/">原子库 · 讲透</a><a href="../articles/">范文</a><a href="../compare/">同题四体</a>'
     new = (f'<nav><div class="wrap"><a class="brand" href="../">{ba.LOGO.format(w=26)}采风</a>'
            f'{ba.site_nav("../")}</div></nav><div class="subnav"><div class="wrap">{sub}</div></div>')
     t = re.sub(r"<nav>.*?</nav>", new, t, count=1, flags=re.S)

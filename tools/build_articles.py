@@ -136,7 +136,7 @@ ENTER_JS = """
 """
 
 SECTION = None  # 由 build_site 显式设置；其余脚本按调用者文件名推断
-_SEC_BY_CALLER = {"build_articles": "engines", "build_compare": "engines",
+_SEC_BY_CALLER = {"build_articles": "engines", "build_compare": "engines", "build_atoms": "engines",
                   "build_lecture": "lecture", "build_daily": "eval"}
 SITE_NAV = [("engines", "引擎", "engines/"), ("lecture", "讲义", "lecture/"), ("eval", "评测", "eval/")]
 
