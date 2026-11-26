@@ -51,6 +51,12 @@ a:hover{border-color:var(--zhu)}
 nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
 nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
 nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .in{gap:24px}
+nav .snav{display:flex;gap:26px;font-size:13.5px;letter-spacing:.16em;margin-left:auto}
+nav .snav a{border:0;color:var(--ink2);padding:17px 0 16px;border-bottom:1px solid transparent}
+nav .snav a:hover{color:var(--zhu)}
+nav .snav a.on{color:var(--ink);border-bottom-color:var(--ink)}
+@media(max-width:600px){nav .snav{gap:14px;letter-spacing:.06em}nav .snav a:last-child{display:none}}
 nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
 nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
 nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
@@ -118,13 +124,9 @@ ENTER_CSS = """
   transform:scaleX(0);transform-origin:left;animation:e-rule 1.1s cubic-bezier(.7,0,.2,1) .1s forwards}
 nav{position:sticky}
 @keyframes e-rule{to{transform:scaleX(1)}}
-.e-seal{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;background:var(--zhu);color:#F5F1E8;
-  font:900 10px/1 var(--serif);border-radius:2px;vertical-align:middle;transform:rotate(-6deg)}
-.js .e-seal{opacity:0;transform:scale(2) rotate(-16deg);animation:e-stamp .38s cubic-bezier(.3,1.6,.5,1) .55s forwards}
-@keyframes e-stamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
 .js .e-in{opacity:0;animation:e-ink .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.35s + var(--k,0) * 90ms)}
 @keyframes e-ink{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
-@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-seal,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
+@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
 """
 ENTER_HEAD = "<script>document.documentElement.classList.add('js')</script>"
 ENTER_JS = """
@@ -133,13 +135,25 @@ ENTER_JS = """
  setTimeout(()=>document.querySelectorAll('.e-in').forEach(el=>{el.classList.remove('e-in')}),2200)})();
 """
 
+SECTION = None  # 由 build_site 显式设置；其余脚本按调用者文件名推断
+_SEC_BY_CALLER = {"build_articles": "engines", "build_compare": "engines",
+                  "build_lecture": "lecture", "build_daily": "eval"}
+SITE_NAV = [("engines", "引擎", "engines/"), ("lecture", "讲义", "lecture/"), ("eval", "评测", "eval/")]
+
+
+def site_nav(rel):
+    sec = SECTION if SECTION is not None else _SEC_BY_CALLER.get(Path(sys.argv[0]).stem)
+    items = "".join(f'<a class="{"on" if s == sec else ""}" href="{rel}{h}">{n}</a>' for s, n, h in SITE_NAV)
+    return (f'<div class="snav">{items}'
+            '<a href="https://github.com/Greatbeing/writing-engines">GitHub ↗</a></div>')
+
 
 def page(title, body, rel, reader=False):
     tools = ('<div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button>'
              '<button data-fs="1" aria-label="放大字号">A＋</button>'
              '<button id="night" aria-label="夜读">夜读</button>'
-             f'<a href="{rel}articles/">目录</a></div>') if reader else \
-            f'<div class="tools"><button id="night">夜读</button><a href="{rel}">首页</a></div>'
+             '</div>') if reader else \
+            '<div class="tools"><button id="night">夜读</button></div>'
     return f"""<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -149,7 +163,7 @@ def page(title, body, rel, reader=False):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
 <style>{CSS}{ENTER_CSS}</style>{ENTER_HEAD}</head><body>
-<nav><div class="in"><a class="brand" href="{rel}">{LOGO.format(w=26)}采风<span class="e-seal" aria-hidden="true">采</span></a>{tools}</div></nav>
+<nav><div class="in"><a class="brand" href="{rel}">{LOGO.format(w=26)}采风</a>{site_nav(rel)}{tools}</div></nav>
 {'<div id="bar"></div>' if reader else ''}
 {body}
 <footer>{LOGO.format(w=40)}采风 · CAIFENG</footer>
