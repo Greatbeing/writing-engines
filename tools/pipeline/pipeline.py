@@ -254,6 +254,9 @@ def evolve(engine=None, dry=False):
     eng = pool[0]
     rs = cands.get(eng, [])
     evidence = "\n".join(f"- {r.get('stars')}/5 最不像：{r.get('least_like')}｜建议：{r.get('fix_to')}" for r in rs[-8:])
+    intel = PIPE / "_intel" / f"{eng}.md"
+    if intel.exists():  # 外部情报：对标账号新文章里「引擎没写到的新手法」
+        evidence += "\n\n外部对标文章拆解（节选）：\n" + intel.read_text(encoding="utf-8")[-3000:]
     old = W.skill_body(eng)
     prop = llm("你是写作引擎的维护者。只输出 JSON。" + NO_PADDING, f"""下面是引擎「{eng}」的 SKILL.md 和近期评审证据。
 找出证据背后最常见的一个病根，给 SKILL.md 提**一处**修改（新增或替换一段，≤200 字）。

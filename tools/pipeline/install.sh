@@ -2,6 +2,7 @@
 # 编辑部流水线定时器（替换旧的 daily write/review）
 #   bash tools/pipeline/install.sh writer    # being：01:00 / 05:00 推进（选题→撰稿→修改→发布）
 #   bash tools/pipeline/install.sh reviewer  # god：02:00 / 06:00 评审；周日 08:00 引擎迭代
+#   bash tools/pipeline/install.sh scout     # being：每天 00:00 UTC（北京 08:00）抓对标账号新文并拆解
 #   bash tools/pipeline/install.sh status
 set -euo pipefail
 ROLE="${1:-status}"; H="${WRITING_HOME:-/data/home/src/writing-engines}"
@@ -26,6 +27,7 @@ EOF
 off(){ systemctl --user disable --now "writing-daily-$1.timer" 2>/dev/null || true; }
 case "$ROLE" in
   writer)   off write; unit step step "*-*-* 01:00:00" "*-*-* 05:00:00" ;;
+  scout)    unit scout scout "*-*-* 00:00:00" ;;
   reviewer) off review; unit review review "*-*-* 02:00:00" "*-*-* 06:00:00"; unit evolve evolve "Sun *-*-* 08:00:00" ;;
   *) systemctl --user list-timers --all | grep -E 'writing|NEXT' ;;
 esac
