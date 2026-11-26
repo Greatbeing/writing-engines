@@ -94,8 +94,22 @@ def existing_titles(engine, st=None, days=30):
     return titles[:40]
 
 
-def sys_prompt(engine):
-    return f"""你是一位严守写作引擎规范的中文作者。你只输出文章，不解释、不寒暄、不评论自己。
+def recent_issues(st, limit=6):
+    """把最近几次评审指出的问题汇总，避免同一个毛病反复犯。"""
+    out = []
+    for rv in st.get("reviews", [])[-5:]:
+        for it in rv.get("issues", []) or []:
+            if it and it not in out:
+                out.append(it)
+    return out[:limit]
+
+
+def sys_prompt(engine, issues=None):
+    avoid = ""
+    if issues:
+        avoid = ("\n\n近期评审反复指出的问题（这一次务必避开，逐条自查）：\n"
+                 + "\n".join(f"- {x}" for x in issues) + "\n")
+    return f"""你是一位严守写作引擎规范的中文作者。你只输出文章，不解释、不寒暄、不评论自己。{avoid}
 
 下面是你要执行的引擎文档。**风格指纹**与**红线**两节是硬约束：
 
@@ -109,7 +123,7 @@ def usr_prompt(engine, avoid, fb=""):
 
 1. 自选题目。避开这些已有题目及其近似：
 {av}
-2. 篇幅 900–1500 个中文字符。
+2. 篇幅：正文 1000–1400 个汉字（少于 900 字直接不合格）。
 3. 第一行必须是 `# 标题`，空一行后是正文，Markdown，段落之间空一行。
 4. 结尾另起一行写 `> 综合创作。`
 5. 不要出现：{"、".join(BANNED[:18])}。
@@ -118,6 +132,23 @@ def usr_prompt(engine, avoid, fb=""):
 
 只输出文章。
 {fb}
+"""
+
+
+def expand_prompt(engine, avoid, prev, chars):
+    """字数不足时，让模型在上一稿基础上扩写；换题重写既贵又容易再犯同样的错。"""
+    return f"""下面这篇用「{engine}」引擎写的稿子只有 {chars} 字，篇幅不够。
+
+请在**保留原题目、原结构、原语气**的前提下扩写，把正文补到 1100–1400 个汉字：
+- 加细节、加动作、加一句对白，不要加议论、不要加排比、不要加总结段。
+- 不要另起一篇，不要换题目。
+
+原稿：
+---
+{prev}
+---
+
+输出扩写后的完整文章，第一行仍是 `# 标题`，结尾保留 `> 综合创作。`。
 """
 
 
@@ -135,6 +166,10 @@ def check_score(engine, path):
     r = sh([sys.executable, "tools/ai-flavor-checker.py", str(path), "--engine", engine])
     m = re.search(r"合计 1 篇，均值 ([0-9.]+)", r.stdout)
     return float(m.group(1)) if m else None
+
+
+def chars_of(text):
+    return len(re.findall(r"[\u4e00-\u9fff]", re.sub(r"^>.*$", "", text, flags=re.M)))
 
 
 def judge(text, engine):
@@ -173,6 +208,17 @@ def push(times=5):
     return False
 
 
+def prune_logs(days=45):
+    """日志只留 45 天，避免长期跑把磁盘吃满（两台机器可用空间都不到 8G）。"""
+    cut = time.time() - days * 86400
+    for f in LOGDIR.glob("*") if LOGDIR.exists() else []:
+        try:
+            if f.is_file() and f.stat().st_mtime < cut:
+                f.unlink()
+        except OSError:
+            pass
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -187,11 +233,14 @@ def main():
     limit = pass_below(engine)
     DAILY.mkdir(parents=True, exist_ok=True)
     LOGDIR.mkdir(parents=True, exist_ok=True)
+    prune_logs()
 
     sysf, usrf = DAILY / "_sys.txt", DAILY / "_usr.txt"
-    sysf.write_text(sys_prompt(engine), encoding="utf-8")
+    issues = recent_issues(st)
+    sysf.write_text(sys_prompt(engine, issues), encoding="utf-8")
     usrf.write_text(usr_prompt(engine, avoid), encoding="utf-8")
-    print(f"[daily] {today}｜引擎 {engine}（门槛 <{limit}）｜避开 {len(avoid)} 个旧题")
+    print(f"[daily] {today}｜引擎 {engine}（门槛 <{limit}）｜避开 {len(avoid)} 个旧题"
+          f"｜评审通病 {len(issues)} 条")
 
     if a.dry_run:
         print(usrf.read_text(encoding="utf-8")[:800])
@@ -216,9 +265,12 @@ def main():
         if not bad:
             winner = (path, title, score)
             break
-        usrf.write_text(usr_prompt(engine, avoid,
-                                   f"\n上一稿被打回，原因：{'；'.join(bad)}。请重写并务必避免。"),
-                        encoding="utf-8")
+        if bad and all(b.startswith("字数") for b in bad):
+            usrf.write_text(expand_prompt(engine, avoid, text, chars_of(text)), encoding="utf-8")
+        else:
+            usrf.write_text(usr_prompt(engine, avoid,
+                                       f"\n上一稿被打回，原因：{'；'.join(bad)}。请重写并务必避免。"),
+                            encoding="utf-8")
 
     # 清掉这一轮所有落选稿，只留最终稿
     for f in (ROOT / engine / "examples").glob(f"{today}-*.md"):

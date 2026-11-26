@@ -68,3 +68,43 @@ bash tools/daily/install_timers.sh remove
   说明该引擎的 `能力边界` 写得太宽，要回去改引擎，而不是改流水线。
 - **评审不阻断发布。** 采用「先发布、后评审」，评审结论记在 `state.json`；
   ≤2 分时标 `needs_fix`，由人决定是否撤稿——自动撤稿风险太大，不做。
+## 三个已经装上的质量机制
+
+### 1. 字数不足时「扩写」，不换题重写
+
+首跑实测：3 稿里 2 稿因为 806 / 805 字（门槛 850）被打回，而每次重写都换了一个新题目——
+既浪费 tokens，又可能再次踩同一个坑。
+
+现在区分处理：
+- **只差字数** → 把上一稿整篇回喂，要求「保留题目、结构、语气，补到 1100–1400 字，加细节不加议论」。
+- **其它不合格** → 才换一稿重写，并把扣分原因写进提示词。
+
+### 2. 评审结论回流到写作端
+
+`review.py` 会把「指纹逐条核对」表里判为**不过**的项抽出来，记进 `state.json` 的 `reviews[].issues`。
+`write.py` 每次开写前读最近 5 次评审的 issues，作为「近期反复指出的问题」注入系统提示词。
+
+这样评审不只是事后打分，而是第二天就起作用。
+
+### 3. 状态一条命令看完
+
+```bash
+bash tools/daily/status.sh
+```
+
+打印：两个定时器的 enabled/active、最近 7 次发布（机检分 + 评审星级）、评审通病汇总、
+日志尾部、仓库 head 与磁盘余量。
+
+## 定时器持久化（需要 root 做过一次）
+
+云机的 `~/.config/systemd/user/timers.target.wants/` 原本被 root 锁成只读，
+导致 `systemctl --user enable` 报 `Access denied`。已用 sudo 修正属主：
+
+```bash
+sudo chown -R user:user ~/.config/systemd/user/{timers,default}.target.wants
+sudo chmod u+w ~/.config/systemd/user/{timers,default}.target.wants
+systemctl --user enable --now writing-daily-write.timer   # 或 review
+```
+
+现在两台都是 `enabled` + `active`，重启后自动恢复，不再依赖 healthwatch 补丁。
+**如果云机重装或镜像刷新，这一步要重做。**

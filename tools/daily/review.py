@@ -66,6 +66,17 @@ def score(engine, path):
     return float(m.group(1)) if m else None
 
 
+def extract_issues(review):
+    """从「指纹逐条核对」表里抽出判为“不过”的那些项，供写作端下次自查。"""
+    issues = []
+    for line in review.splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) >= 3 and ("不过" in cells[1] or "不 过" in cells[1]):
+            name, why = cells[0], cells[2]
+            issues.append(f"{name}（{why}）" if why and why != "-" else name)
+    return issues[:8]
+
+
 def pick_run(st, date):
     runs = [r for r in st.get("runs", []) if r.get("date") == date]
     return runs[-1] if runs else None
@@ -156,9 +167,11 @@ X / 5（只给数字）
 {review}
 """, encoding="utf-8")
 
+    issues = extract_issues(review)
     st.setdefault("reviews", []).append({
         "date": a.date, "engine": engine, "title": run["title"],
         "stars": stars, "file": out.relative_to(ROOT).as_posix(), "by": "god",
+        "issues": issues,
         "verdict": "pass" if stars >= 4 else ("borderline" if stars == 3 else "needs_fix"),
     })
     save_state(st)
@@ -171,7 +184,8 @@ X / 5（只给数字）
                        cwd=ROOT, capture_output=True)
         p = subprocess.run(["git", "push", "origin", "HEAD:master"], cwd=ROOT, capture_output=True)
         if p.returncode == 0:
-            print(f"[review] 已提交评审《{run['title']}》 {stars}/5 → {out.relative_to(ROOT)}")
+            print(f"[review] 已提交评审《{run['title']}》 {stars}/5"
+                  f"（记下 {len(issues)} 条通病）→ {out.relative_to(ROOT)}")
             return 0
         time.sleep(8 * i)
     print("[review] 推送失败", file=sys.stderr)
