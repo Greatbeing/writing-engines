@@ -1,0 +1,110 @@
+{
+  "p01--A": {
+    "atom": "luxun.1",
+    "engine": "luxun-writing",
+    "total": 4.5,
+    "passed": true
+  },
+  "p01--B": {
+    "atom": "luxun.1",
+    "engine": "luxun-writing",
+    "total": 0.2,
+    "passed": true
+  },
+  "p02--A": {
+    "atom": "luxun.1",
+    "engine": "luxun-writing",
+    "total": 16.2,
+    "passed": true
+  },
+  "p02--B": {
+    "atom": "luxun.1",
+    "engine": "luxun-writing",
+    "total": 12.5,
+    "passed": true
+  },
+  "p03--A": {
+    "atom": "luxun.1",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p03--B": {
+    "atom": "luxun.1",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p04--A": {
+    "atom": "luxun.9",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p04--B": {
+    "atom": "luxun.9",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p05--A": {
+    "atom": "luxun.9",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p05--B": {
+    "atom": "luxun.9",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p06--A": {
+    "atom": "luxun.9",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p06--B": {
+    "atom": "luxun.9",
+    "engine": "luxun-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p07--A": {
+    "atom": "versailles.10",
+    "engine": "versailles-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p07--B": {
+    "atom": "versailles.10",
+    "engine": "versailles-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p08--A": {
+    "atom": "versailles.10",
+    "engine": "versailles-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p08--B": {
+    "atom": "versailles.10",
+    "engine": "versailles-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p09--A": {
+    "atom": "versailles.10",
+    "engine": "versailles-writing",
+    "total": 0.0,
+    "passed": true
+  },
+  "p09--B": {
+    "atom": "versailles.10",
+    "engine": "versailles-writing",
+    "total": 0.0,
+    "passed": true
+  }
+}
