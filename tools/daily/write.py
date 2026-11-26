@@ -101,7 +101,15 @@ def recent_issues(st, limit=6):
         for it in rv.get("issues", []) or []:
             if it and it not in out:
                 out.append(it)
-    return out[:limit]
+    # 把「超标」类问题改写成区间目标：直接喂失败描述，模型会理解成“清零”，
+    # 而指纹里写的是区间（≤3 意味着 1–3 处），归零同样不合格。
+    res = []
+    for x in out[:limit]:
+        if "超" in x and "零" not in x:
+            res.append(f"{x} —— 这次按指纹的区间取值：不要超，也不要归零")
+        else:
+            res.append(x)
+    return res
 
 
 def sys_prompt(engine, issues=None):
