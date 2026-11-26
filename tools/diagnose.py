@@ -18,7 +18,7 @@
 「依据」与「证据」，你可以逐条反驳它。
 
 它做不到的事：
-  · 判不出「独有」的 37 个原子（那些要读引擎自己的原子表）
+  · 判不出「独有」的 63 个原子（那些要读引擎自己的原子表）
   · 判不出反讽、留白、言外之意——这些没有可靠的表面特征
   · 判不出好坏，只判「有没有这个动作」
   · 对练习册/合集（例如 learn/01-练习-认原子.md）运行，统计对象是全文，
@@ -33,7 +33,7 @@
     python tools/diagnose.py --json 稿子.md
     python tools/diagnose.py --list-families
 
-数据来源：atoms/index.json（19 个族标签 = 18 个共用族 + 独有；143 个原子）。
+数据来源：atoms/index.json（182 个原子 = 18 个族 + 63 个独有）。
 退出码：0 = 正常输出；2 = 参数或文件错误。
 """
 
@@ -628,7 +628,7 @@ def report(result):
         if info["evidence"]:
             print("         证据：" + "；".join(str(e) for e in info["evidence"][:3]))
     print()
-    print("   注：「独有」的 37 个原子不在此估计范围内——那要读各引擎自己的原子表"
+    print("   注：「独有」的 63 个原子不在此估计范围内——那要读各引擎自己的原子表"
           f"（见 atoms/LIBRARY.md）。")
 
     print()

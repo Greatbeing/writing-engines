@@ -4,7 +4,7 @@
 
 ## 一、许可覆盖什么
 
-MIT 适用于本仓库的**全部原创内容**：15 个引擎（`*-writing/`）的 `SKILL.md`、`references/`、
+MIT 适用于本仓库的**全部原创内容**：17 个引擎（`*-writing/`）的 `SKILL.md`、`references/`、
 `examples/` 中的原创示范与 `atoms/` 原子总库、`SPEC.md`、`eval/` 的设计文档与脚本、
 `tools/` 下的代码、`README` 与 `CHANGELOG`。
 
