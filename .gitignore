@@ -30,3 +30,11 @@ eval/blind/
 eval/key.json
 eval/assign.json
 eval/rankings*.csv
+
+# 每日流水线的运行时产物（日志与临时提示词不入库；state.json 与 reviews/ 要入库）
+drafts/daily/logs/
+drafts/daily/_sys.txt
+drafts/daily/_usr.txt
+drafts/daily/_rev_sys.txt
+drafts/daily/_rev_usr.txt
+.secrets.env
