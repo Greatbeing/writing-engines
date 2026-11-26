@@ -9,5 +9,15 @@
       "by": "being"
     }
   ],
-  "reviews": []
+  "reviews": [
+    {
+      "date": "2026-11-26",
+      "engine": "sanlian-writing",
+      "title": "周五晚上，年轻人不约酒，只约洗衣机",
+      "stars": 2,
+      "file": "drafts/daily/reviews/2026-11-26.md",
+      "by": "god",
+      "verdict": "needs_fix"
+    }
+  ]
 }
