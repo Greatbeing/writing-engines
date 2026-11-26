@@ -35,7 +35,9 @@ SEEN = INTEL / "seen.json"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
 
 SOURCES = {
-    "浙江宣传": {"engine": "guanfang-writing", "q": "浙江宣传 公众号", "domains": ["mp.weixin.qq.com", "zjol.com.cn"]},
+    # 浙江在线「浙江宣传」栏目全文转载公众号文章，云机可直连
+    "浙江宣传": {"engine": "guanfang-writing", "list": "https://zjnews.zjol.com.cn/zjxc/",
+                "pattern": r'href="([^"]*zjxc/20\d{4}/t\d+_\d+\.shtml)"'},
     "三联生活实验室": {"engine": "sanlian-writing", "q": "三联生活实验室", "domains": ["mp.weixin.qq.com", "lifeweek.com.cn"]},
     "三联生活周刊": {"engine": "feature-writing", "q": "三联生活周刊 封面故事", "domains": ["lifeweek.com.cn", "mp.weixin.qq.com"]},
     "人民日报评论": {"engine": "guanfang-writing", "q": "人民日报评论 人民时评", "domains": ["opinion.people.com.cn", "mp.weixin.qq.com"]},
@@ -61,6 +63,14 @@ def unbing(u):
 
 
 def search(src):
+    if src.get("list"):  # 栏目页直抓：最稳，不依赖搜索引擎
+        page = get(src["list"])
+        out = []
+        for h in re.findall(src["pattern"], page):
+            u = "https:" + h if h.startswith("//") else urllib.parse.urljoin(src["list"], h)
+            if u not in out:
+                out.append(u)
+        return sorted(out, reverse=True)
     q = urllib.parse.quote(src["q"] + " " + " OR ".join(f"site:{d}" for d in src["domains"]))
     page = get(f"https://www.bing.com/search?q={q}&setlang=zh-CN&filters=ex1%3a%22ez2%22")  # 近一周
     urls = []
@@ -76,8 +86,10 @@ def article(url):
     page = get(url)
     t = re.search(r'<meta property="og:title" content="([^"]+)"', page) or re.search(r"<title>(.*?)</title>", page, re.S)
     title = html.unescape(t.group(1)).strip() if t else url
-    body = re.search(r'id="js_content"[^>]*>(.*?)</div>\s*<script', page, re.S)
+    body = (re.search(r'id="js_content"[^>]*>(.*?)</div>\s*<script', page, re.S)          # 微信
+            or re.search(r'class="[^"]*(?:artCon|art_content|TRS_Editor)[^"]*"[^>]*>(.*?)<div class="(?:fenxiang|share|editor)', page, re.S))  # 浙江在线
     raw = body.group(1) if body else page
+    title = re.sub(r"^浙江宣传[丨|]\s*", "", re.sub(r"\s*[-_].*浙江在线.*$", "", title))
     raw = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", raw, flags=re.S)
     raw = re.sub(r"</p>|<br\s*/?>", "\n", raw)
     text = html.unescape(re.sub(r"<[^>]+>", "", raw))
