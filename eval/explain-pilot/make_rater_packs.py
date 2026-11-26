@@ -19,5 +19,5 @@ for R in ['R1', 'R2', 'R3']:
         s.append(f"### 题 {pid}\n评判的目标写法：{D[it['atom']]}\n【原稿】\n{draft}\n【X】\n"
                  + (d / 'X.md').read_text(encoding='utf-8').strip()
                  + "\n【Y】\n" + (d / 'Y.md').read_text(encoding='utf-8').strip())
-    (H / 'blind' / f'{R}_pack.txt').write_text('\n\n'.join(s), encoding='utf-8')
+    (H / 'blind' / f'{R}_pack.md').write_text('\n\n'.join(s), encoding='utf-8')
     print(R, len(s))

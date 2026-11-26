@@ -3,7 +3,7 @@ import csv, re
 from pathlib import Path
 H = Path(__file__).resolve().parent
 rows = []
-for line in (H / 'ratings_raw.txt').read_text(encoding='utf-8').splitlines():
+for line in (H / 'ratings_raw.md').read_text(encoding='utf-8').splitlines():
     if not line.strip():
         continue
     item, rater, body = line.split('|', 2)

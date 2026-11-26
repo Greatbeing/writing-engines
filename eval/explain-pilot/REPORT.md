@@ -72,7 +72,7 @@
 - runs/：18 篇改写稿，`pNN--A.md` / `pNN--B.md`
 - key.json、assign.json：抽签结果（种子 20261126）和评分者分配
 - blind/：评分者看到的匿名包，只有 X/Y，不含条件
-- ratings_raw.txt、ratings.csv：18 条评分记录，含分项分和理由
+- ratings_raw.md、ratings.csv：18 条评分记录，含分项分和理由
 - flavor.json：AI 味检测器分数
 - results.json：Wilson 汇总结果
 - pilot.py、make_rater_packs.py、to_csv.py：可复现脚本
