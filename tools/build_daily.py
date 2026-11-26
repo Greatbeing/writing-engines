@@ -86,6 +86,10 @@ mark.gem{background:none;border-bottom:2px solid var(--zhu);padding-bottom:1px;c
 .tabs{display:flex;gap:22px;font-size:14px;margin:0 0 26px}
 .tabs a{border-bottom:1px solid var(--rule)}.tabs a:hover{border-color:var(--zhu);color:var(--zhu)}
 .empty{color:var(--ink2);font-size:14.5px}
+.fix{border:1px solid var(--rule);padding:16px 20px;margin:0 0 18px}
+.fix .lab{font:12px var(--mono);letter-spacing:.14em;color:var(--ink2);margin-top:6px}
+.fix .before{font:400 16.5px/1.9 var(--serif);color:var(--ink2);text-decoration:line-through;text-decoration-color:var(--ink2)}
+.fix .after{font:400 16.5px/1.9 var(--serif);border-left:2px solid var(--zhu);padding-left:12px}
 @media(max-width:640px){.dl,.dlist{padding-left:20px;padding-right:20px}}
 """
 
@@ -130,6 +134,23 @@ def review_body(path):
     return markdown.markdown(md.strip(), extensions=["tables", "sane_lists"])
 
 
+def best_fix(path):
+    """从评审稿“最该改的一句”取出（原句, 改法）；改法去掉括号里的说明。"""
+    if not path.exists():
+        return None
+    md = path.read_text(encoding="utf-8")
+    m = re.search(r"^## 最该改的一句\s*\n(.*?)(?=^## |\Z)", md, flags=re.M | re.S)
+    if not m:
+        return None
+    sec = m.group(1)
+    a = re.search(r"原句[:：]\s*(.+)", sec)
+    b = re.search(r"改法[:：]\s*(.+)", sec)
+    if not (a and b):
+        return None
+    after = re.sub(r"[（(][^（）()]*[)）]\s*$", "", b.group(1).strip()).strip()
+    return a.group(1).strip(), after
+
+
 def day_page(date, run, review, proc, gems, lesson):
     eng = run.get("engine", "")
     title = run.get("title", "")
@@ -171,6 +192,12 @@ def day_page(date, run, review, proc, gems, lesson):
 
     # 三、评改
     parts.append("<h2>三、评改</h2>")
+    fix = best_fix(ROOT / review["file"]) if review and review.get("file") else None
+    if fix:
+        parts.append('<div class="fix"><div class="lab">改前</div>'
+                     f'<div class="before">{esc(fix[0])}</div>'
+                     '<div class="lab">改后</div>'
+                     f'<div class="after">{esc(fix[1])}</div></div>')
     rb = review_body(ROOT / review["file"]) if review and review.get("file") else ""
     parts.append(f'<div class="rev">{rb}</div>' if rb else '<p class="empty">评审尚未完成。</p>')
 
