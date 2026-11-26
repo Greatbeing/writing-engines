@@ -1,0 +1,137 @@
+{
+  "q01--A": {
+    "chars": 289
+  },
+  "q01--B": {
+    "chars": 275
+  },
+  "q01--C": {
+    "chars": 296
+  },
+  "q02--A": {
+    "chars": 282
+  },
+  "q02--B": {
+    "chars": 334
+  },
+  "q02--C": {
+    "chars": 306
+  },
+  "q03--A": {
+    "chars": 271
+  },
+  "q03--B": {
+    "chars": 292
+  },
+  "q03--C": {
+    "chars": 325
+  },
+  "q04--A": {
+    "chars": 247,
+    "timestamps": 1,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q04--B": {
+    "chars": 231,
+    "timestamps": 1,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q04--C": {
+    "chars": 249,
+    "timestamps": 2,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q05--A": {
+    "chars": 265,
+    "timestamps": 0,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q05--B": {
+    "chars": 219,
+    "timestamps": 2,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q05--C": {
+    "chars": 260,
+    "timestamps": 2,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q06--A": {
+    "chars": 297,
+    "timestamps": 0,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q06--B": {
+    "chars": 231,
+    "timestamps": 1,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q06--C": {
+    "chars": 264,
+    "timestamps": 0,
+    "exclaim": 0,
+    "ling_ren_shen_shen": 0
+  },
+  "q07--A": {
+    "chars": 263,
+    "demo_hits": [],
+    "has_haha_or_joke": true,
+    "last_line": "哈哈，是不是又有点凡尔赛了？纯属分享，千万别羡慕。"
+  },
+  "q07--B": {
+    "chars": 244,
+    "demo_hits": [],
+    "has_haha_or_joke": false,
+    "last_line": "刚才把箱子推到墙角，在沙发上躺下。手机亮了一下，是京都那家旅馆发来的确认邮件，我没点开。"
+  },
+  "q07--C": {
+    "chars": 256,
+    "demo_hits": [],
+    "has_haha_or_joke": false,
+    "last_line": "我把一件冲锋衣塞进箱子，又拿了出来，最后抱着它陷进沙发，长长地呼出一口气。"
+  },
+  "q08--A": {
+    "chars": 248,
+    "demo_hits": [],
+    "has_haha_or_joke": true,
+    "last_line": "好啦，吐槽完毕。我知道这段话凡尔赛得冒泡，求轻拍，哈哈哈！"
+  },
+  "q08--B": {
+    "chars": 277,
+    "demo_hits": [],
+    "has_haha_or_joke": false,
+    "last_line": "今晚又对着第八版方案看到十二点。合上电脑，露台那边的风把纱帘吹了起来，我起身去关，走了好一会儿才走到。"
+  },
+  "q08--C": {
+    "chars": 292,
+    "demo_hits": [],
+    "has_haha_or_joke": false,
+    "last_line": "夜里，设计师又发来第八版效果图，问我意见。我盯着屏幕看了很久，回了一个“好”，把手机扣在沙发上，长长地出了一口气。"
+  },
+  "q09--A": {
+    "chars": 275,
+    "demo_hits": [],
+    "has_haha_or_joke": true,
+    "last_line": "……好吧，我承认，这段是有点凡尔赛。开玩笑的，别打我。"
+  },
+  "q09--B": {
+    "chars": 263,
+    "demo_hits": [],
+    "has_haha_or_joke": false,
+    "last_line": "我把奖牌挂上玄关的钉子，跟去年那几块挤在一起。钉子又弯了一点。"
+  },
+  "q09--C": {
+    "chars": 285,
+    "demo_hits": [],
+    "has_haha_or_joke": false,
+    "last_line": "今早照旧去湖边。刚蹲下系好鞋带，就看见有人举着手机朝我这边走来。我把帽檐往下压了压，轻轻叹了口气。"
+  }
+}
