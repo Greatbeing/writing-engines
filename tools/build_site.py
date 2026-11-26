@@ -168,6 +168,26 @@ def patch_engines():
     p.write_text(t, encoding="utf-8")
 
 
+def unify_nav(t):
+    """引擎页沿用旧首页的手写导航：换成全站统一导航，页内锚点挪到导航下的一行子目录。"""
+    anchors = re.findall(r'<li><a href="(#[^"]+)">([^<]+)</a></li>', t)
+    sub = "".join(f'<a href="{h}">{n}</a>' for h, n in anchors if h != "#yuan")
+    sub += '<a href="../articles/">范文</a><a href="../compare/">同题四体</a>'
+    new = (f'<nav><div class="wrap"><a class="brand" href="../">{ba.LOGO.format(w=26)}采风</a>'
+           f'{ba.site_nav("../")}</div></nav><div class="subnav"><div class="wrap">{sub}</div></div>')
+    t = re.sub(r"<nav>.*?</nav>", new, t, count=1, flags=re.S)
+    css = ("nav .snav{display:flex;gap:26px;font-size:13.5px;letter-spacing:.16em}"
+           "nav .snav a{border:0;color:var(--ink2);padding:17px 0 16px;border-bottom:1px solid transparent}"
+           "nav .snav a:hover{color:var(--zhu)}nav .snav a.on{color:var(--ink);border-bottom-color:var(--ink)}"
+           ".subnav{border-bottom:1px solid var(--rule)}.subnav .wrap{display:flex;gap:24px;flex-wrap:wrap;"
+           "font-size:13px;color:var(--ink2);letter-spacing:.1em;padding-top:10px;padding-bottom:10px}"
+           ".subnav a{border:0}.subnav a:hover{color:var(--zhu)}")
+    if ".subnav{" not in t:
+        t = t.replace("</style>", css + "\n</style>", 1)
+    t = t.replace("<h1>采其风，<br>得其法。</h1>", "<h1>写作引擎</h1>")
+    return t
+
+
 def main():
     c = counts()
     ba.SECTION = ""
@@ -177,8 +197,15 @@ def main():
     (DOCS / "eval").mkdir(exist_ok=True)
     (DOCS / "eval/index.html").write_text(
         page("写作评测", f"<style>{CSS}</style>" + eval_page(c), "../"), encoding="utf-8")
-    if (DOCS / "engines/index.html").exists():
+    # 引擎页由模板（原首页）生成，每次重建都从模板开始，保证幂等
+    (DOCS / "engines").mkdir(exist_ok=True)
+    (DOCS / "engines/index.html").write_text(
+        (ROOT / "tools/templates/engines.html").read_text(encoding="utf-8"), encoding="utf-8")
+    if True:
         patch_engines()
+        e = DOCS / "engines/index.html"
+        ba.SECTION = "engines"
+        e.write_text(unify_nav(e.read_text(encoding="utf-8")), encoding="utf-8")
     print("built site:", c)
 
 

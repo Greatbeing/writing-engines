@@ -321,6 +321,7 @@ def main():
         return 4
 
     sh([sys.executable, "tools/build_daily.py"], timeout=300)
+    sh([sys.executable, "tools/build_site.py"], timeout=300)
     # 同一天重跑时替换旧记录，不要把同一天堆成多篇
     st["runs"] = [r for r in st.get("runs", []) if r.get("date") != today]
     st["runs"].append({

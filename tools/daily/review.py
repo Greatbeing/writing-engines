@@ -218,6 +218,7 @@ X / 5（只给数字）
     save_state(st)
 
     subprocess.run([sys.executable, "tools/build_daily.py"], cwd=ROOT, capture_output=True)
+    subprocess.run([sys.executable, "tools/build_site.py"], cwd=ROOT, capture_output=True)
     subprocess.run(["git", "add", "-A"], cwd=ROOT, capture_output=True)
     subprocess.run(["git", "commit", "-m", f"review({engine}): {run['title']} {stars}/5"],
                    cwd=ROOT, capture_output=True)
