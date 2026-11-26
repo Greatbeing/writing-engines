@@ -35,9 +35,11 @@ while [ $# -gt 0 ]; do
 done
 
 if [ "$PROMPT" = "-" ]; then TEXT="$(cat)"; else
-  [ -f "$PROMPT" ] || { echo "找不到提示词文件：$PROMPT" >&2; exit 2; }
+  [ -r "$PROMPT" ] || { echo "提示词文件读不了：$PROMPT" >&2; exit 2; }
   TEXT="$(cat "$PROMPT")"
 fi
+
+[ -n "${TEXT//[[:space:]]/}" ] || { echo "提示词为空，不调用" >&2; exit 2; }
 
 command -v "$TOOL" >/dev/null 2>&1 || { echo "$TOOL 未安装" >&2; exit 3; }
 
