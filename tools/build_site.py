@@ -50,11 +50,16 @@ def counts():
 
 CSS = """
 .home{max-width:1080px;margin:0 auto;padding:0 32px}
-.h-hero{padding:96px 0 72px;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:end}
-.h-hero h1{font:900 clamp(42px,6.4vw,86px)/1.12 var(--serif);letter-spacing:.06em}
-.h-hero .en{font:400 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--ink2);margin:20px 0 24px}
-.h-hero .sub{font:400 17px/2 var(--serif);color:var(--ink2);max-width:24em}
-.h-hero .mk{width:100%;max-width:380px;justify-self:end}
+.h-hero{min-height:calc(100vh - 57px);padding:72px 0 64px;border-bottom:1px solid var(--ink);display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,.72fr);gap:clamp(40px,6vw,96px);align-items:center}
+.h-hero h1{font:900 clamp(40px,5vw,72px)/1.28 var(--serif);letter-spacing:.08em}
+.h-hero h1 span{display:block;white-space:nowrap}
+.h-hero h1 .last{margin-top:.12em}
+.h-hero .en{font:400 11px var(--mono);letter-spacing:.32em;text-transform:uppercase;color:var(--ink2);
+  margin:34px 0 22px;white-space:nowrap}
+.h-hero .rule{width:48px;height:1px;background:var(--ink);margin:0 0 22px}
+.h-hero .sub{font:400 16px/2.05 var(--serif);color:var(--ink2);max-width:25em}
+.h-hero .mk{width:100%;max-width:340px;justify-self:center;align-self:center}
 .mk path{stroke-dasharray:140;stroke-dashoffset:140;animation:e-draw 1.4s cubic-bezier(.6,0,.2,1) forwards}
 .mk path:nth-child(2){animation-delay:.25s}.mk path:nth-child(3){animation-delay:.5s}
 @media(prefers-reduced-motion:reduce){.mk path{animation:none;stroke-dashoffset:0}}
@@ -89,7 +94,7 @@ CSS = """
 .tool .st{display:inline-block;margin-top:12px;font:12px var(--mono);letter-spacing:.1em;border:1px solid var(--rule);padding:2px 10px}
 .tool .st.live{border-color:var(--zhu);color:var(--zhu)}
 .tool .links{margin-top:12px;display:flex;gap:22px;font-size:14px}
-@media(max-width:820px){.h-hero,.loop{grid-template-columns:1fr}.h-hero .mk{justify-self:start;max-width:240px}
+@media(max-width:820px){.h-hero,.loop{grid-template-columns:1fr}.h-hero{min-height:0;padding:56px 0 48px}.h-hero .mk{justify-self:start;max-width:200px;order:-1}.h-hero .en{white-space:normal}
  .doors{grid-template-columns:1fr}.door,.door:first-child,.door:last-child{padding:32px 0;border-right:0;border-bottom:1px solid var(--rule)}
  .tool{grid-template-columns:1fr;gap:8px}.home,.ev{padding-left:20px;padding-right:20px}}
 """
@@ -113,8 +118,9 @@ def home(c):
         f'<span class="num">{num}</span><span class="go">进入 →</span></a>'
         for i, no, name, verb, href, desc, num in doors)
     return f"""<main class="home">
-<section class="h-hero"><div><h1>采其风，得其法，<br>自成一体。</h1>
-<p class="en">Collect the style. Learn the method. Find your own.</p>
+<section class="h-hero"><div><h1><span>采其风，</span><span>得其法，</span><span class="last">自成一体。</span></h1>
+<p class="en">Collect the style · Learn the method · Find your own</p>
+<div class="rule"></div>
 <p class="sub">采风是一个教人写作的项目。先把名家的文风拆成原子，再把原子讲成课，最后用评测验证——目的不是让你像谁，是让你写出自己的风格。</p></div>
 {mark(None, 380)}</section>
 <section class="doors">{d}</section>
