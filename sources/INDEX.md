@@ -35,7 +35,7 @@
 | 9 | 2023-10-18 | 「潘晓之问」，43 年后的回响 | 思想回访、古今双轨 |
 | 10 | 2023-11 | 逃离家暴后，一对母女的漫长重逢 | A9 章节标题、素人类模式、时间作为变量 |
 
-### 三联生活实验室（11 篇，2024–2026）→ `human-voice-writing`
+### 三联生活实验室（11 篇，2024–2026）→ `sanlian-writing`
 
 | # | 日期 | 标题 | 技法贡献 |
 |---|---|---|---|
@@ -51,10 +51,10 @@
 | 10 | 2026-11-11 | 医保健身房 | 原子 4 市场/职场语言挪用、原子 18 科技梗引用 |
 | 11 | 2026-11-18 | 上海姐弟恋（原文存档） | 首篇单源蒸馏（v1.0 的 12 原子全部来自此篇） |
 
-### 浙江宣传（10 篇，未入库）→ `guanfang-writing`
+### 浙江宣传（10 篇，未入库）→ `zhexuan-writing`
 
 官方体引擎的语料不在本仓库，也不建议入库（政务文本的转载风险高于媒体文本）。
-`guanfang-writing/references/case-studies.md` 保留的是**拆解结论**
+`zhexuan-writing/references/case-studies.md` 保留的是**拆解结论**
 （原子链还原 + 爆款规律），不是原文。篇目在 SKILL.md 里点了名：
 《小镇做题家》《人民至上》《长征》两篇、《圣黛 CP》《大人感》《直播间孝子贤孙》等。
 
@@ -75,7 +75,7 @@
 ```bash
 # 仓库已 gitignore 这些路径，放进去不会被提交
 mkdir -p feature-writing/references/sources/local
-mkdir -p human-voice-writing/references/sources/local
+mkdir -p sanlian-writing/references/sources/local
 
 # 按 INDEX 的篇名自行取得 10 篇 + 11 篇，命名规范：
 #   媒体-YYYY-MM-DD-标题.txt
@@ -86,8 +86,8 @@ mkdir -p human-voice-writing/references/sources/local
 放进之后：
 
 ```bash
-python tools/ai_flavor_checker.py --engine human-voice-writing \
-  human-voice-writing/references/sources/local/*.txt
+python tools/ai_flavor_checker.py --engine sanlian-writing \
+  sanlian-writing/references/sources/local/*.txt
 ```
 
 预期：11 篇三联全部 < 30 分。这是 checker 的**最重要的校准断言**——

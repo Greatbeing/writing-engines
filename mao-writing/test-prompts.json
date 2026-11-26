@@ -1,5 +1,5 @@
 {
-  "engine": "maozedong-writing",
+  "engine": "mao-writing",
   "checker_threshold": 30,
   "_how_to_run": [
     "1) python tools/ai-flavor-checker.py 产出.md（engine_profiles.json 暂无本引擎配置，用 generic 门槛 30）",

@@ -9,7 +9,7 @@ description: |
   不适用：
   - 东坡式“窘迫 → 转身 → 旷达”的议论随笔（用 sushi-writing）。汪体不转身、不说理，情绪始终是平的。
   - 天真视角、自嘲出糗、荒野大地衬出小人（用 lijuan-writing）。汪体的“我”是见过世面、懂行的老熟人，不装不懂；镜头留在街巷灶台，不拉到天地尺度。
-  - 社会批评（用 luxun-writing）、官方时评（用 guanfang-writing）、人物特稿（用 feature-writing）、民国腔/文言仿古、美食测评与种草文案。
+  - 社会批评（用 luxun-writing）、官方时评（用 zhexuan-writing）、人物特稿（用 feature-writing）、民国腔/文言仿古、美食测评与种草文案。
 ---
 # 汪曾祺体——认知引擎版
 

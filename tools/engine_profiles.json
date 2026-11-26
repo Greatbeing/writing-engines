@@ -28,7 +28,7 @@
         "dialogue": 1.0
       }
     },
-    "human-voice-writing": {
+    "sanlian-writing": {
       "label": "活人感叙事（三联生活实验室体）",
       "pass_below": 30,
       "_note": "引号访谈与「不是A而是B」是厂牌签名装置，必须奖励/豁免，不能扣分。",
@@ -46,7 +46,7 @@
         "dialogue": 2.0
       }
     },
-    "guanfang-writing": {
+    "zhexuan-writing": {
       "label": "官方时评（浙江宣传体）",
       "pass_below": 45,
       "_note": "2026-11 原文校准：3 篇浙江宣传原文均分 17.2（max 28.6），均分低于门槛一半，无证据支持调权，权重维持。",
@@ -154,7 +154,7 @@
         "dialogue": 1.0
       }
     },
-    "maozedong-writing": {
+    "mao-writing": {
       "label": "毛泽东文章体说理",
       "pass_below": 30,
       "_note": "2026-11 原文校准：3 篇毛选原文均分 13.7（max 24.7），均分低于门槛一半，无证据支持调权，权重维持。",
@@ -172,7 +172,7 @@
         "dialogue": 1.0
       }
     },
-    "renminribao-writing": {
+    "guanfang-writing": {
       "label": "人民日报评论体",
       "pass_below": 45,
       "_note": "2026-11 原文校准：3 篇人民日报评论员原文均分 13.4（max 22.9），均分低于门槛一半，无证据支持调权，权重维持。",

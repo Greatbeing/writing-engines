@@ -56,8 +56,8 @@
 
 | 引擎 | 文体 | 蒸馏来源 | 原子 | 状态 |
 |---|---|---|---|---|
-| [`human-voice-writing`](human-voice-writing/SKILL.md) | 活人感城市观察文（三联生活实验室体） | 11 篇（2024–2026） | 21 | 可用 |
-| [`guanfang-writing`](guanfang-writing/SKILL.md) | 官方时评（浙江宣传体） | 10 篇（拆解结论入库，原文不入） | 12 | 可用 |
+| [`sanlian-writing`](sanlian-writing/SKILL.md) | 活人感城市观察文（三联生活实验室体） | 11 篇（2024–2026） | 21 | 可用 |
+| [`zhexuan-writing`](zhexuan-writing/SKILL.md) | 官方时评（浙江宣传体） | 10 篇（拆解结论入库，原文不入） | 12 | 可用 |
 | [`feature-writing`](feature-writing/SKILL.md) | 人物特稿（《人物》杂志体） | 10 篇（2020–2023） | 10 | 可用 |
 | [`gongwen-writing`](gongwen-writing/SKILL.md) | 党政机关公文（GB/T 9704-2012，15 个法定文种） | 9 个文种模板 | 9 | 可用 |
 | [`sushi-writing`](sushi-writing/SKILL.md) | 苏轼白话体随笔（散文小品＋尺牍） | 13 篇（公版） | 10 | 试用 |
@@ -68,11 +68,11 @@
 | [`yuhua-writing`](yuhua-writing/SKILL.md) | 余华体冷静叙事 | 拆解结论（原文不入库） | 10 | 试用 |
 | [`standup-writing`](standup-writing/SKILL.md) | 中文脱口秀稿 | 拆解结论（原文不入库） | 10 | 试用 |
 | [`versailles-writing`](versailles-writing/SKILL.md) | 凡尔赛体（网络文体，明贬暗褒） | 句式拆解（不收网友原帖） | 10 | 试用 |
-| [`renminribao-writing`](renminribao-writing/SKILL.md) | 人民日报评论体 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`guanfang-writing`](guanfang-writing/SKILL.md) | 人民日报评论体 | 拆解结论（原文不入库） | 10 | 试用 |
 | [`wangzengqi-writing`](wangzengqi-writing/SKILL.md) | 汪曾祺体散文 | 拆解结论（原文不入库） | 10 | 试用 |
 | [`jinyong-writing`](jinyong-writing/SKILL.md) | 金庸体武侠叙事 | 拆解结论（原文不入库） | 10 | 试用 |
 | [`acheng-writing`](acheng-writing/SKILL.md) | 阿城体白描叙事 | 拆解结论（原文不入库） | 10 | 试用 |
-| [`maozedong-writing`](maozedong-writing/SKILL.md) | 毛泽东文章体说理 | 拆解结论（原文不入库） | 10 | 试用 |
+| [`mao-writing`](mao-writing/SKILL.md) | 毛泽东文章体说理 | 拆解结论（原文不入库） | 10 | 试用 |
 
 结构分两层：**4 个可用**（活人感／官方体／特稿／公文——过契约、过断言、有完整产出、
 有实战反馈）＋ **13 个试用**（七节齐备、断言可跑，但样本与反馈还少）。
@@ -112,8 +112,8 @@
 
 ```bash
 git clone https://github.com/Greatbeing/writing-engines.git
-cp -r writing-engines/human-voice-writing \
-      writing-engines/guanfang-writing \
+cp -r writing-engines/sanlian-writing \
+      writing-engines/zhexuan-writing \
       writing-engines/feature-writing \
       writing-engines/gongwen-writing \
       writing-engines/sushi-writing \
@@ -123,10 +123,10 @@ cp -r writing-engines/human-voice-writing \
       writing-engines/lijuan-writing \
       writing-engines/yuhua-writing \
       writing-engines/standup-writing \
-      writing-engines/renminribao-writing \
+      writing-engines/guanfang-writing \
       writing-engines/wangzengqi-writing \
       writing-engines/jinyong-writing \
-      writing-engines/maozedong-writing \
+      writing-engines/mao-writing \
       ~/.openclaw/workspace/skills/
 ```
 
@@ -187,7 +187,7 @@ description／红线／指纹各自的写法。`tools/lint_skill.py` 让它可�
 | [`tools/build_compare.py`](tools/build_compare.py) | 把 `demo/<题号>/` 的四版生成为同题对照页 `docs/compare/` |
 
 ```bash
-python3 tools/ai-flavor-checker.py --engine human-voice-writing 文章.md
+python3 tools/ai-flavor-checker.py --engine sanlian-writing 文章.md
 python3 tools/lint_skill.py --all
 python3 tools/run_prompts.py --all
 python3 tools/tests/test_checker.py

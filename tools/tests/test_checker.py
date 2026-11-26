@@ -79,7 +79,7 @@ class TestEngineAwareness(unittest.TestCase):
 
     def test_quote_and_formula_not_penalised_for_human_voice(self):
         """活人感的引号访谈 + 不是A而是B，不能成为扣分项。"""
-        hv = aifc.score_text(HUMAN_VOICE_DEVICES, PROFILES["human-voice-writing"])
+        hv = aifc.score_text(HUMAN_VOICE_DEVICES, PROFILES["sanlian-writing"])
         gen = aifc.score_text(HUMAN_VOICE_DEVICES, PROFILES["generic"])
         # 同一段话，活人感引擎的判定必须比通用引擎更宽松（或至少不更严）
         self.assertLessEqual(
@@ -88,20 +88,20 @@ class TestEngineAwareness(unittest.TestCase):
         )
         self.assertTrue(
             hv["passed"],
-            f"自家签名装置被判不合格：{hv['total']} / 门槛 {PROFILES['human-voice-writing']['pass_below']}",
+            f"自家签名装置被判不合格：{hv['total']} / 门槛 {PROFILES['sanlian-writing']['pass_below']}",
         )
 
     def test_formula_penalty_exempted_only_where_declared(self):
         """formula 权重：活人感/官方体为 0，特稿/通用 > 0。"""
-        self.assertEqual(PROFILES["human-voice-writing"]["penalty"]["formula"], 0.0)
-        self.assertEqual(PROFILES["guanfang-writing"]["penalty"]["formula"], 0.0)
+        self.assertEqual(PROFILES["sanlian-writing"]["penalty"]["formula"], 0.0)
+        self.assertEqual(PROFILES["zhexuan-writing"]["penalty"]["formula"], 0.0)
         self.assertGreater(PROFILES["feature-writing"]["penalty"]["formula"], 0.0)
 
     def test_official_body_threshold_is_wider(self):
         """官方体自带书面腔：门槛必须比活人感宽，否则整文体被误杀。"""
         self.assertGreater(
-            PROFILES["guanfang-writing"]["pass_below"],
-            PROFILES["human-voice-writing"]["pass_below"],
+            PROFILES["zhexuan-writing"]["pass_below"],
+            PROFILES["sanlian-writing"]["pass_below"],
         )
 
     def test_feature_writing_gets_no_colloquial_credit(self):
@@ -182,7 +182,7 @@ class TestCorpusRegression(unittest.TestCase):
     """
 
     def test_human_voice_corpus_passes(self):
-        engine = "human-voice-writing"
+        engine = "sanlian-writing"
         prof = PROFILES[engine]
         for path in sorted((LOCAL).glob("三联*.txt")):
             with self.subTest(file=path.name):

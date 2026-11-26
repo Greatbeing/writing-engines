@@ -6,7 +6,7 @@ description: |
   ①写生活散文、家人小记、季节与风物记录（600–1500 字），写的是学习者自己的日子
   ②给一篇散文“加李娟味”：改写、诊断缺了哪几个原子
   ③拆解一篇文章用了哪些李娟手法
-  不适用：东坡式旷达议论、读书杂感、带哲理收束的随笔（用 sushi-writing）；城市观察、新媒体叙事、去 AI 腔（用 human-voice-writing）；社会批评（用 luxun-writing）；人物特稿（用 feature-writing）；冒充新疆牧区亲历的“伪边地文学”。
+  不适用：东坡式旷达议论、读书杂感、带哲理收束的随笔（用 sushi-writing）；城市观察、新媒体叙事、去 AI 腔（用 sanlian-writing）；社会批评（用 luxun-writing）；人物特稿（用 feature-writing）；冒充新疆牧区亲历的“伪边地文学”。
 ---
 # 李娟体——认知引擎版
 

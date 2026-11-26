@@ -6,7 +6,7 @@ description: |
   ①写短篇叙事、小小说（800–2000 字），以普通人的苦难与活下去为题
   ②给一篇叙事“加余华味”：改写、诊断缺了哪几个原子
   ③拆解一篇小说用了哪些余华式手法
-  不适用：杂文时评（用 luxun-writing）、官方时评（用 guanfang-writing）、松弛随笔（用 sushi-writing / human-voice-writing）、人物特稿（用 feature-writing）、早期先锋小说式的暴力实验、真实灾难或真实受难者的再创作。
+  不适用：杂文时评（用 luxun-writing）、官方时评（用 zhexuan-writing）、松弛随笔（用 sushi-writing / sanlian-writing）、人物特稿（用 feature-writing）、早期先锋小说式的暴力实验、真实灾难或真实受难者的再创作。
 ---
 # 余华体——认知引擎版
 

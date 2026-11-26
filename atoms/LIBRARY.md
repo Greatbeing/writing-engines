@@ -20,11 +20,11 @@
 ）
 - [wangzengqi·闲闲起笔](../wangzengqi-writing/references/atom-ops.md)（1. 闲闲起笔
 ）
-- [guanfang·场景钩 / 故事钩（Scene Hook）](../guanfang-writing/references/atom-ops.md)（4. 场景钩 / 故事钩（Scene Hook）
+- [zhexuan·场景钩 / 故事钩（Scene Hook）](../zhexuan-writing/references/atom-ops.md)（4. 场景钩 / 故事钩（Scene Hook）
 ）
-- [renminribao·以小见大](../renminribao-writing/references/atom-ops.md)（5. 以小见大
+- [guanfang·以小见大](../guanfang-writing/references/atom-ops.md)（5. 以小见大
 ）
-- [human-voice·场景微电影](../human-voice-writing/references/atoms.md)（5 场景微电影）
+- [sanlian·场景微电影](../sanlian-writing/references/atoms.md)（5 场景微电影）
 - [acheng·物事起笔](../acheng-writing/references/atom-ops.md)（1. 物事起笔）
 
 ## 自嘲（8）
@@ -65,7 +65,7 @@
 ）
 - [wangxiaobo·俏皮收尾](../wangxiaobo-writing/references/atom-ops.md)（10. 俏皮收尾
 ）
-- [human-voice·松弛哲学收尾](../human-voice-writing/references/atoms.md)（12 松弛哲学收尾）
+- [sanlian·松弛哲学收尾](../sanlian-writing/references/atoms.md)（12 松弛哲学收尾）
 - [acheng·冷收](../acheng-writing/references/atom-ops.md)（10. 冷收）
 - [versailles·淡收](../versailles-writing/references/atom-ops.md)（10. 淡收）
 
@@ -75,7 +75,7 @@
 
 **变体差异**（语气/位置/密度）：官方体 ≤3 处、长在论证节点；鲁迅「揭底」1–2 句、冷；张爱玲首尾各一断语，刻薄轻冷；人民日报四字格与对仗庄重成组；脱口秀包袱句十字内；活人感前置独立加粗、或压到最低姿态收尾。
 
-- [guanfang·金句压缩（Compress to Aphorism）](../guanfang-writing/references/atom-ops.md)（10. 金句压缩（Compress to Aphorism）
+- [zhexuan·金句压缩（Compress to Aphorism）](../zhexuan-writing/references/atom-ops.md)（10. 金句压缩（Compress to Aphorism）
 ）
 - [luxun·揭底一句](../luxun-writing/references/atom-ops.md)（3. 揭底一句
 ）
@@ -83,15 +83,15 @@
 ）
 - [zhangailing·格言收束](../zhangailing-writing/references/atom-ops.md)（10. 格言收束
 ）
-- [renminribao·四字格凝练](../renminribao-writing/references/atom-ops.md)（6. 四字格凝练
+- [guanfang·四字格凝练](../guanfang-writing/references/atom-ops.md)（6. 四字格凝练
 ）
-- [renminribao·对仗收束](../renminribao-writing/references/atom-ops.md)（7. 对仗收束
+- [guanfang·对仗收束](../guanfang-writing/references/atom-ops.md)（7. 对仗收束
 ）
 - [standup·短句落点](../standup-writing/references/atom-ops.md)（10. 短句落点
 ）
-- [human-voice·金句前置独立行](../human-voice-writing/references/atoms.md)（15 金句前置独立行）
-- [human-voice·短促口语断言](../human-voice-writing/references/atoms.md)（16 短促口语断言）
-- [human-voice·低姿态金句](../human-voice-writing/references/atoms.md)（20 低姿态金句）
+- [sanlian·金句前置独立行](../sanlian-writing/references/atoms.md)（15 金句前置独立行）
+- [sanlian·短促口语断言](../sanlian-writing/references/atoms.md)（16 短促口语断言）
+- [sanlian·低姿态金句](../sanlian-writing/references/atoms.md)（20 低姿态金句）
 
 ## 排比/三段（6）
 
@@ -99,16 +99,16 @@
 
 **变体差异**（语气/位置/密度）：官方体三句表态收尾、每句须有增量；毛选短句排比节奏快；人民日报由小到大逐级抬升；脱口秀第三项破规律出笑；活人感三连具体物替代抽象词、递进梗到 3 即收。
 
-- [guanfang·三句表态 / 排比收尾（Trilogy Stance）](../guanfang-writing/references/atom-ops.md)（9. 三句表态 / 排比收尾（Trilogy Stance）
+- [zhexuan·三句表态 / 排比收尾（Trilogy Stance）](../zhexuan-writing/references/atom-ops.md)（9. 三句表态 / 排比收尾（Trilogy Stance）
 ）
-- [maozedong·短句排比](../maozedong-writing/references/atom-ops.md)（9. 短句排比
+- [mao·短句排比](../mao-writing/references/atom-ops.md)（9. 短句排比
 ）
-- [renminribao·排比递进](../renminribao-writing/references/atom-ops.md)（8. 排比递进
+- [guanfang·排比递进](../guanfang-writing/references/atom-ops.md)（8. 排比递进
 ）
 - [standup·三段式](../standup-writing/references/atom-ops.md)（4. 三段式
 ）
-- [human-voice·三连具体物](../human-voice-writing/references/atoms.md)（3 三连具体物）
-- [human-voice·递进梗](../human-voice-writing/references/atoms.md)（9 递进梗）
+- [sanlian·三连具体物](../sanlian-writing/references/atoms.md)（3 三连具体物）
+- [sanlian·递进梗](../sanlian-writing/references/atoms.md)（9 递进梗）
 
 ## 分类拆解（3）
 
@@ -116,11 +116,11 @@
 
 **变体差异**（语气/位置/密度）：官方体用于批评、拆解精度即锋利度；毛选分类剖析定态度、分条列举给办法。多在主体段。
 
-- [guanfang·拆机制（Deconstruct to Enumerable）](../guanfang-writing/references/atom-ops.md)（5. 拆机制（Deconstruct to Enumerable）
+- [zhexuan·拆机制（Deconstruct to Enumerable）](../zhexuan-writing/references/atom-ops.md)（5. 拆机制（Deconstruct to Enumerable）
 ）
-- [maozedong·分类剖析](../maozedong-writing/references/atom-ops.md)（2. 分类剖析
+- [mao·分类剖析](../mao-writing/references/atom-ops.md)（2. 分类剖析
 ）
-- [maozedong·分条列举](../maozedong-writing/references/atom-ops.md)（3. 分条列举
+- [mao·分条列举](../mao-writing/references/atom-ops.md)（3. 分条列举
 ）
 
 ## 反转揭底（6）
@@ -135,7 +135,7 @@
 ）
 - [standup·反转](../standup-writing/references/atom-ops.md)（3. 反转
 ）
-- [human-voice·共识假装](../human-voice-writing/references/atoms.md)（1 共识假装）
+- [sanlian·共识假装](../sanlian-writing/references/atoms.md)（1 共识假装）
 - [zhangailing·反转体谅](../zhangailing-writing/references/atom-ops.md)（9. 反转体谅
 ）
 - [versailles·抱怨式炫耀](../versailles-writing/references/atom-ops.md)（2. 抱怨式炫耀）
@@ -146,11 +146,11 @@
 
 **变体差异**（语气/位置/密度）：官方体是 meta 层改题与「不是A而是B」重定义；苏轼拉长缩短时空、轻轻翻一层不抬杠；李娟镜头突然拉远，人变小却仍认真。
 
-- [guanfang·反转定调（Reframe the Question）](../guanfang-writing/references/atom-ops.md)（2. 反转定调（Reframe the Question）
+- [zhexuan·反转定调（Reframe the Question）](../zhexuan-writing/references/atom-ops.md)（2. 反转定调（Reframe the Question）
 ）
-- [guanfang·升维 / 重新定义（Elevate & Redefine）](../guanfang-writing/references/atom-ops.md)（6. 升维 / 重新定义（Elevate & Redefine）
+- [zhexuan·升维 / 重新定义（Elevate & Redefine）](../zhexuan-writing/references/atom-ops.md)（6. 升维 / 重新定义（Elevate & Redefine）
 ）
-- [guanfang·具体-抽象双层结构（Concrete-Abstract Sandwich）](../guanfang-writing/references/atom-ops.md)（8. 具体-抽象双层结构（Concrete-Abstract Sandwich）
+- [zhexuan·具体-抽象双层结构（Concrete-Abstract Sandwich）](../zhexuan-writing/references/atom-ops.md)（8. 具体-抽象双层结构（Concrete-Abstract Sandwich）
 ）
 - [sushi·变与不变](../sushi-writing/references/atom-ops.md)（5. 变与不变
 ）
@@ -167,11 +167,11 @@
 
 - [luxun·历史照今](../luxun-writing/references/atom-ops.md)（6. 历史照今
 ）
-- [guanfang·古今双轨对照（Dialectic Contrast）](../guanfang-writing/references/atom-ops.md)（7. 古今双轨对照（Dialectic Contrast）
+- [zhexuan·古今双轨对照（Dialectic Contrast）](../zhexuan-writing/references/atom-ops.md)（7. 古今双轨对照（Dialectic Contrast）
 ）
-- [renminribao·历史纵深](../renminribao-writing/references/atom-ops.md)（3. 历史纵深
+- [guanfang·历史纵深](../guanfang-writing/references/atom-ops.md)（3. 历史纵深
 ）
-- [human-voice·观念对比对仗](../human-voice-writing/references/atoms.md)（19 观念对比对仗）
+- [sanlian·观念对比对仗](../sanlian-writing/references/atoms.md)（19 观念对比对仗）
 
 ## 预设驳论（6）
 
@@ -181,15 +181,15 @@
 
 - [luxun·引其言而驳](../luxun-writing/references/atom-ops.md)（5. 引其言而驳
 ）
-- [maozedong·预设驳论](../maozedong-writing/references/atom-ops.md)（8. 预设驳论
+- [mao·预设驳论](../mao-writing/references/atom-ops.md)（8. 预设驳论
 ）
-- [maozedong·两点论](../maozedong-writing/references/atom-ops.md)（5. 两点论
+- [mao·两点论](../mao-writing/references/atom-ops.md)（5. 两点论
 ）
-- [renminribao·辩证回应](../renminribao-writing/references/atom-ops.md)（9. 辩证回应
+- [guanfang·辩证回应](../guanfang-writing/references/atom-ops.md)（9. 辩证回应
 ）
 - [sushi·主客问答](../sushi-writing/references/atom-ops.md)（4. 主客问答
 ）
-- [human-voice·质疑→反驳](../human-voice-writing/references/atoms.md)（8 质疑→反驳）
+- [sanlian·质疑→反驳](../sanlian-writing/references/atoms.md)（8 质疑→反驳）
 
 ## 数据压舱（4）
 
@@ -197,9 +197,9 @@
 
 **变体差异**（语气/位置/密度）：官方体贴身数据压在质疑最烈处；人民日报「从…到…」成组有出处；余华用钱数碗数代替形容苦，是叙事用法。
 
-- [guanfang·数据压舱（Anchoring with Data）](../guanfang-writing/references/atom-ops.md)（3. 数据压舱（Anchoring with Data）
+- [zhexuan·数据压舱（Anchoring with Data）](../zhexuan-writing/references/atom-ops.md)（3. 数据压舱（Anchoring with Data）
 ）
-- [renminribao·数据并举](../renminribao-writing/references/atom-ops.md)（4. 数据并举
+- [guanfang·数据并举](../guanfang-writing/references/atom-ops.md)（4. 数据并举
 ）
 - [yuhua·数字与账目](../yuhua-writing/references/atom-ops.md)（6. 数字与账目
 ）
@@ -223,8 +223,8 @@
 ）
 - [luxun·正话反说](../luxun-writing/references/atom-ops.md)（2. 正话反说
 ）
-- [human-voice·市场／职场语言挪用](../human-voice-writing/references/atoms.md)（4 市场／职场语言挪用）
-- [human-voice·荒诞解读](../human-voice-writing/references/atoms.md)（17 荒诞解读）
+- [sanlian·市场／职场语言挪用](../sanlian-writing/references/atoms.md)（4 市场／职场语言挪用）
+- [sanlian·荒诞解读](../sanlian-writing/references/atoms.md)（17 荒诞解读）
 - [yuhua·荒诞消解](../yuhua-writing/references/atom-ops.md)（4. 荒诞消解
 ）
 - [versailles·困扰包装](../versailles-writing/references/atom-ops.md)（7. 困扰包装）
@@ -235,7 +235,7 @@
 
 **变体差异**（语气/位置/密度）：毛选取俗语、要人人懂；张爱玲刁钻跨界贴细节；王小波科学类比与动物寓言以理服人；脱口秀类比越精确越好笑；李娟拟人对话万物，温情。
 
-- [maozedong·俗语比喻](../maozedong-writing/references/atom-ops.md)（4. 俗语比喻
+- [mao·俗语比喻](../mao-writing/references/atom-ops.md)（4. 俗语比喻
 ）
 - [zhangailing·刁钻比喻](../zhangailing-writing/references/atom-ops.md)（2. 刁钻比喻
 ）
@@ -285,9 +285,9 @@
 ）
 - [jinyong·招式命名](../jinyong-writing/references/atom-ops.md)（3. 招式命名
 ）
-- [human-voice·造词命名](../human-voice-writing/references/atoms.md)（11 造词命名）
-- [human-voice·动词化网梗](../human-voice-writing/references/atoms.md)（2 动词化网梗）
-- [human-voice·理论家族](../human-voice-writing/references/atoms.md)（14 理论家族）
+- [sanlian·造词命名](../sanlian-writing/references/atoms.md)（11 造词命名）
+- [sanlian·动词化网梗](../sanlian-writing/references/atoms.md)（2 动词化网梗）
+- [sanlian·理论家族](../sanlian-writing/references/atoms.md)（14 理论家族）
 
 ## 典型画像（8）
 
@@ -297,12 +297,12 @@
 
 - [luxun·典型画像](../luxun-writing/references/atom-ops.md)（7. 典型画像
 ）
-- [maozedong·反面典型](../maozedong-writing/references/atom-ops.md)（6. 反面典型
+- [mao·反面典型](../mao-writing/references/atom-ops.md)（6. 反面典型
 ）
-- [maozedong·正面榜样](../maozedong-writing/references/atom-ops.md)（7. 正面榜样
+- [mao·正面榜样](../mao-writing/references/atom-ops.md)（7. 正面榜样
 ）
-- [human-voice·群像人格化](../human-voice-writing/references/atoms.md)（6 群像人格化）
-- [human-voice·人物样本公式](../human-voice-writing/references/atoms.md)（7 人物样本公式）
+- [sanlian·群像人格化](../sanlian-writing/references/atoms.md)（6 群像人格化）
+- [sanlian·人物样本公式](../sanlian-writing/references/atoms.md)（7 人物样本公式）
 - [jinyong·出场立人](../jinyong-writing/references/atom-ops.md)（1. 出场立人
 ）
 - [wangzengqi·几笔传神](../wangzengqi-writing/references/atom-ops.md)（4. 几笔传神
@@ -315,9 +315,9 @@
 
 **变体差异**（语气/位置/密度）：毛选像商量、要求具体可做；人民日报由历史与事实推出信心与方向。只在结尾。
 
-- [maozedong·亲切号召](../maozedong-writing/references/atom-ops.md)（10. 亲切号召
+- [mao·亲切号召](../mao-writing/references/atom-ops.md)（10. 亲切号召
 ）
-- [renminribao·号召落点](../renminribao-writing/references/atom-ops.md)（10. 号召落点
+- [guanfang·号召落点](../guanfang-writing/references/atom-ops.md)（10. 号召落点
 ）
 
 ## 回环呼应（4）
@@ -328,7 +328,7 @@
 
 - [standup·callback](../standup-writing/references/atom-ops.md)（8. callback
 ）
-- [human-voice·回环结构](../human-voice-writing/references/atoms.md)（10 回环结构）
+- [sanlian·回环结构](../sanlian-writing/references/atoms.md)（10 回环结构）
 - [yuhua·重复结构](../yuhua-writing/references/atom-ops.md)（2. 重复结构
 ）
 - [yuhua·物件贯穿](../yuhua-writing/references/atom-ops.md)（8. 物件贯穿
@@ -336,11 +336,11 @@
 
 ## 独有原子
 
-- [guanfang·接情绪（Acknowledge）](../guanfang-writing/references/atom-ops.md)（1. 接情绪（Acknowledge）
+- [zhexuan·接情绪（Acknowledge）](../zhexuan-writing/references/atom-ops.md)（1. 接情绪（Acknowledge）
 ）
-- [guanfang·情绪套利（Sentiment Arbitrage）——选题算法](../guanfang-writing/references/atom-ops.md)（11. 情绪套利（Sentiment Arbitrage）——选题算法
+- [zhexuan·情绪套利（Sentiment Arbitrage）——选题算法](../zhexuan-writing/references/atom-ops.md)（11. 情绪套利（Sentiment Arbitrage）——选题算法
 ）
-- [guanfang·平视共谋（Peer Positioning）](../guanfang-writing/references/atom-ops.md)（12. 平视共谋（Peer Positioning）
+- [zhexuan·平视共谋（Peer Positioning）](../zhexuan-writing/references/atom-ops.md)（12. 平视共谋（Peer Positioning）
 ）
 - [jinyong·动作分镜](../jinyong-writing/references/atom-ops.md)（2. 动作分镜
 ）
@@ -360,11 +360,11 @@
 ）
 - [lijuan·一句轻叹](../lijuan-writing/references/atom-ops.md)（9. 一句轻叹
 ）
-- [maozedong·开门见山](../maozedong-writing/references/atom-ops.md)（1. 开门见山
+- [mao·开门见山](../mao-writing/references/atom-ops.md)（1. 开门见山
 ）
-- [renminribao·高位定调](../renminribao-writing/references/atom-ops.md)（1. 高位定调
+- [guanfang·高位定调](../guanfang-writing/references/atom-ops.md)（1. 高位定调
 ）
-- [renminribao·时空坐标](../renminribao-writing/references/atom-ops.md)（2. 时空坐标
+- [guanfang·时空坐标](../guanfang-writing/references/atom-ops.md)（2. 时空坐标
 ）
 - [standup·act-out](../standup-writing/references/atom-ops.md)（7. act-out
 ）
@@ -404,9 +404,9 @@
 ）
 - [zhangailing·声光切景](../zhangailing-writing/references/atom-ops.md)（8. 声光切景
 ）
-- [human-voice·网络梗考古](../human-voice-writing/references/atoms.md)（13 网络梗考古）
-- [human-voice·科技梗引用](../human-voice-writing/references/atoms.md)（18 科技梗引用）
-- [human-voice·双关梗](../human-voice-writing/references/atoms.md)（21 双关梗）
+- [sanlian·网络梗考古](../sanlian-writing/references/atoms.md)（13 网络梗考古）
+- [sanlian·科技梗引用](../sanlian-writing/references/atoms.md)（18 科技梗引用）
+- [sanlian·双关梗](../sanlian-writing/references/atoms.md)（21 双关梗）
 
 ## 对初拟 14 族的调整及理由
 

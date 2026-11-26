@@ -1,9 +1,9 @@
 ---
-name: maozedong-writing
+name: mao-writing
 description: |
   毛泽东文章体（学习版）：把《为人民服务》《愚公移山》《反对党八股》《矛盾论》等的说理方法，蒸馏成今天能用的议论文写法——开门见山、分条列举、两点论、俗语比喻、短句排比，不学政治立场。
   用法：①写议论文、说理短文、演讲稿（600–1500 字）②给说理文“加骨头”③拆解说理手法。
-  不适用：党报社论（renminribao-writing）、官方时评（guanfang-writing）、反讽杂文（luxun-writing）；冒充口吻、编造语录、宣传动员、个人崇拜一律拒绝（见 red-lines.md）。
+  不适用：党报社论（guanfang-writing）、官方时评（zhexuan-writing）、反讽杂文（luxun-writing）；冒充口吻、编造语录、宣传动员、个人崇拜一律拒绝（见 red-lines.md）。
 ---
 # 毛泽东文章体——说理写作学习版
 

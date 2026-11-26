@@ -25,11 +25,11 @@ v0.2 全部改成比率或密度：
 用法
 ----
     python3 tools/ai-flavor-checker.py 文章.md
-    python3 tools/ai-flavor-checker.py --engine human-voice-writing 文章.md
+    python3 tools/ai-flavor-checker.py --engine sanlian-writing 文章.md
     python3 tools/ai-flavor-checker.py --engine feature-writing a.md b.md
     python3 tools/ai-flavor-checker.py --stdin < 文章.txt
     python3 tools/ai-flavor-checker.py --list-engines
-    python3 tools/ai-flavor-checker.py --json --engine guanfang-writing 文章.md
+    python3 tools/ai-flavor-checker.py --json --engine zhexuan-writing 文章.md
 
 退出码：0 = 全部通过该引擎门槛；1 = 有文本未过；2 = 参数/环境错误。
 （v0.1 恒为 0，没法当门禁用。）

@@ -6,7 +6,7 @@ description: |
   ①写白话随笔、游记、生活记录、读书杂感（500–1500 字）
   ②给一篇随笔“加东坡味”：改写、诊断缺了哪几个原子
   ③拆解一篇文章用了哪些东坡手法
-  不适用：官方时评（用 guanfang-writing）、城市观察（用 human-voice-writing）、人物特稿（用 feature-writing）、文言仿古。
+  不适用：官方时评（用 zhexuan-writing）、城市观察（用 sanlian-writing）、人物特稿（用 feature-writing）、文言仿古。
 ---
 # 苏轼白话体——认知引擎版
 

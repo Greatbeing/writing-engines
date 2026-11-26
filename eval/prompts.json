@@ -11,7 +11,7 @@
     {
       "id": "t01",
       "category": "城市现象",
-      "hypothesis": "human-voice-writing",
+      "hypothesis": "sanlian-writing",
       "prompt": "写一篇公众号文章：最近年轻人流行把逛菜市场当成周末活动，管它叫「菜市场 City Walk」。",
       "constraints": { "length": "800 字左右", "format": "Markdown，含标题" },
       "material": [
@@ -23,7 +23,7 @@
     {
       "id": "t02",
       "category": "城市现象",
-      "hypothesis": "human-voice-writing",
+      "hypothesis": "sanlian-writing",
       "prompt": "写一篇公众号文章：越来越多年轻人给猫狗办生日会，蛋糕要订、照片要拍、还要请朋友。",
       "constraints": { "length": "800 字左右", "format": "Markdown，含标题" },
       "material": [
@@ -35,7 +35,7 @@
     {
       "id": "t03",
       "category": "城市现象",
-      "hypothesis": "human-voice-writing",
+      "hypothesis": "sanlian-writing",
       "prompt": "写一篇公众号文章：写字楼楼下便利店的关东煮涨价了，从三块涨到五块。",
       "constraints": { "length": "700-800 字", "format": "Markdown，含标题" },
       "material": [
@@ -47,7 +47,7 @@
     {
       "id": "t04",
       "category": "社会情绪",
-      "hypothesis": "human-voice-writing",
+      "hypothesis": "sanlian-writing",
       "prompt": "写一篇公众号文章：35 岁被裁员之后去开网约车，这件事在社交平台上被反复讨论。",
       "constraints": { "length": "800 字左右", "format": "Markdown，含标题" },
       "material": [
@@ -59,7 +59,7 @@
     {
       "id": "t05",
       "category": "社会情绪",
-      "hypothesis": "human-voice-writing",
+      "hypothesis": "sanlian-writing",
       "prompt": "写一篇公众号文章：相亲时被问「你父母有退休金吗」，这句话正在成为年轻人的一道坎。",
       "constraints": { "length": "800 字左右", "format": "Markdown，含标题" },
       "material": [
@@ -71,7 +71,7 @@
     {
       "id": "t06",
       "category": "社会情绪",
-      "hypothesis": "human-voice-writing",
+      "hypothesis": "sanlian-writing",
       "prompt": "写一篇公众号文章：办公室里所有人都在假装很忙，这件事已经被年轻人叫破了。",
       "constraints": { "length": "700-800 字", "format": "Markdown，含标题" },
       "material": [
@@ -107,7 +107,7 @@
     {
       "id": "t09",
       "category": "争议回应",
-      "hypothesis": "guanfang-writing",
+      "hypothesis": "zhexuan-writing",
       "prompt": "写一篇时评：回应「AI 会抢走我们的工作」这轮集体焦虑。",
       "constraints": { "length": "800 字左右", "format": "Markdown，含标题" },
       "material": [
@@ -119,7 +119,7 @@
     {
       "id": "t10",
       "category": "争议回应",
-      "hypothesis": "guanfang-writing",
+      "hypothesis": "zhexuan-writing",
       "prompt": "写一篇时评：年轻人该不该躺平，这个争论又热了起来。",
       "constraints": { "length": "800 字左右", "format": "Markdown，含标题" },
       "material": [

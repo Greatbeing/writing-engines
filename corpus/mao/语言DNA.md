@@ -1,7 +1,7 @@
-# 语言DNA · maozedong
+# 语言DNA · mao
 
 > 由 `tools/corpus_stats.py` 从语料自动统计生成，**只含统计量与词表，不含任何原文句子**。
-> 语料：本机 `tools/tests/fixtures/local/maozedong-*.txt`，共 3 篇 / 3999 汉字（原文不入库）。
+> 语料：本机 `tools/tests/fixtures/local/mao-*.txt`，共 3 篇 / 3999 汉字（原文不入库）。
 > 用途：与 `references/atom-ops.md` 里的原子说法互证——原子说「句子短」，这里给出短到什么程度。
 
 ## 一、节奏

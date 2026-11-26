@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ENGINES = ["baseline", "human-voice-writing", "guanfang-writing", "feature-writing"]
+ENGINES = ["baseline", "sanlian-writing", "zhexuan-writing", "feature-writing"]
 
 NO_LEAK = (
     "【输出要求】\n"

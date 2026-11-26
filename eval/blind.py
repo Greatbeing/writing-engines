@@ -36,12 +36,12 @@ HERE = Path(__file__).resolve().parent
 RUNS = HERE / "runs"
 BLIND = HERE / "blind"
 RATERS = ["R1", "R2", "R3"]
-ENGINES = ["baseline", "human-voice-writing", "guanfang-writing", "feature-writing"]
+ENGINES = ["baseline", "sanlian-writing", "zhexuan-writing", "feature-writing"]
 LABELS = ["A", "B", "C", "D"]
 
 # 必须拦下的泄露：这些字样一旦出现在正文，评分者就能反推版本
 HARD_LEAKS = [
-    "SKILL.md", "human-voice-writing", "guanfang-writing", "feature-writing",
+    "SKILL.md", "sanlian-writing", "zhexuan-writing", "feature-writing",
     "风格指纹", "红线审查", "原子技法", "本引擎", "写作引擎",
     "浙江宣传体", "三联生活实验室", "《人物》杂志体",
 ]
@@ -131,8 +131,8 @@ def main(argv=None):
     assign = load_assign(topics)
 
     # demo 模式下，引擎名对应 demo/<题号>/ 下的短文件名
-    DEMO_NAME = {"baseline": "baseline", "human-voice-writing": "human-voice",
-                 "guanfang-writing": "guanfang", "feature-writing": "feature"}
+    DEMO_NAME = {"baseline": "baseline", "sanlian-writing": "sanlian",
+                 "zhexuan-writing": "zhexuan", "feature-writing": "feature"}
 
     def out_path(tid, eng):
         if args.src == "runs":

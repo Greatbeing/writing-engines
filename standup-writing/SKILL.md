@@ -6,7 +6,7 @@ description: |
   ①写 3–5 分钟单口/开放麦稿、短视频口播段子
   ②给一段文案“加笑点”：诊断缺铺垫、缺反转还是缺 callback
   ③拆解一段稿子用了哪些结构
-  不适用：严肃评论（用 luxun-writing）、官方宣传（用 guanfang-writing）、人物特稿（用 feature-writing）、相声贯口。
+  不适用：严肃评论（用 luxun-writing）、官方宣传（用 zhexuan-writing）、人物特稿（用 feature-writing）、相声贯口。
 ---
 # 脱口秀稿体——认知引擎版
 

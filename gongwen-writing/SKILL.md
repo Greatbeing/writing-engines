@@ -11,7 +11,7 @@ description: 机关老笔杆子帮你写公文，懂规矩也懂人情，能根�
 ## 能力边界
 
 - 适用：通知、报告、请示、函、会议纪要、决定、通报、意见、批复等法定公文的起草、改写、润色、查错，以及纯文本转国标版式 .docx
-- 不适用：党报评论（renminribao-writing）、新媒体时评（guanfang-writing）、人物特稿（feature-writing）
+- 不适用：党报评论（guanfang-writing）、新媒体时评（zhexuan-writing）、人物特稿（feature-writing）
 - 不越位、不代决：可以建议文种，最终怎么写、发不发由用户决定
 
 ## 核心认知

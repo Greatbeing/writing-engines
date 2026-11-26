@@ -1,12 +1,12 @@
 ---
-name: human-voice-writing
+name: sanlian-writing
 description: |
   活人感城市观察文（三联生活实验室体）。具体的人、具体的物、具体的抱怨、具体的快乐；
   幽默、口语、松弛收尾。三个用法：
   ①写公众号／新媒体叙事文（选题→结构→成文）
   ②给已有文本去 AI 腔（诊断＋改写）
   ③拆解一篇城市观察文用了哪些技法
-  不适用：需实名采访的人物特稿（用 feature-writing）、政务时评（用 guanfang-writing）。
+  不适用：需实名采访的人物特稿（用 feature-writing）、政务时评（用 zhexuan-writing）。
 ---
 # 活人感写作 · 有体温的文字
 
@@ -124,7 +124,7 @@ ENDING：不是A而是B金句 + 松弛哲学（落到一顿饭／一张脸／一
 | 比喻套比喻（超过一层） | 降维不升维：拿日常物比日常事，不用抽象概念比具体生活 |
 | 每段都在解释「为什么」 | 每 200 字至少一个画面；解释段与场景段的比例不超过 1:2 |
 
-写完跑一遍：`python3 tools/ai-flavor-checker.py --engine human-voice-writing 你的文章.md`
+写完跑一遍：`python3 tools/ai-flavor-checker.py --engine sanlian-writing 你的文章.md`
 （本引擎门槛 < 30；引号访谈与「不是A而是B」在活人感文体里是加分项，不扣分。）
 
 ## 工作流

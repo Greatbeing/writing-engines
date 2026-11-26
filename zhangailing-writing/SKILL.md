@@ -6,7 +6,7 @@ description: |
   ①写都市散文、人情小品、短篇小说片段（600–1500 字）
   ②给一篇散文“加张爱玲味”：改写、诊断缺了哪几个原子
   ③拆解一篇文章用了哪些张爱玲手法
-  不适用：社会批评杂文（用 luxun-writing）、官方时评（用 guanfang-writing）、松弛随笔（用 sushi-writing / human-voice-writing）、人物特稿（用 feature-writing）、民国腔仿古与“旗袍月亮”式布景。
+  不适用：社会批评杂文（用 luxun-writing）、官方时评（用 zhexuan-writing）、松弛随笔（用 sushi-writing / sanlian-writing）、人物特稿（用 feature-writing）、民国腔仿古与“旗袍月亮”式布景。
 ---
 # 张爱玲体——认知引擎版
 

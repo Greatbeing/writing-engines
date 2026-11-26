@@ -2,105 +2,68 @@
   "engine": "guanfang-writing",
   "checker_threshold": 45,
   "_how_to_run": [
-    "1) python3 tools/ai-flavor-checker.py --engine guanfang-writing 产出.md",
+    "1) python tools/ai-flavor-checker.py 产出.md（engine_profiles.json 暂无本引擎配置，默认 generic 门槛 30，仅作参考）",
     "2) 逐条核对 assertions",
-    "3) 门槛是 45 不是 30——官方体自带书面腔，这是文体特征"
+    "3) 建议门槛 45：党报评论的排比、四字格与书面腔是文体特征"
   ],
   "prompts": [
     {
-      "id": "gf-1",
-      "material_ref": "eval/prompts.json#t09",
-      "prompt": "帮我写一篇浙江宣传体的时评，主题：年轻人爱上逛公园（「公园 20 分钟效应」走红网络），600-800 字，官方公众号风格。",
-      "expect": "社会现象体：场景钩/接情绪开头 → 现象拆解 → 结构归因 → 本质升维 → 给选择权收尾金句；平视无说教；红线安全",
+      "id": "rmrb-1",
+      "prompt": "用人民日报评论员文章的写法，写一篇 1500 字左右的评论：新时代更需要工匠精神。",
+      "expect": "高位定调 → 时空坐标 → 历史纵深 → 以小见大 → 数据并举（待核占位）→ 排比递进 → 辩证回应 → 对仗收束 → 号召落点",
       "assertions": [
         {
-          "type": "checker_max",
-          "value": 45
-        },
-        {
           "type": "min_chars",
-          "value": 600
-        },
-        {
-          "type": "any_regex",
-          "value": "\\d+\\s*(分钟|小时|天|年|%|万)",
-          "note": "至少 1 处贴身化数字（原子 3）"
-        },
-        {
-          "type": "count_max",
-          "target": "golden_sentences",
-          "value": 3,
-          "note": "金句 ≤ 3 处"
-        },
-        {
-          "type": "any_regex",
-          "value": "我们|不妨|想想",
-          "note": "平视语态（原子 12）"
+          "value": 1300
         },
         {
           "type": "no_regex",
-          "value": "你们应该|必须认识到|广大人民群众要"
+          "value": "人民日报评论员\\s*$|家人们|破防|你们要|必须认识到",
+          "note": "无冒署名、无新媒体腔、无训话"
+        },
+        {
+          "type": "any_regex",
+          "value": "也要看到|不可否认|诚然",
+          "note": "有辩证回应"
         },
         {
           "type": "manual",
-          "note": "靶心在具体操作层，保护层（抽象原则）同时在场"
+          "note": "无编造的讲话、文件、数据；数据为可溯源或【待核】"
         }
       ]
     },
     {
-      "id": "gf-2",
-      "material_ref": "eval/prompts.json#t10",
-      "prompt": "写一篇时评，回应「年轻人该不该躺平」，600-800 字，官方公众号风格。",
-      "expect": "危机引导/热点评议体：先接情绪再定调 → 数据压舱回答最尖锐问题 → 双层结构（批评具体层/保护抽象层）→ 1/3 处处理性转折 → 结尾给希望；金句 ≤3 处且长在论证节点",
+      "id": "rmrb-2",
+      "prompt": "写一篇 1000 字的“人民时评”式短评：一位乡村教师坚守山区三十年的新闻（素材由用户提供）。",
+      "expect": "以小见大起笔 → 第二段高位定调 → 数据并举 → 辩证回应 → 对仗收束",
       "assertions": [
         {
-          "type": "checker_max",
-          "value": 45
+          "type": "no_regex",
+          "value": "泪目|感动哭|你们要"
         },
         {
           "type": "min_chars",
-          "value": 600
-        },
-        {
-          "type": "any_regex",
-          "value": "不是[^。]{1,40}而是",
-          "note": "原子 6 升维"
-        },
-        {
-          "type": "count_max",
-          "target": "metaphor_families",
-          "value": 1,
-          "note": "全文只有一个贯穿隐喻，不混用"
+          "value": 1000
         },
         {
           "type": "manual",
-          "note": "结尾是结构化表态（三句排比或一组对仗），不是抒情"
-        },
-        {
-          "type": "manual",
-          "note": "没有替读者下判决，留了选择权"
+          "note": "第二段内出现全局性判断；人物细节只用用户素材，不添加"
         }
       ]
     },
     {
-      "id": "gf-3",
-      "material_ref": null,
-      "prompt": "帮我拆解下面这篇文章的原子链，并做红线体检（把文章贴进来）。",
-      "expect": "走拆解流程四步：识别原子链 → 对照组合规则 → 红线体检 → 一句话总评 + 1-2 处改法",
+      "id": "rmrb-3",
+      "prompt": "拆解下面这篇党报评论的原子链，并按风格指纹体检（把文章贴进来）。",
+      "expect": "走拆解流程：逐段标原子 → 还原原子链 → 六项指纹体检 → 1–2 处改法，不代写新文",
       "assertions": [
         {
           "type": "any_regex",
-          "value": "接情绪|反转定调|数据压舱|双层结构|三句表态|金句压缩",
+          "value": "高位定调|历史纵深|数据并举|排比递进|辩证回应|号召落点",
           "note": "必须点名原子"
         },
         {
-          "type": "any_regex",
-          "value": "原子链|骨架",
-          "note": "要画出骨架，不是逐段复述"
-        },
-        {
           "type": "manual",
-          "note": "没有代写新文（用户只要求拆解）"
+          "note": "没有代写新文；不大段复述原文"
         }
       ]
     }

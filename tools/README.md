@@ -22,7 +22,7 @@
 
 ```bash
 python3 tools/ai-flavor-checker.py 你的文章.md
-python3 tools/ai-flavor-checker.py --engine human-voice-writing 你的文章.md
+python3 tools/ai-flavor-checker.py --engine sanlian-writing 你的文章.md
 python3 tools/ai-flavor-checker.py --list-engines
 python3 tools/ai-flavor-checker.py --selftest
 python3 tools/ai-flavor-checker.py --json --engine feature-writing a.md b.md
@@ -69,7 +69,7 @@ LLM 打分不可解释、不可复现、逐次成本高，而且它会被自己�
 
 ```bash
 python3 tools/lint_skill.py --all
-python3 tools/lint_skill.py human-voice-writing --strict
+python3 tools/lint_skill.py sanlian-writing --strict
 python3 tools/lint_skill.py --repo
 ```
 

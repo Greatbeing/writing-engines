@@ -9,7 +9,7 @@
 
 → https://greatbeing.github.io/writing-engines/articles/
 
-（`guanfang-writing/examples/2026-11-02-skill评分报告.html` 是 skill 自评分卡，不是文章示例，不在此列。）
+（`zhexuan-writing/examples/2026-11-02-skill评分报告.html` 是 skill 自评分卡，不是文章示例，不在此列。）
 
 ## 已做的那一件：同题四体
 

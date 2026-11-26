@@ -93,22 +93,22 @@
 
 - **新增 `SPEC.md`（引擎契约）**。三个引擎此前章节结构各不相同（活人感全内联、
   官方体良好分层、特稿居中），说明「蒸馏五步」的「压缩」一步没有产物定义。
-- **`human-voice-writing` 主文件下沉**：21 原子表 → `references/atoms.md`，
+- **`sanlian-writing` 主文件下沉**：21 原子表 → `references/atoms.md`，
   厂牌签名装置 → `references/structure.md`，版本记录 → 本文件。
   主文件从全内联改为「索引 + 指针」。
 - **三份 description 重写**：删掉篇名等溯源信息（它不参与触发），
   同义触发词合并成真正的不同分支，并补上「不适用」路由句。
 - **红线全部改成「禁止 + 正面替代」两列。** 连读六条「❌ 禁止」会把被禁行为
   拉进上下文；给一个正面动作，注意力才落在该做的事上。
-- **`guanfang-writing` 补上可见的红线小节**：此前红线只在 reference 与流程第 5 步里，
+- **`zhexuan-writing` 补上可见的红线小节**：此前红线只在 reference 与流程第 5 步里，
   agent 读主文件时看不到。
-- **`guanfang-writing` 补上 `examples/`**：此前它没有完整产出示例（违反 `SPEC.md` §1）。
+- **`zhexuan-writing` 补上 `examples/`**：此前它没有完整产出示例（违反 `SPEC.md` §1）。
   原 `优化成果卡片.html` 迁为 `examples/2026-11-02-官方体改写前后对照.html`——
   它本来就是一张改写前后的对照，放在引擎目录里比放在展示目录里更有用。
 - **`lint_skill.py` 新增 E10**：检查 `examples/` 是否有完整产出。片段不算示例。
-- **三份 `test-prompts.json` 统一为可判定的 assertions**（guanfang 原有 2 条散文式
-  「expected」，无断言；human-voice 与 feature 此前没有）。
-- **修内部不一致**：`human-voice` 主文件曾同时写 v3.0（frontmatter）与
+- **三份 `test-prompts.json` 统一为可判定的 assertions**（zhexuan 原有 2 条散文式
+  「expected」，无断言；sanlian 与 feature 此前没有）。
+- **修内部不一致**：`sanlian` 主文件曾同时写 v3.0（frontmatter）与
   v2.0（正文标题）两个版本号。
 
 ### 治理
@@ -119,7 +119,7 @@
 
 ## [0.1.0] 2026-11-24 — 初始版本
 
-- 三个引擎：`human-voice-writing` v3.0（11 篇三联）、`guanfang-writing`（10 篇浙江宣传）、
+- 三个引擎：`sanlian-writing` v3.0（11 篇三联）、`zhexuan-writing`（10 篇浙江宣传）、
   `feature-writing` v1.0（10 篇人物）
 - `tools/ai-flavor-checker.py` v0.1
 - `PRODUCT.md` 北极星与三层资产构想

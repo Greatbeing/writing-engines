@@ -2,7 +2,7 @@
 """同题四体对照页：demo/<题号>/*.md -> docs/compare/<题号>.html
 
 用法：python tools/build_compare.py
-每个题目目录放 baseline.md / human-voice.md / guanfang.md / feature.md，有几篇放几篇。
+每个题目目录放 baseline.md / sanlian.md / zhexuan.md / feature.md，有几篇放几篇。
 """
 import html, json, re, sys
 from pathlib import Path
@@ -15,8 +15,8 @@ from build_articles import page  # 复用文章页的外壳、配色与夜读
 OUT = ROOT / "docs" / "compare"
 VERSIONS = [  # 文件名, 标签, 副标, 是否引擎
     ("baseline.md",    "裸模型",   "不加载任何引擎", False),
-    ("human-voice.md", "城市之风", "活人感 · human-voice-writing", True),
-    ("guanfang.md",    "庙堂之风", "官方体 · guanfang-writing", True),
+    ("sanlian.md", "城市之风", "活人感 · sanlian-writing", True),
+    ("zhexuan.md",    "庙堂之风", "官方体 · zhexuan-writing", True),
     ("feature.md",     "人间之风", "特稿 · feature-writing", True),
     ("acheng.md",      "白描之风", "阿城体 · acheng-writing", True),
     ("wangzengqi.md",  "散文之风", "汪曾祺体 · wangzengqi-writing", True),

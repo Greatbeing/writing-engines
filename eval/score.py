@@ -4,7 +4,7 @@
 eval 汇总脚本 —— 把盲排结果算成三个数字。
 
 输入：eval/key.json（唯一事实来源，先有 key 才有评分表）
-    {"t01": {"A": "baseline", "B": "human-voice-writing", ...}, ...}
+    {"t01": {"A": "baseline", "B": "sanlian-writing", ...}, ...}
     标签 A-D 在每题内唯一且完整；键名必须覆盖 prompts.json 的全部题号。
 
 输入：eval/rankings.csv
@@ -34,10 +34,10 @@ from collections import defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ENGINES = ["baseline", "human-voice-writing", "guanfang-writing", "feature-writing"]
+ENGINES = ["baseline", "sanlian-writing", "zhexuan-writing", "feature-writing"]
 LABELS = ["A", "B", "C", "D"]
-SHORT = {"baseline": "baseline", "human-voice-writing": "活人感",
-         "guanfang-writing": "官方体", "feature-writing": "特稿"}
+SHORT = {"baseline": "baseline", "sanlian-writing": "活人感",
+         "zhexuan-writing": "官方体", "feature-writing": "特稿"}
 BORDA = {0: 4, 1: 3, 2: 2, 3: 1}   # 第 1 名 4 分，第 4 名 1 分
 
 
@@ -372,14 +372,14 @@ def render(res, resolved):
 def selftest():
     """用可控假数据验证算术。三件事：胜率算对、ρ 算对、短板判读生效。"""
     # 场景：活人感总是第 1，官方体第 2，特稿第 3，baseline 第 4
-    key = {t: {"A": "human-voice-writing", "B": "guanfang-writing",
+    key = {t: {"A": "sanlian-writing", "B": "zhexuan-writing",
                "C": "feature-writing", "D": "baseline"} for t in ("t01", "t02")}
     rows = [{"topic": t, "rater": "R1", "order": ["A", "B", "C", "D"], "note": ""}
             for t in ("t01", "t02")]
     res_rows = resolve(rows, key)
     ok = True
 
-    rate, win, tot = win_rate(res_rows, "human-voice-writing", "baseline")
+    rate, win, tot = win_rate(res_rows, "sanlian-writing", "baseline")
     if (win, tot, round(rate, 3)) != (2, 2, 1.0):
         print(f"[fail] 胜率：期望 (2,2,1.0)，得到 ({win},{tot},{rate})")
         ok = False
@@ -392,17 +392,17 @@ def selftest():
         ok = False
 
     res = compute(res_rows)
-    if res["per_topic"]["t01"]["best"] != "human-voice-writing":
+    if res["per_topic"]["t01"]["best"] != "sanlian-writing":
         print("[fail] 每题最优算错")
         ok = False
     if res["mean_rho"] != float("nan") and res["n_rho"] == 0:
         pass  # 单评分者无 ρ，符合预期
-    if res["borda"]["human-voice-writing"] != 8:   # 2 题 × 4 分
-        print(f"[fail] Borda：期望 8，得到 {res['borda'].get('human-voice-writing')}")
+    if res["borda"]["sanlian-writing"] != 8:   # 2 题 × 4 分
+        print(f"[fail] Borda：期望 8，得到 {res['borda'].get('sanlian-writing')}")
         ok = False
 
-    v = verdict({"human-voice-writing": rate_stat(18, 20),
-                 "guanfang-writing": rate_stat(2, 20),
+    v = verdict({"sanlian-writing": rate_stat(18, 20),
+                 "zhexuan-writing": rate_stat(2, 20),
                  "feature-writing": rate_stat(16, 20)},
                 {"活人感/官方体": sep_stat(16, 20)}, 0.6)
     if "短板" not in v:
@@ -411,20 +411,20 @@ def selftest():
 
     # n=20 时 6/20（30%）的区间上界约 0.52，还没到「显著落后」。
     # 这一条把「样本量的限制」写进测试，免得以后有人把它当成 bug 改掉。
-    v_weak = verdict({"guanfang-writing": rate_stat(6, 20)}, {}, 0.6)
+    v_weak = verdict({"zhexuan-writing": rate_stat(6, 20)}, {}, 0.6)
     if "**短板**：" in v_weak or "**疑似短板**" not in v_weak:
         print(f"[fail] 6/20 应判为「疑似短板」而非定论。输出：\n{v_weak}")
         ok = False
 
     # 关键回归：n=20 的 12/20（点估计 60%）恰恰落在噪声内，不能判「显著通过」。
     # 上一版脚本在这里会输出「H1 通过 60%」——用纯随机数据实测过。
-    v_noise = verdict({"human-voice-writing": rate_stat(12, 20)}, {}, 0.6)
+    v_noise = verdict({"sanlian-writing": rate_stat(12, 20)}, {}, 0.6)
     if "**H1 通过（显著）**" in v_noise or "方向性" not in v_noise:
         print(f"[fail] 60%（n=20）被判成显著了。输出：\n{v_noise}")
         ok = False
 
     # 20/20 才该判显著
-    v_strong = verdict({"human-voice-writing": rate_stat(20, 20)}, {}, 0.6)
+    v_strong = verdict({"sanlian-writing": rate_stat(20, 20)}, {}, 0.6)
     if "**H1 通过（显著）**" not in v_strong:
         print(f"[fail] 20/20 没判成显著。输出：\n{v_strong}")
         ok = False

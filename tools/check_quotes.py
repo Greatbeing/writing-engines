@@ -13,7 +13,7 @@ lint 只查格式，红线写在文档里但写的时候并不执行。真正拦
 用法
 ----
   python tools/check_quotes.py                 # 检查 demo/*/ 下全部成文
-  python tools/check_quotes.py demo/t05/human-voice.md
+  python tools/check_quotes.py demo/t05/sanlian.md
   python tools/check_quotes.py --strict          # 非逐字也算不合格（可作门禁）
   python tools/check_quotes.py --selftest
 

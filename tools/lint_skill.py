@@ -5,7 +5,7 @@
 
 用法：
     python3 tools/lint_skill.py --all
-    python3 tools/lint_skill.py human-voice-writing
+    python3 tools/lint_skill.py sanlian-writing
     python3 tools/lint_skill.py some-new-engine --strict
 
 检查项（对齐 SPEC.md 与 CONTRIBUTING.md 的准入线）：
@@ -258,13 +258,13 @@ def atom_family_lint():
             elif index[aid]["family"] != fam:
                 issues.append(Issue("A2", "error",
                                     f"{aid} 族「{fam}」≠ index.json「{index[aid]['family']}」"))
-    hv = ROOT / "human-voice-writing" / "references" / "atoms.md"
+    hv = ROOT / "sanlian-writing" / "references" / "atoms.md"
     if hv.exists():
         for line in hv.read_text(encoding="utf-8").splitlines():
             m = re.match(r"^\| (\d+) \|", line)
             if not m:
                 continue
-            aid = f"human-voice.{m.group(1)}"
+            aid = f"sanlian.{m.group(1)}"
             seen.add(aid)
             cells = [c.strip() for c in line.strip().strip("|").split("|")]
             fam = cells[-1] if len(cells) >= 5 else None

@@ -6,7 +6,7 @@ description: |
   ①写杂文、短评、社会现象批评（600–1500 字）
   ②给一篇评论“加鲁迅味”：改写、诊断缺了哪几个原子
   ③拆解一篇文章用了哪些鲁迅手法
-  不适用：官方时评（用 guanfang-writing）、松弛随笔（用 sushi-writing / human-voice-writing）、人物特稿（用 feature-writing）、民国腔仿古。
+  不适用：官方时评（用 zhexuan-writing）、松弛随笔（用 sushi-writing / sanlian-writing）、人物特稿（用 feature-writing）、民国腔仿古。
 ---
 # 鲁迅体——认知引擎版
 

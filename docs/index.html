@@ -340,21 +340,21 @@ html.intro #intro{display:grid;position:fixed;inset:0;z-index:50;background:var(
         <article class="card">
           <span class="feng">庙 堂 之 风</span>
           <h4>官方体</h4>
-          <div class="slug">guanfang-writing</div>
+          <div class="slug">zhexuan-writing</div>
           <p>体制内爆款写作法。12 个原子操作 + 组合规则 + 风格指纹；选题困难时用「情绪套利三问」自己找题。核心不是文体模式库，是可生成新文章的认知引擎。</p>
           <div class="use"><em>适用</em> 时评 · 政论 · 主旋律 · 纪念文</div>
         </article>
         <article class="card">
           <span class="feng">社 论 之 风</span>
           <h4>人民日报评论</h4>
-          <div class="slug">renminribao-writing</div>
+          <div class="slug">guanfang-writing</div>
           <p>高位定调、历史纵深、四字格与排比递进、辩证回应。与官方体的边界写在能力边界里：要爆款、破圈用它；要庄重、可上头版用这个。</p>
           <div class="use"><em>适用</em> 社论 · 评论员文章 · 人民时评</div>
         </article>
         <article class="card">
           <span class="feng">讲 理 之 风</span>
           <h4>毛泽东文章体</h4>
-          <div class="slug">maozedong-writing</div>
+          <div class="slug">mao-writing</div>
           <p>开门见山、分类剖析、分条列举、两点论、俗语比喻、短句排比。只学怎么写，不学立场；冒充口吻、编造语录一律拒绝。</p>
           <div class="use"><em>适用</em> 议论文 · 说理短文 · 演讲稿</div>
         </article>
@@ -452,7 +452,7 @@ html.intro #intro{display:grid;position:fixed;inset:0;z-index:50;background:var(
         <article class="card">
           <span class="feng">城 市 之 风</span>
           <h4>活人感</h4>
-          <div class="slug">human-voice-writing</div>
+          <div class="slug">sanlian-writing</div>
           <p>城市观察文。具体的人、具体的物、具体的抱怨、具体的快乐；幽默、口语、松弛收尾。21 个原子，也能反向给已有文本去 AI 腔。</p>
           <div class="use"><em>适用</em> 公众号叙事文 · 城市观察 · 网感文案</div>
         </article>
@@ -537,7 +537,7 @@ html.intro #intro{display:grid;position:fixed;inset:0;z-index:50;background:var(
     <p>Claude Code 或其它支持 <code>SKILL.md</code> 的宿主：把引擎目录放进对应的 skills 路径即可。目录自包含，无代码依赖。</p>
     <p>一句话需求进，一篇文章出。写完可以自检：</p>
 <pre><button class="copy">COPY</button><span class="c"># 按引擎给一篇文章打 AI 味分</span>
-<span class="k">python</span> tools/ai-flavor-checker.py article.md --engine human-voice-writing
+<span class="k">python</span> tools/ai-flavor-checker.py article.md --engine sanlian-writing
 <span class="c"># 全库合规 / 断言 / 回归测试</span>
 <span class="k">python</span> tools/lint_skill.py --all
 <span class="k">python</span> tools/run_prompts.py --all

@@ -1,9 +1,9 @@
 {
-  "engine": "human-voice-writing",
+  "engine": "sanlian-writing",
   "checker_threshold": 30,
   "_how_to_run": [
     "1) 用人写 / 用 agent 按 prompt 写出一篇",
-    "2) python3 tools/ai-flavor-checker.py --engine human-voice-writing 产出.md",
+    "2) python3 tools/ai-flavor-checker.py --engine sanlian-writing 产出.md",
     "3) 逐条核对 assertions（能用机器查的写 type/target/value，需人判的写 type=manual）",
     "4) 全部通过才算这个 prompt 合格；有一条不过，说明引擎的这一处没被写清"
   ],

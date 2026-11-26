@@ -6,7 +6,7 @@ description: |
   ①写说理杂文、随笔、对某种“正确的废话”的反驳（600–1500 字）
   ②给一篇板着脸的评论“加王小波味”：改写、诊断缺了哪几个原子
   ③拆解一篇文章用了哪些王小波手法
-  不适用：官方时评（用 guanfang-writing）、冷峻批判杂文（用 luxun-writing）、松弛生活随笔（用 sushi-writing / human-voice-writing）、小说叙事（《黄金时代》式性爱与时代叙事不仿写）、冒充王小波口吻。
+  不适用：官方时评（用 zhexuan-writing）、冷峻批判杂文（用 luxun-writing）、松弛生活随笔（用 sushi-writing / sanlian-writing）、小说叙事（《黄金时代》式性爱与时代叙事不仿写）、冒充王小波口吻。
 ---
 # 王小波体——认知引擎版
 
