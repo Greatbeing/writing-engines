@@ -4,7 +4,7 @@
 用法：python tools/build_articles.py
 新增文章：把 .md 放进某个引擎的 examples/，重新运行本脚本并提交 docs/。
 """
-import html, re, sys
+import html, json, re, sys
 from pathlib import Path
 import markdown
 
@@ -207,6 +207,33 @@ def main():
     idx = f"""<section class="list"><h1>文章</h1>
 <p class="intro">引擎写出来的东西。不讲方法，只看成品。<br>想看差别：<a href="../compare/">同题四体 · 同一份素材，四种写法 →</a></p>{items}</section>"""
     (OUT / "index.html").write_text(page("文章", idx, "../"), encoding="utf-8")
+    # 旧链接跳转：引擎改名后 slug 变了，老书签不该 404。
+    # 映射表由 tools/redirects.json 维护；与现存 slug 冲突的一律跳过。
+    rp = ROOT / "tools" / "redirects.json"
+    if rp.exists():
+        red = json.loads(rp.read_text(encoding="utf-8"))
+        live = {a["slug"] for a in arts}
+        made = 0
+        for old_slug, new_slug in red.items():
+            if old_slug in live or new_slug not in live:
+                continue
+            stub = (
+                '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+                '<title>跳转 · 采风</title>'
+                f'<link rel="canonical" href="{new_slug}.html">'
+                f'<meta http-equiv="refresh" content="0; url={new_slug}.html">'
+                '<meta name="robots" content="noindex">'
+                '<style>body{background:#F5F1E8;color:#1A1A1A;'
+                'font:16px/1.9 -apple-system,"PingFang SC",sans-serif;'
+                'display:grid;place-items:center;height:100vh;margin:0}'
+                'a{color:#B23A2B}</style></head><body>'
+                f'<p>这一篇换了地址：<a href="{new_slug}.html">继续阅读 →</a></p>'
+                f'<script>location.replace("{new_slug}.html")</script></body></html>'
+            )
+            (OUT / f"{old_slug}.html").write_text(stub, encoding="utf-8")
+            made += 1
+        if made:
+            print(f"  + {made} redirect page(s)")
     print(f"built {len(arts)} articles -> {OUT.relative_to(ROOT)}")
     for a in arts:
         print(f"  {a['slug']}.html  {a['title']}")
