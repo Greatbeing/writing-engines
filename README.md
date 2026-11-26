@@ -185,6 +185,9 @@ description／红线／指纹各自的写法。`tools/lint_skill.py` 让它可�
 | [`tools/tests/test_checker.py`](tools/tests/test_checker.py) | checker 的回归测试（18 条断言） |
 | [`tools/build_articles.py`](tools/build_articles.py) | 把引擎 `examples/*.md` 生成为官网文章页 `docs/articles/` |
 | [`tools/build_compare.py`](tools/build_compare.py) | 把 `demo/<题号>/` 的四版生成为同题对照页 `docs/compare/` |
+| [`tools/maint/`](tools/maint/README.md) | 每日维护：站点一致性构建、六项体检、周报（两台云机定时跑） |
+| [`tools/agents/`](tools/agents/README.md) | 四个 agent（DSH/Claude/codex/opencode）的调用手册与统一入口 |
+| [`tools/daily/`](tools/daily/README.md) | 每日自动写作流水线（写出稿 + 独立评审） |
 
 ```bash
 python3 tools/ai-flavor-checker.py --engine sanlian-writing 文章.md
