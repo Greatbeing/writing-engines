@@ -275,8 +275,10 @@ def patch_engines():
 def unify_nav(t):
     """引擎页沿用旧首页的手写导航：换成全站统一导航，页内锚点挪到导航下的一行子目录。"""
     anchors = re.findall(r'<li><a href="(#[^"]+)">([^<]+)</a></li>', t)
-    sub = "".join(f'<a href="{h}">{n}</a>' for h, n in anchors if h != "#yuan")
-    sub += '<a href="../atoms/">原子库 · 讲透</a><a href="../articles/">范文</a><a href="../compare/">同题四体</a>'
+    # 页内「原子库」一节只是概览，与独立的原子库页重名：子目录里只留一个「原子库」，直达独立页。
+    sub = "".join(f'<a href="{h}">{n}</a>' for h, n in anchors if h not in ("#yuan", "#atoms"))
+    sub += ('<span class="sep" aria-hidden="true"></span>'
+            '<a href="../atoms/">原子库</a><a href="../articles/">范文</a><a href="../compare/">同题四体</a>')
     new = (f'<nav><div class="wrap"><a class="brand" href="../">{ba.LOGO.format(w=26)}采风</a>'
            f'{ba.site_nav("../")}</div></nav><div class="subnav"><div class="wrap">{sub}</div></div>')
     t = re.sub(r"<nav>.*?</nav>", new, t, count=1, flags=re.S)
@@ -285,7 +287,8 @@ def unify_nav(t):
            "nav .snav a:hover{color:var(--zhu)}nav .snav a.on{color:var(--ink);border-bottom-color:var(--ink)}"
            ".subnav{border-bottom:1px solid var(--rule)}.subnav .wrap{display:flex;gap:24px;flex-wrap:wrap;"
            "font-size:13px;color:var(--ink2);letter-spacing:.1em;padding-top:10px;padding-bottom:10px}"
-           ".subnav a{border:0}.subnav a:hover{color:var(--zhu)}")
+           ".subnav a{border:0}.subnav a:hover{color:var(--zhu)}"
+           ".subnav .sep{width:1px;align-self:stretch;background:var(--rule)}")
     if ".subnav{" not in t:
         t = t.replace("</style>", css + "\n</style>", 1)
     t = t.replace("<h1>采其风，得其法，<br>自成一体。</h1>", "<h1>写作引擎</h1>")
