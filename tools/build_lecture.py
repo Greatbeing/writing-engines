@@ -91,10 +91,10 @@ def main():
                  + (f'<a href="{prev.stem.split("-")[0]}.html">← {html.escape(render(prev)[0])}</a>' if prev else "<span></span>")
                  + (f'<a href="{nxt.stem.split("-")[0]}.html">{html.escape(render(nxt)[0])} →</a>' if nxt else "<span></span>")
                  + "</div>")
-        content = (f'<article class="lec"><div class="sub">采风 · 讲义</div>'
+        content = (f'<article class="lec"><div class="sub">采风 · 写作讲义</div>'
                    f"<h1>{html.escape(title)}</h1><hr class=\"rule\">"
                    f'<div class="body">{body}</div></article>{pager}')
-        (OUT / f"{slug}.html").write_text(page(title + " · 采风讲义", content + f"<style>{CSS}</style>", "../"), encoding="utf-8")
+        (OUT / f"{slug}.html").write_text(page(title + " · 采风写作讲义", content + f"<style>{CSS}</style>", "../"), encoding="utf-8")
         one = re.search(r"^>\s*\*\*(.+?)\*\*", body_md_of(f), re.M)
         items.append((slug, title, (one.group(1) if one else "").strip()))
         print(f"  lecture/{slug}.html  {title}")
@@ -109,14 +109,14 @@ def main():
         + (f'<div class="one">{html.escape(o)}</div>' if o else "")
         + "</a>"
         for i, (s, t, o) in enumerate(items))
-    idx = (f'<section class="list"><h1>采风 · 讲义</h1>'
+    idx = (f'<section class="list"><h1>采风 · 写作讲义</h1>'
            f'<p class="lead">把写作变成可以学的手艺。<br>一讲只教一个动作，写完就能改。</p>'
            f'<div class="brandline">采其风，得其法，成其体</div>{lst}</section>'
            f'<div class="foot"><div class="box"></div><p>三季共{cn(len(items))}讲：'
            + "、".join(t.split()[1][0] for _, t, _ in items if len(t.split()) > 1) + "。"
            f"每讲五节——一个动作、名家怎么写、AI 写成什么样、改一遍、你的练习。</p></div>"
            f"<style>{CSS}</style>")
-    (OUT / "index.html").write_text(page("采风 · 讲义", idx, "../"), encoding="utf-8")
+    (OUT / "index.html").write_text(page("采风 · 写作讲义", idx, "../"), encoding="utf-8")
     print(f"built {len(items)} lecture(s) + index")
 
 
