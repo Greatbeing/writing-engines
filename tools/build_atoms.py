@@ -120,8 +120,10 @@ def main():
 
     # 单页
     for it in items:
-        body = markdown.markdown(re.sub(r"^\*\*族\*\*.*$", "", it["md"], count=1, flags=re.M),
-                                 extensions=["sane_lists"])
+        src = re.sub(r"^\*\*族\*\*.*$", "", it["md"], count=1, flags=re.M)
+        # 列表/引用前补空行，否则 markdown 会把「- 」并进上一段
+        src = re.sub(r"(?m)^(?![ \t]*(?:[-*+] |\d+\. |>))(.+)\n(?=[ \t]*(?:[-*+] |\d+\. |>))", r"\1\n\n", src)
+        body = markdown.markdown(src, extensions=["sane_lists"])
         content = (f'<article class="ad"><div class="crumb"><a href="index.html">原子库</a> · '
                    f'{esc(short.get(it["engine"], it["engine"]))} · {esc(it["id"])}</div>'
                    f'<h1>{esc(it["name"])}</h1><div class="tags"><span>{esc(it["tier"])}</span>'
