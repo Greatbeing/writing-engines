@@ -182,7 +182,7 @@ let t0=null,mx=-999,my=-999,settled=false;
 sv.addEventListener('pointermove',e=>{const b=sv.getBoundingClientRect(),vb=sv.viewBox.baseVal;
  mx=vb.x+(e.clientX-b.left)/b.width*vb.width;my=vb.y+(e.clientY-b.top)/b.height*vb.height});
 sv.addEventListener('pointerleave',()=>{mx=my=-999});
-const start=document.documentElement.classList.contains('intro')?2700:250;
+const start=document.documentElement.classList.contains('intro')?4300:250;
 function step(ts){if(t0===null)t0=ts;const el=ts-t0-start;let moving=0;
  for(const p of P){const live=el>p.delay;let fx=0,fy=0;
   if(live){fx=(p.hx-p.x)*.045;fy=(p.hy-p.y)*.045}
@@ -290,6 +290,10 @@ def unify_nav(t):
         t = t.replace("</style>", css + "\n</style>", 1)
     t = t.replace("<h1>采其风，得其法，<br>自成一体。</h1>", "<h1>写作引擎</h1>")
     return t
+
+
+# 进入动效以 site_intro 为准（覆盖上面的旧版开场）
+from site_intro import INTRO_CSS, INTRO_HTML  # noqa: E402,F811
 
 
 def main():
