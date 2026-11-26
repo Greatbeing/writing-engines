@@ -4,8 +4,8 @@
 
 <h1 align="center">采风 · Caifeng</h1>
 
-<p align="center"><b>采其风，得其法。</b><br>
-<sub>Collect the style. Build the engine.</sub></p>
+<p align="center"><b>采其风，得其法，自成一体。</b><br>
+<sub>Collect the style. Learn the method. Find your own.</sub></p>
 
 <p align="center">每一种文风背后，都有一套没说出口的规则。我们把它采下来，造成引擎。<br>
 <a href="https://greatbeing.github.io/writing-engines/">官网</a> · 写作引擎库 writing-engines</p>

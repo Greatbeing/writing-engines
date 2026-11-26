@@ -113,8 +113,8 @@ def home(c):
         f'<span class="num">{num}</span><span class="go">进入 →</span></a>'
         for i, no, name, verb, href, desc, num in doors)
     return f"""<main class="home">
-<section class="h-hero"><div><h1>采其风，<br>得其法。</h1>
-<p class="en">Collect the style. Build the engine.</p>
+<section class="h-hero"><div><h1>采其风，得其法，<br>自成一体。</h1>
+<p class="en">Collect the style. Learn the method. Find your own.</p>
 <p class="sub">采风是一个教人写作的项目。先把名家的文风拆成原子，再把原子讲成课，最后用评测验证——目的不是让你像谁，是让你写出自己的风格。</p></div>
 {mark(None, 380)}</section>
 <section class="doors">{d}</section>
@@ -162,7 +162,7 @@ def patch_engines():
                '<li><a href="../articles/">范文</a></li><li><a href="../compare/">同题四体</a></li>'
                '<li class="sep"><a href="../lecture/">讲义</a></li><li><a href="../eval/">评测</a></li>',
                t, flags=re.S)
-    t = t.replace("<title>采风 · Caifeng — 采其风，得其法</title>", "<title>写作引擎 · 采风</title>")
+    t = t.replace("<title>采风 · Caifeng — 采其风，得其法，自成一体</title>", "<title>写作引擎 · 采风</title>")
     if "li.sep" not in t:
         t = t.replace("</style>", "nav li.sep{border-left:1px solid var(--rule);padding-left:28px}\n</style>", 1)
     p.write_text(t, encoding="utf-8")
@@ -184,7 +184,7 @@ def unify_nav(t):
            ".subnav a{border:0}.subnav a:hover{color:var(--zhu)}")
     if ".subnav{" not in t:
         t = t.replace("</style>", css + "\n</style>", 1)
-    t = t.replace("<h1>采其风，<br>得其法。</h1>", "<h1>写作引擎</h1>")
+    t = t.replace("<h1>采其风，得其法，<br>自成一体。</h1>", "<h1>写作引擎</h1>")
     return t
 
 
@@ -192,7 +192,7 @@ def main():
     c = counts()
     ba.SECTION = ""
     (DOCS / "index.html").write_text(
-        page("采其风，得其法", f"<style>{CSS}</style>" + home(c), ""), encoding="utf-8")
+        page("采其风，得其法，自成一体", f"<style>{CSS}</style>" + home(c), ""), encoding="utf-8")
     ba.SECTION = "eval"
     (DOCS / "eval").mkdir(exist_ok=True)
     (DOCS / "eval/index.html").write_text(
