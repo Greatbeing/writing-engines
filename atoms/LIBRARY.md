@@ -2,9 +2,9 @@
 
 > 方案 a：各引擎原子文件保留原样，只在每个原子下加 `**族**：X`。本页按族汇总；机器可读版见 [index.json](index.json)，一致性由 `tools/lint_skill.py`（A1–A3）校验。
 
-共 163 个原子｜18 族｜独有 47 个。
+共 182 个原子｜18 族｜独有 63 个。
 
-## 小处起笔（9）
+## 小处起笔（10）
 
 **通用定义**：从一个极小、具体、人人见过的东西或一件亲历小事切入，让大题目先有落脚点。
 
@@ -26,6 +26,7 @@
 ）
 - [sanlian·场景微电影](../sanlian-writing/references/atoms.md)（5 场景微电影）
 - [acheng·物事起笔](../acheng-writing/references/atom-ops.md)（1. 物事起笔）
+- [feature·开场帧](../feature-writing/references/atom-ops.md)（1. 开场帧）
 
 ## 自嘲（8）
 
@@ -248,7 +249,7 @@
 - [lijuan·拟人与对话万物](../lijuan-writing/references/atom-ops.md)（7. 拟人与对话万物
 ）
 
-## 冷笔白描（11）
+## 冷笔白描（13）
 
 **通用定义**：只写名词、动词、时间、数字与步骤，不加形容词与评价，让读者自己起反应。
 
@@ -274,6 +275,8 @@
 ）
 - [acheng·吃相](../acheng-writing/references/atom-ops.md)（2. 吃相）
 - [acheng·动作代心理](../acheng-writing/references/atom-ops.md)（3. 动作代心理）
+- [feature·细节处境化](../feature-writing/references/atom-ops.md)（4. 细节处境化）
+- [feature·克制抒情](../feature-writing/references/atom-ops.md)（8. 克制抒情）
 
 ## 命名（5）
 
@@ -407,6 +410,22 @@
 - [sanlian·网络梗考古](../sanlian-writing/references/atoms.md)（13 网络梗考古）
 - [sanlian·科技梗引用](../sanlian-writing/references/atoms.md)（18 科技梗引用）
 - [sanlian·双关梗](../sanlian-writing/references/atoms.md)（21 双关梗）
+- [feature·题记装置](../feature-writing/references/atom-ops.md)（2. 题记装置）
+- [feature·引语载荷](../feature-writing/references/atom-ops.md)（3. 引语载荷）
+- [feature·履历压缩](../feature-writing/references/atom-ops.md)（5. 履历压缩）
+- [feature·反差断言](../feature-writing/references/atom-ops.md)（6. 反差断言）
+- [feature·群像切片](../feature-writing/references/atom-ops.md)（7. 群像切片）
+- [feature·章节标题](../feature-writing/references/atom-ops.md)（9. 章节标题）
+- [feature·参考资料](../feature-writing/references/atom-ops.md)（10. 参考资料）
+- [gongwen·需求澄清](../gongwen-writing/references/atom-ops.md)（1. 需求澄清）
+- [gongwen·文种判定](../gongwen-writing/references/atom-ops.md)（2. 文种判定）
+- [gongwen·素材盘点](../gongwen-writing/references/atom-ops.md)（3. 素材盘点）
+- [gongwen·情境化语气](../gongwen-writing/references/atom-ops.md)（4. 情境化语气）
+- [gongwen·篇幅控制](../gongwen-writing/references/atom-ops.md)（5. 篇幅控制）
+- [gongwen·规范结构](../gongwen-writing/references/atom-ops.md)（6. 规范结构）
+- [gongwen·默念自查](../gongwen-writing/references/atom-ops.md)（7. 默念自查）
+- [gongwen·交付多嘴一句](../gongwen-writing/references/atom-ops.md)（8. 交付多嘴一句）
+- [gongwen·风格沉淀](../gongwen-writing/references/atom-ops.md)（9. 风格沉淀）
 
 ## 对初拟 14 族的调整及理由
 
@@ -418,3 +437,4 @@
 6. **「小处起笔」放宽到「小处切入」**：官方「场景钩」、人民日报「以小见大」不在开头而在论证中段落地，但动作相同（以具体小处承载大题），归入此族，变体里注明位置差异。
 7. **鲁迅「正话反说」归「正经夸张」**：都是用正经语气让荒谬自露，鲁迅为反讽变体；其余族维持初拟。
 8. **独有**：选题算法（官方情绪套利）、姿态类（接情绪、平视共谋、沉默者立场）、小说叙事技法（动作分镜、悬念、对白等）、单引擎语言质地（文白相间、色彩点睛等）不硬归。
+9. **特稿、公文入库（+19）**：特稿「开场帧」以一帧具体画面落脚，归小处起笔；「细节处境化」「克制抒情」只摆事实不加评价，归冷笔白描。其余特稿原子（题记、引语、履历压缩、反差断言、群像切片、章节标题、参考资料）在现有族里找不到同一动作，标独有。公文 9 条是工作流与格式规矩（澄清、文种、素材、语气档、篇幅、结构、自查、交付说明、风格沉淀），均为单引擎，不够 3 个引擎，不新开族，全部标独有。

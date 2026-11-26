@@ -1302,5 +1302,157 @@
     "family": "不收的收尾",
     "file": "versailles-writing/references/atom-ops.md",
     "heading": "## 10. 淡收\n"
+  },
+  {
+    "id": "feature.1",
+    "name": "开场帧",
+    "engine": "feature-writing",
+    "family": "小处起笔",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 1. 开场帧\n"
+  },
+  {
+    "id": "feature.2",
+    "name": "题记装置",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 2. 题记装置\n"
+  },
+  {
+    "id": "feature.3",
+    "name": "引语载荷",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 3. 引语载荷\n"
+  },
+  {
+    "id": "feature.4",
+    "name": "细节处境化",
+    "engine": "feature-writing",
+    "family": "冷笔白描",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 4. 细节处境化\n"
+  },
+  {
+    "id": "feature.5",
+    "name": "履历压缩",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 5. 履历压缩\n"
+  },
+  {
+    "id": "feature.6",
+    "name": "反差断言",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 6. 反差断言\n"
+  },
+  {
+    "id": "feature.7",
+    "name": "群像切片",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 7. 群像切片\n"
+  },
+  {
+    "id": "feature.8",
+    "name": "克制抒情",
+    "engine": "feature-writing",
+    "family": "冷笔白描",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 8. 克制抒情\n"
+  },
+  {
+    "id": "feature.9",
+    "name": "章节标题",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 9. 章节标题\n"
+  },
+  {
+    "id": "feature.10",
+    "name": "参考资料",
+    "engine": "feature-writing",
+    "family": "独有",
+    "file": "feature-writing/references/atom-ops.md",
+    "heading": "## 10. 参考资料\n"
+  },
+  {
+    "id": "gongwen.1",
+    "name": "需求澄清",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 1. 需求澄清\n"
+  },
+  {
+    "id": "gongwen.2",
+    "name": "文种判定",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 2. 文种判定\n"
+  },
+  {
+    "id": "gongwen.3",
+    "name": "素材盘点",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 3. 素材盘点\n"
+  },
+  {
+    "id": "gongwen.4",
+    "name": "情境化语气",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 4. 情境化语气\n"
+  },
+  {
+    "id": "gongwen.5",
+    "name": "篇幅控制",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 5. 篇幅控制\n"
+  },
+  {
+    "id": "gongwen.6",
+    "name": "规范结构",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 6. 规范结构\n"
+  },
+  {
+    "id": "gongwen.7",
+    "name": "默念自查",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 7. 默念自查\n"
+  },
+  {
+    "id": "gongwen.8",
+    "name": "交付多嘴一句",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 8. 交付多嘴一句\n"
+  },
+  {
+    "id": "gongwen.9",
+    "name": "风格沉淀",
+    "engine": "gongwen-writing",
+    "family": "独有",
+    "file": "gongwen-writing/references/atom-ops.md",
+    "heading": "## 9. 风格沉淀\n"
   }
 ]
