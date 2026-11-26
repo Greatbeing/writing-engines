@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周五晚上，年轻人不约酒，只约洗衣机 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+
+.js nav .brand svg path{stroke-dasharray:140;stroke-dashoffset:140;animation:e-draw .9s cubic-bezier(.6,0,.2,1) forwards}
+.js nav .brand svg path:nth-child(2){animation-delay:.12s}.js nav .brand svg path:nth-child(3){animation-delay:.24s}
+@keyframes e-draw{to{stroke-dashoffset:0}}
+.js nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;animation:e-rule 1.1s cubic-bezier(.7,0,.2,1) .1s forwards}
+nav{position:sticky}
+@keyframes e-rule{to{transform:scaleX(1)}}
+.e-seal{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;background:var(--zhu);color:#F5F1E8;
+  font:900 10px/1 var(--serif);border-radius:2px;vertical-align:middle;transform:rotate(-6deg)}
+.js .e-seal{opacity:0;transform:scale(2) rotate(-16deg);animation:e-stamp .38s cubic-bezier(.3,1.6,.5,1) .55s forwards}
+@keyframes e-stamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
+.js .e-in{opacity:0;animation:e-ink .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.35s + var(--k,0) * 90ms)}
+@keyframes e-ink{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-seal,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
+</style><script>document.documentElement.classList.add('js')</script></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风<span class="e-seal" aria-hidden="true">采</span></a><div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button><button data-fs="1" aria-label="放大字号">A＋</button><button id="night" aria-label="夜读">夜读</button><a href="../articles/">目录</a></div></div></nav>
+<div id="bar"></div>
+<article>
+<div class="head"><div class="feng">城市之风 · 活人感</div>
+<h1>周五晚上，年轻人不约酒，只约洗衣机</h1>
+<div class="meta">2026-11-26 · 约 1101 字 · 读完约 2 分钟</div></div>
+<div class="body"><p>周五晚上，年轻人应该去哪里？</p>
+<p>这是个几乎不需要思考的共识：约朋友，找一家灯光昏暗的店，点几盘油腻的下酒菜，聊聊工作和感情，直到被服务员提醒打烊。</p>
+<p>但最近，我的几个朋友开始拒绝这个共识。他们周五晚上不约酒，只约一台洗衣机。</p>
+<p>不是因为没钱，也不是因为没朋友。在24小时自助洗衣房，坐在塑料凳上，看着衣服在圆筒里翻滚，他们觉得比在酒吧里更安全，也更松弛。</p>
+<p>说白了，洗衣房是一种廉价的“情绪加油站”。</p>
+<p>实用原因很简单：空调开着，座位免费，没人强迫你消费，可以待到凌晨。一篮子脏衣服，洗烘折叠，正好填满两三个小时。而且在这里，没有人会问你本月KPI完成了没有，没有人会发来未读消息。</p>
+<p>心态原因更隐蔽。独自在房间里发呆，容易陷入“我是不是被遗弃了”的细节；在洗衣房，周围有人，但没人要求你社交。衣服转一圈四十分钟，正好让大脑停下来，不必思考下一周要不要加班。</p>
+<p>小林，互联网产品经理，28岁。上个月第一次去洗衣房，带着两篮脏衣服和一台平板。他选了离干衣机最近的位置，一边刷剧一边等烘完。</p>
+<p>“在家里坐着，手会不自觉地去打开工作群，”小林说，“在洗衣房坐着，只想衣服。”</p>
+<p>这个例子解决了一个“但是”：在家不行吗？不行，家里的沙发太会勾引人加班，书桌上还摆着未拆的快递和未回的邮件。</p>
+<p>阿沁，自由插画师，24岁。她习惯周五晚上带着素描本去洗衣房，洗一篮床单和衣服，顺便画陌生人的侧影。她会选靠窗的座位，把洗衣液的味道当作背景音乐。</p>
+<p>“图书馆太安静，安静得让人难过，”阿沁说，“这里有人走动，有滚筒转动的嗡嗡声，但没人问我画得怎么样，也没人凑过来看。”</p>
+<p>解决另一个“但是”：为什么不去图书馆？因为安静是另一种压力，而洗衣房的嘈杂是白噪音。</p>
+<p>小孙，护士，30岁。夜班结束早晨七点，她会直接去洗衣房，把制服和私人衣物分开洗。她会带一本书，虽然大部分时间只是盯着衣服在圆筒里打转。</p>
+<p>“洗衣机转一圈，正好让大脑空白，”她说，“出来的时候，天已经亮了，身体也安静了。”</p>
+<p>解决第三个“但是”：为什么不直接回家睡觉？因为身体累了，大脑还醒着，需要一个过渡地段，让疲惫从工作模式切换到休息模式。</p>
+<p>当然，有人会说，这不就是穷，装什么文艺？</p>
+<p>不装。在大城市租房，洗衣机往往是共享的，或者根本没有。去洗衣房，先是为了洗干净衣服，其次是为了买一小时不被打扰的权利。这种权利在酒吧里买不到，在家里也买不到。主打一个自洽：花二十块钱，换一个不用面对空房间的周五晚上。</p>
+<p>不是因为他们不想热闹，而是因为他们想要一种“在场但不参与”的孤独。</p>
+<p>周五晚上，一碗便利店的馄饨，一张洗衣房的塑料凳，几件衣服在机器里慢慢转干。比喝醉更诚实，也比失眠更温柔。</p>
+<p>你周五晚上，去过什么地方，只是为了不孤独？</p>
+<blockquote>
+<p>综合创作。</p>
+</blockquote></div></article>
+<div class="note"><div class="box">本文是引擎 <code>sanlian-writing</code> 的模型产出示例，不是语料原文。
+源文件：<a href="https://github.com/Greatbeing/writing-engines/blob/master/sanlian-writing/examples/2026-11-26-周五晚上-年轻人不约酒-只约洗衣机.md">sanlian-writing/examples/2026-11-26-周五晚上-年轻人不约酒-只约洗衣机.md</a></div></div>
+<div class="pager"><span></span><a href="2026-11-25-zhexuan.html">被替代的不是人，是站在原地的那一步 →</a></div>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+
+(()=>{let k=0;document.querySelectorAll('main > *, body > section, body > article, body > .how').forEach(el=>{
+  if(k>5)return;el.classList.add('e-in');el.style.setProperty('--k',k++)});
+ setTimeout(()=>document.querySelectorAll('.e-in').forEach(el=>{el.classList.remove('e-in')}),2200)})();
+</script></body></html>
