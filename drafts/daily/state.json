@@ -17,7 +17,11 @@
       "stars": 2,
       "file": "drafts/daily/reviews/2026-11-26.md",
       "by": "god",
-      "verdict": "needs_fix"
+      "verdict": "needs_fix",
+      "issues": [
+        "口语词（「说白了」×2、「主打」×1、「自洽」×1，共4处超标）",
+        "对仗位置（「不是因为没钱，也不是因为没朋友」现于第4段非转折处）"
+      ]
     }
   ]
 }

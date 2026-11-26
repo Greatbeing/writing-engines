@@ -8,9 +8,9 @@ cd "$HOME_DIR" || { echo "找不到 $HOME_DIR"; exit 2; }
 echo "═══ 定时器 ═══"
 for r in write review; do
   u="writing-daily-$r.timer"
-  printf '%-28s enabled=%-8s active=%-8s\n' "$u" \
-    "$(systemctl --user is-enabled "$u" 2>/dev/null || echo -)" \
-    "$(systemctl --user is-active "$u" 2>/dev/null || echo -)"
+  printf '%-28s enabled=%-10s active=%-8s\n' "$u" \
+    "$(systemctl --user is-enabled "$u" 2>/dev/null | head -1 | tr -d '\n' || true)" \
+    "$(systemctl --user is-active  "$u" 2>/dev/null | head -1 | tr -d '\n' || true)"
 done
 systemctl --user list-timers --all 2>/dev/null | grep -E 'writing-daily|^NEXT' | sed 's/^/  /'
 
