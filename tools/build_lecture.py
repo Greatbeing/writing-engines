@@ -108,7 +108,8 @@ def main():
     idx = (f'<section class="list"><h1>采风 · 讲义</h1>'
            f'<p class="lead">把写作变成可以学的手艺。<br>一讲只教一个动作，写完就能改。</p>'
            f'<div class="brandline">采其风，得其法，成其体</div>{lst}</section>'
-           f'<div class="foot"><div class="box"></div><p>第一季三讲：起、行、收。'
+           f'<div class="foot"><div class="box"></div><p>第一季{"一二三四五六七八九十"[len(items)-1]}讲：'
+           + "、".join(t.split()[1][0] for _, t, _ in items if len(t.split()) > 1) + "。"
            f"每讲五节——一个动作、名家怎么写、AI 写成什么样、改一遍、你的练习。</p></div>"
            f"<style>{CSS}</style>")
     (OUT / "index.html").write_text(page("采风 · 讲义", idx, "../"), encoding="utf-8")

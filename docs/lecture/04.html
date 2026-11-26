@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第四讲 改：删掉可有可无的字 · 采风讲义 · 采风</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F1E8;--ink:#1A1A1A;--ink2:#5A564E;--rule:#D8D1C2;--zhu:#B23A2B;
+--serif:'Noto Serif SC','Source Han Serif SC','Songti SC',serif;
+--sans:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--fs:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.9 var(--sans);-webkit-font-smoothing:antialiased}
+body.night{--paper:#1C1B19;--ink:#E6E0D3;--ink2:#9C968A;--rule:#3A3731}
+::selection{background:var(--zhu);color:var(--paper)}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-color:var(--zhu)}
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font:600 17px var(--serif);letter-spacing:.2em;border:0;display:flex;gap:10px;align-items:center}
+nav .tools{display:flex;gap:6px;font-size:13px;color:var(--ink2)}
+nav .tools a,nav .tools button{border:1px solid var(--rule);background:none;color:inherit;font:13px var(--sans);padding:3px 10px;cursor:pointer}
+nav .tools button:hover,nav .tools a:hover{border-color:var(--zhu);color:var(--zhu)}
+#bar{position:fixed;top:56px;left:0;height:2px;background:var(--zhu);width:0;z-index:6}
+/* 列表 */
+.list{max-width:760px;margin:0 auto;padding:72px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.12em}
+.list .intro{color:var(--ink2);margin:12px 0 48px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:28px 0}
+.item:last-child{border-bottom:1px solid var(--ink)}
+.item .feng{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 23px/1.6 var(--serif);margin:6px 0 8px}
+.item:hover h2{color:var(--zhu)}
+.item p{color:var(--ink2);font-size:15px}
+.item .meta{font:12px var(--mono);color:var(--ink2);margin-top:10px;letter-spacing:.05em}
+/* 正文 */
+article{max-width:34em;margin:0 auto;padding:64px 24px 40px;font-size:var(--fs)}
+article .head{border-bottom:1px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+article .feng{font:600 13px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+article h1{font:900 1.75em/1.45 var(--serif);letter-spacing:.04em;margin:10px 0 14px}
+article .meta{font:13px var(--sans);color:var(--ink2);letter-spacing:.05em}
+.body{font-family:var(--serif);line-height:2;text-align:justify}
+.body p{margin:0 0 1.15em}
+.body h2{font:600 1.15em/1.6 var(--serif);margin:2.2em 0 .9em;padding-left:14px;border-left:3px solid var(--zhu)}
+.body h3{font:600 1.05em var(--serif);margin:1.8em 0 .7em}
+.body blockquote{border-left:2px solid var(--rule);padding:2px 0 2px 18px;color:var(--ink2);margin:1.4em 0}
+.body ul,.body ol{padding-left:1.6em;margin:0 0 1.15em}
+.body strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(178,58,43,.16) 0)}
+.body hr{border:0;text-align:center;margin:2.4em 0}.body hr::after{content:"· · ·";color:var(--ink2);letter-spacing:.6em}
+.body table{border-collapse:collapse;width:100%;font:14px/1.7 var(--sans);margin:1.4em 0}
+.body th,.body td{border-bottom:1px solid var(--rule);padding:8px 6px;text-align:left}
+.body img{max-width:100%}
+.note{max-width:34em;margin:0 auto;padding:0 24px 24px;font-size:13px;color:var(--ink2)}
+.note .box{border-top:1px solid var(--ink);padding-top:16px}
+.pager{max-width:34em;margin:0 auto;padding:8px 24px 64px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border:0;color:var(--ink2)}.pager a:hover{color:var(--zhu)}
+footer{max-width:1080px;margin:0 auto;padding:40px 32px 56px;border-top:1px solid var(--rule);display:flex;gap:14px;align-items:center;font:600 14px var(--serif);letter-spacing:.2em}
+@media(max-width:600px){article{padding-top:40px}.list{padding-top:48px}nav .in{padding:0 16px}}
+@media print{nav,#bar,.pager,footer{display:none}body{background:#fff}}
+
+.js nav .brand svg path{stroke-dasharray:140;stroke-dashoffset:140;animation:e-draw .9s cubic-bezier(.6,0,.2,1) forwards}
+.js nav .brand svg path:nth-child(2){animation-delay:.12s}.js nav .brand svg path:nth-child(3){animation-delay:.24s}
+@keyframes e-draw{to{stroke-dashoffset:0}}
+.js nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;animation:e-rule 1.1s cubic-bezier(.7,0,.2,1) .1s forwards}
+nav{position:sticky}
+@keyframes e-rule{to{transform:scaleX(1)}}
+.e-seal{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;background:var(--zhu);color:#F5F1E8;
+  font:900 10px/1 var(--serif);border-radius:2px;vertical-align:middle;transform:rotate(-6deg)}
+.js .e-seal{opacity:0;transform:scale(2) rotate(-16deg);animation:e-stamp .38s cubic-bezier(.3,1.6,.5,1) .55s forwards}
+@keyframes e-stamp{to{opacity:1;transform:scale(1) rotate(-6deg)}}
+.js .e-in{opacity:0;animation:e-ink .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.35s + var(--k,0) * 90ms)}
+@keyframes e-ink{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
+@media(prefers-reduced-motion:reduce){.js nav .brand svg path,.js nav::after,.js .e-seal,.js .e-in{animation:none;opacity:1;stroke-dashoffset:0;transform:none;filter:none}}
+</style><script>document.documentElement.classList.add('js')</script></head><body>
+<nav><div class="in"><a class="brand" href="../"><svg viewBox="0 0 96 56" width="26" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风<span class="e-seal" aria-hidden="true">采</span></a><div class="tools"><button id="night">夜读</button><a href="../">首页</a></div></div></nav>
+
+<article class="lec"><div class="sub">采风 · 讲义</div><h1>第四讲 改：删掉可有可无的字</h1><hr class="rule"><div class="body"><p>前三讲教的是怎么写。这一讲教的是写完以后做什么。</p>
+<p>鲁迅回答别人问写作方法，说过一句很实在的话：</p>
+<blockquote>
+<p>写完后至少看两遍，竭力将可有可无的字，句，段删去，毫不可惜。</p>
+</blockquote>
+<p>注意这句话本身：没有「我认为」，没有「非常重要」。他自己先删过了。</p>
+<h2>一、这一讲你要学会的一个动作</h2>
+<blockquote>
+<p><strong>写完放一放，回来只做减法：每一句都问「删掉它，读者会少知道什么」。答不上来，就删。</strong></p>
+</blockquote>
+<p>判断标准：<strong>改完的稿子比初稿短三成，意思一点没少。</strong> 短不下来，说明你还在舍不得。</p>
+<h2>二、名家怎么写</h2>
+<p>苏轼的《记承天寺夜游》全文不到一百字：一个夜晚、一个朋友、一片月光、一句感慨。</p>
+<p>他没写为什么被贬到黄州，没写张怀民是谁，没写那晚聊了什么。这些都是「可有可无」——对他自己很重要，对这篇文章不是。</p>
+<p><strong>删，不是删坏的句子，是删不属于这一篇的好句子。</strong> 这最难。</p>
+<h2>三、AI 写成什么样</h2>
+<p>机器的稿子有三种水分，最好认：</p>
+<ol>
+<li><strong>铺垫</strong>：「说到……，不得不提……」「众所周知……」——正文还没开始。</li>
+<li><strong>复述</strong>：同一个意思换三种说法各说一遍，第二、三遍是在凑字数。</li>
+<li><strong>保险</strong>：「在一定程度上」「某种意义上」「或许可以说」——作者不敢下判断，就给每句话加一层垫子。</li>
+</ol>
+<p>它们都不是错句，所以初学者舍不得删。但读者每读一句废话，对下一句的信任就少一分。</p>
+<h2>四、改一遍</h2>
+<p><strong>原句</strong></p>
+<blockquote>
+<p>说到童年，不得不提我外婆家门口那棵老槐树。在某种意义上，那棵树陪伴了我整个童年，见证了我的成长，是我童年记忆中不可或缺的一部分。</p>
+</blockquote>
+<p><strong>拆解</strong>：铺垫一处（说到……不得不提），保险一处（某种意义上），复述三处（陪伴、见证、不可或缺，说的是同一件事）。真正的信息只有一条：外婆家门口有棵老槐树。</p>
+<p><strong>改后</strong></p>
+<blockquote>
+<p>外婆家门口有棵老槐树。我七岁那年爬上去，下不来，在上面坐到天黑。</p>
+</blockquote>
+<p>删掉了一半以上的字，又补了一件事。<strong>改不只是删，是把删出来的位置，留给一个具体的东西。</strong></p>
+<h2>五、你的练习</h2><div class="homework">
+<p>找一篇你自己写过的东西（作文、周报、朋友圈长文都行），取其中 300 字左右的一段。</p>
+<p><strong>三条限制：</strong></p>
+<ol>
+<li>改完的字数不超过原文的 70%。</li>
+<li>删掉所有「某种意义上」「在一定程度上」「不得不说」「众所周知」。</li>
+<li>至少补进一个原文没有的具体细节（一个时间、一个数字、一句原话）。</li>
+</ol>
+<p><strong>自查</strong>：把两版并排放。<strong>如果删掉的那三成你一句都不想念，说明删对了。</strong> 如果某句真的想念，把它放回去——那句是你的。</p>
+</div><hr />
+<blockquote>
+<p>这一讲只教一个动作：只做减法，把位置留给具体的东西。
+下一篇：让人物自己说话。</p>
+</blockquote></div></article><div class="pager"><a href="03.html">← 第三讲 收：结尾别升华</a><a href="05.html">第五讲 话：让人物自己说话 →</a></div><style>
+.lec{max-width:720px;margin:0 auto;padding:56px 28px 40px}
+.lec h1{font:900 clamp(28px,4vw,40px)/1.3 var(--serif);letter-spacing:.06em;margin:0 0 6px}
+.lec .sub{font:12px var(--mono);color:var(--ink2);letter-spacing:.18em;margin-bottom:8px}
+.lec hr.rule{border:0;border-top:1px solid var(--zhu);width:64px;margin:18px 0 34px}
+.body{font-size:17px;line-height:1.95}
+.body h2{font:600 21px/1.6 var(--serif);letter-spacing:.04em;margin:44px 0 14px;padding-left:14px;position:relative}
+.body h2::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;background:var(--zhu);border-radius:1px}
+.body h3{font:600 17px/1.6 var(--serif);margin:26px 0 8px;color:var(--ink2)}
+.body p{margin:0 0 16px}
+.body blockquote{border-left:2px solid var(--ink);padding:2px 0 2px 18px;margin:18px 0;color:var(--ink2);font:400 17px/1.9 var(--serif)}
+.body blockquote p{margin:0 0 10px}
+.body blockquote p:last-child{margin:0}
+.body strong{font-weight:600}
+.body ul,.body ol{margin:0 0 16px 1.3em}
+.body li{margin:6px 0}
+.body hr{border:0;border-top:1px dashed var(--rule);margin:36px 0}
+.body em{font-style:normal;color:var(--ink2)}
+.body table{font-size:15px}
+.pager{max-width:720px;margin:0 auto;padding:0 28px 56px;display:flex;justify-content:space-between;gap:16px;font-size:14px}
+.pager a{border-bottom:1px solid var(--rule)}
+.pager a:hover{border-color:var(--zhu);color:var(--zhu)}
+.list{max-width:820px;margin:0 auto;padding:64px 32px 40px}
+.list h1{font:900 34px/1.4 var(--serif);letter-spacing:.1em}
+.list .lead{color:var(--ink2);margin:14px 0 10px;font:400 17px/1.9 var(--serif)}
+.list .brandline{font:12px var(--mono);color:var(--ink2);letter-spacing:.18em;margin-bottom:36px}
+.item{display:block;border:0;border-top:1px solid var(--ink);padding:24px 0}
+.item:last-of-type{border-bottom:1px solid var(--ink)}
+.item .no{font:600 12px var(--serif);letter-spacing:.3em;color:var(--zhu)}
+.item h2{font:600 20px/1.6 var(--serif);margin:6px 0 0}
+.item .one{color:var(--ink2);font-size:14.5px;margin-top:6px}
+.foot{max-width:820px;margin:0 auto;padding:0 32px 64px;font-size:13px;color:var(--ink2)}
+.foot .box{border-top:1px solid var(--zhu);padding-top:14px;max-width:64px}
+.homework{background:#EFE9DC;border-left:2px solid var(--zhu);padding:4px 20px 6px;margin:10px 0 26px}
+.homework p{margin:10px 0}
+.homework ol,.homework ul{margin:8px 0 10px 1.3em}
+@media(max-width:640px){.lec,.pager{padding-left:20px;padding-right:20px}.body{font-size:16.5px}}
+</style>
+<footer><svg viewBox="0 0 96 56" width="40" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 14 C30 6, 56 24, 92 12" stroke="#1A1A1A" stroke-width="2.6"/><path d="M12 30 C36 22, 58 38, 82 28" stroke="#1A1A1A" stroke-width="2"/><path d="M20 46 C40 39, 58 53, 72 44" stroke="#B23A2B" stroke-width="2.6"/></svg>采风 · CAIFENG</footer>
+<script>
+const b=document.body,k='cf-read';
+const s=JSON.parse(localStorage.getItem(k)||'{}');
+if(s.fs)document.documentElement.style.setProperty('--fs',s.fs+'px');
+if(s.night)b.classList.add('night');
+function save(){localStorage.setItem(k,JSON.stringify(s))}
+document.querySelectorAll('[data-fs]').forEach(x=>x.onclick=()=>{
+  s.fs=Math.min(24,Math.max(15,(s.fs||18)+(+x.dataset.fs)));
+  document.documentElement.style.setProperty('--fs',s.fs+'px');save()});
+const n=document.getElementById('night');
+if(n)n.onclick=()=>{s.night=!s.night;b.classList.toggle('night',s.night);save()};
+const bar=document.getElementById('bar');
+if(bar)addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100||0)+'%'},{passive:true});
+
+(()=>{let k=0;document.querySelectorAll('main > *, body > section, body > article, body > .how').forEach(el=>{
+  if(k>5)return;el.classList.add('e-in');el.style.setProperty('--k',k++)});
+ setTimeout(()=>document.querySelectorAll('.e-in').forEach(el=>{el.classList.remove('e-in')}),2200)})();
+</script></body></html>
