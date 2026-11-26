@@ -4,6 +4,8 @@
 
 <h1 align="center">采风 · Caifeng</h1>
 
+<p align="center">简体中文 · [English](README.en.md)</p>
+
 <p align="center"><b>采其风，得其法，自成一体。</b><br>
 <sub>Collect the style. Learn the method. Find your own.</sub></p>
 

@@ -299,11 +299,102 @@ def unify_nav(t):
 from site_intro import INTRO_CSS, INTRO_HTML  # noqa: E402,F811
 
 
+# ---- English home (docs/en/index.html) ----
+GH_EN = GH + "/blob/master/README.en.md"
+LANG_CSS = ("nav a.lang{border:0;font:12px var(--mono);letter-spacing:.18em;color:var(--ink2);margin-left:22px}"
+            "nav a.lang:hover{color:var(--zhu)}")
+EN_CSS = """
+.h-hero h1.en-h{letter-spacing:.01em;font-size:clamp(34px,4.2vw,58px);line-height:1.22}
+.h-hero h1.en-h span{white-space:normal}
+.enb{border-top:1px solid var(--ink);padding:48px 0 52px;display:grid;grid-template-columns:200px 1fr;gap:40px}
+.enb h2{font:600 20px/1.5 var(--serif)}
+.enb p,.enb li{font:400 16px/1.9 var(--serif);color:var(--ink2)}
+.enb p+p{margin-top:12px}.enb ul{list-style:none}.enb li{border-top:1px solid var(--rule);padding:8px 0}
+.enb code,.enb pre{font:13px/1.7 var(--mono)}
+.enb pre{border:1px solid var(--rule);padding:14px 16px;overflow:auto;margin:12px 0}
+.enb table{border-collapse:collapse;width:100%;font:14.5px/1.6 var(--serif)}
+.enb td,.enb th{border-top:1px solid var(--rule);padding:7px 10px 7px 0;text-align:left;vertical-align:top}
+.enb th{font-weight:600;color:var(--ink)}.enb td{color:var(--ink2)}
+@media(max-width:820px){.enb{grid-template-columns:1fr;gap:14px}}
+"""
+EN_ENGINES = [
+    ("sanlian-writing", "Lived-in city observation (Sanlian Life Lab style)", "Ready"),
+    ("zhexuan-writing", "Official commentary (Zhejiang Propaganda style)", "Ready"),
+    ("feature-writing", "Profile features (<i>Renwu</i> magazine style)", "Ready"),
+    ("gongwen-writing", "Government official documents (GB/T 9704-2012)", "Ready"),
+    ("sushi-writing", "Su Shi-style vernacular essays (苏轼体)", "Trial"),
+    ("luxun-writing", "Lu Xun-style essay (鲁迅体)", "Trial"),
+    ("wangxiaobo-writing", "Wang Xiaobo-style humorous argument (王小波体)", "Trial"),
+    ("zhangailing-writing", "Eileen Chang-style prose (张爱玲体)", "Trial"),
+    ("lijuan-writing", "Li Juan-style plain-sketch prose (李娟体)", "Trial"),
+    ("yuhua-writing", "Yu Hua-style detached narration (余华体)", "Trial"),
+    ("standup-writing", "Chinese stand-up comedy scripts (脱口秀稿)", "Trial"),
+    ("versailles-writing", "&ldquo;Versailles&rdquo; humblebrag (凡尔赛体)", "Trial"),
+    ("guanfang-writing", "<i>People&rsquo;s Daily</i> commentary (人民日报评论体)", "Trial"),
+    ("wangzengqi-writing", "Wang Zengqi-style prose (汪曾祺体)", "Trial"),
+    ("jinyong-writing", "Jin Yong-style wuxia narrative (金庸体)", "Trial"),
+    ("acheng-writing", "Ah Cheng-style plain-sketch narrative (阿城体)", "Trial"),
+    ("mao-writing", "Mao Zedong-style argumentative prose (毛泽东文章体)", "Trial"),
+]
+
+
+def home_en(c):
+    rows = "".join(f'<tr><td><a href="{GH}/tree/master/{d}"><code>{d}</code></a></td><td>{g}</td><td>{s}</td></tr>'
+                   for d, g, s in EN_ENGINES)
+    return f"""<main class="home">
+<section class="h-hero"><div><h1 class="en-h"><span>Collect the style.</span><span>Learn the method.</span><span class="last">Find your own.</span></h1>
+<p class="en">采其风 · 得其法 · 自成一体</p>
+<div class="rule"></div>
+<p class="sub">Caifeng is a project for learning to write. It breaks the styles of established writers into atoms, teaches the atoms as lessons, and tests the results. The aim is not to sound like anyone, but to arrive at a style of your own.</p></div>
+{ATOM_SVG}</section>
+<section class="enb"><h2>What an engine is</h2><div>
+<p>A genre is a set of operating rules its authors never state. An engine takes a genre apart to a grain you can execute, then reassembles the parts into something that can write new pieces.</p>
+<pre>engine = atomic techniques × style fingerprint × red-line review</pre>
+<p>Atoms govern how a piece is thought up; the fingerprint, how a draft is checked; red lines, what must never appear. A template makes you sound like it; an engine means you don&rsquo;t have to.</p></div></section>
+<section class="enb"><h2>Engines</h2><div>
+<p>{c['engines']} engines, {c['atoms']} atoms. Four are ready; the rest are on trial. Engine pages are in Chinese.</p>
+<table><tr><th>Engine</th><th>Genre</th><th>Status</th></tr>{rows}</table>
+<p><a href="../engines/">Browse all engines (Chinese) →</a> &nbsp; <a href="../articles/">Sample pieces (Chinese) →</a></p></div></section>
+<section class="enb"><h2>Atom library</h2><div>
+<p>Lay the engines side by side and many moves turn out to be the same move. The cross-engine library holds {c['atoms']} atoms in 18 families plus 63 unique ones. Different authors are different combinations of the same atoms.</p>
+<p><a href="../atoms/">Atom library (Chinese) →</a></p></div></section>
+<section class="enb"><h2>Teaching layer</h2><div>
+<p>Three tracks: recognize single atoms, see how authors combine them, then diagnose your own drafts. {c['lectures']} lectures so far, each one technique: see it in the original, take it apart, write it yourself.</p>
+<p><a href="../lecture/">Lectures (Chinese) →</a> &nbsp; <a href="../eval/">Evaluation (Chinese) →</a></p></div></section>
+<section class="enb"><h2>Install</h2><div>
+<p>Each engine is a self-contained <code>SKILL.md</code> directory with no code dependencies. Copy it into your host&rsquo;s skills path (OpenClaw, Claude Code, or any host that reads <code>SKILL.md</code>).</p>
+<pre>git clone {GH}.git
+cp -r writing-engines/luxun-writing ~/.openclaw/workspace/skills/</pre>
+<p><a href="{GH_EN}">Read the English README on GitHub ↗</a></p></div></section>
+</main>"""
+
+
+def add_lang(t, href, label):
+    t = t.replace('<div class="tools">', f'<a class="lang" href="{href}">{label}</a><div class="tools">', 1)
+    return t.replace("</style>", LANG_CSS + "</style>", 1)
+
+
+def build_en(c):
+    ba.SECTION = ""
+    t = page("Collect the style. Learn the method. Find your own.",
+             f"<style>{CSS}{ATOM_CSS}{EN_CSS}</style>" + home_en(c) + f"<script>{ATOM_JS}</script>", "../")
+    t = t.replace('<html lang="zh-CN">', '<html lang="en">', 1)
+    t = t.replace(' · 采风</title>', ' · Caifeng</title>', 1)
+    for zh, en in ((">引擎</a>", ">Engines</a>"), (">讲义</a>", ">Lectures</a>"), (">评测</a>", ">Evaluation</a>"),
+                   (">夜读</button>", ">Night</button>")):
+        t = t.replace(zh, en)
+    t = add_lang(t, "../", "中文")
+    (DOCS / "en").mkdir(exist_ok=True)
+    (DOCS / "en/index.html").write_text(t, encoding="utf-8")
+
+
 def main():
     c = counts()
     ba.SECTION = ""
-    (DOCS / "index.html").write_text(
-        page("采其风，得其法，自成一体", f"<style>{CSS}{INTRO_CSS}{ATOM_CSS}</style>" + INTRO_HTML + home(c) + f"<script>{ATOM_JS}</script>", ""), encoding="utf-8")
+    (DOCS / "index.html").write_text(add_lang(
+        page("采其风，得其法，自成一体", f"<style>{CSS}{INTRO_CSS}{ATOM_CSS}</style>" + INTRO_HTML + home(c) + f"<script>{ATOM_JS}</script>", ""),
+        "en/", "EN"), encoding="utf-8")
+    build_en(c)
     ba.SECTION = "eval"
     (DOCS / "eval").mkdir(exist_ok=True)
     (DOCS / "eval/index.html").write_text(
