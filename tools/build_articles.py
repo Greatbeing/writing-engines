@@ -148,6 +148,11 @@ def site_nav(rel):
             '<a href="https://github.com/Greatbeing/writing-engines">GitHub ↗</a></div>')
 
 
+EN_SITE = "https://greatbeing.github.io/caifeng-en/"
+EN_SITE_LINK = (f'<a class="ensite" href="{EN_SITE}" style="margin-left:auto;border:0;font:400 12px var(--mono);'
+                'letter-spacing:.12em;color:var(--ink2)">English site ↗</a>')
+
+
 def page(title, body, rel, reader=False):
     tools = ('<div class="tools"><button data-fs="-1" aria-label="缩小字号">A−</button>'
              '<button data-fs="1" aria-label="放大字号">A＋</button>'
@@ -166,7 +171,7 @@ def page(title, body, rel, reader=False):
 <nav><div class="in"><a class="brand" href="{rel}">{LOGO.format(w=26)}采风</a>{site_nav(rel)}{tools}</div></nav>
 {'<div id="bar"></div>' if reader else ''}
 {body}
-<footer>{LOGO.format(w=40)}采风 · CAIFENG</footer>
+<footer>{LOGO.format(w=40)}采风 · CAIFENG{EN_SITE_LINK}</footer>
 <script>{JS}{ENTER_JS}</script></body></html>
 """
 

@@ -1,0 +1,16 @@
+<main class="ev">{MARK}
+<h1>Evaluation</h1>
+<p class="lead">An engine claims it can write in a style; a lecture claims a move works. Both claims have to be tested against results. Evaluation has three layers: daily marking, a machine screen, and human blind review.</p>
+<section class="tool"><div class="k">01 · DAILY</div><div>
+<h2>Marking desk</h2><p>Every day the writer side produces one piece with one engine. Drafts that fail the machine check go back for a rewrite; drafts that pass go to a reviewer, who checks the style points one by one, picks the single sentence most in need of revision, and draws one lesson. Everything is archived, rejected drafts included.</p>
+<span class="st live">Running · {days} days</span>
+<div class="links"><a href="{ZH}daily/">Marking desk (Chinese) ↗</a><a href="{ZH}daily/gems.html">Sentences and lessons (Chinese) ↗</a></div></div></section>
+<section class="tool"><div class="k">02 · MACHINE</div><div>
+<h2>AI-flavor checker</h2><p>Scans for stock phrases, aphorism tone, stacked parallelism and internet slang, and scores each piece against its own engine&rsquo;s standard. The score is a threshold, not a verdict: passing only means no obvious machine flavor. Whether it is good still takes a human reader.</p>
+<span class="st">v0.2 · 16 calibrations</span>
+<div class="links"><a href="{GH}/blob/master/tools/ai-flavor-checker.py">Source ↗</a></div></div></section>
+<section class="tool"><div class="k">03 · HUMAN</div><div>
+<h2>Blind review</h2><p>For the same prompt, the engine version and the bare-model version are shuffled and handed to graders who are not told which is which, two graders per prompt. Win rates are judged with Wilson intervals; with too few samples, no conclusion is drawn.</p>
+<span class="st">Design and results in Chinese</span>
+<div class="links"><a href="{GH}/blob/master/eval/DESIGN.md">Design (Chinese) ↗</a><a href="{GH}/blob/master/eval/RESULTS.md">Results (Chinese) ↗</a></div></div></section>
+</main>
