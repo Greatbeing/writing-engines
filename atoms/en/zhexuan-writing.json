@@ -1,0 +1,137 @@
+{
+  "engine": "zhexuan-writing",
+  "atoms": {
+    "zhexuan.1": {
+      "tier_reason": "Core: granting the reader’s feeling first decides whether they read on, in any piece on a charged topic.",
+      "why": "When a topic carries feeling, readers come in on guard. Start with reasoning and they hear a lecture; grant first that their grievance or anxiety is fair, and the wall comes down so the reasoning can get in. This step decides whether they finish the piece.",
+      "example": "> [Demo] Trying all night to get a ticket and still not getting one: that tired, stifled feeling, anyone who has been through it knows. At the same time, it is worth asking: where did the tickets go?",
+      "breakdown": "- “tired, stifled”: the feeling is made specific, not a blanket “understandable”.\n- “anyone who has been through it knows”: the writer stands beside the reader, not opposite as judge.\n- “At the same time”: a parallel turn into thinking that avoids “but”, so the trust just built isn’t broken.",
+      "overdo": "We fully understand everyone’s anxiety, but anxiety solves nothing, and we must look at this rationally.\n\n“Understand” is a formality, and the moment “but” arrives everything before it is cancelled; readers only hear that they are being taught.",
+      "when_not": "- When the topic carries no feeling (technical notes, pure information); forced acknowledgment seems affected.\n- When the feeling itself isn’t legitimate, such as stirring up hostility; don’t endorse it.",
+      "exercise": "On “working late into the night”, write two opening sentences that acknowledge the feeling, without the words “but” or “understand”.",
+      "check": "After the first paragraph, does the reader feel the writer is on their side?",
+      "adjacent": "- zhexuan.12 Peer Positioning: acknowledging is a one-time move at the opening; peer positioning is the stance of the whole piece.\n- guanfang.9 Dialectical Reply: that one grants the problem; this one grants the feeling."
+    },
+    "zhexuan.2": {
+      "tier_reason": "Common: shifting a question up a level gets past loaded debates in commentary and essays.",
+      "why": "Many debates are traps: however you answer, one side is offended. Ask at a different level and both sides are taken into a larger frame; readers get a sense of “so that’s how to think about it”. The truer the new question, the more convincing.",
+      "example": "> [Demo] Rather than asking why young people don’t like phone calls, ask this: hasn’t communication today long stopped depending on the voice alone?",
+      "breakdown": "- “Rather than … ask this”: openly signals that the question is being replaced.\n- The original question puts the blame on young people; the new one points to a change in how people communicate. Blame becomes observation.\n- The new question can be answered with facts later, not left as a hanging rhetorical question.",
+      "overdo": "The problem was never you, it’s the times. It’s not that you didn’t try hard enough; the world changed.\n\nIt swaps the question without returning an answer and pushes everything onto “the times”; readers see at once that it is sophistry dressed as comfort.",
+      "when_not": "- When the original question is reasonable and has a clear answer; reframing is just evasion.\n- When you can’t produce facts to support the new question.",
+      "exercise": "Rewrite “why don’t children like reading nowadays” as a new question at a higher level that can be argued.",
+      "check": "Does the new question explain more than the old one, and does the rest of the piece answer it?",
+      "adjacent": "- zhexuan.6 Elevate and Redefine: reframing changes the question, elevating changes the concept.\n- zhexuan.8 Concrete-Abstract Sandwich: reframing sets the direction; the sandwich decides where the criticism lands."
+    },
+    "zhexuan.3": {
+      "tier_reason": "Core: one precise, relatable number anchors an argument where feeling runs high, in any argumentative form.",
+      "why": "Where feeling runs hottest, reasoning has the hardest time getting in, but facts can. A number precise enough that readers can measure it against their own lives turns feeling into understanding and gives the argument an anchor so it doesn’t drift.",
+      "example": "> [Demo] A county hospital sees ×× patients a day but has only ×× general practitioners: worked out, one doctor has to see a whole train carriage of people in a morning. (Numbers are placeholders and must be replaced with traceable data.)",
+      "breakdown": "- “××”: real writing needs a source; without one, mark it [to verify].\n- “a whole train carriage of people”: the total is converted into a unit readers can picture; that is what close to home means.\n- The number sits right at the point of doubt and answers “just how stretched is it?”",
+      "overdo": "Plenty of data shows that the vast majority agree, and the problem has been greatly improved.\n\n“Plenty”, “vast majority” and “greatly” are data at the level of concepts; none can be checked or felt.",
+      "when_not": "- When you can’t find a reliable source; better none than invented.\n- In the lyrical passages of a human story; numbers break the warmth.",
+      "exercise": "For “delivery riders have it hard”, find a relatable conversion and write one sentence with ×× as a placeholder.",
+      "check": "Can readers measure this number against their own lives?",
+      "adjacent": "- guanfang.4 Data Alongside: that one presents change as a set; this one is a single precise, close-to-home point.\n- zhexuan.4 Scene Hook: data handles understanding, the scene handles feeling."
+    },
+    "zhexuan.4": {
+      "tier_reason": "Core: a concrete person or detail gives an abstract claim warmth, and stories are the flesh of evidence in every genre.",
+      "why": "Readers can nod at an abstract claim but won’t remember it; an image stays. Readers see first and think after, and then the point can’t be held off. A story is the flesh on the chain of evidence and works across forms.",
+      "example": "> [Demo] At the station ticket window, an old woman holds a slip of paper covered in writing: the steps her grandson taught her for buying a ticket. Step three is circled twice in pen. (The person is an invented example.)",
+      "breakdown": "- “a slip of paper covered in writing”: one object tells you she can’t use a phone.\n- “circled twice”: the anxiety is hidden in the detail; the writer doesn’t need to point it out.\n- The image leads straight to the point (the digital divide), not emotion for its own sake.",
+      "overdo": "At that moment tears blurred his eyes, and he thought of his faraway home, of the dreams he once had …\n\nAll stock emotion, not a single verifiable detail, and the story is cut off from the point.",
+      "when_not": "- When the detail can only be invented yet would pass as true; leave it out or mark it as an example.\n- When readers need a quick conclusion (debunking a rumor, say); a scene slows things down.",
+      "exercise": "For “old people living alone”, write a two-sentence scene with only one object and one action.",
+      "check": "If you delete this scene, does the point lose its persuasive force?",
+      "adjacent": "- guanfang.5 Small to Large: that one leans toward holding up a grand theme.\n- zhexuan.8 Concrete-Abstract Sandwich: the scene is one of the materials of the concrete layer."
+    },
+    "zhexuan.5": {
+      "tier_reason": "Common: breaking a vague target into countable types sharpens criticism in commentary and explainers.",
+      "why": "Railing at “chaos” in general gives readers nothing to check against; split it into three to five mutually exclusive types and the criticism has a bullseye, which readers can even use to check themselves and pass on. The more precise the breakdown, the sharper the piece.",
+      "example": "> [Demo] A round of “sentiment marketing” goes in roughly three steps: first tell a story that softens the heart, then manufacture a “last chance, limited time”, and finally close the net with “not buying means you don’t support us”.",
+      "breakdown": "- “three steps”: stages that don’t overlap, in a clear order.\n- Every step is an action readers can match to something they have seen.\n- After the breakdown, name the shared fault (using feeling as leverage); don’t stop at a list.",
+      "overdo": "The current problems are mainly: first, inadequate understanding; second, ineffective measures; third, incomplete implementation; fourth, insufficient supervision.\n\nThe types overlap, there isn’t one case, it’s an official-document list readers can’t check against.",
+      "when_not": "- When the target is already clear and single; forced splitting looks like padding.\n- When you can’t give a real example for each type.",
+      "exercise": "Break “clickbait” into three types that don’t overlap, and write a sample headline of your own for each.",
+      "check": "Could the types be swapped for one another? If so, they aren’t mutually exclusive.",
+      "adjacent": "- zhexuan.8 Concrete-Abstract Sandwich: the breakdown supplies the concrete target; the sandwich makes sure there is a protective layer.\n- guanfang.8 Rising Parallels: parallelism pushes forward with matching structures; a breakdown sorts side by side."
+    },
+    "zhexuan.6": {
+      "tier_reason": "Common: redefining a misused word with “not A, but B” clears a debate in any argumentative piece.",
+      "why": "Debates often get stuck on a word that has been contaminated. Redefine it, and readers don’t have to pick right or wrong; they see a truer meaning, and those who were labeled get a clean word.",
+      "example": "> [Demo] Being “good at managing a household” doesn’t mean refusing to spend on anything; it means knowing where the money should go.",
+      "breakdown": "- “doesn’t mean refusing to spend on anything”: first take apart the misunderstanding in the old definition.\n- “it means knowing where the money should go”: the new definition is more accurate and easier to live by.\n- The second half is more concrete than the first; rebuilding takes more effort than taking apart.",
+      "overdo": "Success isn’t success but a state of mind; effort isn’t effort but a choice.\n\n“But B” is emptier than “not A”; the new definition isn’t truer, it’s a tongue-twister.",
+      "when_not": "- When the concept hasn’t been contaminated; redefining it just manufactures a talking point.\n- When the new definition risks whitewashing.",
+      "exercise": "Redefine “Buddha-like” (佛系, a shrug at striving) with “not … but …”, with a concrete behavior in the second half.",
+      "check": "Would an ordinary reader accept the new definition as more accurate?",
+      "adjacent": "- zhexuan.2 Reframe the Question: changes the question.\n- zhexuan.10 Compress to Aphorism: redefinitions are often pressed into aphorisms, but an aphorism isn’t always a definition."
+    },
+    "zhexuan.7": {
+      "tier_reason": "Common: alternating past and present cases gives depth to conclusions in commentary and essays.",
+      "why": "Talk only of the present and a view sounds like one person’s opinion. Alternate past and present, and readers see the same pattern recur; “I think” becomes “history shows again and again”, and the new phenomenon gains grounds for being understood.",
+      "example": "> [Demo] When cameras became common, people worried painters would lose their jobs; painters didn’t disappear, and new ways of painting appeared. Today’s worries about new tools are worth placing on the same long line.",
+      "breakdown": "- The historical anchor is a familiar, uncontroversial technological change, no showing off learning.\n- “didn’t disappear, and …”: gives history’s outcome.\n- “worth placing on the same long line”: builds a clear logical bridge so past and present serve one point.",
+      "overdo": "From ancient times to today, from East to West, from farming civilization to industrial civilization, humanity has always moved forward through change.\n\nBoth ends are empty concepts without one concrete case; the contrast has slogans and no bridge.",
+      "when_not": "- Don’t use historical facts you aren’t sure of as anchors.\n- When the historical analogy is plainly strained; forcing it weakens the argument.",
+      "exercise": "For “young people love saving money”, find a historical parallel you know for certain, write one sentence for the past and one for now, and a linking sentence.",
+      "check": "Between the past and present passages, is there one sentence saying plainly what they both show?",
+      "adjacent": "- guanfang.3 Historical Depth: one stretch of history as grounding; here past and present alternate several times."
+    },
+    "zhexuan.8": {
+      "tier_reason": "Signature: aiming at the execution while protecting the principle is how this style dares to touch a topic without overturning.",
+      "why": "The more concrete the target, the more precise and the safer the criticism; at the same time a layer of abstract principle catches it, so readers know the writer opposes the practice, not the foundation. This is the structural secret of daring to touch something without overturning.",
+      "example": "> [Demo] What deserves criticism is the specific practice of turning “lightening the load” into three more forms to fill in; the original aim of lightening the load is precisely to give time back to children.",
+      "breakdown": "- “three more forms to fill in”: the target lands on the operational level of execution.\n- “the original aim of lightening the load”: the abstract protective layer, showing the principle isn’t rejected.\n- Both layers are present at once, so the criticism has an edge and also a limit.",
+      "overdo": "In the end all of this is caused by the system and capital; the whole society is sick.\n\nThe target spreads into “the system” and “society”, with no concrete object and no protective layer; it crosses the line at once and is only venting.",
+      "when_not": "- Purely positive narratives that need no layer of criticism.\n- When you can’t produce a concrete target; better not to criticize.",
+      "exercise": "On “box-ticking check-ins”, write two sentences: one criticizing a specific practice, one stating the principle being protected.",
+      "check": "Could a specific department or practice claim the criticism, and is there one explicit line of protection?",
+      "adjacent": "- zhexuan.5 Deconstruct to Enumerable: supplies the concrete target.\n- guanfang.9 Dialectical Reply: answers after granting the problem, without necessarily separating levels."
+    },
+    "zhexuan.9": {
+      "tier_reason": "Common: a three-line close gives a structured stance readers can carry away, in columns and speeches.",
+      "why": "After a piece, readers need something to take with them. Three lines are easy to remember and pass on; if each adds a stance, readers leave with a clear attitude rather than a feeling.",
+      "example": "> [Demo] Toward old crafts, a little more patience; toward new ways of playing, a little more curiosity; toward people still finding their way, a little more tolerance.",
+      "breakdown": "- Three different objects: old crafts, new ways, people finding their way; each line adds something.\n- “a little more …”: matching structures keep the rhythm even.\n- A clear stance on both tradition and innovation, not fence-sitting.",
+      "overdo": "Let us have a little more understanding, a little more tolerance, a little more forbearance.\n\nThree lines say one thing; understanding, tolerance and forbearance are near-synonyms, with no added stance.",
+      "when_not": "- When the piece has just used a parallel series; another at the end repeats it.\n- When the stance hasn’t yet been argued in the body.",
+      "exercise": "Write a three-line close for a piece on “simpler weddings”, each line addressed to a different party.",
+      "check": "Delete any one of the three lines: is the stance clearly incomplete?",
+      "adjacent": "- guanfang.8 Rising Parallels: lifts the argument mid-way.\n- guanfang.10 Call to Action: gives an action; this gives a stance."
+    },
+    "zhexuan.10": {
+      "tier_reason": "Signature: one line that holds outside its context is what readers carry when they share the piece.",
+      "why": "What can be screenshotted can spread. A well-compressed line is the crystal of the whole argument, and it is what readers take when they share. It has to grow at a node of the argument and stand up to scrutiny.",
+      "example": "> [Demo] The recommendation algorithm remembers what you clicked, but not why you stopped.",
+      "breakdown": "- A contrast: “remembers what you clicked” against “not why you stopped”.\n- Posted on its own it still holds, without depending on context.\n- It must come after the piece has argued how recommendations work, or it floats.",
+      "overdo": "No road you walk is wasted, every step counts; if you bloom, the breeze will come.\n\nThe lines have nothing to do with the argument; it is a pile of maxims, greasy and unable to bear scrutiny.",
+      "when_not": "- Stop once a piece has more than three.\n- When accuracy is sacrificed for polish.",
+      "exercise": "Compress a passage of argument you have written into one line of no more than twenty words, and check whether it stands alone.",
+      "check": "Would this line hold up posted on its own, and did the piece argue for it first?",
+      "adjacent": "- guanfang.6 Four-Character Phrases: solemn summary, not meant to spread on its own.\n- zhexuan.6 Elevate and Redefine: a definition can become an aphorism, but an aphorism isn’t always a definition."
+    },
+    "zhexuan.11": {
+      "tier_reason": "Signature: this topic-choosing calculation, collective feeling times an unanswered moment, is what drives this style’s reach.",
+      "why": "Readers need a piece most when feeling is rising and no one has explained it. A piece that catches the feeling and offers understanding and a way forward at that moment gets shared widely. That isn’t luck; it is judging the timing.",
+      "example": "> [Paraphrase] This style often publishes in application season, exam season, or the week a word floods social media, answering head-on the feeling everyone is discussing but nobody has explained.",
+      "breakdown": "- Test one: how many people are going through this feeling right now?\n- Test two: is any authoritative voice responding at this moment?\n- Test three: can I give a complete answer, “acknowledge → understanding → a way forward”? Only start writing if all three hold.",
+      "overdo": "Topic X is trending! Today let’s talk about it too. What do you think? Leave a comment below.\n\nIt only chases the trend with nothing added; someone has already caught the feeling and you are just joining the crowd.",
+      "when_not": "- With sensitive events beyond what public authoritative statements can characterize.\n- When you can’t offer a way forward; chasing the trend only adds noise.",
+      "exercise": "List three collective feelings you noticed this week, score each against the three tests above, and pick the one most worth writing.",
+      "check": "Can each of the three tests be answered “yes” in one sentence?",
+      "adjacent": "- zhexuan.1 Acknowledge: arbitrage governs the timing of the topic; acknowledging governs the first move on the page."
+    },
+    "zhexuan.12": {
+      "tier_reason": "Core: treating readers as fellow thinkers removes the lecturing tone, and every genre benefits from that stance.",
+      "why": "A lecturing tone is argument’s worst enemy. Use “we” and “consider”, and genuinely let readers keep their own view; they feel respected and are willing to keep thinking with you.",
+      "example": "> [Demo] Consider our own parents: they too were once told “this generation is hopeless”. As for how to see it this time, the answer is left to each of us.",
+      "breakdown": "- “Consider”: an invitation, not an order.\n- “our own parents”: writer and reader stand in the same generation.\n- “the answer is left to each of us”: the choice is really handed over.",
+      "overdo": "Each of us should realize that we must change our thinking and we must learn gratitude.\n\nThe “we” is only “you should” in other words; the stance was fixed long ago, and the equality is fake.",
+      "when_not": "- Formal notices and regulatory documents that need clear requirements.\n- On questions where the stance is settled and not open to debate; pretending to be open is hypocritical.",
+      "exercise": "Rewrite “you should treasure your time” as two sentences in peer positioning.",
+      "check": "Delete “we”: is the sentence an order? If so, the stance is fake.",
+      "adjacent": "- zhexuan.1 Acknowledge: the opening move.\n- guanfang.10 Call to Action: uses “we” to rally at the end; here it is a stance through the whole piece."
+    }
+  }
+}

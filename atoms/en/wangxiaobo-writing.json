@@ -1,0 +1,115 @@
+{
+"engine": "wangxiaobo-writing",
+"atoms": {
+"wangxiaobo.1": {
+"tier_reason": "Common: reasoning an absurd premise to its end works in any argumentative piece.",
+"why": "Readers nod at every step, because every step is reasonable; only at the last one do they find they've been led to the edge of a cliff. The absurdity isn't announced by the writer; readers work it out themselves, so they are more convinced and find it funnier. Readers can only laugh if the writer doesn't.",
+"example": "> [Paraphrase] “The Khwarezmian Messenger Problem” (《花剌子模信使问题》) starts from the legend that messengers bearing bad news were put to death, works out in earnest how messengers would adjust the news they brought back, and then extends the reasoning to intellectuals.\n\n> [Demo] If more check-ins mean better learning, then the best way to learn is to check in ten times a day. Taking it further, the people checking in had better not come at all, since coming takes up seats and gets in the way of others checking in.",
+"breakdown": "- “If … then …”: the premise is accepted as given, with no stance taken first.\n- “Taking it further”: the chain runs at least three steps, with no sarcasm in between.\n- “had better not come at all”: the endpoint is the exact opposite of the premise's intent; the joke lands here.\n- No verdicts like “absurd” or “ridiculous” anywhere.",
+"overdo": "If check-ins prove learning, doesn't that show our managers' intelligence is worrying? You don't know whether to laugh or cry. When will this formalism ever stop?\n\nIt reasons one step and then jumps out to scold. The chain breaks and it becomes a rant.",
+"when_not": "- When the other side's premise is a real problem and has a point; deduction turns into quibbling.\n- With deaths, disasters or other grave events, which are not material to reason with for fun.",
+"exercise": "Pick a rule you find awkward (say, “it only counts as sticking with it after 30 days of check-ins”) and write three steps using “If … then … taking it further …”, without a single evaluative word.",
+"check": "With every evaluative word deleted, can readers still see the absurdity from the reasoning alone?",
+"adjacent": "- wangxiaobo.9 Calm About Absurdity: a narrative tone, not necessarily with a chain of reasoning.\n- wangxiaobo.8 Parody of Tone: puts big words into a scene; deduction pushes a premise to its end."
+},
+"wangxiaobo.2": {
+"tier_reason": "Core: the small first-person opening sets up nearly every piece in this voice.",
+"why": "Open with grand pronouncements and readers go on guard; open with a small incident and they listen as if to a story, letting their guard down. The incident also gives the later reasoning a solid premise, so the argument has somewhere to stand instead of hanging in the air.",
+"example": "> [Paraphrase] “A Pig with a Mind of Its Own” (《一只特立独行的猪》) begins with feeding pigs as a sent-down youth; “The Pleasure of Thinking” (《思维的乐趣》) begins with having no books to read when young. Both tell the incident first, then the argument.\n\n> [Demo] Last month my work unit held a reading-sharing session, and I was in charge of photos. The session lasted forty minutes; I took three hundred pictures.",
+"breakdown": "- “Last month”, “my work unit”: time and place dropped in casually, no background laid out.\n- “in charge of photos”: the narrator's position is low, someone doing a job.\n- “forty minutes, three hundred pictures”: two numbers side by side; the absurdity is planted but not pointed out.",
+"overdo": "In this age of information overload, formalism has become a pain point for countless working people. I remember once attending a thought-provoking meeting …\n\nThe grand claim comes first and “I remember once” is tacked on; the incident becomes an illustration for the argument, and its verdict is given in advance.",
+"when_not": "- When writing for a user who hasn't supplied an experience; don't invent a first-person incident.\n- In formal reports, official documents and other settings that don't allow the first person.",
+"exercise": "In two sentences, write a small thing that happened to you last week. It must include a specific number, and no adjectives are allowed.",
+"check": "Is the first paragraph free of abstract judgments, with only people, places, events and numbers?",
+"adjacent": "- acheng.1: also starts from a thing, but without the chatty tone and without leading to an argument.\n- wangxiaobo.8 Parody of Tone: another way in, starting from a big word."
+},
+"wangxiaobo.3": {
+"tier_reason": "Common: an apt analogy from basic science clarifies arguments in many genres.",
+"why": "Social phenomena are hard to pin down; set a piece of common scientific knowledge beside them and readers see at once which level the error is on. Scientific language carries its own calm, and using it on human affairs creates a solemn mismatch that is both funny and persuasive.",
+"example": "> [Paraphrase] Wang Xiaobo often used his training in science, computing and logical reasoning as a reference for how thinking should work (see “The Pleasure of Thinking” and “My Spiritual Home”, 《我的精神家园》).\n\n> [Demo] It's like using a thermometer to measure whether a pot of soup is salty. The instrument is precise and the readings are lovely; it's just measuring the wrong thing.",
+"breakdown": "- “thermometer”, “salty”: a mismatch of tool and object, clear at a glance.\n- “precise”, “lovely”: grant the other side its strengths first, so the analogy is fair.\n- “just measuring the wrong thing”: one line names the crux, with no further scolding.",
+"overdo": "This phenomenon is like the Schrödinger state of quantum entanglement, or the systemic collapse under the law of entropy, fully demonstrating the nonlinear character of complex systems.\n\nIt piles on jargon to impress. The science is wrong, readers can't follow, and the analogy illuminates nothing.",
+"when_not": "- When you can't explain the scientific point clearly yourself.\n- For young readers or audiences entirely unfamiliar with the relevant basics.",
+"exercise": "Find a high-school physics or maths analogy for “measuring output by hours of overtime” and write it as one sentence.",
+"check": "Could someone with no science background say, after reading, “that's where it goes wrong”?",
+"adjacent": "- wangxiaobo.4 Animal Fable: uses an animal to reflect people, where this uses common knowledge to reflect events. Same family: one is about situation, the other about logic."
+},
+"wangxiaobo.4": {
+"tier_reason": "Signature: the gravely told animal story is one of Wang Xiaobo's best-known moves.",
+"why": "Write about people and readers see themselves in it and get defensive; write about an animal and they relax and watch, until they recognize themselves. Treating the animal more gravely than people is itself the irony.",
+"example": "> [Paraphrase] “A Pig with a Mind of Its Own” tells of a pig that refuses to live as it's been arranged, and of the crowd that tries to catch it; the narrator regards it with respect throughout.\n\n> [Demo] I once saw a duck. The keeper had marked out a path for it, but it insisted on cutting straight through the flowerbed. In terms of efficiency it was right; in terms of management it became a problem duck.",
+"breakdown": "- “I once saw”: the fable also starts from experience, so it doesn't read like a children's story.\n- “insisted on”: gives the animal a will.\n- “In terms of efficiency … in terms of management …”: two standards side by side; the contradiction shows itself.\n- “problem duck”: management jargon fitted onto a duck; the moral is left unsaid.",
+"overdo": "Isn't this duck every one of us? On the track the system lays out, shouldn't we also bravely cut through the flowerbed and be ourselves?\n\nThe moral is shouted out and the fable becomes a motivational slogan.",
+"when_not": "- Where rigorous argument is needed; a fable can be an interlude, not evidence.\n- Beginners shouldn't force an animal story; if it doesn't ring true it becomes a fairy tale.",
+"exercise": "Write three sentences about an animal (a cat or a pigeon will do) that doesn't behave as people arranged, and end by describing it with a human management term.",
+"check": "Is there no sentence that directly equates the animal with people?",
+"adjacent": "- wangxiaobo.3 Scientific Analogy: lays out the structure of an argument, where the fable deals with situation and dignity.\n- wangxiaobo.9 Calm About Absurdity: often used for the chase scenes in a fable."
+},
+"wangxiaobo.5": {
+"tier_reason": "Signature: “interesting” as a serious measure of value is distinctively Wang Xiaobo's.",
+"why": "People are used to judging things by whether they're useful or right. Switch suddenly to whether they're interesting, and readers pause, then see that this ruler measures what others can't: a thing that kills thinking is, for that reason alone, at fault.",
+"example": "> [Paraphrase] “The Pleasure of Thinking” treats the pleasure of thinking as an important part of life and expresses distaste for anything that makes people stop thinking.\n\n> [Demo] I object to meetings like this, not because they waste time (I've done plenty of time-wasting things myself) but because they're too dull, so dull there's nowhere even for your mind to wander.",
+"breakdown": "- “not because … but because”: rule out the usual reason first to bring the new measure forward.\n- The self-mockery in the parenthesis: lowers the narrator in passing, so it doesn't sound like a sermon.\n- “nowhere even for your mind to wander”: grounds “dull” in a concrete sensation.",
+"overdo": "The meaning of life lies in being interesting. May everyone rediscover the pleasure of thinking and be an interesting soul.\n\nThe ruler becomes a feel-good slogan and loses the edge it was meant to criticize with.",
+"when_not": "- When discussing safety, justice and similar questions; “interesting” is not the right measure.\n- More than once in a piece; repeated, it becomes a catchphrase.",
+"exercise": "Pick a routine you dislike and write two sentences saying you object to it “not because of A, but because it's dull,” giving one concrete sign of the dullness.",
+"check": "Is “interesting/dull” used to judge a thing, rather than to exhort people?",
+"adjacent": "- wangxiaobo.7 The Silent Majority: also establishes something, but a position to speak from; this establishes a standard of value."
+},
+"wangxiaobo.6": {
+"tier_reason": "Common: lowering yourself before arguing softens criticism in many kinds of writing.",
+"why": "Arguments delivered from above are off-putting; from someone who admits they're no good either, readers are willing to listen. Self-mockery also gives the reasoning a fallback: I'm just doing the sums honestly, not lecturing anyone.",
+"example": "> [Paraphrase] Wang Xiaobo's essays often take the clumsy, timid, out-of-step “I” as the narrative stance, so the argument comes from an ordinary person.\n\n> [Demo] I'm bad at maths and can't work out how much learning one photo is worth, so I just count the photos, plodding along.",
+"breakdown": "- “bad at maths”: admits a specific weakness, not general modesty.\n- “can't work out”: the weakness connects directly to the matter at hand.\n- “just count the photos”: the clumsy method becomes the starting point of the reasoning.",
+"overdo": "I may be just an ordinary person without much education, but I saw through all of this long ago; their tricks can't fool me.\n\nThe self-mockery is only a setup; the next line raises the narrator up, turning it into a disguised boast.",
+"when_not": "- When speaking in a professional capacity that needs authority (technical explanations, for instance).\n- When the self-mockery would hurt a group you represent.",
+"exercise": "Write a passage criticizing some practice, open with a line of self-mockery directly related to it, and don't allow “but I” at the end.",
+"check": "Without the self-mocking line, does the piece sound noticeably harsher?",
+"adjacent": "- wangxiaobo.10 Playful Close: also often ends on self-mockery, but at the end.\n- wangxiaobo.7 The Silent Majority: declines to take sides, where this lowers oneself."
+},
+"wangxiaobo.7": {
+"tier_reason": "Signature: the stance of the one who won't join either chorus is central to Wang Xiaobo's essays.",
+"why": "Readers are used to the voice of praise and the voice of denunciation, and know what follows as soon as they hear either. Someone who says “I'm on neither side” makes them want to hear what comes next. Declining to take sides also frees the argument from a contest of positions, leaving only facts and logic.",
+"example": "> [Paraphrase] “The Silent Majority” (《沉默的大多数》) describes how the writer long belonged to the people who don't speak up, and then explains why he finally did.\n\n> [Demo] I don't want to praise this meeting, and I don't want to denounce it. Both praise and denunciation require you to get up on stage first, and I'd rather sit below and get the number of photos straight.",
+"breakdown": "- “don't … and don't …”: pushes away both loud voices at once.\n- “get up on stage”: turns a way of speaking into a position in space.\n- “sit below”, “number of photos straight”: lands on a small, solid matter.",
+"overdo": "I belong to no camp; I'm simply a clear-eyed observer. Amid the clamour, silence alone is the noblest stance.\n\nSilence becomes aloofness and is shouted out as yet another slogan.",
+"when_not": "- When there's clearly a right and wrong and a stance is needed; “not taking sides” is then evasion.\n- In a short piece that already has Self-Effacing Base; adding this piles up too many poses.",
+"exercise": "On a topic people are arguing about online, write two sentences saying which two voices you won't join, then one sentence on the small thing you just want to get straight.",
+"check": "After reading, can you say exactly what “the one thing” is that the narrator wants to get straight?",
+"adjacent": "- wangxiaobo.5 The Interest Test: establishes a value; this establishes a position.\n- wangxiaobo.6 Self-Effacing Base: lowers oneself; this steps out of the ranks."
+},
+"wangxiaobo.8": {
+"tier_reason": "Common: earnest misuse of big words is a satirical tool that travels well.",
+"why": "Big words look solemn on big occasions; put them into trivial matters and the size is wrong, and the emptiness shows. The writer doesn't comment, only “carries it out in earnest,” and readers see the seam for themselves.",
+"example": "> [Paraphrase] “Positive Conclusions” (《积极的结论》) discusses how phrases like “a positive conclusion” are actually used.\n\n> [Demo] In line with the requirement to “keep a record of the whole process,” I even photographed the meeting-room air-conditioner remote, to prove that it too had taken part in the study session throughout.",
+"breakdown": "- “In line with the requirement”: first acknowledge the big word's authority.\n- “air-conditioner remote”: an object as trivial as it gets.\n- “taken part in the study session throughout”: the big phrase applied intact, unchanged.",
+"overdo": "“Record-keeping” again, “closing the loop” again. What use is this bureaucratic jargon except to make people jump through hoops? Such-and-such bureau's documents are a joke.\n\nIt attacks the big words directly and names a specific body; parody turns into abuse and naming names.",
+"when_not": "- When aimed at an identifiable organization, document or individual.\n- When readers don't know the phrase being parodied; the joke won't land.",
+"exercise": "Choose a fashionable workplace buzzword (“empower,” “leverage”) and write one sentence in which it is used earnestly on a household chore.",
+"check": "Is there no mocking word in the sentence, with the big word looking ill-fitting all by itself?",
+"adjacent": "- wangxiaobo.1 Straight-Faced Deduction: pushes a premise far, where parody makes a big word small.\n- wangxiaobo.9 Calm About Absurdity: governs tone, where parody governs word choice."
+},
+"wangxiaobo.9": {
+"tier_reason": "Common: an even tone about absurd things works wherever humour should be found, not announced.",
+"why": "Once the writer shouts “how outrageous,” readers can only agree; if the writer acts as if nothing's wrong, readers have to find it themselves, and the moment of finding is the laugh. Calm also creates contrast: the steadier the tone, the more crooked the thing looks.",
+"example": "> [Paraphrase] *The Golden Age* (《黄金时代》) recounts events of an absurd era in a plain, matter-of-fact voice; the narrator never exclaims.\n\n> [Demo] The host asked everyone to put down their phones and talk properly. Then he held up his phone and took a picture of everyone putting down their phones.",
+"breakdown": "- Both are flat statements, without a single intensifying adverb.\n- “Then”: an ordinary time connective that lines the contradiction up.\n- “a picture of everyone putting down their phones”: the joke sits at the end of the sentence, with nothing added after.",
+"overdo": "Can you believe it? The host actually told everyone to put their phones down while whipping out his own and snapping away. Totally outrageous!\n\n“Actually,” “totally” and the exclamation mark give the joke away; there's nothing left for readers to discover.",
+"when_not": "- When the thing isn't actually absurd, you just dislike it; the calm telling will come across as snide.\n- When readers need to be clearly warned of danger.",
+"exercise": "Write a small self-contradictory thing you've seen in two sentences, without “actually,” “really,” “totally” or exclamation marks.",
+"check": "Is the joke at the end of the sentence, with no explanation after it?",
+"adjacent": "- acheng.8: also lowers the tone, but for heavy matters, aiming at restraint rather than laughs.\n- wangxiaobo.1 Straight-Faced Deduction: can be told in this tone."
+},
+"wangxiaobo.10": {
+"tier_reason": "Core: the ending sets the flavour of the whole piece.",
+"why": "Having been led through the reasoning, readers dread being dragged into a lecture at the end. Close lightly and the reasoning's momentum carries on; readers leave smiling and remember the point better. The ending decides the flavour of the whole: make it heavy and everything before was wasted.",
+"example": "> [Paraphrase] Wang Xiaobo's essays mostly end on an understated inference or a joke, with no closing summary.\n\n> [Demo] Next time there's a meeting like this, I suggest we just send a camera. It won't drift off and won't write up reflections; it's far more efficient than me.",
+"breakdown": "- “I suggest”: constructive in form; in content it follows the earlier reasoning to the end.\n- “just send a camera”: turns the deduction's conclusion into a concrete measure.\n- “far more efficient than me”: the last cut falls on the narrator; a light close.",
+"overdo": "A photo can freeze a moment, but it cannot freeze thought. May we all put down the lens, pick up a book, and let every act of learning return to its true nature.\n\nA maxim plus a call to action: the ending suddenly turns solemn and washes out all the laughter before it.",
+"when_not": "- When the piece genuinely needs a clear conclusion or recommendation (a proposal, a report).\n- When there's no reasoning beforehand; a playful close then seems flippant.",
+"exercise": "Give a short argumentative piece you've written a new ending: one “suggestion” that follows from the reasoning, plus one line of self-mockery.",
+"check": "Is the ending free of “let us,” “food for thought” and “may,” and can it be traced back to the reasoning before it?",
+"adjacent": "- acheng.10: a cold close stops on an action, without a laugh.\n- wangxiaobo.6 Self-Effacing Base: often borrowed for the last line."
+}
+}
+}

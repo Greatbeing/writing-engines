@@ -1,0 +1,115 @@
+{
+  "engine": "yuhua-writing",
+  "atoms": {
+    "yuhua.1": {
+      "tier_reason": "Core: the flat, unjudging voice is the ground every other move in the engine stands on.",
+      "why": "Feeling words mean the writer has used up the reader's feeling for them. The flatter the telling, the more the reader has to supply the pain, and what they supply weighs most. Calm also makes the telling credible, like someone who lived it rather than an author performing. Any writing about suffering or conflict can use it.",
+      "example": "> [Paraphrase] In *To Live*, the old man tells of his family dying one after another in the tone of someone discussing the harvest; all the feeling is left to the reader.\n>\n> [Demo] That winter the factory shut. He collected his last month's wages, two hundred and ten yuan, and on the way home bought a kilo of pig's-head meat. (original atom-ops demo)",
+      "breakdown": "- \"The factory shut\": a big event in one clause, with no \"terrible news\" or \"bolt from the blue\".\n- \"Two hundred and ten yuan\": a number in place of a feeling.\n- \"Bought a kilo of pig's-head meat\": an odd act on the day he lost his job; the pain hides in how ordinary it is.",
+      "overdo": "> In that moment his world came crashing down, despair swallowing him like a tide. Why was fate so cruel?\n\nThe writer cries first. The feeling words and the rhetorical question do all the reader's work for them.",
+      "when_not": "- Commentary that must state a clear position or attitude.\n- Comedy or light subjects, where zero degree reads as cold.",
+      "exercise": "Write the day a child fails the entrance exam in three sentences, using only actions and numbers. No feeling words at all.",
+      "check": "In the paragraphs about the big event there is no \"grief\", \"despair\", \"heartbroken\" or the like to delete.",
+      "adjacent": "yuhua.3 Death Written Lightly (zero degree is the overall voice; writing lightly handles only the moment of death); yuhua.6 Numbers and Accounts (numbers are the most common stand-in in zero-degree narration)."
+    },
+    "yuhua.2": {
+      "tier_reason": "Core: the engine's longer stories are built on a repeated act.",
+      "why": "The first time, the reader learns what it looks like; the second time they recognise it; the third time they wait for the change. The one thing that changes (a price, a person, the weather) is made glaring by the sameness around it, and the reader sees a whole life in that change. Repetition is also rhythm, which narrative, speeches and essays all rely on.",
+      "example": "> [Paraphrase] *Chronicle of a Blood Merchant* is built on one blood sale after another, and the rituals around each sale (drinking water first, fried pig's liver and yellow wine afterwards) keep coming back.\n>\n> [Demo] The first watermelon cost forty fen, and Guiying said it was too big. The second cost one yuan twenty, and the three of them ate it sitting on the doorstep. The third cost eight yuan, bought outside the hospital, and nobody ate it. (summarised from yh-1, *Three Watermelons*)",
+      "breakdown": "- The act stays the same: each time he walks there and picks the biggest one.\n- The variable climbs: forty fen, one twenty, eight yuan, following the times and the family's fortunes.\n- The third time it isn't only the price that changes: one fewer person is eating. That is where the repetition cuts.",
+      "overdo": "> Every morning he got up at six, every day he went to the site, every day he ate steamed buns, every day he missed home, every day, every day, every day.\n\nRepetition with no change at all, piling up words to make it sound hard; the reader sees nothing happen.",
+      "when_not": "- Very short pieces (a few hundred words), where three repetitions have no room.\n- More than four times drags; don't force it just to look structured.",
+      "exercise": "Write someone going to the same barber three times, changing one thing each time (the price, who comes with them, or the barber), two sentences at most each time.",
+      "check": "At least three repetitions, and for each you can point to one concrete change.",
+      "adjacent": "yuhua.8 Recurring Object (same family; here an act repeats, there an object runs through); yuhua.6 Numbers and Accounts (the variable in a repetition is often a number)."
+    },
+    "yuhua.3": {
+      "tier_reason": "Signature: Yu Hua's trademark, and hard to judge; beginners easily make it heartless.",
+      "why": "Readers come to a death scene with their guard up, and the longer it runs, the higher the guard. In a sentence or two the thing has happened before the guard is up; the everyday action that follows forces the reader to see that life goes on, and the weight comes down in that drop. The judgement is hard, and beginners easily make it read as callous.",
+      "example": "> [Paraphrase] In *To Live*, the deaths of several family members are told very briefly; *The Seventh Day* opens with the dead narrator saying, in an ordinary voice, that he has died.\n>\n> [Demo] The rice gruel was ready, and Guiying no longer needed it. So he drank it himself, washed the bowl, and set it upside down on the stove. (yh-1, *Three Watermelons*)",
+      "breakdown": "- \"No longer needed it\": the word \"died\" never appears; the death is told as a small thing cancelled.\n- \"So he drank it himself\": the everyday action follows at once, without a pause.\n- \"Set it upside down on the stove\": the action is carried out fully and carefully; the grief is in its completeness.",
+      "overdo": "> She slowly closed her eyes, a last tear sliding down. He held her cold body and cried her name in heart-rending anguish.\n\nSlow motion plus feeling words: the death becomes a performance, and the reader sees only the writer straining.",
+      "when_not": "- Eulogies for real people, where lightness reads as disrespect.\n- When the reader doesn't know the character yet; there is no weight for the lightness to press down.",
+      "exercise": "Write an old person's death. The death gets one sentence only; the next must be a household chore.",
+      "check": "The death takes no more than two sentences, followed directly by an everyday act such as eating, working or talking.",
+      "adjacent": "yuhua.1 Zero-Degree Narration (zero degree is the voice of the whole piece; this is a close-up at the death); yuhua.4 Absurd Relief (lightness presses the weight down with the ordinary; absurdity takes it off with a laugh)."
+    },
+    "yuhua.4": {
+      "tier_reason": "Signature: a Yu Hua trademark that tips into cruelty or cliche easily; beginners should use it sparingly.",
+      "why": "When the reader suddenly wants to laugh at the worst moment, the laugh and the pain jam together and stick longer than pain alone. An absurd detail also makes the people real, because real people run into ridiculous things in disaster too. The margin is very thin: let the blade slip and you are mocking the sufferer.",
+      "example": "> [Paraphrase] *Brothers* uses farce-like plots throughout to show the times changing; *The Seventh Day* has a world after death where you still queue and wait for your number.\n>\n> [Demo] You had to take a number for the cremation. He got 108. The man ahead of him said it was a lucky number, the 108 heroes of Liangshan. He thought about it and reflected that his father had never been in a fight in his life. (original atom-ops demo)",
+      "breakdown": "- \"Take a number for the cremation\": the order of a bank queue moved into the heaviest place.\n- \"The 108 heroes of Liangshan\": a stranger's lucky talk, absurd and true.\n- \"Never been in a fight in his life\": after the laugh lands, a turn back to one fact about his father. Half the weight comes off; half stays.",
+      "overdo": "> At the funeral Second Uncle cried so hard his false teeth fell out, Third Aunt snorted with laughter, the whole room cracked up, and things got very awkward.\n\nThe laughs are stacked into a comedy routine aimed at the mourners themselves, and the grief is dissolved completely.",
+      "when_not": "- Real disasters and identifiable real victims.\n- When the piece already has one or two absurd moments; don't add more.",
+      "exercise": "Write a scene at a hospital payment window. At the most anxious moment, put in one absurd but true detail, in under 50 words.",
+      "check": "No more than two absurd moments in the piece, and the laugh is at the situation, not at the sufferer.",
+      "adjacent": "yuhua.9 Self-Mocking Humor (absurdity comes from the situation; self-mockery comes from the character's own mouth); yuhua.3 Death Written Lightly (lightness doesn't seek a laugh; absurdity wants one)."
+    },
+    "yuhua.5": {
+      "tier_reason": "Common: used for scenes in fiction, scripts and features, but not in argument.",
+      "why": "Short exchanges move fast; the reader's eye jumps down the page and information surfaces in question and answer without narration to explain it. With \"said\" as the only tag, all feeling rests on the words themselves, so the reader hears people, not the writer's adjectives. Fiction, scripts and feature scenes can use it; argument can't.",
+      "example": "> [Paraphrase] Long stretches of *Chronicle of a Blood Merchant* are carried by short exchanges between husband and wife, father and sons, with very little narration.\n>\n> [Demo]\n>\n> \"Where's the money?\" she said.\n>\n> \"Lent it to Lao Si,\" he said.\n>\n> \"Lao Si died last month.\"\n>\n> \"So we don't have to pay it back.\" (original atom-ops demo)",
+      "breakdown": "- Four lines make a whole plot: the money's gone, the borrower is dead, it won't come back.\n- From the third line the tags drop away and the pace quickens.\n- The last line answers the wrong question; the misery and the absurdity are both in it, without a word of narration.",
+      "overdo": "> \"I believe we should give serious consideration to where this money has gone,\" she said angrily. \"I understand your concern, but please trust me,\" he said, choking up.\n\nThe dialogue is written-up prose, and it leans on tags like \"angrily\" and \"choking up\" to label the feeling.",
+      "when_not": "- When a lot of background is needed; stuffed into dialogue, it makes characters sound like they're reading a manual.\n- Educated characters or formal settings, where plain local speech rings false.",
+      "exercise": "Write a husband and wife talking about their child's school fees: six lines at most, each under ten words, with \"said\" as the only tag.",
+      "check": "Delete all the narration and the reader can still say what happened.",
+      "adjacent": "yuhua.9 Self-Mocking Humor (self-mockery is usually spoken in dialogue); yuhua.6 Numbers and Accounts (quoting figures in dialogue is where the two most often meet)."
+    },
+    "yuhua.6": {
+      "tier_reason": "Common: appears in most pieces, but not at every turn.",
+      "why": "\"Life was hard\" leaves readers cold; \"eleven tyres patched in a day, five yuan fifty\" makes them do the sums. Numbers are something the reader can check, and checking pulls them into the character's days. The more specific the number, the less the hardship needs saying. Narrative, features and even argument can use it, provided the numbers fit how life actually works.",
+      "example": "> [Paraphrase] In *Chronicle of a Blood Merchant*, the sums earned from selling blood, and the reckoning of how many days they will last, come up again and again.\n>\n> [Demo] Three years and one month, over two thousand six hundred nappies, ten thousand four hundred yuan in medicine, and I'd paid a hundred and twelve yuan more than he had. (yh-2, *The Exercise Books*)",
+      "breakdown": "- \"Three years and one month\": the time is exact to the month, the days of caring counted out one by one.\n- \"Over two thousand six hundred\": trivial labour magnified by a number.\n- \"A hundred and twelve yuan more\": the brothers' accounts are reckoned to the last yuan, which gives the later \"we're even\" its weight.",
+      "overdo": "> Statistics show that in his life he shed 3,650 tears, walked 100,000 kilometres and gave 100% of his love.\n\nThe numbers have no life logic; they are decoration, and the reader sees at once that they're made up.",
+      "when_not": "- When the numbers don't add up from one place to the next; better not to use them.\n- Too many numbers at the emotional peak pull the reader into arithmetic and away from the person.",
+      "exercise": "Write a delivery rider's day using three numbers. \"Hard\" and \"tired\" are not allowed.",
+      "check": "Every number holds up in real life, and they add up across the piece.",
+      "adjacent": "yuhua.2 Repetition Structure (what changes in a repetition is often a number); yuhua.1 Zero-Degree Narration (numbers are its main material)."
+    },
+    "yuhua.7": {
+      "tier_reason": "Common: a frame for longer life stories; short pieces do without it.",
+      "why": "With one layer between them, a listener stands between the reader and the suffering, so the telling grows colder; the person tells their own story in their own voice, and the calm is credible because they have lived through it. The \"I\" also asks and stays silent on the reader's behalf, and returning to the \"I\" at both ends gives the story a frame. Features and oral histories use it too.",
+      "example": "> [Paraphrase] *To Live* is framed by an \"I\" collecting folk songs in the countryside who listens to the old man's story; it opens and closes from the \"I\"'s point of view.\n>\n> [Demo] When I met Chen Fusheng beside the county bus station he was already sixty-eight, patching bicycle tyres under a plane tree. (yh-1, *Three Watermelons*, first sentence)",
+      "breakdown": "- The \"I\" is a passer-by who gives the time and place of the meeting, then steps back.\n- \"Sixty-eight\", \"patching bicycle tyres\": his situation is set first; the story is his to tell.\n- At the end, \"I wanted to say something, but he had already bent down to look for the next tyre\": the frame closes, and the \"I\" says only half a sentence more.",
+      "overdo": "> After hearing his story I could not calm down for a long time. I deeply felt the weight of life, and it gave me a whole new understanding of existence.\n\nThe \"I\" steals the scene, jumping out to share insights, and the teller's calm is washed away.",
+      "when_not": "- When the person's own first-person voice is strong enough; an extra layer is dead weight.\n- Very short pieces, where a frame opened can't be closed.",
+      "exercise": "Write an opening sentence saying where the \"I\" is and why they're listening to a stranger, then a closing sentence in which the \"I\" leaves. Leave the middle blank.",
+      "check": "The \"I\" comments in no more than two sentences, and a frame opened at the start is closed at the end.",
+      "adjacent": "yuhua.10 Quiet Ending (the frame often ends on one action by the \"I\"); yuhua.1 Zero-Degree Narration (the frame gives the flat voice a plausible source)."
+    },
+    "yuhua.8": {
+      "tier_reason": "Common: many stories have one, though not all.",
+      "why": "An object is a marker for the reader. The first time it's just a thing; the second time they recognise it; by the last time, all the feeling stored up earlier presses down at once, and the reader aches without a word of explanation. It gives the story a thread and says for the characters what they can't say themselves.",
+      "example": "> [Paraphrase] The old ox in *To Live*; the fried pig's liver and yellow wine that keep returning in *Chronicle of a Blood Merchant*.\n>\n> [Demo] Those three exercise books are with my nephew now. He's in middle school and uses them for scrap paper. On the backs he works equations, and still gets more than half wrong. (yh-2, *The Exercise Books*, ending)",
+      "breakdown": "- At the start the exercise books are the nephew's leftovers; in the middle they become the brothers' account book; at the end they go back to the nephew.\n- \"On the backs he works equations\": the front holds the mother's three years, the back a child's everyday; the object carries two layers of time.\n- \"Still gets more than half wrong\": echoes the opening; the object comes full circle with no interpretation.",
+      "overdo": "> The pocket watch symbolised my father's silent love, symbolised the passing of time, and symbolised the gap between us that could never be crossed.\n\nThe object is handed a symbolic reading, and the author gets to the reader's associations first.",
+      "when_not": "- An object that appears only once isn't recurring; better not to set one up.\n- Several recurring objects compete for the thread: one per piece.",
+      "exercise": "Choose an object (an umbrella, a lunch box) and plan how it appears at the beginning, middle and end of a story, one sentence each time.",
+      "check": "The object appears at least three times, each in a different situation, and nowhere is it explained what it symbolises.",
+      "adjacent": "yuhua.2 Repetition Structure (same family; there an act repeats, here an object runs through); yuhua.10 Quiet Ending (the object's last appearance is often the closing image)."
+    },
+    "yuhua.9": {
+      "tier_reason": "Signature: a characteristic Yu Hua tone, and it depends on the laugh coming from the character, not the author.",
+      "why": "When the character laughs first, the reader is spared feeling sorry for him, and yet feels it more, because they see how he carries things. Self-mockery gives people in hardship dignity: he isn't an object of pity but someone who can make a joke. The margin is that the laugh comes from the character's mouth; the author must not look down on him.",
+      "example": "> [Paraphrase] The characters' boasting and humiliations in *Brothers*; Yu Hua often talks about his writing with self-mockery in public interviews (only the tone is borrowed, no words quoted).\n>\n> [Demo] He said he'd only won once in his life, against the King of Hell, who thought he was too skinny and didn't want him. (original atom-ops demo)",
+      "breakdown": "- \"Only won once in his life\": first he writes off a lifetime of losing.\n- \"Against the King of Hell\": life and death turned into a match.\n- \"Too skinny and didn't want him\": the laugh lands on his own poverty and thinness; a near death made light of by the man himself.",
+      "overdo": "> He limped over like a penguin; everyone laughed, and he had no choice but to grin along foolishly.\n\nThe joke is aimed at the disability itself. It is the author and the bystanders laughing at him, not the character mocking himself.",
+      "when_not": "- When the character has just suffered a disaster and hasn't recovered; self-mockery rings false.\n- When the narrator is the author, it easily turns into the author doing stand-up.",
+      "exercise": "Write one line a laid-off man says to a friend about being let go. It should be funny, but what's funny is his own situation.",
+      "check": "The joke is told by the character, about himself, not about someone else's disability, poverty or illness.",
+      "adjacent": "yuhua.4 Absurd Relief (absurdity comes from the situation; self-mockery from the character speaking); yuhua.5 Dialogue Drives Plot (self-mockery usually comes up in dialogue)."
+    },
+    "yuhua.10": {
+      "tier_reason": "Core: the engine's stories nearly always close this way.",
+      "why": "The reader has been weighed down by hardship all the way and expects some verdict; the ending gives only an everyday action, so they have nowhere to put the feeling and must carry it away. An everyday image also implies that life goes on, which weighs more than any \"meaning\". The ending is where any piece succeeds or fails, and not spelling out the theme is a basic skill.",
+      "example": "> [Paraphrase] *To Live* ends with a distant view of the fields at dusk, the old man and his ox.\n>\n> [Demo] A student came to collect his bike. He took the three yuan and dropped it in the tin box, which gave a clink. My bus came too. (yh-1, *Three Watermelons*, ending)",
+      "breakdown": "- \"Took the three yuan\": back to the daily business of patching tyres; the big events of the story go unmentioned.\n- \"Gave a clink\": one small sound pulls the reader out of the memory and back to the scene.\n- \"My bus came too\": the framing \"I\" leaves and it closes flat.",
+      "overdo": "> Yes, this is what it means to live. However cruel fate may be, we must bravely carry on, because life itself is the meaning.\n\nThe ending lifts and states the theme, spelling out what the reader could grasp alone.",
+      "when_not": "- Forms that need a clear conclusion or a call to action (reports, appeals).\n- When what came before has too little weight; a quiet ending will just look unfinished.",
+      "exercise": "Write the ending of a story about a father in hospital: one everyday action and one homely line only. \"Life\" and \"meaning\" are not allowed.",
+      "check": "The last paragraph has no summing-up sentence, only an action, an image or a homely line.",
+      "adjacent": "yuhua.8 Recurring Object (the closing image often falls on the recurring object); yuhua.7 Frame Narrator (the framing \"I\" often leaves at the end)."
+    }
+  }
+}

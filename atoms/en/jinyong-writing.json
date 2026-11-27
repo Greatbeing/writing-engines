@@ -1,0 +1,115 @@
+{
+  "engine": "jinyong-writing",
+  "atoms": {
+    "jinyong.1": {
+      "tier_reason": "Core: in any narrative form, a character needs to be remembered from their first appearance.",
+      "why": "Readers remember people by hooks, not by résumés. One distinctive action paired with one physical oddity puts an image in the reader's head at once; when the trait returns later, the reader recognises the person without a reminder. The character comes alive, and the writer saves the ink of reintroducing them.",
+      "example": "> *Paraphrase:* In *The Deer and the Cauldron*, the protagonist enters in a street-market scene; a few glib remarks and a few quick moves, and the reader knows what kind of boy he is.\n\n> *Illustration:* He was about sixty and missing half his left ear, yet his net-mending hands were perfectly steady; the shuttle went through and never caught a second strand.\n\n*(The illustration is written for this library; Jin Yong's works are in copyright and are not quoted.)*",
+      "breakdown": "- \"Missing half his left ear\": the oddity, recognisable at a glance and hinting at a past.\n- \"Yet his hands were perfectly steady\": the action; one \"yet\" twists the damage and the skill together.\n- \"Never caught a second strand\": fine enough to film, so \"steady\" is no longer just an adjective.",
+      "overdo": "> The man had sword-like brows and starry eyes, a finely shaped nose and an imposing bearing; his white robe outshone the snow, and he gave off an air of authority without anger.\n\nThe fault: a pile of adjectives. Every word is praise and none is an action; close the book and nothing stays.",
+      "when_not": "- For walk-on characters: the full set makes readers think they matter.\n- When a character is meant to stay in the background and be revealed later; keep the entrance faint.",
+      "exercise": "Write someone you know appearing for the first time, in exactly three sentences: one action, one physical oddity, one thing they say.",
+      "check": "Hide the name. If the next chapter mentions only that trait, would the reader recognise the person?",
+      "adjacent": "- jinyong.10 Distinct Voices: the entrance sets a first impression; distinct voices run through the whole work.\n- jinyong.6 Ensemble of Factions: establishing one person versus establishing a group at once."
+    },
+    "jinyong.2": {
+      "tier_reason": "Common: useful for fights, chases, sport and other action scenes; not needed in plain narration.",
+      "why": "In an action scene readers want to see clearly. Give position, distance and cause, and a sequence plays in their heads; write fast passages in quick succession like burst shots, and slow passages with a beat of thought or a bystander's reaction, which stretches the tension. Alternating tight and loose is far stronger than \"they fought three hundred rounds\".",
+      "example": "> *Paraphrase:* In *Demi-Gods and Semi-Devils*, the battle at Juxian Manor sets one man against many, with opponents' reactions and the hero's state of mind threaded between the moves.\n\n> *Illustration:* The tip of the pole swept along the water and threw up a sheet of icy spray, straight into his face. In the instant he shut his eyes, the butt of the pole had already come round and tapped him lightly behind the knee.\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"Swept along the water\": first the weapon's path and the space.\n- \"Into his face\", \"the instant he shut his eyes\": a chain of cause; the first move creates the opening for the second.\n- \"Tapped lightly\": the result rests on \"lightly\", and the master's ease shows itself.",
+      "overdo": "> Their figures crossed, their sword-light gleamed like snow, and in an instant they had exchanged over three hundred moves, fighting until heaven and earth went dark and sand and stones flew, with neither able to win.\n\nThe fault: atmosphere with no shots. No one can tell who is where or why a move is made, so readers skip it.",
+      "when_not": "- When the outcome is settled and the fight is only a passage; one line will do.\n- When the piece centres on a character's inner life; long storyboards crowd it out.",
+      "exercise": "Write two people fighting over one umbrella in four sentences or fewer. Each sentence must give either a position or a cause.",
+      "check": "After reading, could you sketch where each person stands at every move?",
+      "adjacent": "- jinyong.3 Named Techniques: the storyboard shows the process; the name is called only at the key move.\n- jinyong.6 Ensemble of Factions: the storyboard follows one or two people; the ensemble watches several parties at once."
+    },
+    "jinyong.3": {
+      "tier_reason": "Signature: a hallmark of wuxia that is hard to transplant outside martial-arts settings.",
+      "why": "A name is a compressed biography: a fisherman's son fights with a pole and his moves are named after water, so readers know at once where he comes from. A name is also a hook; announce it without showing it all and readers keep waiting for it. Name rarely, and the naming carries weight.",
+      "example": "> *Paraphrase:* Across Jin Yong's novels, martial-arts names draw on classics, lines of poetry, animals or natural imagery, and the name itself conveys the school's temperament.\n\n> *Illustration:* The old man from a fishing family had a three-move pole technique called \"Three Strokes Against the Current\"; the third stroke was never shown, and it became a suspense.\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"Against the current\": taken from a fisherman's daily life, so the name is tied to his origin.\n- \"Three strokes\": the number gives structure; readers count and wait.\n- \"The third stroke was never shown\": naming also plants a secret, and the name starts to drive the plot.",
+      "overdo": "> He roared, \"Ninefold Heaven Thunder World-Ending Slash!\" and followed at once with \"Supreme Void Limitless Sky-Breaking Palm\" and \"Primordial Unity Star-Shattering Finger\".\n\nThe fault: mystic words fired in a volley. The names have nothing to do with the character, and the louder they are shouted, the more they sound like a game's skill list.",
+      "when_not": "- In realist or contemporary settings, named techniques look comic.\n- If one name has already been called in a scene, do not call a second.",
+      "exercise": "Design a self-defence move for a cobbler. The name must be no more than four characters (a short phrase in English) and must reveal his trade.",
+      "check": "From the name alone, can you guess the user's background?",
+      "adjacent": "- jinyong.4 Planted Secret: a technique's name can double as a hook.\n- jinyong.9 Couplet Chapter Titles: both are about naming; chapter titles name chapters, technique names name moves."
+    },
+    "jinyong.4": {
+      "tier_reason": "Core: every narrative that needs to be read on depends on it; it decides whether the reader turns the page.",
+      "why": "People want to fill gaps. A box, an unfinished sentence leaves an empty space in the reader's mind, and every later page is pulled along by it. The longer it is held, the greater the satisfaction when it opens; the less the character wants to say, the more important the thing seems.",
+      "example": "> *Paraphrase:* In *The Smiling, Proud Wanderer*, at the hand-washing ceremony in Hengshan, uninvited visitors arrive as the guests gather; the situation is about to change, and why is not yet clear.\n\n> *Illustration:* The scholar said quietly, \"Old man, in the box is…\" \"Don't say it. If you say it, I'll have no choice but to get involved.\"\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"In the box is…\": a sentence left half-said, the most direct form of a gap.\n- \"Don't say it\": the character refuses to know, and the reader wants to know all the more.\n- \"No choice but to get involved\": hints at the weight of what is inside, and ties the secret to the character's sense of duty.",
+      "overdo": "> He vaguely felt that all of this concealed an earth-shattering secret, and that this secret would change everyone's fate forever.\n\nThe fault: announcing a secret with nothing in it. No concrete object or line to hold on to, so readers have nothing to wonder about; \"earth-shattering\" is only a scare word.",
+      "when_not": "- In explanation or news, where readers want the answer, not to be kept waiting.\n- When a piece already has two or three secrets unresolved; another only adds confusion.",
+      "exercise": "Write a short exchange between two people, three to five lines, in which one mentions an object but refuses to explain it.",
+      "check": "Is the secret a concrete thing, and is there a clear place later where it is revealed?",
+      "adjacent": "- jinyong.5 The Reveal: planting is borrowing; the reveal is paying back.\n- jinyong.3 Named Techniques: an unused move can also be a hook."
+    },
+    "jinyong.5": {
+      "tier_reason": "Common: most stories can use it, but it needs groundwork and works only once per piece.",
+      "why": "Readers have formed judgments along the way; the reveal overturns them and then lets them look back to find the clues were there all along, so surprise and \"of course\" arrive together. Once positions are rearranged, the old conflict becomes a new one and the story's weight doubles.",
+      "example": "> *Paraphrase:* In *Demi-Gods and Semi-Devils*, the protagonist's origins are exposed in public, and friend and foe are reversed overnight.\n\n> *Illustration:* The leader of the pursuers and the old ferryman were brothers who had kept the same beacon tower together twenty years before; the box held no treasure but a roll of the dead, and in it was the name of the one-armed pursuer's own elder brother.\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"Brothers who had kept the same beacon tower\": an identity revealed; the enemy becomes an old friend in an instant.\n- \"No treasure but a roll of the dead\": an object revealed; the secret planted earlier pays off here.\n- \"His own elder brother's name\": the final cut falls on the one-armed pursuer, whose position is forced to change.",
+      "overdo": "> So he was a spy! No, he was actually a double agent! And the true mastermind was none other than the master who had been helping the hero all along!\n\nThe fault: three reversals in a row with no groundwork. Each undoes the last, and readers stop believing any truth.",
+      "when_not": "- When nothing earlier points to it; a forced reversal drops from the sky.\n- In lyrical or argumentative pieces that need no turn of plot.",
+      "exercise": "Write a two-sentence story in which the second sentence completely reverses the identity of someone in the first, and leave one clue in the first sentence.",
+      "check": "Looking back, can you find at least one piece of foreshadowing for the reveal?",
+      "adjacent": "- jinyong.4 Planted Secret: plant first, reveal later.\n- jinyong.7 Loyalty Dilemma: a reveal often pushes a character into a dilemma."
+    },
+    "jinyong.6": {
+      "tier_reason": "Common: crowded scenes are frequent in fiction and features; single-thread narration does not need it.",
+      "why": "If everyone in a room is \"greatly startled\", the reader sees only fog. Give each person a different reaction and the scene gains layers: the rash one moves first, the shrewd one speaks first, the one with something on his mind does not move. Readers guess each party's thinking themselves, and drama grows outside the dialogue.",
+      "example": "> *Paraphrase:* In *The Smiling, Proud Wanderer*, guests from many schools gather in Hengshan, and the attitudes of the orthodox and unorthodox sides appear in the same scene at once.\n\n> *Illustration:* The short, stout one rushed forward first; the one-armed one watched the lamp; the one in the grey fur never drew his blade.\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"The short, stout one rushed forward first\": rash, the fastest to act.\n- \"The one-armed one watched the lamp\": calculating; his eyes move before his hands.\n- \"Never drew his blade\": the most dangerous of them; not moving is itself the signal.",
+      "overdo": "> Everyone was greatly alarmed at these words and began to talk among themselves; some were shocked, some were angry, some were lost in thought, and for a moment the scene was in chaos.\n\nThe fault: \"some… some…\" sorts the crowd into types without a single specific person, which is the same as not writing it.",
+      "when_not": "- When only two or three people are present; ensemble treatment looks contrived.\n- At a climax that needs great speed, where naming each person in turn slows it down.",
+      "exercise": "A manager suddenly announces bad news in a meeting. In three sentences, write three people's different reactions, without any words for facial expressions.",
+      "check": "Can every person present be told apart from the others by one action?",
+      "adjacent": "- jinyong.1 Entrance Portrait: establishing one person.\n- jinyong.10 Distinct Voices: an ensemble separates people by action; distinct voices separate them by speech."
+    },
+    "jinyong.7": {
+      "tier_reason": "Common: almost all serious narrative needs real conflict, but it takes length to build.",
+      "why": "Good guys fighting bad guys is a spectacle to watch; when both sides are right, readers are drawn in to weigh the choice for the character. The choice exposes what lies deepest in the character, and the price gives the choice weight. If the writer does not rescue them, the reader's heart stays in suspense.",
+      "example": "> *Paraphrase:* In *Demi-Gods and Semi-Devils*, the protagonist breaks with his sworn brothers; in *The Legend of the Condor Heroes*, country and private love pull against each other.\n\n> *Illustration:* On one side, the brother he had faced death with; on the other, the names of thirteen dead men. He kicked the scholar into the cabin and went ashore himself.\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"The brother he had faced death with\", \"the names of thirteen dead men\": both sides concrete, both with weight.\n- \"Kicked into the cabin\": the choice is written as action, not inner monologue.\n- \"Went ashore himself\": the price falls on him; going ashore means facing his brother.",
+      "overdo": "> He fell into deep struggle: on one side was love, on the other duty, and his heart was in agony. In the end he understood that true love means letting go.\n\nThe fault: an abstract dilemma and a cheap resolution. \"Love\" and \"duty\" are empty words, and one sentence of insight dissolves the dilemma.",
+      "when_not": "- In light material or comic scenes, where a forced dilemma drags the tone down.\n- When one side clearly outweighs the other; that is a multiple-choice question, not a dilemma.",
+      "exercise": "Design a dilemma for a character, with each side represented by one concrete thing. In the last sentence, write only what they do.",
+      "check": "After the choice, has the character lost something the reader cares about?",
+      "adjacent": "- jinyong.5 The Reveal: reveals often create dilemmas.\n- jinyong.8 Historical Setting: the tide of events is the outside pressure on a dilemma."
+    },
+    "jinyong.8": {
+      "tier_reason": "Common: usable in any historical or period material, as long as real people's words and deeds are not invented.",
+      "why": "Once a real reign year appears, readers call up what they know of that time, and the story gains the texture of truth. With history pressing down on individuals, a character's choices are no longer purely private; readers feel the smallness and struggle of the individual, and the weight increases.",
+      "example": "> *Paraphrase:* *The Legend of the Condor Heroes* is set against the standoff between the Song, the Jin and the Mongols; *The Deer and the Cauldron* is set in the Kangxi reign.\n\n> *Illustration:* The third month of the seventeenth year of Chongzhen: the Yellow River's ice had only just broken, and the floes were still jostling in midstream.\n\n*(The illustration is written for this library. The seventeenth year of Chongzhen is 1644, the year the Ming fell.)*",
+      "breakdown": "- \"The third month of the seventeenth year of Chongzhen\": only the date; readers who know will sense that the world is about to change.\n- \"The ice had only just broken\": season and geography, not historical record.\n- \"Floes jostling\": the larger forces are hidden in the scenery; turmoil is suggested by an image.",
+      "overdo": "> At the end of the Ming dynasty, politics were corrupt and the people lived in misery; peasant uprisings broke out one after another, Li Zicheng led his army into Beijing, the Chongzhen Emperor hanged himself on Coal Hill, and the Qing army then entered the passes…\n\nThe fault: a history lesson. A summary of sources before the story has begun, and the reader's mind has already wandered.",
+      "when_not": "- When the writer's grasp of that period is shaky; better to invent a setting.\n- Where the plot needs real historical figures to speak; use fictional characters instead.",
+      "exercise": "Set a story's period in one sentence, with only one time and one piece of scenery, and no historical explanation.",
+      "check": "Delete the reign year. Does the story become lighter? Have any real people been given invented words or deeds?",
+      "adjacent": "- jinyong.7 Loyalty Dilemma: the tide of history forces the dilemma.\n- jinyong.9 Couplet Chapter Titles: both are classical packaging, one for background, one for titles."
+    },
+    "jinyong.9": {
+      "tier_reason": "Signature: the hallmark packaging of the Chinese chapter novel; rare in modern forms and worth learning mainly to understand it.",
+      "why": "Parallel lines have natural rhythm and order; at a glance the reader senses a classical air. Each half gives one image, previewing two highlights of the chapter without revealing the outcome, so it entices without spoiling. Read in sequence, a book's chapter titles also form a map of the plot.",
+      "example": "> *Paraphrase:* *Demi-Gods and Semi-Devils*, *The Deer and the Cauldron* and other novels use couplet chapter titles; the latter often assembles them from lines by earlier poets.\n\n> *Illustration:* 孤灯照雪辨来客 断篙横江识故人\n\n*Translation:* \"A lone lamp on the snow: telling who has come / A broken pole across the river: knowing an old friend.\"\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"A lone lamp on the snow\" against \"a broken pole across the river\": noun matches noun, verb matches verb, seven characters against seven.\n- \"Telling who has come\" against \"knowing an old friend\": the first half is about a stranger, the second about recognition, so the plot moves forward.\n- It does not say who the old friend is: the image is given, the answer held back.",
+      "overdo": "> Chapter Three: The Hero Awakens His Heaven-Defying Bloodline After Betrayal / The Villain Finally Dies in One Blow\n\nThe fault: no parallelism and a spoiler. Neither length nor parts of speech match, and the ending is written into the title.",
+      "when_not": "- In modern settings or short essays, where chapter couplets look affected.\n- When your skill with parallelism is not enough; use a simple title, since a forced couplet looks worse than none.",
+      "exercise": "Write a five-character couplet title for something that happened to you recently: the first half the cause, the second the turn.",
+      "check": "Are the two halves equal in length and matched in parts of speech, without giving away the ending?",
+      "adjacent": "- jinyong.3 Named Techniques: both are naming, one for chapters and one for moves.\n- jinyong.4 Planted Secret: a chapter title can itself plant a secret."
+    },
+    "jinyong.10": {
+      "tier_reason": "Core: applies to any form with dialogue; it decides whether characters are living people or mouthpieces.",
+      "why": "How a person talks reveals who they are: background, trade, temperament. Readers recognise people by their tone, so not every line needs \"so-and-so said\", and reading flows. When each voice has its own pitch, conflict feels truer, because two lives collide in a single exchange.",
+      "example": "> *Paraphrase:* In *The Deer and the Cauldron*, the protagonist talks in street slang, slippery and quick-witted, in sharp contrast with the way people at court speak.\n\n> *Illustration:* \"Folk from the capital, these days more of them run south than north. You're heading north. Going to deliver yourself to death, or deliver something?\"\n\n*(The illustration is written for this library.)*",
+      "breakdown": "- \"More of them run south than north\": he speaks from observation, like an old hand who has watched travellers come and go.\n- \"Deliver yourself to death\", \"deliver something\": the two uses of 送 (deliver) set against each other, rough but sharp.\n- He never says \"I suspect you\": there is a blade in the words, and the tone builds the character.",
+      "overdo": "> \"How dare you!\" he said angrily. \"Hmph, so what?\" she sneered. \"I will never let you go!\" he said through gritted teeth.\n\nThe fault: dialogue tags carry the personality. Remove \"angrily\" and \"sneered\" and any of the three lines could belong to anyone.",
+      "when_not": "- In formal record-keeping texts, where everyone's tone should be neutral.\n- When you do not know a dialect or jargon well; do not invent it, or it rings false.",
+      "exercise": "Have a cook and an accountant each answer the same question, \"Busy today?\", in one line each, without naming the speakers.",
+      "check": "Cover every speaker tag. Can you still tell who says each line?",
+      "adjacent": "- jinyong.1 Entrance Portrait: the first line spoken is one of its three elements.\n- jinyong.6 Ensemble of Factions: an ensemble separates people by action; distinct voices separate them by tone."
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "engine": "guanfang-writing",
+  "atoms": {
+    "guanfang.1": {
+      "tier_reason": "Signature: the hallmark opening of official commentary; worth understanding, but rarely right outside that register.",
+      "why": "From the first lines the reader knows what the piece sets out to prove, and every later layer has to answer to that sentence. A large frame gives the issue weight, so the reader reads on more seriously; with the judgment stated first, the argument has a direction and does not scatter.",
+      "example": "> A city's warmth shows not only in the height of its towers but also in the late-night service lamp still burning.\n\n*(Illustrative example written for this library.)*",
+      "breakdown": "- \"A city's warmth\": lifts a small matter (a local service) to the level of the city's character.\n- \"Not only… but also…\": grants the large scale, then shifts the weight to the concrete; the opening already plants the later move from small to large.\n- The whole sentence is a judgment with no pile of adjectives, so the rest of the piece can support it layer by layer.",
+      "overdo": "> This work is of great significance and far-reaching impact; it is a historic milestone that will surely go down in history.\n\nThe fault: volume without content. None of the big words says *where* it is big, so nothing later can back it up.",
+      "when_not": "- The issue is small and readers only want to know what to do (service guides, explainers of a notice); forcing it upward sounds inflated.\n- When the body cannot supply facts to hold that height. (A short commentary may open on a single incident, but the keynote must arrive by the second paragraph.)",
+      "exercise": "Write one opening keynote sentence for \"a neighbourhood opens a canteen for the elderly\". Place it in a larger frame, but the sentence must contain one concrete object.",
+      "check": "Take the keynote sentence out on its own. Can you find at least two facts later in the piece that directly bear it out? If not, the keynote is empty.",
+      "adjacent": "- guanfang.2 Time Coordinates: the keynote answers \"how big is this\"; the coordinates answer \"why now\".\n- zhexuan.6 Elevate and Redefine: that atom rewrites a concept; the keynote gives an overall judgment."
+    },
+    "guanfang.2": {
+      "tier_reason": "Common: useful in most commentary that is tied to a moment, but only when a genuinely relevant date exists.",
+      "why": "Readers need a reason of \"here and now\" before they feel a piece concerns them. A point in time puts them at a crossroads, looking back and ahead at once; the issue gains a before and after, and the judgment follows naturally instead of appearing from nowhere.",
+      "example": "> Another school year begins. Looking back from here, the road outside the school gate has been rebuilt three times; looking ahead, the road the children have to walk is still long.\n\n*(Illustrative example written for this library.)*",
+      "breakdown": "- \"Another school year begins\": opens on a point everyone can confirm, which needs no checking and cannot be wrong.\n- \"Looking back… looking ahead…\": one backward, one forward, fixing the present at the midpoint.\n- \"Rebuilt three times\": the coordinate does not stay in abstract time; it is hung at once on a visible change.",
+      "overdo": "> Standing at a new historical starting point, facing a new era and a new journey, at this crucial moment linking past and future…\n\nThe fault: every marker is generic. It fits any article, so it locates nothing.",
+      "when_not": "- When no point in time is truly tied to the issue, do not force an anniversary or a \"crucial moment\".\n- When an anniversary count, session number or date has not been verified: leave it out, or mark it [to be verified].",
+      "exercise": "Write the first two sentences of a short commentary on waste sorting, using one concrete, checkable point in time (a season, a holiday, a new term) to locate the present.",
+      "check": "Swap the date for another day. Does the piece still work? If it does, the date has nothing to do with the issue; change it.",
+      "adjacent": "- guanfang.1 High Keynote: coordinates give the position in time; the keynote gives the height of value.\n- guanfang.3 Historical Depth: a coordinate is a point; depth is a stretch of road behind it."
+    },
+    "guanfang.3": {
+      "tier_reason": "Common: works across argument and commentary, provided the history is reliable and actually relevant.",
+      "why": "Looked at only today, a judgment can seem like one person's opinion; connect it to something tested by time and readers take it as a pattern rather than a view. History also brings images and a sense of period, giving an argument a longer breath.",
+      "example": "> When the ancients built irrigation channels, they followed the rule \"dredge the bed deep, keep the weir low\": six characters that held for a thousand years. Today the tools of water management have changed; the seriousness about working with nature's rules has not.\n\n*(Illustrative example written for this library. The rule is the traditional maxim associated with the Dujiangyan irrigation works.)*",
+      "breakdown": "- \"Dredge the bed deep, keep the weir low\": chooses a widely known maxim with a clear origin, not an obscure allusion.\n- \"Six characters that held for a thousand years\": presses the history into one tangible result without going into scholarship.\n- \"Today… has not\": bridges straight back to the present, so past and present serve the same point.",
+      "overdo": "> As the ancients said, \"great affairs must be done through small details\"; and also, \"of a hundred li, ninety is only halfway\"; and again, \"a tree you can barely embrace grows from a tiny shoot\"…\n\nThe fault: three sayings in a row, none bridged to the others or brought back to the topic. It becomes a display of reading.",
+      "when_not": "- When you are unsure of the date, source or exact wording; misattributed sayings are the commonest way this move fails.\n- When the issue is very new and any historical analogy would be forced.",
+      "exercise": "On the topic of young people learning a craft, find one historical fact you know to be accurate. Write a lead-in of no more than three sentences, plus the one sentence that bridges to today.",
+      "check": "Delete the historical part. Is the argument clearly weaker? If not, it was only decoration.",
+      "adjacent": "- zhexuan.7 Dialectic Contrast: that atom alternates past and present several times; here one stretch of history usually serves as grounds.\n- guanfang.2 Time Coordinates: coordinates mark \"now\"; depth tells \"where it came from\"."
+    },
+    "guanfang.4": {
+      "tier_reason": "Common: figures strengthen most arguments, but only when a reliable source exists.",
+      "why": "A judgment persuades through trust; numbers give readers something to check for themselves. When figures come in a set and show change as \"from… to…\", the reader sees a curve rather than a point, and the judgment shifts from \"I say so\" to \"the facts are here\".",
+      "example": "> From ×× outlets in year ×× to ×× in year ××, the county's parcel network has multiplied; behind the figures, goods from the mountains are travelling faster than people for the first time.\n\n*(Illustrative example written for this library; ×× marks placeholders.)*",
+      "breakdown": "- \"From… to…\": two endpoints make a change, which persuades more than a single total.\n- \"××\": in real writing these must be replaced with traceable data; with no source, mark [to be verified].\n- The second half translates the figures into an image and a judgment, so data and judgment stand side by side rather than piling up.",
+      "overdo": "> According to statistics, the relevant indicators rose by about thirty per cent, coverage exceeded ten million people, and satisfaction reached over ninety-five per cent.\n\nThe fault: \"according to statistics\" with no source, round numbers that feel guessed, three in a row and not one judgment. Readers neither believe nor remember them.",
+      "when_not": "- When no reliable source is available. Write only the judgment, or mark [to be verified]; never estimate a number.\n- In strongly emotional passages, where a string of figures cools the warmth.",
+      "exercise": "Write one sentence of data alongside judgment for \"buses reach the villages\". Use ×× as placeholders for figures in two years, and add one sentence translating the figures into a change in daily life.",
+      "check": "Can you state the source and definition of every figure? If not, change it to [to be verified].",
+      "adjacent": "- zhexuan.3 Anchoring with Data: that atom stresses a single precise, close-to-home number; this one stresses a set of figures showing change.\n- guanfang.8 Rising Parallels: figures often sit inside parallels, but the parallel itself governs the rising rhythm."
+    },
+    "guanfang.5": {
+      "tier_reason": "Core: works across genres and is the basic skill behind any good argument.",
+      "why": "Readers *know* a grand judgment but do not *feel* it; one concrete person and one action let them see it. Held first by the image, they then accept the reasoning behind it, and the judgment gains warmth and credibility. The move works in every genre and is the groundwork of good argument.",
+      "example": "> At four in the morning, the market's shutter is half raised, and the woman who sells tofu has already cut the first tray into neat squares.\n\n*(Illustrative example written for this library; the person is fictional.)*",
+      "breakdown": "- \"Four in the morning\", \"half raised\": precise time and action make the image stand.\n- \"The woman who sells tofu\": no real name or workplace, so nothing fictional passes as news fact.\n- \"Neat squares\": the detail already implies the diligence the piece will discuss, without the writer saying so.",
+      "overdo": "> He quietly held his post for thirty years, never complaining of hardship, putting the collective before his family, forging greatness out of the ordinary.\n\nThe fault: the person is perfected and given no visible action; it is all words of praise, and the reader cannot see anyone.",
+      "when_not": "- In very short statements of position, where setting a scene slows the pace.\n- When the only details you have are invented. Write a small thing you know to be true; any invention must be labelled as an example.",
+      "exercise": "On the topic of community doctors, write two sentences of scene with no evaluative adjectives at all: only time, action and one object.",
+      "check": "Remove every adjective. Is the image still there? Only then has it landed.",
+      "adjacent": "- zhexuan.4 Scene Hook: stresses grabbing the reader at the start and giving body heat; this atom stresses holding up a large theme.\n- guanfang.1 High Keynote: the two often pair, one high and one grounded."
+    },
+    "guanfang.6": {
+      "tier_reason": "Signature: the most recognisable sound of Chinese official commentary; hard to carry into other registers or into English.",
+      "why": "Four-character phrases have even syllables and carry weight when read, which suits summing up a spirit or a demand at the start or end of a paragraph. Two or three in parallel let the reader take in the points in one breath and set up the formal tone of the genre. It is the most easily recognised voice of official commentary.",
+      "example": "> *Shouzheng chuangxin, jiujiu weigong* (keep to what is right while innovating; persist and the work will tell) are saying the same thing: keep the direction steady and the effort long.\n\n*(Illustrative example written for this library; in Chinese: 守正创新、久久为功，说的是同一件事：方向要稳，劲头要长。)*",
+      "breakdown": "- Two sets of four-character phrases; it does not reach for more.\n- \"Are saying the same thing\": a plain sentence follows at once to unpack the phrases, so the reader does not hear only the ring.\n- \"Keep the direction steady and the effort long\": the explanation is short and solid, pairing the formal with the colloquial.",
+      "overdo": "> We must unite our hearts and pool our strength, tackle tough problems, forge ahead, advance with courage, strive with vigour and act without slackening.\n\n*(In Chinese: 凝心聚力、攻坚克难、砥砺奋进、勇毅前行、踔厉奋发、笃行不怠。)*\n\nThe fault: six sets in a row with overlapping meanings; the phrases replace content, and the reader cannot recall a single thing.",
+      "when_not": "- When narrating concrete facts or telling a person's story; the phrases grind the details flat.\n- In new-media pieces for young readers, where heavy use sounds stiff.",
+      "exercise": "Write the end of a paragraph about community volunteering. Sum it up in two four-character phrases, then explain them in one plain sentence of no more than fifteen characters (about ten English words).",
+      "check": "Does the paragraph use no more than three sets, and can each set be matched to concrete content?",
+      "adjacent": "- guanfang.7 Couplet Close: four-character phrases are a rhythm of word groups; the couplet is a structure of paired sentences.\n- zhexuan.10 Compress to Aphorism: an aphorism aims to be shareable out of context; four-character phrases aim at formal summary."
+    },
+    "guanfang.7": {
+      "tier_reason": "Common: a reliable way to close a section in most argument, as long as it is used sparingly.",
+      "why": "Symmetrical sentences carry a natural sense of completion; the reader knows a layer of argument has landed. When the two halves complement each other, one giving the condition and one the result, they are easy to remember and leave room to breathe before the next layer.",
+      "example": "> Once the road reached the door, life had something to look forward to; once people's hearts came together, the work had something to aim at.\n\n*(Illustrative example written for this library.)*",
+      "breakdown": "- The two halves share one structure: \"once… reached/came…, … had something to…\".\n- They complement each other: the first is about material conditions, the second about people's hearts; they do not repeat.\n- In Chinese both halves end on colloquial words (奔头 / 准头), so there is everyday warmth inside the formality.",
+      "overdo": "> Development is the hard truth, development is the top priority; development must be high-quality, and quality must be highly developed.\n\nThe fault: matching for the sake of matching. The halves say the same thing, and the last clause merely reverses word order as a word game.",
+      "when_not": "- If every paragraph ends on a couplet, the piece loses its breath and turns into a chant.\n- When the argument has not been fully made, a couplet close looks like a premature conclusion.",
+      "exercise": "Write a couplet close for a passage about family values: one half about behaviour, the other about its result.",
+      "check": "Can either half be deleted without loss of meaning? If so, they are repeating each other.",
+      "adjacent": "- guanfang.6 Four-Character Phrases: both are compact pronouncements, but those are word groups and this is a pair of sentences.\n- zhexuan.9 Trilogy Stance: that is the closing stance of a piece; the couplet is used more to close paragraphs."
+    },
+    "guanfang.8": {
+      "tier_reason": "Common: a familiar device in persuasive writing, effective once per piece at the climax.",
+      "why": "Same-shaped sentences speed up the rhythm and carry the reader along with the tone. The key is the *rise*: each sentence stands higher than the last, so the reader feels the argument climbing rather than marking time. Used once at the height of the argument, its force is most concentrated.",
+      "example": "> Only when one household has clean water can a village be said to drink safe water; only when village after village drinks safe water can a county speak of closing its gap in basic services.\n\n*(Illustrative example written for this library.)*",
+      "breakdown": "- The subject moves from \"one household\" to \"a village\" to \"a county\", rising level by level.\n- The end of each clause becomes the start of the next (anadiplosis), so the progression is visible.\n- Only three levels; it stops at the county and does not force its way higher.",
+      "overdo": "> We must have confidence, we must have determination, we must have perseverance, we must have love, we must have our original aspiration.\n\nThe fault: five parallel lines that do not rise. In Chinese each ends on 心 (heart), so the rhyme stands in for logic; it sounds loud and says one thing.",
+      "when_not": "- Once the piece already has more than two parallels, skip any further ones.\n- When there is no real causal link between levels; a forced rise sounds hollow.",
+      "exercise": "Write three parallel sentences on reading. The subject must widen from the individual to the family to society, with a conditional link between each sentence.",
+      "check": "Shuffle the three sentences. Does the meaning stop making sense? If not, there is no rise.",
+      "adjacent": "- zhexuan.9 Trilogy Stance: that is a triple stance at the end; this is the step-by-step rise at the argument's height.\n- guanfang.7 Couplet Close: a couplet is two complementary sentences; a parallel is several rising ones."
+    },
+    "guanfang.9": {
+      "tier_reason": "Core: the basic safeguard of any argument; without it a piece reads as one-sided praise.",
+      "why": "Readers already have doubts; when the writer voices them first, trust is built. A piece that only praises gets discounted automatically; admit the difficulty and then answer it, and the piece carries weight. This is the core skill that keeps any argument from falling over.",
+      "example": "> We should also recognise that many small shopkeepers do not yet know how to use online tools, and \"going online\" is a real hurdle for them. They should not have to clear it alone; someone needs to build the steps up to where they stand.\n\n*(Illustrative example written for this library.)*",
+      "breakdown": "- \"We should also recognise\": a clear turn to face the problem, not avoid it.\n- The difficulty is concrete: who (small shopkeepers) and where it lies (not knowing the tools).\n- The answer is not pushed onto individual virtue; it lands on a workable direction, \"build the steps\".",
+      "overdo": "> Of course, some difficulties and problems are inevitable on the road ahead, but we believe that, with joint efforts from all sides, these problems will surely be properly resolved.\n\nThe fault: a target set up and never answered. \"Some difficulties\" names nothing, and the reply amounts to \"we believe it will be solved\".",
+      "when_not": "- In pure celebration or mourning, where turning to problems would break the feeling.\n- When you have no higher-level answer, do not set up a target you cannot hit.",
+      "exercise": "Write a dialectical reply on promoting electronic payment: first describe concretely the real difficulty of one group of people, then write one sentence of answer that does not put the burden on individuals.",
+      "check": "Does the reply contain a direction that can actually be acted on, rather than only \"believe\" and \"hope\"?",
+      "adjacent": "- zhexuan.1 Acknowledge: that atom grants the feeling; this one grants the problem itself.\n- zhexuan.8 Concrete-Abstract Sandwich: both deal with criticism, but the sandwich governs where the target and the protected layer sit."
+    },
+    "guanfang.10": {
+      "tier_reason": "Common: the usual ending for persuasive commentary, but wrong for analysis or explainers.",
+      "why": "Once the piece has laid out the road behind and the facts, the reader needs somewhere to go. A call to action turns the argument into a shared choice; \"we\" rather than \"you\" invites the reader in instead of lecturing them. The more solid the groundwork, the stronger this line.",
+      "example": "> Sweep the path outside your door, do the work in your hands properly, and the days will grow brighter one by one. In this, every one of us has a part.\n\n*(Illustrative example written for this library.)*",
+      "breakdown": "- \"Sweep\", \"do properly\": the call rests on concrete actions anyone can take.\n- \"Brighter one by one\": confidence shown as an image, not a slogan.\n- \"Every one of us has a part\": closing on \"us\" frames the demand as shared participation.",
+      "overdo": "> Let us unite more closely, roll up our sleeves and work hard, and with fuller enthusiasm and higher morale strive to write new and greater glories!\n\nThe fault: slogan stacked on slogan, cut off from anything specific earlier; it would end any article equally well.",
+      "when_not": "- In analysis or explanatory pieces, where readers want a conclusion, not mobilisation.\n- When no facts have been laid down; a call from nowhere only sounds empty.",
+      "exercise": "Write two closing sentences for a short commentary on not wasting food. The call must include one concrete action and use \"we\", not \"you\".",
+      "check": "Can the action at the end be traced back to something earlier in the piece? If not, the call comes from nowhere.",
+      "adjacent": "- zhexuan.9 Trilogy Stance: that gives a stance to carry away; a call to action gives a shared action.\n- zhexuan.12 Peer Positioning: both use \"we\", but peer positioning runs through the whole piece, while the call comes only at the end."
+    }
+  }
+}

@@ -470,10 +470,94 @@ python tools/run_prompts.py --all</pre>
         en_shell(t, "../../", "../", "../../engines/", "engines"), encoding="utf-8")
 
 
+EN_SECTIONS = [("why", "Why it works"), ("example", "From the source"), ("breakdown", "Taking it apart"),
+               ("overdo", "Overdone"), ("when_not", "When not to use it"), ("exercise", "Five-minute exercise"),
+               ("check", "Self-check"), ("adjacent", "Adjacent atoms")]
+TIER_EN = {"核心": "Core", "常用": "Common", "签名": "Signature"}
+
+
+def _aslug(aid):
+    return re.sub(r"[^0-9A-Za-z_.-]", "_", aid)
+
+
+def en_atom_data():
+    """atoms/en/<engine>.json → {id: {section: markdown}}；缺失或不完整的原子不计入。"""
+    out = {}
+    for f in sorted((ROOT / "atoms/en").glob("*.json")):
+        for aid, v in json.loads(f.read_text(encoding="utf-8")).get("atoms", {}).items():
+            if all(str(v.get(k, "")).strip() for k, _ in EN_SECTIONS):
+                out[aid] = v
+    return out
+
+
+def build_en_atom_pages(idx, g, data):
+    import markdown
+    import build_atoms as bt
+    tiers = {}
+    for f in sorted((ROOT / "atoms/explain").glob("*.md")):
+        for aid, v in bt.parse_explain(f)[1].items():
+            tiers[aid] = v["tier"]
+    fam_en, eng_en, at = g["families"], g["engines"], g["atoms"]
+    known = {a["id"] for a in idx}
+
+    def link_ids(h):
+        # 相邻原子里的 id：有英文页链英文页，否则链中文页
+        def rep(m):
+            aid = m.group(0)
+            if aid not in known:
+                return aid
+            href = f"{_aslug(aid)}.html" if aid in data else f"../../atoms/{_aslug(aid)}.html"
+            return f'<a href="{href}">{aid}</a>'
+        return re.sub(r"(?<![\w./])[a-z]+\.\d+(?![\w])", rep, h)
+
+    ba.SECTION = "engines"
+    for a in idx:
+        aid = a["id"]
+        if aid not in data:
+            continue
+        d = data[aid]
+        name, one = at.get(aid, [a["name"], ""])
+        parts = [f"<p><strong>In one line:</strong> {esc(one)}</p>"]
+        for k, label in EN_SECTIONS:
+            src = re.sub(r"(?m)^(?![ \t]*(?:[-*+] |\d+\. |>))(.+)\n(?=[ \t]*(?:[-*+] |\d+\. |>))", r"\1\n\n", d[k].strip())
+            h = markdown.markdown(src, extensions=["sane_lists"])
+            if k == "adjacent":
+                h = link_ids(h)
+            parts.append(f"<p><strong>{label}</strong></p>{h}")
+        tier = TIER_EN.get(tiers.get(aid, "常用"), "Common")
+        reason = str(d.get("tier_reason", "")).strip()
+        content = (f'<article class="ad"><div class="crumb"><a href="index.html">Atoms</a> · '
+                   f'{esc(eng_en.get(a["engine"], a["engine"]))} · {esc(aid)}</div>'
+                   f'<h1>{esc(name)}</h1><div class="tags"><span>{tier}</span>'
+                   f'<span>Family · {esc(fam_en.get(a["family"], a["family"]))}</span></div>'
+                   + (f'<p style="font-size:13.5px;color:var(--ink2);margin:-14px 0 22px">{esc(reason)}</p>' if reason else "")
+                   + f'<div class="body">{"".join(parts)}</div></article>'
+                   '<div class="pager" style="max-width:36em;margin:0 auto;padding:0 24px 56px">'
+                   '<a href="index.html">← Atom library</a></div>')
+        t = page(f"{name} · Atoms", content + f"<style>{bt.CSS}</style>", "../../")
+        (DOCS / f"en/atoms/{_aslug(aid)}.html").write_text(
+            en_shell(t, "../../", "../", f"../../atoms/{_aslug(aid)}.html", "atoms"), encoding="utf-8")
+
+
 def build_en_atoms():
     idx = json.loads((ROOT / "atoms/index.json").read_text(encoding="utf-8"))
     g = en_glossary()
     fam_en, eng_en, at = g["families"], g["engines"], g["atoms"]
+    data = en_atom_data()
+    (DOCS / "en/atoms").mkdir(parents=True, exist_ok=True)
+    for old in (DOCS / "en/atoms").glob("*.html"):
+        if old.name != "index.html":
+            old.unlink()
+    build_en_atom_pages(idx, g, data)
+    missing = [a["id"] for a in idx if a["id"] not in data]
+    print(f"built en atoms: {len(idx) - len(missing)} English page(s); missing translations: {len(missing)}"
+          + (f" ({', '.join(missing[:10])}{' …' if len(missing) > 10 else ''})" if missing else ""))
+
+    def href(a):
+        return (f'{_aslug(a["id"])}.html' if a["id"] in data else f'../../atoms/{_aslug(a["id"])}.html')
+
+    def zh(a):
+        return "" if a["id"] in data else ' <span class="zh">(Chinese)</span>'
     groups = {}
     for a in idx:
         groups.setdefault(a["family"], []).append(a)
@@ -484,8 +568,8 @@ def build_en_atoms():
         aid = f"f{k}"
         toc.append(f'<a href="#{aid}">{esc(name)} <small>{len(groups[f])}</small></a>')
         items = "".join(
-            f'<li><a href="../../atoms/{re.sub(r"[^0-9A-Za-z_.-]", "_", a["id"])}.html">'
-            f'<b>{esc(at.get(a["id"], [a["name"], ""])[0])}</b></a> <span class="zh">(Chinese)</span>'
+            f'<li><a href="{href(a)}">'
+            f'<b>{esc(at.get(a["id"], [a["name"], ""])[0])}</b></a>{zh(a)}'
             f'<span class="eng">{esc(eng_en.get(a["engine"], a["engine"]))}</span>'
             f'<div class="one">{esc(at.get(a["id"], ["", ""])[1])}</div></li>' for a in groups[f])
         note = ("Moves found in one engine only." if f == "独有"
@@ -498,7 +582,8 @@ def build_en_atoms():
             'small enough to practise, general enough to recombine. Different authors are different combinations of the same atoms.</p>'
             f'<p class="stat">{len(idx)} atoms · {shared} shared families · {len(groups.get("独有", []))} unique · '
             f'{len({a["engine"] for a in idx})} engines</p>'
-            '<p>Names and one-line definitions are given in English. Each atom&rsquo;s full page is in Chinese.</p>'
+            + ('<p>Each atom has a full page in English; quotations from authors still in copyright are kept in Chinese with a short gloss.</p>'
+               if not missing else '<p>Atoms marked (Chinese) do not have an English page yet and link to the Chinese one.</p>') +
             f'<nav class="toc">{"".join(toc)}</nav></div></section>{"".join(secs)}</main>')
     ba.SECTION = "engines"
     t = page("Atom library", f"<style>{EN_CSS}{EN_SUB_CSS}</style>" + body, "../../")

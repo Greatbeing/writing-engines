@@ -1,0 +1,115 @@
+{
+"engine": "versailles-writing",
+"atoms": {
+"versailles.1": {
+"tier_reason": "Common: tucking the real news into a subordinate slot works in almost any casual post.",
+"why": "Readers follow the main clause by default, so the first thing they see is a trivial matter. Only on a second look do they notice the real information hiding in “where” or “on the way back from where.” That moment of “oh, I see” is the joke. The less weight the boast is given, the sharper the contrast.",
+"example": "> [Demo] Flew back today via a layover in Vancouver, and the bubble tea place at the airport has stopped doing taro. I was flat the whole way home.",
+"breakdown": "- “via a layover in Vancouver”: the boast sits in an adverbial of time.\n- “stopped doing taro”: the main clause is a small thing.\n- “flat the whole way home”: all the feeling goes to the small thing; the boast gets not a word of emphasis.",
+"overdo": "I just got back from Vancouver! Just mentioning it in passing, but the airport bubble tea there isn't great.\n\nThe boast has become the subject, gained an exclamation mark, and the writer even says “in passing.” That is showing off in plain sight.",
+"when_not": "- For a genuine trip report or travel piece, there is nothing to hide.\n- When the boast is so ordinary that nobody would care once it's hidden, readers unwrap it and find nothing.",
+"exercise": "Take the sentence “I was in some impressive place” and turn the place into an adverbial, with a main clause about a meal or the weather.",
+"check": "Is the boast noun the subject? If you delete it, does the sentence still read smoothly?",
+"adjacent": "- versailles.5 Brands Dropped Lightly: one hides a location, the other hides a name.\n- versailles.4 Praise by Proxy: hides the boast in someone else's mouth."
+},
+"versailles.2": {
+"tier_reason": "Common: complaint-shaped boasting is the default move of the form and fits many registers.",
+"why": "The complaining tone makes readers think they're hearing a gripe; only when they reach the thing complained about do they realize the “fault” is one only its owner could have. The more genuine the grievance, the louder the boast. Structurally it's a small reversal: from sympathy to “ah, so that's it.”",
+"example": "> [Demo] A garden this big is a real nuisance. We have someone in every week to mow it, and each time he has to sit for half a day before he can walk again.",
+"breakdown": "- “a real nuisance”: it opens with a complaint.\n- “garden this big”: the thing complained about is a good thing.\n- “every week”, “sit for half a day”: the complaint lands on concrete details that imply the size.",
+"overdo": "Our garden is honestly way too big and too beautiful, it's driving me mad, rare plants everywhere, so exhausting!\n\nIt says “big,” “beautiful” and “rare” outright; the complaint is left as an empty shell.",
+"when_not": "- If the thing really is broken, that's a gripe, not Versailles.\n- If you've already used Privilege as Problem, piling a complaint on top makes the whole piece one long lament.",
+"exercise": "Pick a good thing and write one concrete nuisance caused by its being “big” or “many.” No complimentary words allowed.",
+"check": "Can readers work back from the nuisance to what's good about the thing? Is there a single adjective praising it anywhere?",
+"adjacent": "- versailles.7 Privilege as Problem: this complains about the thing itself; that one about a choice or a situation.\n- standup.2 Setup and Punchline: same Reversal family, but this one doesn't need a short line to flip it."
+},
+"versailles.3": {
+"tier_reason": "Common: praising yourself by running yourself down works in plenty of everyday writing.",
+"why": "Readers first accept “he says he's no good,” then meet a number or a benchmark far beyond the ordinary and have to do the sum themselves. The moment they do, the modest shell cracks and the pride shows. This kind of praise-through-blame works in a lot of everyday writing, hence Common.",
+"example": "> [Demo] I honestly can't cook. Last time we had people over I only managed eight dishes, and the soup was too salty.",
+"breakdown": "- “honestly can't cook”: set yourself low first.\n- “only managed eight dishes”: an absurdly high standard, flattened by “only.”\n- “the soup was too salty”: one real small flaw to make the modesty believable.",
+"overdo": "My cooking is just so-so, it's only that everyone says it's better than a restaurant, but it's not really that great.\n\nThe high standard has turned into direct praise, then gets pulled back with “not really that great.” Both the modesty and the bragging are exposed.",
+"when_not": "- When you actually mean to mock yourself, don't hide a high standard; use standup.5.\n- When readers don't know how high the standard is (a specialist score, a job grade), the contrast never lands.",
+"exercise": "Write “I'm bad at X,” then add a specific number or result only an expert could reach.",
+"check": "Strip away the “I'm no good” shell: is what remains obviously an achievement?",
+"adjacent": "- standup.5 Self-Mockery: there the self-lowering is real.\n- versailles.6 Downplayed Numbers: modesty with a catch often lands on a number."
+},
+"versailles.4": {
+"tier_reason": "Common: reported speech is everywhere, so passing on praise fits many forms.",
+"why": "Praising yourself looks deliberate; praise from someone else reads like a fact, and if you seem put out by it, that adds “I couldn't care less.” Readers can tell you're borrowing someone else's knife, but formally there's nothing to object to, and that innocence is the joke. Reported speech is common in many genres.",
+"example": "> [Demo] My trainer at the gym told me to stop coming again today. Said if I keep going he'll have nothing left to teach me. It was a bit embarrassing.",
+"breakdown": "- “My trainer … said”: the praise comes from a third party.\n- “nothing left to teach me”: the praise is hidden inside an attempt to dissuade.\n- “a bit embarrassing”: the narrator reacts with awkwardness, not pride.",
+"overdo": "My trainer says I'm the most talented client he's ever had, and honestly I think so too, I really am doing pretty well.\n\nAfter the quote it adds “I think so too”: the borrowed knife is handed back and it becomes self-praise.",
+"when_not": "- When the person quoted is an identifiable real person or celebrity.\n- When the piece already has two people praising you; a third turns it into a collection of commendation letters.",
+"exercise": "Write something a stranger (a shop assistant, a security guard, a driver) said to you that sounds like a complaint but is really praise.",
+"check": "Is there a single line where “I” endorse the praise? Does the praise appear only inside quotation?",
+"adjacent": "- versailles.1 In Passing: one hides the boast in an adverbial, the other in someone else's mouth.\n- versailles.3 Modesty with a Catch: you say you're bad, others say you're good; they often work together."
+},
+"versailles.5": {
+"tier_reason": "Signature: the nickname-as-familiarity move is a hallmark of the form.",
+"why": "Only things you know very well get nicknames. Saying “that orange box” instead of the full name makes readers identify it themselves, and also tells them “to him this is everyday.” The pleasure of recognition stacked on the everyday tone shows more wealth than the full name would.",
+"example": "> [Demo] My friend sent another postcard from “that school next to Cambridge,” insisting I come and stay over the summer, but my cat can't be left alone.",
+"breakdown": "- “that school next to …”: no full name, just a position.\n- “another”: this happens often; it's familiar.\n- “my cat can't be left alone”: the main clause's worry is a small thing; the name is set down lightly.",
+"overdo": "I bought the classic model of a certain brand's bag, list price 48,000, in the limited orange.\n\nFull name, model and price: that's ad copy, not Versailles.",
+"when_not": "- When the audience won't recognize the abbreviation at all; wrapped too deep, nobody can open it.\n- Anything involving promotion of a real brand, in any form.",
+"exercise": "Pick an expensive item and write one sentence referring to it only by color, shape or location.",
+"check": "Does the sentence contain a full brand name, model number or price? Would a reader in the know recognize it at a glance?",
+"adjacent": "- versailles.1 In Passing: this sets down a name lightly; that one slips in a location.\n- versailles.6 Downplayed Numbers: one turns down a noun, the other a number."
+},
+"versailles.6": {
+"tier_reason": "Common: saying heavy things lightly works in reports and small talk too.",
+"why": "Numbers are the easiest thing to understand; readers grasp the weight at once, while the deflating word makes it sound weightless. Weight and tone cancel out, and readers feel the gap themselves. This way of saying heavy things lightly also works in reports and chat, so it's Common.",
+"example": "> [Demo] We didn't have much stuff for the move, only filled three trucks, and that's not counting the books.",
+"breakdown": "- “didn't have much”, “only”: two deflating words hold it down.\n- “three trucks”: the number itself is large.\n- “not counting the books”: one more stroke; the number is actually bigger, yet said more casually.",
+"overdo": "OMG! The move took a whole three trucks!! We have SO much stuff!\n\nExclamation marks and “a whole” turn the deflation into inflation; it's plain boasting.",
+"when_not": "- When the number isn't big enough, deflating it looks like confessing a shortfall.\n- For data in formal reports, don't wave it off with “only”; it distorts.",
+"exercise": "Write a number you consider “a lot,” put “only” or “just” before it, and end the sentence with an unrelated small regret.",
+"check": "Is there a deflating word before the number? Are there exclamation marks or inflating words like “a whole” or “actually” anywhere?",
+"adjacent": "- versailles.3 Modesty with a Catch: the number often serves as the absurd standard for “not good enough.”\n- versailles.5 Brands Dropped Lightly: both deflate, on different targets."
+},
+"versailles.7": {
+"tier_reason": "Common: the most frequent way into a Versailles piece.",
+"why": "Readers face a perfectly earnest “hard choice” in which every option is enviable. The more serious the tone, the more it sounds like real worry, and the more obvious the absurdity: what kind of problem is that? It's the most common opening of the form and its trademark.",
+"example": "> [Demo] Both schools offered full scholarships. One is too cold in winter, one too hot in summer, and I still can't decide whether to buy the down jacket or the sunscreen first.",
+"breakdown": "- “Both schools offered full scholarships”: the advantage is the premise of the problem.\n- “too cold”, “too hot”: weighing pros and cons in earnest, as if really choosing.\n- “down jacket or the sunscreen”: the worry lands on a ridiculously specific detail.",
+"overdo": "Ugh so annoying, too many offers, can't decide which one, feeling a little torn~\n\nThe worry is too light and vague, with no serious detail; readers feel no contrast.",
+"when_not": "- When readers are in a real predicament themselves (job rejections, failed exams); it will offend.\n- When you've already used Complaint as Boast; adding a dilemma repeats the lament.",
+"exercise": "Write a “which of two good options” worry and let the agonizing land on an everyday object.",
+"check": "Is the tone of the worry serious? Would a reader finish and think “I'd like a problem like that”?",
+"adjacent": "- versailles.2 Complaint as Boast: that complains about a thing's faults; this is a choice within a situation.\n- versailles.8 Asking for Advice: the dilemma often turns into a question at the end."
+},
+"versailles.8": {
+"tier_reason": "Signature: the fake request for advice is a recognizable Versailles ending.",
+"why": "A question pulls readers in. On the surface it asks for help; in fact it makes them reread the condition. Nobody can really answer, and nobody needs to; the more sincere the question, the less the writer seems aware of boasting. It also leaves the ending open, with nothing spelled out.",
+"example": "> [Demo] How do you all usually deal with your building management? Our rooftop terrace is too big, and they say every time it snows they have to send two extra people.",
+"breakdown": "- “How do you all usually …”: a standard request-for-help pattern.\n- “rooftop terrace is too big”: the boast hides in the background to the question.\n- “two extra people”: a concrete consequence quantifies the size; the question needs no answer.",
+"overdo": "Question for everyone: what should I do with our spare apartment? Rent it, sell it, or leave it empty? Please give detailed advice, thanks!\n\nIt asks a question that really needs an answer, even requests “detailed advice.” Readers will reply in earnest and the joke is gone.",
+"when_not": "- When the piece already ends on a faint close; a question on top drags.\n- On platforms where readers will genuinely answer (Q&A sites), it may be taken seriously.",
+"exercise": "Take a Privilege as Problem line you've written and rewrite it as a request for help starting “Hey everyone” or “Girls.”",
+"check": "Does anyone actually need to answer this question? Remove the question mark: is it a boast?",
+"adjacent": "- versailles.10 Faint Close: two ways to end, one with a question, one with a sigh.\n- versailles.7 Privilege as Problem: the question is often where the dilemma lands."
+},
+"versailles.9": {
+"tier_reason": "Signature: distinctive but hard to calibrate; not recommended for beginners.",
+"why": "The writer's surprise at ordinary things implies that they don't usually live like this. Readers reason from “he didn't even know” to “so that's how he lives.” The judgment is extremely delicate: overdone, it's unbelievable and slides easily into looking down on ordinary people, so beginners shouldn't imitate it directly.",
+"example": "> [Demo] Went to the wet market by myself for the first time today. Turns out you have to buy spring onions separately. I always thought they just came with the vegetables.",
+"breakdown": "- “by myself for the first time”: implies someone usually does it for you.\n- “you have to buy spring onions separately”: surprise at common knowledge.\n- “always thought they just came with”: specific naivety, which sets off the lifestyle.",
+"overdo": "Only found out today that some people have to squeeze onto buses to get to work, how sad. Do you ordinary people do this every day?\n\nThe contrast has become contempt for the reader. “How sad” and “you ordinary people” cross the line, and it isn't believable either.",
+"when_not": "- When other people's livelihoods or hardships are involved; it can humiliate readers.\n- When the thing you're surprised by is too basic; readers just think you're putting it on.",
+"exercise": "Write one “first time … only then found out …” sentence about a small piece of common knowledge, with the joke only on yourself.",
+"check": "Are there any words that belittle others? Would readers believe this ignorance?",
+"adjacent": "- versailles.3 Modesty with a Catch: that one says you're bad at something; this one says you don't know.\n- versailles.1 In Passing: this one often borrows a passing detail to hint at daily life."
+},
+"versailles.10": {
+"tier_reason": "Core: the ending decides whether the piece works, and closing on a feeling generalizes to many forms.",
+"why": "An ending that doesn't explain leaves the whole job of unwrapping to the reader. A sigh brings the mood back to flat, a last contrast with the boast hidden earlier. The ending makes or breaks the piece: spell it out and the whole thing deflates. Closing on a feeling rather than a summary works in many forms.",
+"example": "> [Demo · on an action] Having said that, I took the watch off and tossed it in the drawer to lie with the others.\n\n> [Demo · on an object] The pour-over on the desk had long gone cold; the beans were the ones I carried back from Ethiopia last week.\n\n> [Demo · on dialogue] My daughter called from the door: “Mum, the riding instructor's here.” I said, “Coming.”",
+"breakdown": "- Action: “tossed it in the drawer” is a tired gesture; “the others” slips in one more boast.\n- Object: “long gone cold” is weariness; “carried back” tucks the boast into a clause.\n- Dialogue: a homely “Coming,” flat in feeling, with the boast hidden in someone else's line.",
+"overdo": "Okay okay, just kidding haha, am I being too Versailles? Don't take it seriously~\n\nThe writer unwraps it, doing the reader's job first.\n\nWhen you stand this high, even rest becomes a luxury. Sigh, never mind.\n\nA maxim before the sigh: summing up for the reader, then sighing, is posing.",
+"when_not": "- When readers can't yet see the boast in what came before; supply enough information first, don't rush to close.\n- When you've already ended on Asking for Advice; no need to add a sigh.",
+"exercise": "Write three endings for a short Versailles piece: one on an action, one on an object, one on a line of dialogue, each under twenty words. No “downstairs” and no “sigh, I'll stop there.”",
+"check": "Is there any “just kidding,” “haha” or explanation in the ending? Does it stop on a feeling?",
+"adjacent": "- versailles.8 Asking for Advice: another way to end without spelling it out.\n- standup.8 Callback: stand-up ends on a callback, Versailles on a sigh."
+}
+}
+}

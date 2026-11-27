@@ -1,0 +1,115 @@
+{
+  "engine": "standup-writing",
+  "atoms": {
+    "standup.1": {
+      "tier_reason": "Core: almost every bit opens this way; it decides whether the audience gets on board.",
+      "why": "When the audience hears a familiar detail, the first thing they think is \"yes, yes, that's me.\" That moment of recognition is trust paid in advance; it is why they are willing to take the punchline that follows. The more specific the detail, the more it sounds like it is about them.",
+      "example": "*Sample (repo-written):* Have you ever noticed that when you press the \"close door\" button in a lift, the door doesn't close any faster? And yet everyone presses it.",
+      "breakdown": "- \"The 'close door' button in a lift\": a specific object everyone has pressed.\n- \"Doesn't close any faster\": says out loud what everyone suspected but never said.\n- \"And yet everyone presses it\": moves from the object to people, leaving an opening for the punchline.",
+      "overdo": "Have you ever noticed that young people today are under a lot of pressure, life keeps getting faster, and everyone is anxious?\n\nThe problem: the \"opening\" has grown into an editorial. There is no object anyone can picture, so the audience has nothing to say \"yes, that's me\" to.",
+      "when_not": "- When the subject is a strange experience that only happened to you: just tell it, no need to drag in shared experience.\n- When \"have you ever noticed\" has already been used twice in the same set: a third time makes it a verbal tic.",
+      "exercise": "Write down three small objects or small actions you ran into today. Open each with one \"Have you ever noticed…\" sentence, then pick the most specific one.",
+      "check": "Is there an object or action in the line that could be photographed? Will the audience think \"me too\"?",
+      "adjacent": "- standup.6 Escalation: the opening supplies the premise; escalation pushes it further.\n- standup.5 Self-Deprecation: the opening points at everyday life; self-deprecation points at yourself."
+    },
+    "standup.2": {
+      "tier_reason": "Core: the basic unit of a joke; nearly every other stand-up atom is built on it.",
+      "why": "The setup makes the audience's brain finish the next sentence on its own; the punchline takes a different road, and one that is understood instantly. The half-second gap between \"I thought\" and \"oh, it's actually\" is the laugh. It needs both surprise and instant understanding; lose either and it falls flat.",
+      "example": "*Sample (repo-written):* I signed up for an English class, and I've really stuck with it. (Pause) I now know the refund process inside out.",
+      "breakdown": "- \"I've really stuck with it\": the setup; the audience expects better English.\n- \"(Pause)\": gives the audience time to complete the expectation.\n- \"The refund process\": the punchline; what was stuck with has been swapped out, and it is understood at once.\n- It stops right after the punchline, with no explanation.",
+      "overdo": "I signed up for an English class and stuck with it really well, except what I stuck with was getting a refund, haha, basically I mean I didn't keep studying.\n\nThe problem: an explanation and a \"haha\" come after the punchline, filling in the gap by hand.",
+      "when_not": "- When the piece needs a stretch of sincere narration: don't flip every line; let the audience breathe.\n- When the expectation itself isn't clear: get the setup solid first, don't rush the punchline.",
+      "exercise": "Write one line, \"I'm really good at X.\" Then write a second line of no more than ten words that swaps out what you are good at.",
+      "check": "Cover the punchline and read only the setup: can the audience guess a \"normal ending\"? Is the punchline different from that ending?",
+      "adjacent": "- standup.3 Reversal: a punchline flips one line; a reversal flips the logic of the whole bit.\n- standup.10 Short Landing: governs the length of the punchline and the word it lands on."
+    },
+    "standup.3": {
+      "tier_reason": "Common: a strong closer for a longer bit, but it needs enough setup and works once per bit.",
+      "why": "All along, the audience has built a model of \"who did what to whom\" with you. The reversal turns that model upside down. Every line before it gets reinterpreted, so the laugh works backwards and is often bigger than any single punchline.",
+      "example": "*Sample (repo-written):* I always thought I was using my habit-tracking app to manage myself. Then I realised it knows what time I get up and go to bed better than my mum does. Last month it sent me an annual review. That's when I understood: I'm its employee.",
+      "breakdown": "- \"Using my habit-tracking app to manage myself\": sets up master and servant; I am the master.\n- \"Better than my mum does\": quiet setup; the power is shifting.\n- \"Annual review\": a workplace prop, preparing the flip.\n- \"I'm its employee\": master and servant swap, and everything before is reread.",
+      "overdo": "I have a cat. Actually, the cat has me. Actually, we keep each other. Actually, the world is just one big act of mutual keeping.\n\nThe problem: a reversal, then another reversal, then an uplifting moral. The logic gets flipped like a pancake and ends up as a motivational quote.",
+      "when_not": "- When there isn't enough setup to support it: a forced flip just feels confusing.\n- When the bit already has one big reversal: don't stack a second.",
+      "exercise": "Write three sentences on \"I'm in charge of something.\" In the fourth, have that thing be in charge of you.",
+      "check": "Looking back after the reversal, has the meaning of at least one earlier line changed?",
+      "adjacent": "- standup.2 Setup and Punchline: overturns a single line.\n- standup.4 Rule of Three: a reversal often lands on the third beat."
+    },
+    "standup.4": {
+      "tier_reason": "Common: easy to use anywhere a list appears, but predictable if repeated.",
+      "why": "Two instances are enough for the brain to spot a pattern; by the third, the audience is waiting for \"more of the same.\" The third item keeps the shape of the first two, so it sounds smooth; its content suddenly veers off, so it lands. Three is the fewest repetitions that establish a pattern and the most before it gets tiresome.",
+      "example": "*Sample (repo-written):* Before work I need three things: my staff badge, my earphones, and — a facial expression that makes me look busy at my desk.",
+      "breakdown": "- \"My staff badge, my earphones\": two physical objects; the pattern is \"things you take to work.\"\n- \"And —\": a one-beat pause, signalling the third item is coming.\n- \"A facial expression…\": the shape is still \"one thing,\" but the content has veered from objects to disguise.",
+      "overdo": "Office workers have three treasures: coffee, takeaway and dark circles, plus overtime, anxiety, and requirements that never stop changing.\n\nThe problem: the third item doesn't veer, and the list runs on to six. The pattern isn't broken, only dragged out.",
+      "when_not": "- When you only have one good idea: don't force two filler examples in front of it.\n- When the bit has already used a rule of three: a second one, and the audience will see it coming.",
+      "exercise": "For \"things you face going home for the New Year,\" list two normal ones, then a third that keeps the sentence shape but changes direction.",
+      "check": "Can the third item be read in the same sentence pattern as the first two? Is it the only one that's \"off\"?",
+      "adjacent": "- standup.3 Reversal: the third beat can be a small reversal.\n- standup.6 Escalation: escalation raises the stakes step by step; the rule of three is two steady, one off."
+    },
+    "standup.5": {
+      "tier_reason": "Common: the safest way to earn goodwill, but it must not slide into self-pity.",
+      "why": "When the audience sees you hit yourself first, they lower their guard: this person isn't here to lecture me. Offence aimed inward is the safest, and it also earns you the right to poke at other things later. What gets laughed at is a ridiculous detail, not the pain itself.",
+      "example": "*Sample (repo-written):* I'm an extremely disciplined person. Every night I set an alarm for six in the morning. And every morning at six, right on time, I turn it off.",
+      "breakdown": "- \"Extremely disciplined\": first build yourself up.\n- \"An alarm for six in the morning\": a specific habit that looks like real discipline.\n- \"Right on time, I turn it off\": \"right on time\" stays, the action changes, and you fall.\n- It lands on the small act of turning off an alarm, not on \"I'm a failure.\"",
+      "overdo": "I've achieved nothing. My work's a mess, my relationships have failed, and sometimes I feel there's no point in being alive.\n\nThe problem: the self-deprecation lands on the pain itself. The audience starts to feel sorry for you instead of laughing; it has become a sob story.",
+      "when_not": "- When the subject touches real trauma or illness: don't use it for self-deprecation.\n- Self-deprecation followed straight away by bragging cancels itself out.",
+      "exercise": "Write one strength you think you have, then use a specific action to show it doesn't actually hold.",
+      "check": "Is the laugh about a detail or about pain? After hearing it, does the listener want to laugh or to comfort you?",
+      "adjacent": "- standup.2 Setup and Punchline: self-deprecation often uses its structure.\n- versailles.3 Modesty with a Catch: the humblebrag's lowering is fake; stand-up's self-deprecation is real."
+    },
+    "standup.6": {
+      "tier_reason": "Common: works on any everyday rule, but needs a shared premise and a concrete landing.",
+      "why": "Each step goes only a little further than the last, so the audience keeps nodding until they find themselves somewhere absurd. The absurdity comes from every step being reasonable, so the more serious the tone, the funnier it is. The final step needs a landing.",
+      "example": "*Sample (repo-written):* These days you have to claim a coupon before you buy anything. You claim the spend-and-save coupon, then the shop coupon, then the member coupon. At this rate, when I go to book a hospital appointment, the nurse will ask: have you claimed today's specialist coupon?",
+      "breakdown": "- \"Claim a coupon first\": a real, small premise everyone has met.\n- Three kinds of coupon: raising the stakes step by step while the audience is still nodding.\n- \"Book a hospital appointment\": pushed into a setting where there should be no coupons.\n- \"Specialist coupon\": the landing is a specific noun.",
+      "overdo": "Now you need coupons, soon you'll need coupons to eat, coupons to sleep, coupons to breathe, humanity will be ruled by coupons, and the earth will turn into one giant coupon.\n\nThe problem: every step jumps too far and there is no landing. It spins like a slogan.",
+      "when_not": "- When the premise isn't universal enough: the audience won't follow even the first step.\n- When the piece is already absurd: pushing further just loses the ground.",
+      "exercise": "Pick a small everyday rule and write three steps of escalation. The third should land on a specific scene and one line of dialogue.",
+      "check": "Taken on its own, would the audience say each step is \"not impossible\"? Does the last step have a specific image?",
+      "adjacent": "- standup.1 Observational Opening: supplies the premise for escalation.\n- standup.4 Rule of Three: in a rule of three the third item suddenly veers; escalation builds step by step."
+    },
+    "standup.7": {
+      "tier_reason": "Signature: a stage move unique to stand-up; on the page it survives only as cues.",
+      "why": "Description makes the audience imagine; acting makes them see. Change the tone and pacing, and the audience instantly knows \"now it's the thing talking,\" so information and image arrive together. An object made to speak like a person is already a gap in itself. This is a stage technique; on paper you can only leave cues.",
+      "example": "*Sample (repo-written):* Every time my router breaks, this is its attitude: (slowly, a little impatient) \"Have you tried restarting it?\" (normal voice) I restarted it. It lit up another red light.",
+      "breakdown": "- \"(Slowly, a little impatient)\": one cue sets the character's personality.\n- \"Have you tried restarting it?\": the object talks like customer service; that's where the gap is.\n- \"(Normal voice)\": switch back to yourself and give the result.\n- \"Lit up another red light\": after the act-out, there has to be a punchline to close.",
+      "overdo": "(Walks to centre stage) (Deep breath) (Looks around) (Imitates router) (Blinks) (Makes a humming noise) \"I'm broken.\" (Collapses)\n\nThe problem: the brackets have become a stage script. There are more cues than lines, and what's being acted has no punchline.",
+      "when_not": "- In text-only pieces that no one will perform: use sparingly, as brackets get in the way.\n- When cues exceed a tenth of the whole piece: cut them.",
+      "exercise": "Pick a household appliance. Write one thing it \"would say,\" with one tone cue before and one after.",
+      "check": "Without the brackets, is the line itself funny? Are there no more than two brackets?",
+      "adjacent": "- standup.9 Mismatched Analogy: an analogy says A is B; an act-out has A perform as B.\n- standup.10 Short Landing: the line that closes an act-out should be short."
+    },
+    "standup.8": {
+      "tier_reason": "Core: the standard way to close a set or a long piece and make it feel designed.",
+      "why": "When the audience hears a familiar word, they first feel the small pleasure of \"I remember that,\" then discover it in a new place; the two pleasures stack. It also makes the whole piece feel designed, so the ending doesn't deflate. Any longer piece of writing relies on callbacks to close.",
+      "example": "*Sample (repo-written):* (The opening covered \"pressing the close-door button doesn't make it faster.\") …So these days my attitude to life is very calm. Rushing gets you nowhere. But I still press it every day.",
+      "breakdown": "- Premise: the close-door button joke was planted at the start.\n- \"Rushing gets you nowhere\": restates the point in a new context (life).\n- \"But I still press it every day\": the last line of the original joke is brought back, and its meaning shifts from the lift to life.",
+      "overdo": "Remember the close-door button I mentioned at the start? Yes, that close-door button, I said pressing it doesn't make it faster, and now I'm saying close-door button again.\n\nThe problem: the callback is pointed out and then repeated, as if telling the audience \"laugh here.\" There is no new context.",
+      "when_not": "- When the original joke didn't land: calling back to it only reminds everyone it wasn't funny.\n- When only a line or two separates them: it sounds like repetition.",
+      "exercise": "Take a piece you've written, find a word from the opening, and make it appear at the end in something completely different.",
+      "check": "Did the callback change context? Without saying \"as I mentioned,\" can the audience still recognise it?",
+      "adjacent": "- standup.3 Reversal: both can close a bit; a reversal works by flipping, a callback by looking back.\n- standup.1 Observational Opening: what a callback most often returns to is the opening."
+    },
+    "standup.9": {
+      "tier_reason": "Common: works in most bits, but only when the comparison is precise and familiar.",
+      "why": "The two fields don't belong together, so the audience is thrown for a moment; then they find every detail matches, and puzzlement turns into admiration. What's funny isn't the comparison itself but \"how is it that accurate.\" Precision is the key; a vague comparison is just a figure of speech.",
+      "example": "*Sample (repo-written):* Our residents' group chat is like a video site that has only bullet comments and no actual video — hundreds of messages a day, and nobody knows what everyone is watching.",
+      "breakdown": "- \"Residents' group chat\" and \"video site\": two unrelated fields.\n- \"Only bullet comments and no actual video\": precisely hits \"lots of messages, no topic.\"\n- \"Nobody knows what everyone is watching\": one more cut, making the match tighter.",
+      "overdo": "The residents' group chat is like a pot of porridge, and like a war, and like a microcosm of life, full of sweet and sour and bitter and spicy.\n\nThe problem: the comparisons pile up and are all vague. Not one is precise, and the gap turns into school-essay prose.",
+      "when_not": "- When the comparison needs explaining to be understood: pick another.\n- When the audience doesn't know the compared field (too specialised): the gap never reaches them.",
+      "exercise": "Find something completely unrelated to compare \"the company's weekly meeting\" to, then add one detail that makes it fit more precisely.",
+      "check": "In the first second, does it feel like \"these two don't go together\"; by the third, \"actually, yes\"?",
+      "adjacent": "- standup.7 Act-out: an analogy tells; an act-out performs.\n- standup.6 Escalation: escalation goes further within the same field; an analogy jumps to another."
+    },
+    "standup.10": {
+      "tier_reason": "Core: a rule for every punchline line; rhythm decides whether a laugh lands.",
+      "why": "The ear takes things in more slowly than the eye; a long sentence lets the audience drift before the punchline arrives. The end of a sentence is where attention is most concentrated, so put the heaviest word there, stop as soon as it's said, and leave a beat for the laugh. Rhythm decides whether the laugh explodes.",
+      "example": "*Sample (repo-written):* Long version: Honestly, I feel our department's weekly meeting has never really been any use at all. Rewritten: The weekly meeting's run two years. (Pause) The agenda's never changed.\n\n(The Chinese original sets the limit at ten characters; in English, read it as a handful of words.)",
+      "breakdown": "- Cut \"honestly,\" \"really,\" \"at all\": strip every modifier.\n- Split into two lines: one for the setup, one for the punchline.\n- \"Never changed\": lands on the verb; the end of the line is the laugh.\n- The \"(Pause)\" goes before the punchline, not after.",
+      "overdo": "The weekly meeting's been going two years, and the agenda, well, honestly, it's just never really changed, you know.\n\nThe problem: filler and padding are stuffed into the punchline, the key word is buried mid-sentence, and the line ends on \"you know.\"",
+      "when_not": "- Setup and narrative lines don't need to be short; give information when information is needed.\n- If every line in the piece is that short, it reads like a telegram and loses its breathing.",
+      "exercise": "Find a long punchline you've written, cut it to under ten words, and make the last word the most important one.",
+      "check": "Count the punchline: is it over ten words? Is the last word where the laugh is?",
+      "adjacent": "- standup.2 Setup and Punchline: the short landing is how a punchline is written.\n- standup.7 Act-out: the line that closes an act-out follows this rule too."
+    }
+  }
+}

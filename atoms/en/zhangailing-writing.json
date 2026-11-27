@@ -1,0 +1,115 @@
+{
+  "engine": "zhangailing-writing",
+  "atoms": {
+    "zhangailing.1": {
+      "tier_reason": "Common: a pronouncement that opens a piece and asks to be proved works in essays and fiction alike.",
+      "why": "Readers walk in and are met by a line that says too much; they think \"really?\" and carry that doubt forward, so every detail becomes evidence. The pronouncement also sets the voice for the whole piece: cold, certain, not open to negotiation.",
+      "example": "> [Paraphrase] “Red Rose, White Rose” (《红玫瑰与白玫瑰》) opens with a verdict on men and two kinds of women before telling Zhenbao’s story; “My Dream of Genius” (《天才梦》) opens with a verdict on herself.\n\n> [Demo] Among flatmates, the most intimate thing is a fridge; so is the most distant. (first line of zal-1 “The Fridge”)",
+      "breakdown": "- “the most intimate … so is the most distant”: a pair of opposites in one sentence creates a contradiction that demands an explanation.\n- The subject is a common object, a fridge, so the verdict stays on the ground instead of drifting into philosophy.\n- The line can stand alone, but it gives no answer; the answer is in the three shelves of the fridge that follow.",
+      "overdo": "Life always gives us answers when we least expect them, and growing up means making peace with loneliness.\n\nOnly big words and no object. Nothing makes the reader want to ask more, and nothing is left for the rest of the piece to prove.",
+      "when_not": "- News, explanatory writing, or any form that must state the facts first.\n- When you can’t produce enough detail later to prove it; the verdict becomes an empty shout.",
+      "exercise": "Pick one object: a takeaway order, a lift, a staff badge. Write one pronouncement about human relations through it, then list three details that would prove it.",
+      "check": "Does the rest of the piece stand without the first line, and do at least three concrete details answer it?",
+      "adjacent": "- zhangailing.10 Aphoristic Close: same family; the opening verdict raises a doubt, the closing one sets the answer down lightly.\n- zhangailing.2 Unlikely Simile: a verdict may contain a simile, but a verdict is about judgment and a simile about image."
+    },
+    "zhangailing.2": {
+      "tier_reason": "Common: comparing a feeling to an unexpected everyday object sharpens description in any genre.",
+      "why": "Readers have gone numb to “feelings” but still remember how things feel in the hand. When the comparison crosses over to a far-off object, readers pause, find that object in their own lives, and once it fits they think “yes, exactly”. The feeling turns from a concept into a texture.",
+      "example": "> [Paraphrase] The end of “My Dream of Genius” (《天才梦》) compares life to a splendid gown crawling with lice, sewing the respectable and the unbearable into one object.\n\n> [Demo] Her politeness was like the receipt stapled to a takeaway bag: fixed on tight, and tearing it off leaves a hole. (original demo in atom-ops)",
+      "breakdown": "- The tenor, “politeness”, is abstract; the vehicle, a receipt, is something everyone has torn off today.\n- “fixed on tight” matches how thorough the politeness is; “leaves a hole” matches the cost of seeing through it. The comparison goes one step further than “like”.\n- Plain “like”, no “as if” or “as though”.",
+      "overdo": "Longing is like a flower quietly blooming in the night, and like a distant star on the horizon, gentle yet steadfast.\n\nStock images, two similes stacked in one sentence, and nothing actually compared.",
+      "when_not": "- When a paragraph already has one simile, don’t add another. Three to five in a whole piece is enough.\n- Where facts need stating precisely; a simile introduces ambiguity.",
+      "exercise": "Compare “awkwardness”, “going through the motions” and “not wanting to let go” each to something on a kitchen counter or office desk, and write the half-sentence that takes the comparison one step further.",
+      "check": "Is the vehicle an everyday object of today, and does at least one detail in it match a feature of the feeling?",
+      "adjacent": "- zhangailing.3 Mind Through Objects: a simile uses an object to stand for the mind; this one has the character actually handle an object.\n- zhangailing.4 A Touch of Color: a color is sometimes given through a simile, “the color of old newspaper”, but the point there is setting the key."
+    },
+    "zhangailing.3": {
+      "tier_reason": "Core: leaving feelings unsaid and showing how someone handles an object is “show, don’t tell” at the level of detail, useful in every genre.",
+      "why": "Writing “she was sad” is the writer drawing the conclusion for the reader. Writing that he pushed a carton of milk a little further back makes the reader infer, and an inferred feeling belongs to the reader, so it weighs more.",
+      "example": "> [Paraphrase] In “The Golden Cangue” (《金锁记》), Cao Qiqiao’s whole life is tangled up with money, jewellery and objects; her inner life mostly shows through them and is rarely stated.\n\n> [Demo] The carton of milk she had bought was three days past its date. He didn’t throw it out and didn’t drink it; he just pushed it a little further in, to where she would see it. (original demo in atom-ops)",
+      "breakdown": "- “three days past its date”: time is written into the object, showing how long this has dragged on.\n- “didn’t throw it out and didn’t drink it”: two negatives rule out the two simplest attitudes.\n- “to where she would see it”: the action has a direction and a target; the unspoken thing is “I want her to know, but I won’t say it”.\n- Not one word of inner state in the whole sentence.",
+      "overdo": "He quietly put the photo away, his eyes wet, his heart welling with endless longing and regret.\n\nAfter the action it spells out the feeling anyway; the space the object left is filled in with emotion words.",
+      "when_not": "- At moments where a character must take a stand or push a conflict forward; an action can’t replace dialogue.\n- When the object has no established tie to the character; readers have nothing to infer from.",
+      "exercise": "Write “a week after the break-up”: only how one person deals with something the other left behind, under 40 words, no words for inner states.",
+      "check": "With every adjective of feeling deleted, can readers still name the character’s emotion, and name more than one possibility?",
+      "adjacent": "- zhangailing.2 Unlikely Simile: a simile is a figure of speech; this is an action in the plot.\n- zhangailing.5 Cold Accounting: the accounts often land on objects too, like the dish soap, but they concern what passes between two people, not one person’s private feeling."
+    },
+    "zhangailing.4": {
+      "tier_reason": "Common: one exact color can set the mood of a scene in fiction, essays and features.",
+      "why": "“Red” is information; “red going a little black” is a judgment. An exact color carries temperature, age and texture. The picture in the reader’s head freezes into place, and the mood is set with it, without the writer using a single emotion word.",
+      "example": "> [Paraphrase] “A Chronicle of Changing Clothes” (《更衣记》) uses dress and color throughout to trace changes in the times and in people; her fictional characters often enter with the color of their clothes setting the tone.\n\n> [Demo] The strawberries were deep red, almost overripe, red going a little black. (zal-1 “The Fridge”)",
+      "breakdown": "- “deep red” is the first layer; “almost overripe” adds time; “going a little black” brings in something about to spoil.\n- The strawberries were a thank-you gift; the color hints that the thanks came late and a little grudgingly.\n- It is the only color in the passage, which is why it holds.",
+      "overdo": "The sky was azure, the clouds pure white, the distant hills a lush green, and nearby the flowers mingled pink, gold and lilac.\n\nThe colors pile up into a palette, each a standard shade, and none of them sets a mood.",
+      "when_not": "- In passages where the visual doesn’t matter, such as dense dialogue or argument; a forced color breaks the rhythm.\n- When a passage already has one color, don’t add a second.",
+      "exercise": "Give “a desk after overtime” one color. No single basic color words; say what it looks like, or how new or worn it is.",
+      "check": "Is the color word more than a bare “red, yellow, blue, white, black”, and does the sentence’s mood weaken if you delete it?",
+      "adjacent": "- zhangailing.8 Sound and Light Transitions: sound and light handle transitions and time; color sets the key.\n- zhangailing.2 Unlikely Simile: a color can be given through a simile, “like old newspaper”; the test is whether it sets the key."
+    },
+    "zhangailing.5": {
+      "tier_reason": "Signature: this level gaze on the calculations inside human ties is Zhang Ailing’s trademark, and beginners easily turn it into spite.",
+      "why": "Everyone has made these small calculations and won’t admit it. Written out calmly, they give the reader a small chill at being caught, then the relief of “so everyone does this”. The flatter the tone, the truer it sounds, and the less the reader can argue.",
+      "example": "> [Paraphrase] In “Love in a Fallen City” (《倾城之恋》), Bai Liusu and Fan Liuyuan size each other up and neither will show their hand first; love is written as a careful calculation.\n\n> [Demo] He didn’t ask whether she ate spicy food, which meant he wasn’t good at looking after people; but he didn’t order the most expensive dish, the Longjing shrimp, either, which meant he didn’t care for show. The two entries cancelled out, and the books balanced. (zal-2 “The Blind-Date Dinner”)",
+      "breakdown": "- “which meant … which meant …”: the reasoning is laid out like an accountant’s journal entries.\n- “cancelled out”, “the books”: bookkeeping words for feelings; the chill comes from the mismatch of vocabulary.\n- No judging words like “shrewd” or “snobbish”.",
+      "overdo": "In this materialistic age everyone wears a mask and calculates every move; true feeling has long been swallowed by self-interest.\n\nThe accounts become an accusation; the writer stands above the characters, and the cold eye becomes a sneer.",
+      "when_not": "- Eulogies, thank-yous and other writing that needs complete sincerity.\n- When you aren’t ready to follow it with a turn of sympathy; on its own it easily turns mean.",
+      "exercise": "Write one bit of reckoning between colleagues over who messages first to ask about progress, in a bookkeeping tone (“because last time it was …”), under 60 words.",
+      "check": "Does the passage contain a concrete account (who went first, who lost out, who is waiting), with no moral judgment words?",
+      "adjacent": "- zhangailing.9 Reverse Sympathy: the accounts do the seeing through, the sympathy turns back to speak for them; they usually come as a pair.\n- zhangailing.3 Mind Through Objects: an object holds one person’s feeling; the accounts are between two people."
+    },
+    "zhangailing.6": {
+      "tier_reason": "Common: writing ordinary goods with relish gives any piece presence and credibility.",
+      "why": "Common things are within the reader’s reach; once written down, they bring presence and credibility. Written concretely and with fondness, they make the writer seem like someone living a life, not someone watching from outside. And human feeling hides in exactly these unremarkable things.",
+      "example": "> [Paraphrase] “Notes on Apartment Life” (《公寓生活记趣》) writes about the hot water, the lift and the noise of the street, and says openly that she likes listening to it; “Seeing on the Road” (《道路以目》) writes small scenes glimpsed in the street.\n\n> [Demo] The freezer was shared, stuffed with three kinds of frozen dumplings: pork and cabbage, chive and egg, sweetcorn. No one needed to write their name on a bag; you could tell whose was whose by the flavor. (zal-1 “The Fridge”)",
+      "breakdown": "- Three flavors named one by one, as specific as a supermarket shelf.\n- “you could tell whose was whose by the flavor”: the goods mark the people in passing, bringing out three people’s differences and their unspoken understanding.\n- No praise of “the smell of everyday life” or “life is worth it”.",
+      "overdo": "The market is full of the rich smell of daily life; this plain human bustle is the warmth that best comforts ordinary hearts.\n\nThe goods are praised, not written. A tone of condescending praise turns the ordinary into a prop.",
+      "when_not": "- Official documents and academic writing.\n- When the goods have nothing to do with the people or their ties; a list is just a ledger of events.",
+      "exercise": "List three specific things in your fridge or drawer (with brand or flavor), and in one sentence let each reveal a little of its owner’s character.",
+      "check": "Are the goods named specifically (flavor, price, model), and does at least one carry information about a person?",
+      "adjacent": "- zhangailing.3 Mind Through Objects: this one is about the taste of the thing itself; that one is about how a person handles it.\n- zhangailing.7 Desolate Undertone: desolation is often placed amid the bustle of common things; the goods are the ground, desolation the cold stroke."
+    },
+    "zhangailing.7": {
+      "tier_reason": "Signature: this is the most personal undertone of Zhang Ailing; borrowed, it needs restraint.",
+      "why": "Readers are sunk in the trivial when they are suddenly reminded that all of it will pass; the drop in temperature makes the chill. Because there is only one stroke, readers have no time to resist, and the chill comes from inside them.",
+      "example": "> [Paraphrase] “Love in a Fallen City” (《倾城之恋》) lets the fall of a city bring an ordinary couple together, and the ending turns to a larger impermanence; “The Golden Cangue” (《金锁记》) closes a character’s life on the passing of time.\n\n> [Demo] When the lease runs out we will each move away, and the fridge will be left for the next lot. It won’t remember anyone, only which shelf was always empty. (zal-1 “The Fridge”)",
+      "breakdown": "- “When the lease runs out”: a concrete deadline gives time a scale.\n- “left for the next lot”: people move on, things stay; host and guest swap places.\n- “only which shelf was always empty”: the chill lands on a detail, not on “life is fleeting”.",
+      "overdo": "All splendour must end; life is only a grand farewell, and in the end we will lose everything we love.\n\nSentiment in big words, with no concrete object or deadline; the chill is forced in by the writer.",
+      "when_not": "- When the piece is already heavy; adding desolation just piles it on.\n- Writing meant to give readers energy or encouragement.",
+      "exercise": "Write a birthday party. In the lively passage put only one sentence about time or leaving, without “in the end” or “impermanence”.",
+      "check": "Does the desolation appear in only one sentence, and does that sentence hold a concrete object or deadline?",
+      "adjacent": "- zhangailing.9 Reverse Sympathy: desolation is cold, sympathy is warm; they often come one after the other.\n- zhangailing.10 Aphoristic Close: the desolate stroke can come just before the end, but it is an image, not a verdict."
+    },
+    "zhangailing.8": {
+      "tier_reason": "Core: every genre has to manage transitions, and a sound or a change of light lets one scene hand over to the next without a stated link.",
+      "why": "Transitions are a question of rhythm and every form meets them. “In the blink of an eye” is the writer moving the scenery; with a sound, the reader’s senses are pulled away first and the scene follows, time and mood turning a page with it. The join is made by feeling and doesn’t show.",
+      "example": "> [Paraphrase] “The Golden Cangue” (《金锁记》) opens on the moon and echoes it at the end, across many years; “Sealed Off” (《封锁》) opens and closes a stretch of time on the tram bell.\n\n> [Demo] The compressor stopped with a hum, and the room went suddenly quiet, so quiet you could hear someone next door peeling garlic. (zal-1 “The Fridge”)",
+      "breakdown": "- “stopped with a hum”: a specific sound ending marks a train of thought coming to a pause.\n- “went suddenly quiet”: from sound to silence, and the mood sinks with it.\n- “next door peeling garlic”: a tiny sound sets off the quiet and turns the eye to another household, widening the scene.",
+      "overdo": "Time flew, and in the blink of an eye three years had passed; the sunlight outside the window was as warm as ever.\n\nIt cuts by force with “time flew” and “in the blink of an eye”; the sunlight is decoration and carries no change.",
+      "when_not": "- Two transitions in a row both on sound or light look contrived.\n- Narratives that need a clear time span, such as reporting; sound and light can’t replace a stated time.",
+      "exercise": "Write someone working late in an office, using one sound (not a clock) to move from dusk to late night.",
+      "check": "Is the transition free of “in a blink”, “before you knew it”, “time flew”, and do time or mood really change on either side of that sound or light?",
+      "adjacent": "- zhangailing.4 A Touch of Color: color sets the key; sound and light make the switch.\n- zhangailing.7 Desolate Undertone: sound and light can lead into desolation, but the transition itself isn’t responsible for the chill."
+    },
+    "zhangailing.9": {
+      "tier_reason": "Signature: turning back to sympathize after seeing through someone is what gives her cold eye warmth; the measure is hard, and done badly it preaches.",
+      "why": "Readers have just seen through someone along with the writer and feel a little superior. The turn takes that away: under the scheming is fear, poverty, no choice, and readers are the same. The cold eye gains warmth, and the piece moves from exposing to understanding.",
+      "example": "> [Paraphrase] “Love in a Fallen City” (《倾城之恋》) doesn’t mock the couple’s calculations; it shows that in chaotic times people can only hold on to something solid. “Love” (《爱》) writes the one small hope in a woman’s ordinary life.\n\n> [Demo] In fact neither of them was wrong. People in their early thirties don’t have much left they can afford to lose, so they weigh every item. They weigh carefully not because they are shrewd but because they are afraid. (zal-2 “The Blind-Date Dinner”)",
+      "breakdown": "- “In fact neither of them was wrong”: a clear turning back that reverses every reckoning before it.\n- “don’t have much left they can afford to lose”: a reason rooted in circumstance, not vague pity.\n- “not because they are shrewd but because they are afraid”: what was called shrewdness is renamed fear.",
+      "overdo": "But really none of us has it easy; everyone is trying hard to live, and may we all be treated gently by the world.\n\nSympathy turns into a feel-good blessing, with no concrete fear pointed out.",
+      "when_not": "- When nothing earlier has been seen through, the sympathy has nothing to push against.\n- For acts with real malice that hurt others; forced sympathy excuses harm.",
+      "exercise": "Write one sentence about a colleague’s scheme to take credit, then one sentence turning back with sympathy, naming the concrete thing he is afraid of.",
+      "check": "Does the sympathy name a concrete circumstance (money, housing, age, being alone) rather than “nobody has it easy”?",
+      "adjacent": "- zhangailing.5 Cold Accounting: reckon first, sympathize after; without either side it tips over.\n- zhangailing.10 Aphoristic Close: sympathy turns back to speak for someone, the close is a verdict; the close often follows sympathy."
+    },
+    "zhangailing.10": {
+      "tier_reason": "Common: ending on a light verdict instead of an uplift suits essays, fiction and columns.",
+      "why": "After a piece made of details, readers need a handle to lift them by. The verdict gives a handle but no call to action; readers finish with a small drop in the stomach and aren’t lectured. A cold, light tone leaves room at the end, like someone leaving without shutting the door.",
+      "example": "> [Paraphrase] “My Dream of Genius” (《天才梦》) ends on a verdict about life in the form of a simile; “Love” (《爱》) ends on a light sigh about meeting.\n\n> [Demo] What lies between people is often not a wall but a layer of cling film: you can see through it, you just can’t smell anything. (last line of zal-1 “The Fridge”)",
+      "breakdown": "- “not a wall but a layer of cling film”: it rejects a stock phrase and swaps in an ordinary object of today.\n- “you can see through it, you just can’t smell anything”: two short clauses close it, the rhythm light.\n- The cling film picks up the fridge running through the piece, so the verdict locks onto the earlier detail.",
+      "overdo": "May everyone drifting through the city find their own warmth and be treated gently by life.\n\nThe ending suddenly calls for warmth, and one blessing wipes out the cold eye of everything before it.",
+      "when_not": "- When the first line is already a verdict and there are several more in the middle; another at the end turns it into a convention of one-liners.\n- When the narrative needs to stop on an action or image; a verdict spells out the aftertaste.",
+      "exercise": "For a moving-house scene like zal-3 “Old Things”, write a new closing verdict using an object that appeared earlier, in under 30 words.",
+      "check": "Is the last line free of “let us”, “may you”, “quiet, good years”, and does its object or image appear earlier?",
+      "adjacent": "- zhangailing.1 Aphoristic Opening: same family; the opening raises a doubt, the close lays the answer down lightly.\n- zhangailing.7 Desolate Undertone: desolation is the image before the end; the close is the final judgment."
+    }
+  }
+}

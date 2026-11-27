@@ -118,6 +118,20 @@ def main():
     ba.SECTION = "engines"
     short = {k: v[1] for k, v in ba.ENGINES.items()}
 
+    # 英文原子集合：仅当 atoms/en/<engine>.json 含该原子时才加 EN 切换（避免断链）
+    en_ids = set()
+    for f in sorted((ROOT / "atoms/en").glob("*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(d, dict):
+            d = d.get("atoms", d)
+        if isinstance(d, dict):
+            en_ids.update(k for k, v in d.items() if isinstance(v, dict))
+        elif isinstance(d, list):
+            en_ids.update(x["id"] for x in d if isinstance(x, dict) and "id" in x)
+
     # 单页
     for it in items:
         src = re.sub(r"^\*\*族\*\*.*$", "", it["md"], count=1, flags=re.M)
@@ -130,8 +144,13 @@ def main():
                    f'<span>族 · {esc(it["family"])}</span></div><div class="body">{body}</div></article>'
                    '<div class="pager" style="max-width:36em;margin:0 auto;padding:0 24px 56px">'
                    '<a href="index.html">← 原子库</a></div>')
-        (OUT / f"{slug(it['id'])}.html").write_text(
-            page(f"{it['name']} · 原子库", content + f"<style>{CSS}</style>", "../"), encoding="utf-8")
+        html = page(f"{it['name']} · 原子库", content + f"<style>{CSS}</style>", "../")
+        if it["id"] in en_ids:
+            html = html.replace('<div class="tools">',
+                                f'<a class="lang" href="../en/atoms/{slug(it["id"])}.html">EN</a><div class="tools">', 1)
+            html = html.replace("</style>", "nav a.lang{border:0;font:12px var(--mono);letter-spacing:.18em;color:var(--ink2);"
+                                "margin-left:22px}nav a.lang:hover{color:var(--zhu)}</style>", 1)
+        (OUT / f"{slug(it['id'])}.html").write_text(html, encoding="utf-8")
 
     # 总览：档位 → 族
     tree = defaultdict(lambda: defaultdict(list))

@@ -1,0 +1,115 @@
+{
+  "engine": "wangzengqi-writing",
+  "atoms": {
+    "wangzengqi.1": {
+      "tier_reason": "Common: many pieces open this way, but a piece can also open with Customs Laid Out.",
+      "why": "Nobody has told the reader what lesson is coming, so they relax, as if someone had pulled up a chair for a chat. The opening gives one concrete point for the eye to land on, and the small open question of where this is going keeps them reading.",
+      "example": "> [Paraphrase] *The Rain in Kunming* does not begin with rain. It starts with a painting he once made for someone, and only after a detour does it reach the rain.\n>\n> [Demo] Second floor of the work canteen, third table by the window, one leg propped on a piece of cardboard folded four times. I ate lunch there for two years.",
+      "breakdown": "- \"Second floor\", \"third table by the window\": coordinates first, as if pointing it out.\n- \"Cardboard folded four times\": a useless little object, which is exactly what an idle opening looks like.\n- \"Ate lunch there for two years\": time slipped in lightly, with no feeling attached.",
+      "overdo": "> The canteen: an ordinary yet extraordinary place. It holds so many memories of my youth and has witnessed my growth.\n\nThe first sentence already states the theme and emotes. \"Holds\" and \"witnessed\" are empty words; there is nothing to look at.",
+      "when_not": "- News, notices, cover letters and other forms that must get to the point at once.\n- Very short pieces (under about 300 characters), where a detour leaves no room for the real matter.",
+      "exercise": "Write about a place you often go. The first two sentences may give only its location and one unremarkable object. No feeling words.",
+      "check": "Cover the title: from the first two sentences the reader cannot guess the theme, but can see one concrete thing.",
+      "adjacent": "wangzengqi.6 Customs Laid Out can also open a piece, but it lays out a whole place's rules; a Leisurely Opening is a single point. lijuan.1 opens with a child's not-knowing; here the \"I\" is someone who knows the place."
+    },
+    "wangzengqi.2": {
+      "tier_reason": "Signature: the knowing-friend talk about food and things is the move most readers associate with Wang Zengqi.",
+      "why": "The reader gets household knowledge, not an encyclopedia entry. Names, methods and the right amounts are all specific, so it feels like listening to someone by the stove. Behind the knowledge stands a person who knows food and takes trouble over it, which gives the piece warmth and credibility.",
+      "example": "> [Paraphrase] *Duanwu Duck Eggs* goes into where the salted duck eggs of his hometown come from, double yolks, the colour of the yolk and how to eat them; *Food of My Hometown* goes through puffed rice, toasted flour and wild greens one by one.\n>\n> [Demo] Shepherd's purse, where I come from we call it \"ground greens\". It shows up on the field ridges in early spring, grows flat to the ground, leaves toothed. For dumplings you mix in a little pork, not much. Too much and you can't taste the greens.",
+      "breakdown": "- \"Where I come from we call it\": the local name comes first, in a chatting voice.\n- \"Grows flat to the ground, leaves toothed\": the shape is exact enough to recognise.\n- \"Not much. Too much and…\": a sense of proportion only someone who cooks it would have.",
+      "overdo": "> Shepherd's purse is a highly nutritious wild vegetable, rich in vitamin C and dietary fibre, with a fresh aroma and layered flavour. A spring must-eat.\n\nEncyclopedia plus product-review voice; no person is speaking.",
+      "when_not": "- Things you don't really know. Invented names and methods are forged lore.\n- Argument or exposition that needs objective data, where a homely tone reads as careless.",
+      "exercise": "Pick something your family often eats and write three sentences: what it's called, how it's made, and one \"you mustn't…\" rule of thumb.",
+      "check": "Someone who cooks the dish would nod at every sentence, and the words \"nutritious\", \"texture\" or \"must-eat\" never appear.",
+      "adjacent": "wangzengqi.7 Plants by Name deals with plants and their uses; wangzengqi.3 Craft in Detail is about the process and the person, while Explaining Things is about the thing itself."
+    },
+    "wangzengqi.3": {
+      "tier_reason": "Core: exact, unpraising description of work underlies most of the engine's concrete passages.",
+      "why": "The reader follows the steps and watches the whole job once, so a continuous picture forms. Accuracy is itself a form of respect: you never need to write \"masterly\", the reader admires on their own. The chain of actions also sets a rhythm you can feel in your hands.",
+      "example": "> [Paraphrase] *A Tale of Big Nur* describes the tinsmiths' carrying poles and the work in their hands; *Three Friends of Winter* describes how a few small tradesmen make their living.\n>\n> [Demo] Old Sun, who cuts keys, clamps the old key on the left of the machine and the blank on the right, pushes, and brass filings fly up and land on the back of his hand. When it's done he runs a file over the teeth, holds it up to the light once, and says, \"There.\"",
+      "breakdown": "- \"Left\", \"right\", \"pushes\": the steps in order, none skipped.\n- \"Filings land on the back of his hand\": a detail only someone standing there would see.\n- \"Holds it up to the light once\": the old hand's care hidden in a gesture.\n- Not one word of praise in the passage.",
+      "overdo": "> Old Sun is a craftsman of consummate skill who has kept his little stall for decades, showing through his artisan spirit the greatness within the ordinary.\n\nAll verdict and no tools or steps. \"Artisan spirit\" and \"showing\" are empty shells.",
+      "when_not": "- When you have never watched the craft yourself and can't get the steps right.\n- Passages that need to move fast; a long process will drag.",
+      "exercise": "Watch someone do a job (cutting hair, cooking, fixing a bike). Write four actions in order and name one tool.",
+      "check": "Remove the person's name and the reader can still picture how the job is done from the steps; there is no praising adjective in the passage.",
+      "adjacent": "wangzengqi.4 A Few Strokes takes only one or two actions to make a person stand; Craft in Detail needs the whole process. lijuan.2 fills the page with household trivia and quantities, self-mockingly; this one writes about other people's skill."
+    },
+    "wangzengqi.4": {
+      "tier_reason": "Core: almost every person in the engine is introduced this way.",
+      "why": "Readers don't remember people by a list of features but by one particular action or turn of phrase. The economy leaves a gap, and the reader fills in the character; what they fill in themselves, they keep.",
+      "example": "> [Paraphrase] *The Ordination* gives each monk in the temple only a few lines and one or two incidents, and each comes out distinct; Little Ying's family is drawn the same way.\n>\n> [Demo] The woman serving at the canteen gives her ladle a little shake in the tray and two pieces of meat slide back. You look at her, she looks at you, and says, \"That's plenty.\"",
+      "breakdown": "- \"A little shake of the ladle\": one action is her entire character sheet.\n- \"You look at her, she looks at you\": the exchange shows how unbothered she is.\n- \"That's plenty\": one line closes it, with no explanation of what she's thinking.",
+      "overdo": "> The serving woman is in her fifties, of medium build, with dark skin and fine wrinkles at her eyes, always in a faded blue work smock, a simple smile on her face.\n\nA checklist of looks: crowded, yet nothing she does belongs only to her.",
+      "when_not": "- Profiles and biographies that need a full life and many sides; a few strokes are not enough.\n- When a specific person must be identifiable (missing persons, case reports), where the full description is needed.",
+      "exercise": "Write about someone you see every day but don't know. One action and one line only, in under 40 words.",
+      "check": "From that one action the reader could pick the person out of a crowd, and the text never says \"he is a … sort of person\".",
+      "adjacent": "wangzengqi.3 Craft in Detail writes the full process; lijuan.5 is family comedy about one's own relatives and wants a laugh. A Few Strokes isn't after a laugh, only to make the person stand."
+    },
+    "wangzengqi.5": {
+      "tier_reason": "Signature: drifting off into an aside and returning without a visible join is distinctively his.",
+      "why": "The digression lays an undertone beneath the main subject: behind today's pancake stall there is now a bowl of soup from childhood, and the reader feels the depth of time and memory. Coming back without a seam sets the reader gently down where they were, like a natural drift in conversation.",
+      "example": "> [Paraphrase] *The Rain in Kunming* wanders from the rain to mushrooms, waxberries and michelia flowers, then to a small tavern on a rainy day, and only at the end comes back to the rain.\n>\n> [Demo] Speaking of breakfast, I think of the peppery soup at the street corner when I was small: one black iron pot, heavy on the pepper, you'd sweat after a bowl. That was a long time ago. — Downstairs, Old Zhou's pancake stall has a queue by seven.",
+      "breakdown": "- \"Speaking of breakfast, I think of\": slides out from one word of the main subject.\n- \"Black iron pot\", \"heavy on the pepper\": the digression must be concrete too, not just remembered feeling.\n- \"That was a long time ago\": one plain sentence closes the door.\n- After the dash, straight back to the present, with no \"but to return to…\".",
+      "overdo": "> Speaking of pancakes, I can't help thinking of childhood, of my hometown, of those days that will never return… Anyway, back to the point: the pancake stall downstairs does good business.\n\nThe digression has only feeling and no objects, and the return is forced with \"anyway, back to the point\".",
+      "when_not": "- When the piece has already wandered twice; a third time and it falls apart.\n- Practical writing and short reviews, where readers want a straight line.",
+      "exercise": "Write a paragraph about food in front of you. Insert two sentences about the same kind of food from another year (with one concrete object), then return in one sentence without any linking phrase.",
+      "check": "The digression contains a real object; the sentence that returns has no \"anyway\", \"back to the point\" or \"I digress\".",
+      "adjacent": "lijuan.8 pulls the camera back to sky and earth, a change of scale; The Digression moves sideways to another place and year. sushi.6 turns toward a principle; this turns toward another real thing."
+    },
+    "wangzengqi.6": {
+      "tier_reason": "Common: used for longer pieces set in a place; shorter ones open with a single point instead.",
+      "why": "The reader meets the place before the people, so when people appear they already have soil to stand in. With the rules written concretely, readers infer for themselves what kind of people live under them. The laying-out also gives the piece an unhurried start.",
+      "example": "> [Paraphrase] *Duanwu Duck Eggs* opens by listing the Dragon Boat Festival customs of his hometown; *A Tale of Big Nur* first describes the lie of the land around the Nur and the different households on either side, and the characters appear late.\n>\n> [Demo] At our work unit, the rule is that New Year goods go out a week before the holiday. A drum of oil, a sack of rice, a box of apples. Every year the apples are said to be from Yantai. You sign when you collect, and after signing you carry it downstairs yourself.",
+      "breakdown": "- \"At our work unit, the rule is\": introduces a small place as if it were a whole region.\n- \"A drum of oil, a sack of rice, a box of apples\": short list-like sentences, concrete and countable.\n- \"Are said to be from Yantai\": one \"said to be\" brings in a small human wrinkle.\n- \"Carry it downstairs yourself\": the rule already has people in it.",
+      "overdo": "> The Spring Festival is the most important traditional holiday of the Chinese nation, with a long history and rich customs, including pasting couplets, setting off firecrackers and the reunion dinner, embodying people's longing for a better life.\n\nEncyclopedia voice: no particular place and no person.",
+      "when_not": "- Customs of a place you don't know; invented ones are forged folklore.\n- Short, character-led pieces, where the laying-out will smother the people.",
+      "exercise": "Write one unwritten rule of your workplace, school or housing estate. In three sentences say what it is, when, and how it's done; let the last sentence bring in a person.",
+      "check": "The laid-out passage has at least one concrete number or object, and a person has appeared by the end.",
+      "adjacent": "wangzengqi.1 Leisurely Opening is a single point; wangzengqi.2 Explaining Things covers one thing, Customs Laid Out covers a place's rules."
+    },
+    "wangzengqi.7": {
+      "tier_reason": "Common: appears wherever plants appear, but not every piece has them.",
+      "why": "Only when it has a name does the reader see the plant rather than a vague patch of green. Writing its use brings it back into people's days. Without emoting, the feeling hides in an act like splitting it into a second pot, and the reader senses it on their own.",
+      "example": "> [Paraphrase] *Among Plants and Trees* (*Renjian caomu*) describes flowers and trees one by one, their looks and origins; *Kui and Xie* works out what two ancient vegetables actually were.\n>\n> [Demo] The pot of mint on the balcony came from the market, two yuan a bunch. I stood it in water, it put out roots, and I planted it. In summer I pinch off a few leaves for tea. Cool. It grows like mad; one pot wasn't enough, so I split it into another.",
+      "breakdown": "- \"Two yuan a bunch\": origin and price, plain fact.\n- \"Stood it in water, it put out roots\": how it came to live.\n- \"A few leaves for tea. Cool.\": its use, plus a one-word sensation.\n- \"Grows like mad\": a colloquial description, and the only one.",
+      "overdo": "> The mint quietly keeps me company, its emerald leaves glittering in the sun as if telling of life's resilience and beauty.\n\nThe plant has become a prop for feeling, with no fact beyond its name.",
+      "when_not": "- When you can't name it for sure. Better to write \"some weed I don't know\" than to make one up.\n- Scenes where the plant is only background; detailed writing will upstage the main matter.",
+      "exercise": "Write about a plant near you in four sentences: its name, where it came from, what it looks like, what it's used for. \"Keeps me company\" and \"telling of\" are not allowed.",
+      "check": "Every sentence is a checkable fact or action; no more than two adjectives in the passage.",
+      "adjacent": "lijuan.7 talks to plants and thinks on their behalf; this one doesn't personify. lijuan.3 sketches the big landscape; Plants by Name writes a single plant."
+    },
+    "wangzengqi.8": {
+      "tier_reason": "Core: the rhythm of every sentence in the engine rests on it.",
+      "why": "Short sentences make the reader breathe at the pauses, so the rhythm is like speech, and each sentence carries one thing, so the information is clear. Alternating long and short creates rise and fall; the shortest sentence often lands on the most important fact, and the reader naturally stops there.",
+      "example": "> [Paraphrase] This runs all through Wang Zengqi's essays and stories: short sentences and comma-broken phrases, with spoken idiom mixed in naturally.\n>\n> [Demo] The oil is fresh. The pancake is made on the spot. Seven yuan.",
+      "breakdown": "- Three sentences getting shorter (five, five, two characters in the Chinese).\n- \"Is fresh\", \"is made on the spot\": spoken-style predicates.\n- \"Seven yuan\": only the price is left at the end, crisp, like the stallholder calling it out.",
+      "overdo": "> The stall that appears punctually at the estate gate every cold winter morning, making fragrant pancakes from fresh oil and freshly spread batter for hurrying commuters, charges only seven yuan.\n\nOne long modifier holds all the information; you can't read it aloud, and the point, \"seven yuan\", is buried.",
+      "when_not": "- Legal or technical text, where full conditions are needed and forced breaking loses the logic.\n- A whole piece of three-to-five-word sentences turns into telegram style; some long sentences must carry it.",
+      "exercise": "Find a sentence of yours over 40 words and break it into three or four short ones, the last no more than four words.",
+      "check": "You can read it aloud without running out of breath; average sentence length in the passage stays short (no more than 20 characters in Chinese).",
+      "adjacent": "wangzengqi.9 Classical Touches gives short sentences some backbone; standup.10 uses short sentences to land a punchline, while here they are everyday tone."
+    },
+    "wangzengqi.9": {
+      "tier_reason": "Signature: the pinch of classical Chinese in plain speech is a recognisable mark of his prose.",
+      "why": "In a page of plain speech a sudden classical phrase makes the ear prick up, giving the sentence some bone and a bit of old-fashioned humour. It stands out because it is rare. It is salt, not the main course; one pinch more and it's too salty.",
+      "example": "> [Paraphrase] Wang Zengqi's essays often slip a brief classical phrase or old-style expression into the vernacular, in a small proportion that never becomes a manner.\n>\n> [Demo] 这家面馆的汤，说不上好，亦无不可。\n>\n> *Translation:* This noodle shop's broth: I wouldn't call it good. Nor is it unacceptable. (The last four characters, 亦无不可, are classical.)",
+      "breakdown": "- \"I wouldn't call it good\": plain speech as the base.\n- 亦无不可 (\"nor is it unacceptable\"): a four-character classical phrase closes it, making the verdict reserved and a little sly.\n- The phrase is one everyone knows, not an obscure construction.",
+      "overdo": "> 余尝闻此面馆之汤甚为可口，遂往一试，食之，果然妙哉，实乃人间至味也。\n>\n> *Translation:* I had once heard this establishment's broth was most palatable, and so went to try it; upon partaking, it was marvellous indeed, truly the supreme flavour of the mortal world.\n\nThe whole thing is half-classical, with archaic \"I\" (余) and exclamatory particles; it becomes a Republican-era pastiche and loses its spoken base.",
+      "when_not": "- Young readers or very colloquial platforms, where classical words put up a barrier.\n- When you aren't sure what the phrase means.",
+      "exercise": "Write a 100-word spoken-style review and replace just one key spot with a common classical phrase (such as 不过如此 \"no more than that\" or 亦无不可 \"nor is it unacceptable\").",
+      "check": "No more than three classical phrases in the piece; it still reads smoothly without them, and has more flavour with them.",
+      "adjacent": "wangzengqi.8 Short Spoken Lines is the base, Classical Touches the garnish; guanfang.6 uses four-character phrases in strings to build momentum, while here one appears only now and then."
+    },
+    "wangzengqi.10": {
+      "tier_reason": "Core: nearly every piece in the engine ends this way.",
+      "why": "Nobody tells the reader what to be moved by, so the feeling is left to them; a last concrete picture stays before their eyes, and the aftertaste outlasts any conclusion. It's like putting down your chopsticks when the talk is done: unhurried, and it makes people look back.",
+      "example": "> [Paraphrase] *The Ordination* ends with a water bird startled up from the reed marsh; *The Rain in Kunming* ends by saying, lightly, that he misses the rain there, and leaves it.\n>\n> [Demo] That day he put an extra cracker in my pancake. I said it was too much. He said, \"Eat.\"",
+      "breakdown": "- \"An extra cracker\": the kindness lands on a small action.\n- \"I said it was too much\": only the words are recorded, not my feelings.\n- \"Eat\": one word closes it, with no sentence of explanation after.",
+      "overdo": "> That cracker taught me what everyday human warmth really is. It turns out the most unforgettable thing isn't the taste, but that simple warmth.\n\n\"Taught me\" and \"it turns out\" spell out the theme and lift it up, saying for the reader what they should have reached alone.",
+      "when_not": "- Arguments and reports that need a clear conclusion.\n- When the plot hasn't been made clear yet; stopping abruptly will confuse rather than linger.",
+      "exercise": "Give one of your old pieces a new ending: cut the final reflective paragraph and replace it with a line of dialogue or an action.",
+      "check": "The last paragraph has no \"I realised\", \"it turns out\" or \"this is what…\", and could be drawn as a picture.",
+      "adjacent": "lijuan.10 stopping on an action is almost the same structure, though Li Juan usually adds a little humour; luxun.10 leaves a cold, open question, while this leaves something warm and homely."
+    }
+  }
+}

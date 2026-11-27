@@ -1,0 +1,115 @@
+{
+  "engine": "luxun-writing",
+  "atoms": {
+    "luxun.1": {
+      "tier_reason": "Core: works at the opening of any form, and decides whether the reader gets to the second paragraph.",
+      "why": "Readers are long tired of big judgments and skip them automatically. A concrete small object makes them see first, and catches their curiosity. When the piece later cuts something large out of it, the reader gets the jolt of \"so that was hidden in something this small\". The small thing also sets a boundary for the writer, who can't start with empty talk.",
+      "example": "> 无论是谁，只要在中国过活，便总得常听到“他妈的”或其相类的口头禅。（《论“他妈的！”》）\n\n*Translation:* Whoever you are, if you live in China you are bound to hear \"his mother's\", or some catchphrase like it, all the time. (\"On 'His Mother's!'\")",
+      "breakdown": "- \"his mother's\": a curse, too small to be mentioned in polite company, and strong for exactly that reason.\n- \"whoever you are\", \"all the time\": establish first that it is everywhere, and the small thing at once has weight.\n- No judgment, only pointing: the verdict is saved for later.",
+      "overdo": "> A cup of bubble tea reflects the anxiety of today's young people; a single \"noted\" mirrors the deep predicament of the workplace.\n\nThe trouble is \"reflects\" and \"mirrors\": the small thing is only a springboard, one sentence later we are among big words, and the object was never really looked at.\n\n> (The earlier part gets \"claiming a seat first\" exactly right)… Schools could open more counseling rooms, and we should all put down our phones and ask ourselves.\n\nThe trouble: after the dissection it drops into a list of remedies. The small thing is abandoned and the ending becomes a prescription anyone could write. After cutting it open, bring the small thing back and let it appear once more; offer no plan.",
+      "when_not": "- When the event is itself big news (a disaster, a policy), forcing a small entry looks flippant.\n- Very short notice-type writing needs no hook.",
+      "exercise": "Pick a catchphrase you heard more than three times today. In three sentences, describe only where, by whom and how it was said. No evaluative words allowed.",
+      "check": "Within the first three sentences, is there something concrete you could photograph or record? Does this small thing appear a second time later on?",
+      "adjacent": "luxun.9 Cold Sketch (Small Entry decides what to write, Cold Sketch how to write it); sushi.1 (Su Shi enters a scene to enjoy it, Lu Xun to cut it open)."
+    },
+    "luxun.2": {
+      "tier_reason": "Signature: Lu Xun's trademark move; the sense of proportion is very hard, and beginners easily turn it into snide sarcasm.",
+      "why": "Direct attack makes readers take sides, and the target gets defensive at once. Irony gets the reader nodding first; they follow the logic for a stretch before noticing the pit under their feet. That discovery after the pause is made by the reader, so it hurts more than being told, and is harder to argue with.",
+      "example": "*Demo:* What remarkable efficiency. The boss had barely posted when twenty \"noted\"s came in within three seconds. As for what exactly had been noted, that is another matter, and need not be looked into.\n\n(\"Grabism\" uses this grand tone for \"send-away-ism\"; we are not sure of the exact wording, so it is not quoted.)",
+      "breakdown": "- \"remarkable efficiency\": give full praise first, in a sincere tone.\n- \"three seconds\", \"twenty\": numbers make the praise concrete, and the absurdity starts to surface.\n- \"need not be looked into\": one light line drops the real problem at the reader's feet.",
+      "overdo": "> Wow, sooo outstanding! Truly worthy of our great office workers, working overtime till dawn is just the best~\n\nThe trouble: irony too shallow and too dense; it gives itself away in the first word, leaving only snark and no logic to follow.",
+      "when_not": "- Topics involving suffering or casualties, where irony wounds the victims.\n- Settings where readers may not catch the irony (translation, writing for children).",
+      "exercise": "Choose a practice you oppose and write two sentences in a tone of complete approval. The second must contain a concrete number or detail that lets the absurdity show.",
+      "check": "When someone reads your first sentence, do they need a moment before realizing you are criticizing?",
+      "adjacent": "luxun.3 The Exposing Line (irony goes around, exposing goes straight); luxun.5 Quote Then Refute (quoting sets out the other side's words and then takes them apart; irony pretends to be the other side and keeps talking)."
+    },
+    "luxun.3": {
+      "tier_reason": "Common: useful in any commentary, but it must be held up by the setup before it.",
+      "why": "The reader has seen many phenomena and is left holding a knot they can't put into words. The exposing line says it for them, and that \"yes, that's it\" feeling makes the whole piece memorable. It is the node of the argument; the paragraphs before and after take their bearings from it.",
+      "example": "> 一，想做奴隶而不得的时代；二，暂时做稳了奴隶的时代。（《灯下漫笔》）\n\n*Translation:* One: ages in which people wanted to be slaves and could not. Two: ages in which people were, for the time being, secure as slaves. (\"Random Thoughts Under the Lamp\")",
+      "breakdown": "- Two ages side by side: a whole history of order and chaos pressed into one contrast.\n- \"could not\", \"for the time being\": the two smallest words cut deepest; even the second is no good.\n- No exclamation, no adjectives: the flatter the sentence, the colder.",
+      "overdo": "> You think you're scrolling your phone, but really your phone is scrolling you. You think you're choosing, but you were chosen long ago.\n\nThe trouble: a formula, and two in one paragraph. It reads like an aphorism generator; with no phenomena underneath, readers only think \"here we go again\".",
+      "when_not": "- When the phenomena haven't been laid out enough yet, the line becomes bare assertion.\n- If the piece already has two, cut the third.",
+      "exercise": "Write 100 words describing a phenomenon, then say what it is in one sentence of no more than 25 words, without \"actually\" or \"essentially\".",
+      "check": "Lifted out and read alone, can others understand what the line says? And are there no more than two such lines in the piece?",
+      "adjacent": "luxun.4 Naming a Type (naming gives a word, exposing gives a judgment); luxun.10 Unresolved Ending (exposing sits mid-piece; the ending doesn't judge)."
+    },
+    "luxun.4": {
+      "tier_reason": "Common: usable in any commentary or observational piece, but a badly chosen name becomes the joke itself.",
+      "why": "When a phenomenon has no name, readers have only a vague feeling. Once it is named, it has a handle, and readers can match it to people around them at once. A good name gets carried out of the piece and repeated elsewhere, and the piece's influence travels with it.",
+      "example": "> 它却虽然是狗，又很像猫，折中，公允，调和，平正之状可掬。（《论“费厄泼赖”应该缓行》，写叭儿狗）\n\n*Translation:* Though it is a dog, it is very like a cat: moderate, fair, conciliatory, the picture of impartiality. (\"On Deferring Fair Play\", on the pug)",
+      "breakdown": "- \"pug\": a ready-made small animal; the name itself carries contempt and an image.\n- \"a dog, yet very like a cat\": one phrase pins down how this kind of person pleases both sides.\n- \"moderate, fair, conciliatory\": built from words of praise, so the name and the irony strengthen each other.",
+      "overdo": "> I call these people \"the group of formalist executors who are outwardly positive but inwardly negative\".\n\nThe trouble: the name is too long and too academic. There is no image, it can't be said aloud, and no one remembers it.",
+      "when_not": "- When the name would point to an identifiable real person, or widen into a label for a region, gender or similar group.\n- When the phenomenon hasn't been described clearly, naming first is just labeling.",
+      "exercise": "Give a name of no more than four words to people who keep nodding in meetings but do nothing afterwards, then describe their traits in one sentence.",
+      "check": "Could this name be said naturally at a dinner table, without pointing to any specific person?",
+      "adjacent": "luxun.7 Type Portrait (naming is a word, a portrait is a few strokes of action); luxun.3 The Exposing Line (naming gives a handle, exposing gives a judgment)."
+    },
+    "luxun.5": {
+      "tier_reason": "Common: every argument has to face the other side, but it requires the writer really to understand that side.",
+      "why": "Most readers carry the opposing view somewhere in their heads. When the writer states it for them, they feel respected and stop defending. Then it is taken apart, and what gets taken apart is that layer in the reader's own mind; that persuades far better than knocking down a straw man.",
+      "example": "*Demo:* Some say: \"Replying 'noted' is courtesy, it shows the right attitude, and it beats not replying at all.\" That is true. But if courtesy is down to one word, then the difference between it and not replying is also down to one word.\n\n(\"On Deferring Fair Play\" first grants the good intentions of fair play before turning to \"dogs in the water\"; the exact wording is not quoted.)",
+      "breakdown": "- After \"some say\", the whole statement is quoted, uncut and unchanged.\n- \"That is true\": conceding first is the key step of this atom.\n- \"But… down to one word\": push forward along the other side's own words, and take them apart with their own terms.",
+      "overdo": "> Some say \"lying flat is young people's freedom\". This claim obviously doesn't hold up; it is nothing but an excuse for dodging responsibility.\n\nThe trouble: half a sentence quoted and then the abuse starts. The other side becomes a straw man, and \"obviously\" stands in for argument.",
+      "when_not": "- When the opposing view is a rumor or malicious, restating it helps spread it.\n- When a short comment doesn't have room for both stating it fully and taking it apart.",
+      "exercise": "Find a view you disagree with. In 50 words, state it so well that its holders would be satisfied; in another 50, find a gap in its own words.",
+      "check": "Would someone who holds the opposing view read your restatement and think, \"Yes, that's exactly what I think\"?",
+      "adjacent": "sushi.4 (Su Shi lets the guest voice pessimism and then consoles; Lu Xun quotes the other side and then dismantles it); luxun.2 Irony by Praise (irony pretends to agree; quoting genuinely agrees with part of it)."
+    },
+    "luxun.6": {
+      "tier_reason": "Common: commentary and essays can borrow it, but inaccurate history is a fatal flaw.",
+      "why": "Readers live inside today's phenomena and can't see how deep they go. Set an event from centuries ago beside them, and readers suddenly see that \"it has always been this way\". The phenomenon turns from accident into structure; it gains weight and becomes more chilling.",
+      "example": "*Demo:* At the end of Qing memorials to the throne the emperor often wrote two words: \"Noted. Understood.\" Three hundred years later \"understood\" has become \"noted\", and instead of going from the top down, it now goes from the bottom up.\n\n(\"Random Thoughts Under the Lamp\" holds the historians' cycle of \"order, then chaos\" up to the present; the original wording is not quoted.)",
+      "breakdown": "- \"Understood\": an old object with a known source, concrete down to the words.\n- \"Three hundred years later\": one sentence opens up the span of time.\n- \"from the top down… from the bottom up\": find the one point that changed, and the unchanged bones show.",
+      "overdo": "> Two thousand years ago Confucius said, \"Do not do to others what you would not want done to yourself.\" Sadly, people today have long forgotten the wisdom of the ancients.\n\nThe trouble: the \"wise ancients, forgetful moderns\" formula. History is mere decoration, reveals no structure, and brings a sermon with it.",
+      "when_not": "- When you're unsure of the facts or can't find the source.\n- When readers know nothing of that history and it would need long explanation, overshadowing the point.",
+      "exercise": "Take a workplace habit of today, think of an old event you are sure is reliable that corresponds to it, and write in three sentences what changed and what didn't.",
+      "check": "Can you name the source of the historical fact you used? After the comparison, does the reader see something that hasn't changed?",
+      "adjacent": "zhexuan.7 (Zhexuan uses the comparison to support a positive claim, Lu Xun to expose); luxun.3 The Exposing Line (a historical mirror is often followed by an exposing line)."
+    },
+    "luxun.7": {
+      "tier_reason": "Common: useful in commentary, fiction and features, but the boundary is not alluding to real people.",
+      "why": "Abstract criticism always seems to be about someone else. A person with actions and a catchphrase stands up, and readers think of a particular face at once, maybe their own. A portrait gives the phenomenon body heat, and is harder to argue with than commentary: you can't quarrel with an action.",
+      "example": "> 孔乙己是站着喝酒而穿长衫的唯一的人。（《孔乙己》）\n\n*Translation:* Kong Yiji was the only one who drank standing up and wore a long gown. (\"Kong Yiji\")",
+      "breakdown": "- \"drank standing up\": the posture of the short-jacketed laborers; \"long gown\": the scholar's status. Put the two together and his whole situation appears.\n- \"the only one\": one phrase lifts him out of the crowd.\n- No judgment: it doesn't say he is pitiful or ridiculous; the verdict goes to the reader.",
+      "overdo": "> He is the typical \"nice guy\": weak, lacking opinions of his own, always pleasing others, both pitiable and exasperating.\n\nThe trouble: nothing but adjectives and judgments, not one action; readers can't see this person.",
+      "when_not": "- When the details are so many that a specific colleague or internet user could be identified.\n- In analysis built on data and mechanisms, where a portrait would take the argument's place.",
+      "exercise": "Write about \"someone who only looks at their phone in meetings\", using only two actions and one thing they say. No adjectives.",
+      "check": "With every adjective deleted, is the person still there? Would another reader think of someone they know without being able to say who?",
+      "adjacent": "luxun.4 Naming a Type (the name is a word, the portrait is how they look; often one follows the other); luxun.9 Cold Sketch (the portrait draws a person, the cold sketch is the narrating voice for events)."
+    },
+    "luxun.8": {
+      "tier_reason": "Common: every piece of criticism should have it, but done badly self-dissection turns into self-praise.",
+      "why": "A whole piece of \"them\" makes readers feel the writer is standing above. One line of \"I do this too\" brings the writer down from the podium; the reader's guard drops with it, and the criticism is heard better. It also proves the writer isn't performing clear-sightedness.",
+      "example": "> 而且他对于我，渐渐的又几乎变成一种威压，甚而至于要榨出皮袍下面藏着的“小”来。（《一件小事》）\n\n*Translation:* And to me he gradually became almost a kind of pressure, even threatening to squeeze out the \"smallness\" hidden under my fur-lined gown. (\"A Small Incident\")",
+      "breakdown": "- \"to me he\": the rickshaw puller becomes a mirror turned on \"me\".\n- \"pressure\", \"squeeze out\": heavy verbs; the writer leaves himself no way out.\n- \"the 'smallness' under my fur-lined gown\": one garment and one word strip the scholar's dignity bare.",
+      "overdo": "> Of course, I once had similar problems too, but I soon realized it and worked hard to change.\n\nThe trouble: self-dissection turned self-commendation. One second of admission, then proof of being better than everyone else.",
+      "when_not": "- When the writer really has nothing to do with it, forced self-dissection is hypocrisy.\n- When the piece speaks for victims, self-dissection pulls the focus onto the writer.",
+      "exercise": "After a passage of criticism you've written, add one concrete sentence about the same kind of thing you have done yourself. No justification may follow.",
+      "check": "After the self-dissecting line, does a \"but\" or \"still, I\" appear to make excuses for yourself?",
+      "adjacent": "sushi.2 (Su Shi's self-admission comes with a smile, Lu Xun's self-dissection with pain); luxun.10 Unresolved Ending (self-dissection often sits right before the ending)."
+    },
+    "luxun.9": {
+      "tier_reason": "Core: restrained narration is a basic skill for every form, and the heavier the matter, the more it is needed.",
+      "why": "Adjectives feel on the reader's behalf, so the reader doesn't have to. Give only facts and details and the reader must fill the blank; the cold they fill in goes deeper than any that is shouted. The last line especially must be cold: however restrained the rest, one tear at the end collapses the whole piece.",
+      "example": "> 在我的后园，可以看见墙外有两株树，一株是枣树，还有一株也是枣树。（《秋夜》）\n\n*Translation:* In my back garden you can see two trees beyond the wall. One is a jujube tree; the other is also a jujube tree. (\"Autumn Night\")\n\n*Demo:* Three pairs of chopsticks were set on the table. When he finished eating, he put the third pair back in the holder and washed his own bowl.",
+      "breakdown": "- \"Autumn Night\" refuses to combine the trees; the sentence slows down and the loneliness seeps out on its own. Not one adjective.\n- \"three pairs of chopsticks\": details are allowed, as long as they don't announce \"missing someone\".\n- The ending is only \"washed his own bowl\": the coldest line comes last.",
+      "overdo": "> At that moment, behind the cold numbers lay countless heartbroken families and an unspeakable, profound pain!\n\nThe trouble: the words say \"cold\" while the hand is full of adjectives and exclamation marks.\n\n> Ten o'clock, meeting. Ten-twenty, names read out. Eleven-forty, downstairs. Two p.m., accounts shut off.\n\nThe trouble: a log of timestamps. The numbers should be chosen for weight (\"twelve years, one cardboard box\"); more is not colder.",
+      "when_not": "- Forms that need to carry warmth and comfort (eulogies, acknowledgments), where too much cold seems heartless.\n- When readers lack background and bare numbers can't convey the weight.",
+      "exercise": "Take a sad description with three or more adjectives and rewrite it as three sentences: an action, a detail, and the coldest closing line.",
+      "check": "Is there still any \"heartbreaking\", \"profound\", or exclamation mark in the passage? Does the last sentence say the feeling out loud?",
+      "adjacent": "luxun.1 Small Entry (choosing material); luxun.7 Type Portrait (drawing people); sushi.1 (also states things and moves on, but in a relaxed voice)."
+    },
+    "luxun.10": {
+      "tier_reason": "Core: the ending decides the aftertaste, and every argument and essay faces the choice of whether to elevate.",
+      "why": "Cheap hope stitches shut the wound the piece has opened, and once readers breathe out they forget. Leave a question and the reader stays caught on it after closing the page. The cold line shows the writer cares; readers know the writer isn't indifferent, just unwilling to lie.",
+      "example": "> 没有吃过人的孩子，或者还有？救救孩子……（《狂人日记》）\n\n*Translation:* Perhaps there are still children who have not eaten people? Save the children… (\"A Madman's Diary\")",
+      "breakdown": "- \"Perhaps there are still?\": not an assertion but a guess with a question mark; the hope is small.\n- \"Save the children\": a cry of three words, with no plan.\n- The ellipsis: the sentence is unfinished, and the piece stops in mid-air.",
+      "overdo": "> I believe that as long as each of us starts with ourselves, change will come, and tomorrow will surely be better!\n\nThe trouble: sudden brightness plus a call to action. All the cold before it is wasted, and readers are sent off with an empty phrase.",
+      "when_not": "- When the piece's job is to give a plan (proposals, how-to guides).\n- When the audience is in real difficulty and needs a concrete way out, not a question mark.",
+      "exercise": "Take an ending you've written, delete the final elevating paragraph, and replace it with one cold line about what you yourself will do next time.",
+      "check": "Do the last two sentences contain \"let us\", \"I believe\", \"may\", or \"surely will\"?",
+      "adjacent": "sushi.8 (Su Shi lands on a homely laugh, Lu Xun on a cold question); luxun.8 Self-Dissection (often the step before the ending)."
+    }
+  }
+}

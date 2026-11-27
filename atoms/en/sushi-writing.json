@@ -1,0 +1,115 @@
+{
+  "engine": "sushi-writing",
+  "atoms": {
+    "sushi.1": {
+      "tier_reason": "Core: going straight to the point is basic to every narrative form.",
+      "why": "The reader doesn't have to wait; the first sentence puts them on the scene. The more specific the time and place, the more it reads like something that really happened, and trust is there at once. Skipping the preamble keeps the pace light, and the reader feels the writer is telling a story, not giving a report.",
+      "example": "元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。(*Night Walk at Chengtian Temple*)\n\n*Translation:* On the night of the twelfth day of the tenth month, in the sixth year of Yuanfeng, I had undressed and was about to sleep when moonlight came in at the door, and I got up gladly and went out.",
+      "breakdown": "- \"On the night of the twelfth day of the tenth month, in the sixth year of Yuanfeng\": the date is exact down to the night, like a diary.\n- \"Undressed and was about to sleep\": a homely action; he is already at the bedside.\n- \"Moonlight came in at the door, and I got up gladly and went out\": occasion plus response, and in eight characters he is out of the door.",
+      "overdo": "In this fast-paced age, we often forget to stop and pause. That night, as moonlight spilled across the windowsill, ripples I had not felt in years stirred in my heart.\n\nThe problem: it reflects before it enters the scene. \"Spilled across\" and \"ripples\" are stock phrases, and the actual time and place get blurred.",
+      "when_not": "- When an argumentative essay needs to set out the problem first.\n- When the event itself is plain and the piece rests on the commentary that follows: stressing time and place adds little.",
+      "exercise": "In one sentence of no more than 30 words, say where you were at some moment yesterday, what you were doing, and what made you get up and do something else.",
+      "check": "Does the first sentence contain a time, a place and an action? Is there any word of reflection in it?",
+      "adjacent": "- luxun.1 Small Entry: Lu Xun opens in order to dissect; Su Shi opens in order to walk in.\n- sushi.3 Joy in Hardship: another way to open, starting from the situation."
+    },
+    "sushi.2": {
+      "tier_reason": "Signature: Su Dongpo's hallmark move; it needs real idleness underneath, or it turns into showing off or self-pity.",
+      "why": "The reader takes idleness for a flaw; the writer turns it into an advantage: precisely because he has nothing to do, he sees the moonlight others miss. The turn rests on a specific discovery, not on argument. The reader feels a little lighter, and may wonder what they have lost by being busy.",
+      "example": "何夜无月？何处无竹柏？但少闲人如吾两人者耳。(*Night Walk at Chengtian Temple*)\n\n*Translation:* What night is without a moon? What place is without bamboo and cypress? Only there are few idle men like the two of us.",
+      "breakdown": "- Two rhetorical questions: moon and bamboo are everywhere; good things are not rare in themselves.\n- \"Only there are few idle men\": what is rare is the one who looks; the weight shifts at once to people.\n- \"Like the two of us\": he has a friend with him, so the idleness is not lonely and not self-pitying.",
+      "overdo": "Yes, I am an idle man at peace with the world. I do not chase fame or fortune; I only wish to guard the pure land in my heart and watch the clouds roll and unroll.\n\nThe problem: \"idle\" becomes a persona and a boast. Nothing specific is seen, only a pose.",
+      "when_not": "- When the writer's situation is actually busy and hard: forcing \"idle\" is pretence.\n- When readers are in hardship such as unemployment: calling yourself idle can sting.",
+      "exercise": "Write about one small thing you noticed only because you had nothing to do. Close the last sentence with \"It's just that not many people…\"",
+      "check": "Does the \"idleness\" come with something specific that others missed?",
+      "adjacent": "- sushi.8 Self-Teasing Close: the admission is where you stand; the close is where you land.\n- luxun.8 Self-Dissection: Lu Xun admits to guilt; Su Shi admits to idleness."
+    },
+    "sushi.3": {
+      "tier_reason": "Common: works in most essays and accounts of daily life; the hard part is the balance of hardship and joy.",
+      "why": "Write only the hardship, and the reader suffers along with you; write only the joy, and it reads as showing off. Give the hardship in full first, and the reader believes it; then dig a little joy out of it, and the reader feels the joy was earned: real, and something they can borrow for themselves.",
+      "example": "*Sample (repo-written):* On payday I split my food money into thirty portions and put them in thirty digital red envelopes, opening one each morning. By the end of the month there were still two left, enough to take a friend out for barbecue.\n\n(The original, Su Shi's *Letter in Reply to Qin Taixu*, describes how in Huangzhou he divided each month's money into thirty parts hung from the rafters, took one down each day with a pole, and kept what was left in a bamboo tube for guests. The exact wording is uncertain, so it is not quoted.)",
+      "breakdown": "- \"Split into thirty portions\": the hardship is told in numbers, not complaints.\n- \"Opening one each morning\": thrift becomes a small ritual, and the joy comes out of it.\n- \"Two left, enough to take a friend out\": the joy lands on sharing, not on boasting about saving.",
+      "overdo": "Life may have handed me nothing but mess, but I still choose to face it with a smile, because hardship is the best teacher.\n\nThe problem: both the hardship and the joy are empty words. There is no specific predicament, and \"smile\" and \"teacher\" are motivational-poster language.",
+      "when_not": "- When the situation involves other people's real suffering: finding the joy in it looks cold.\n- When the reader is asking for help: they need empathy, not optimism.",
+      "exercise": "Write about a recent time you were short of money or in a mess. The first two sentences describe only the predicament; the third gives one detail in it that made you laugh.",
+      "check": "Does the hardship part have specific numbers or actions? Does the joy grow out of the hardship?",
+      "adjacent": "- sushi.6 A Turn of Thought: joy in hardship finds something to enjoy; the turn of thought lets go.\n- sushi.7 Things Have Owners: when money is short, turn to things that cost nothing."
+    },
+    "sushi.4": {
+      "tier_reason": "Signature: the hallmark structure of the fu; a modern essay needs restraint to use it, one question and one answer.",
+      "why": "When someone else voices the pessimism, the reader doesn't feel lectured. The more reasonable the guest sounds, the more the reader agrees, and the more the writer's answer seems addressed to the reader. Dialogue also creates pauses and a scene, so deep thoughts don't feel forced.",
+      "example": "哀吾生之须臾，羡长江之无穷。(*Former Ode on the Red Cliff*, spoken by the guest)\n\n*Translation:* I grieve that my life lasts but a moment, and envy the endlessness of the Yangtze.",
+      "breakdown": "- \"A moment\" against \"endlessness\": the guest's pessimism has a contrast of scale; it is well argued.\n- \"Grieve\" and \"envy\": two verbs of feeling, very human.\n- The writer lets the guest finish and answers only later: the pessimism is respected, not set up as a target.",
+      "overdo": "A friend asked, \"What's the meaning of life?\" I smiled and said, \"The meaning is in the journey.\" My friend was suddenly enlightened: \"So that's it!\"\n\nThe problem: the guest's pessimism is too weak, the answer comes too fast, and there's sudden enlightenment. It reads like a lesson or an interview; the guest is a straw man.",
+      "when_not": "- When a real conversation must be reported accurately (journalism): don't invent a \"guest.\"\n- When the piece is very short and has no room for a scene of question and answer.",
+      "exercise": "Have a friend voice a kind of pessimism in a 50-word passage with a specific situation. Answer in only two sentences, without the word \"actually.\"",
+      "check": "Can the guest's words stand on their own and convince the reader too? Is there only one round of question and answer?",
+      "adjacent": "- luxun.5 Quote Then Refute: Lu Xun quotes in order to take apart; Su Shi quotes in order to console.\n- sushi.5 Change and Constancy: the writer's answer in a host-and-guest exchange often uses it."
+    },
+    "sushi.5": {
+      "tier_reason": "Common: usable in essays and arguments alike, but changing scale easily slides into nihilism.",
+      "why": "When people feel stuck, it is often a fixed scale that has them stuck: today, this quarter. Stretch or shrink the timescale and the size of the problem changes; the reader feels the stone in their chest has been moved. It doesn't deny the problem, only changes the distance it is seen from.",
+      "example": "盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也。(*Former Ode on the Red Cliff*)\n\n*Translation:* If you look at it from the side of what changes, then heaven and earth cannot last for even the blink of an eye; if you look at it from the side of what does not change, then things and I alike are without end.",
+      "breakdown": "- \"From the side of what changes\" and \"from the side of what does not change\": the two scales are named outright.\n- \"Heaven and earth cannot last for even the blink of an eye\": looked at as change, even heaven and earth are brief.\n- \"Things and I alike are without end\": looked at as constancy, \"I\" am saved too; the landing is on the person.",
+      "overdo": "Before the vast universe, humanity is but a speck of dust. What do your worries even matter?\n\nThe problem: the change of scale belittles the person. That is nihilism, and the reader will only feel worse.",
+      "when_not": "- When the other person faces an urgent practical problem (illness, debt): telling them to \"take the long view\" is irresponsible.\n- When the piece needs to stress how serious the problem is.",
+      "exercise": "Write about something that makes you anxious, and say it twice: once as \"Counted in days…\" and once as \"Counted in decades…\"",
+      "check": "After the change of scale, has \"I\" been shrunk into meaninglessness, or set down more steadily?",
+      "adjacent": "- sushi.9 One Layer Deeper: change and constancy shifts the scale; one layer deeper shifts the understanding.\n- zhexuan.6 Elevate and Redefine: Zhexuan moves up a level to reach a judgement; Su Shi does it to loosen a knot."
+    },
+    "sushi.6": {
+      "tier_reason": "Signature: comes from Su Dongpo's own experience of letting go on the spot; it depends on a physical situation and is hard to copy mechanically.",
+      "why": "Every reader knows physical tiredness. Write the tiredness fully first, and the reader's legs go weak with you; then one thought turns, and the reader breathes out with you. That release is felt in the body, more direct than argument. The turn of thought is small, so it is believable.",
+      "example": "此间有甚么歇不得处？(*Record of a Visit to Songfeng Pavilion*)\n\n*Translation:* What is there here that keeps me from resting?",
+      "breakdown": "- Earlier, the text says his legs were worn out and the pavilion was still far off: the tiredness is written out in full first.\n- \"甚么\" (\"what\"): colloquial; the thought comes out on the spot, not by reasoning.\n- One rhetorical question is enough: no explanation of why he may rest; he simply rests.",
+      "overdo": "In that moment I suddenly understood: life is not about reaching the destination, the true meaning is to enjoy the journey; only by letting go of attachment can we embrace freedom.\n\nThe problem: the turn of thought is followed by a string of grand truths. A turn of thought should be one sentence; this has become a speech.",
+      "when_not": "- When nothing physical or situational has got \"stuck\" before it: the turn becomes an enlightenment out of nowhere.\n- When the subject requires persevering and not giving up (a rescue, a race).",
+      "exercise": "Write about a time you were too tired to move. Use three sentences for the tiredness, one colloquial question for the thought that made you stop, then stop writing.",
+      "check": "Before the turn, are there at least two specific kinds of tiredness? After it, is there more than one sentence of explanation?",
+      "adjacent": "- sushi.3 Joy in Hardship: finding joy versus letting go.\n- sushi.5 Change and Constancy: the turn of thought doesn't change scale, only the thought."
+    },
+    "sushi.7": {
+      "tier_reason": "Signature: Su Dongpo's view of what to take and what to leave; tilt it slightly and it becomes resentment of the rich or false high-mindedness.",
+      "why": "Admit first that you can't have it, and the reader doesn't think you're putting on airs. Then point to good things close at hand that cost nothing, and the reader's sense of lack is caught by a specific substitute. It doesn't ask people to give up desire; it just offers another way out.",
+      "example": "惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色。(*Former Ode on the Red Cliff*)\n\n*Translation:* Only the cool breeze on the river and the bright moon among the hills: the ear takes in the one and it becomes sound; the eye meets the other and it becomes colour.",
+      "breakdown": "- \"Only\": the text has just said \"if a thing is not mine, I will not take even a hair of it\"; here one word turns the direction.\n- \"Cool breeze\" and \"bright moon\": things no one can own.\n- \"The ear takes in\" and \"the eye meets\": it lands on the senses; the enjoyment is concrete, not a slogan.",
+      "overdo": "So what about mansions and fancy cars? The rich aren't necessarily happier than me. True wealth is richness of the heart.\n\nThe problem: it runs others down first, then consoles itself. Resentment of the rich plus a motivational quote, and not one specific thing that costs nothing.",
+      "when_not": "- When the reader lacks basic security in life: telling them to enjoy the sunset sounds glib.\n- When the piece is really meant to criticise unfair distribution: this atom would dissolve the problem.",
+      "exercise": "Write about something you can't afford, admitting it in just one sentence. Then write about something you enjoyed for free today, using two sensory details.",
+      "check": "Is there any line belittling \"those who have\"? Is the free thing concrete enough to be felt through the senses?",
+      "adjacent": "- sushi.3 Joy in Hardship: that finds joy within the hardship; this turns to things that belong to no one.\n- sushi.2 The Idle Man: both turn \"not having\" into \"having.\""
+    },
+    "sushi.8": {
+      "tier_reason": "Core: the ending decides whether the whole piece is stiff and posing; suits essays and commentary alike.",
+      "why": "The higher the turn earlier, the more the ending needs to come back to earth. A homely or self-teasing line makes the reader smile, so the clarity before it doesn't seem stiff, and the reader is willing to believe it. A homely line also leaves an image behind, and that aftertaste lasts longer than a quotable line.",
+      "example": "相与枕藉乎舟中，不知东方之既白。(*Former Ode on the Red Cliff*)\n\n*Translation:* We lay sprawled against each other in the boat, not knowing the east had already grown light.",
+      "breakdown": "- \"Lay sprawled against each other\": asleep in a heap, not dignified at all.\n- \"In the boat\": back to a specific place, down from heaven and earth to the boat.\n- \"Not knowing the east had already grown light\": no word about what was understood, only that they slept till dawn.",
+      "overdo": "That night, I finally understood: may you sail through a thousand ships and still come home young at heart.\n\nThe problem: the ending is a quotable line plus \"may you.\" After the turn it flies upward again and never lands.",
+      "when_not": "- In serious pieces such as memorials or accident reports: self-teasing is out of place.\n- When the whole piece is already light: more self-teasing comes across as glib.",
+      "exercise": "Find a piece you've written whose ending rises into a grand message. Replace the last paragraph with one small, slightly embarrassing thing that actually happened at the time.",
+      "check": "Is the last line an image or a homely remark? Does it contain \"may you,\" \"I finally understood\" or \"life\"?",
+      "adjacent": "- luxun.10 Unresolved Ending: Lu Xun closes cold; Su Shi closes with a smile.\n- sushi.2 The Idle Man: same family, used as a standpoint rather than an ending."
+    },
+    "sushi.9": {
+      "tier_reason": "Common: usable in arguments and essays, but the source engine explicitly says to use it sparingly.",
+      "why": "The reader assumes the conclusion was settled long ago; the writer calmly offers another explanation, and the reader goes \"huh?\" and looks again. The tone isn't combative, so the reader doesn't get defensive, and the new reading is easy to accept. It also shows the writer has thought about it a little longer than others.",
+      "example": "其意不在书。(*On the Marquis of Liu*, on the old man at the bridge who gave Zhang Liang a book)\n\n*Translation:* His purpose was not the book.",
+      "breakdown": "- Everyone else fixes on \"the book\"; one sentence moves the focus away.\n- \"His purpose\": from the event to the motive, one layer deeper.\n- Five characters: no argument against the old view, only a new reading.",
+      "overdo": "Everyone says hard work leads to success? Wrong! I say hard work is the most useless thing of all, and what really decides your fate is your mindset!\n\nThe problem: it flips for the sake of flipping, in an argumentative tone. \"Wrong! I say\" is a contrarian's voice, and the new reading is just another slogan.",
+      "when_not": "- When the accepted view is simply right: overturning it only creates a gimmick.\n- When the piece already has one turn: going one layer deeper makes two.",
+      "exercise": "Write a common judgement about someone (e.g. \"he's got a strange temper\"), then give another reading in one sentence: \"I only realised later that what he… wasn't…\"",
+      "check": "Does the new reading have specific grounds? Is the tone \"I only realised later\" or \"I say otherwise\"?",
+      "adjacent": "- sushi.5 Change and Constancy: changing the scale versus changing the understanding.\n- sushi.10 See for Yourself: one layer deeper relies on thinking; seeing for yourself relies on going to look."
+    },
+    "sushi.10": {
+      "tier_reason": "Common: suits travel writing, reviews and observation pieces; the core is writing out the process of going to look.",
+      "why": "Readers hear a flood of \"I heard that\" every day. When the writer actually goes to look, the conclusion carries the weight of being there. Write the process out, and the reader makes the trip with you; end with a gentle smile at your own or others' past credulity, and the reader is reminded without feeling lectured.",
+      "example": "事不目见耳闻，而臆断其有无，可乎？(*Record of Stone Bell Mountain*)\n\n*Translation:* If one has not seen a thing with one's own eyes or heard it with one's own ears, can one guess whether it is so or not?",
+      "breakdown": "- \"Seen with one's own eyes or heard with one's own ears\": grounds first-hand proof in the eyes and ears.\n- \"Guess\": names the root flaw of hearsay; the word is exact and insults no one.\n- It closes on a rhetorical question: no harsh verdict, the rest is left to the reader.",
+      "overdo": "Everyone online says this place is packed, but I believe online information can't be fully trusted; we should think for ourselves and not follow the crowd.\n\nThe problem: there is only a conclusion and no \"going to look.\" The whole thing is attitude, with not one step of first-hand experience, and a lecture thrown in.",
+      "when_not": "- With things you can't check yourself (distant news, specialist fields): forcing it turns into self-importance.\n- When \"trying it yourself\" carries safety risks.",
+      "exercise": "Pick a small rumour you've heard but not checked (a shop with long queues, a road that's always jammed). Write down when you went to look, one number you saw, and a one-sentence conclusion.",
+      "check": "Does the piece give the time of the visit and what was specifically seen? Does the conclusion rest only on what was seen?",
+      "adjacent": "- sushi.9 One Layer Deeper: both overturn accepted views, but one layer deeper does it by thinking.\n- luxun.6 History as Mirror: Lu Xun turns to old books for proof; Su Shi goes to the scene."
+    }
+  }
+}
