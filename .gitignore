@@ -38,3 +38,5 @@ drafts/daily/_usr.txt
 drafts/daily/_rev_sys.txt
 drafts/daily/_rev_usr.txt
 .secrets.env
+# 蒸馏草稿（含证据片段，人工审过再挪出）
+drafts/distill/
