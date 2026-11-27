@@ -29,5 +29,18 @@
 ## 轮换
 
 选题按「最久没写过的引擎」挑，17 个引擎轮流上，不再随机。
-## 外部情报搜集员`n`n每天北京 08:00（being，在撰稿前）抓浙江宣传、三联生活实验室、三联生活周刊、人民日报评论的新公开文章：`n原文只存本机 `tools/tests/fixtures/local/`（不入库），入库的只有手法拆解 `drafts/pipeline/_intel/<引擎>.md`（引文每处 ≤30 字）。`n拆解里的「引���没写到的新手法」会作为证据喂给周日的引擎迭代，同样要过 A/B 盲比才落盘。来源在 `scout.py` 的 `SOURCES` 里加。
+
+## 外部情报搜集员
+
+每天北京 08:00（being，在撰稿前）抓浙江宣传、三联生活实验室、三联生活周刊、人民日报评论的新公开文章。
+原文只存本机 `tools/tests/fixtures/local/`（不入库），入库的只有手法拆解 `drafts/pipeline/_intel/<引擎>.md`（引文每处 ≤30 字）。
+拆解里「引擎没写到的新手法」会作为证据喂给周日的引擎迭代，同样要过 A/B 盲比才落盘。来源在 `scout.py` 的 `SOURCES` 里加。
+
+```bash
+python3 tools/pipeline/scout.py                    # 全部来源
+python3 tools/pipeline/scout.py --source 浙江宣传 --dry-run
+```
+
+安装定时器：`bash tools/daily/install_timers.sh intel`（being，00:00 UTC = 北京 08:00）。
+
 

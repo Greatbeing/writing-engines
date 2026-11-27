@@ -98,6 +98,42 @@ EOF
     systemctl --user enable --now writing-daily-distill.timer || systemctl --user start writing-daily-distill.timer
     echo "installed: writing-daily-distill.timer (Sun 03:00 UTC)"
     ;;
+  intel)
+    # 每天 00:00 UTC（北京 08:00）抓外部文章、拆手法，喂周日引擎迭代
+    mkdir -p "$HOME_DIR/drafts/daily/logs"
+    cat > "$UNIT_DIR/writing-pipe-scout.service" <<EOF
+[Unit]
+Description=writing-engines external intel scout
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=$HOME_DIR
+Environment=HOME=$HOME
+EnvironmentFile=-$ENVF
+ExecStart=/bin/bash -lc "cd $HOME_DIR && git pull -q --rebase --autostash origin master; $PY -u tools/pipeline/scout.py"
+StandardOutput=append:$HOME_DIR/drafts/daily/logs/pipe-scout.out
+StandardError=append:$HOME_DIR/drafts/daily/logs/pipe-scout.err
+TimeoutStartSec=5400
+Nice=10
+EOF
+    cat > "$UNIT_DIR/writing-pipe-scout.timer" <<EOF
+[Unit]
+Description=writing-engines external intel scout timer
+
+[Timer]
+OnCalendar=*-*-* 00:00:00
+Persistent=true
+RandomizedDelaySec=600
+Unit=writing-pipe-scout.service
+
+[Install]
+WantedBy=timers.target
+EOF
+    systemctl --user daemon-reload
+    systemctl --user enable --now writing-pipe-scout.timer || systemctl --user start writing-pipe-scout.timer
+    echo "installed: writing-pipe-scout.timer (00:00 UTC = 08:00 Beijing)"
+    ;;
   remove)
     for r in write review distill; do
       systemctl --user disable --now "writing-daily-$r.timer" 2>/dev/null || true
