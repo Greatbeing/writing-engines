@@ -45,7 +45,13 @@ def counts():
     except Exception:
         atoms = 0
     days = [p for p in (DOCS / "daily").glob("20*.html")]
-    return dict(engines=len(engines), lectures=len(lectures), arts=len(arts), atoms=atoms, days=len(days))
+    try:
+        fl = [a.get("family") for a in j]
+        fams, uniq = len(set(fl) - {"独有"}), fl.count("独有")
+    except Exception:
+        fams = uniq = 0
+    return dict(engines=len(engines), lectures=len(lectures), arts=len(arts), atoms=atoms, days=len(days),
+                fams=fams, uniq=uniq)
 
 
 CSS = """
@@ -352,12 +358,12 @@ def home_en(c):
 <pre>engine = atomic techniques × style fingerprint × red-line review</pre>
 <p>Atoms govern how a piece is thought up; the fingerprint, how a draft is checked; red lines, what must never appear. A template makes you sound like it; an engine means you don&rsquo;t have to.</p></div></section>
 <section class="enb"><h2>Engines</h2><div>
-<p>{c['engines']} engines, {c['atoms']} atoms. Four are ready; the rest are on trial. Engine pages are in Chinese.</p>
+<p>{c['engines']} engines, {c['atoms']} atoms. Four are ready; the rest are on trial. Individual engine files are in Chinese.</p>
 <table><tr><th>Engine</th><th>Genre</th><th>Status</th></tr>{rows}</table>
-<p><a href="../engines/">Browse all engines (Chinese) →</a> &nbsp; <a href="../articles/">Sample pieces (Chinese) →</a></p></div></section>
+<p><a href="engines/">Browse all engines →</a> &nbsp; <a href="../articles/">Sample pieces (Chinese) →</a></p></div></section>
 <section class="enb"><h2>Atom library</h2><div>
-<p>Lay the engines side by side and many moves turn out to be the same move. The cross-engine library holds {c['atoms']} atoms in 18 families plus 63 unique ones. Different authors are different combinations of the same atoms.</p>
-<p><a href="../atoms/">Atom library (Chinese) →</a></p></div></section>
+<p>Lay the engines side by side and many moves turn out to be the same move. The cross-engine library holds {c['atoms']} atoms in {c['fams']} shared families plus {c['uniq']} unique ones. Different authors are different combinations of the same atoms.</p>
+<p><a href="atoms/">Atom library →</a></p></div></section>
 <section class="enb"><h2>Teaching layer</h2><div>
 <p>Three tracks: recognize single atoms, see how authors combine them, then diagnose your own drafts. {c['lectures']} lectures so far, each one technique: see it in the original, take it apart, write it yourself.</p>
 <p><a href="../lecture/">Lectures (Chinese) →</a> &nbsp; <a href="../eval/">Evaluation (Chinese) →</a></p></div></section>
@@ -374,19 +380,146 @@ def add_lang(t, href, label):
     return t.replace("</style>", LANG_CSS + "</style>", 1)
 
 
+def add_lang_nav(t, href, label):
+    """引擎页导航没有 tools 区：把语言切换放在导航末尾。"""
+    if 'class="lang"' in t:
+        return t
+    t = t.replace("</div></nav>", f'<a class="lang" href="{href}">{label}</a></div></nav>', 1)
+    return t.replace("</style>", LANG_CSS + "</style>", 1)
+
+
 def build_en(c):
     ba.SECTION = ""
     t = page("Collect the style. Learn the method. Find your own.",
              f"<style>{CSS}{ATOM_CSS}{EN_CSS}</style>" + home_en(c) + f"<script>{ATOM_JS}</script>", "../")
+    (DOCS / "en").mkdir(exist_ok=True)
+    (DOCS / "en/index.html").write_text(en_shell(t, "../", "", "../"), encoding="utf-8")
+    build_en_engines(c)
+    build_en_atoms()
+
+
+# ---- English sub-pages (docs/en/engines/, docs/en/atoms/) ----
+EN_GLOSSARY = ROOT / "atoms/en.json"  # 族名、原子名、一句话定义、引擎短名的英文译名表
+
+
+def en_shell(t, rel, enrel, zh_href, on=""):
+    """把 page() 的中文外壳改成英文：lang、标题、导航（引擎/原子库指英文页，讲义/评测指中文并标注）、中文切换。"""
     t = t.replace('<html lang="zh-CN">', '<html lang="en">', 1)
     t = t.replace(' · 采风</title>', ' · Caifeng</title>', 1)
-    for zh, en in ((">引擎</a>", ">Engines</a>"), (">讲义</a>", ">Lectures</a>"), (">评测</a>", ">Evaluation</a>"),
-                   (">夜读</button>", ">Night</button>")):
-        t = t.replace(zh, en)
-    t = add_lang(t, "../", "中文")
-    (DOCS / "en").mkdir(exist_ok=True)
-    (DOCS / "en/index.html").write_text(t, encoding="utf-8")
+    t = t.replace(f'<a class="brand" href="{rel}">', f'<a class="brand" href="{enrel or "./"}">', 1)
+    t = re.sub(r'<a class="[^"]*" href="[^"]*engines/">引擎</a>',
+               f'<a class="{"on" if on == "engines" else ""}" href="{enrel}engines/">Engines</a>'
+               f'<a class="{"on" if on == "atoms" else ""}" href="{enrel}atoms/">Atoms</a>', t, count=1)
+    t = t.replace(">讲义</a>", ">Lectures (Chinese)</a>").replace(">评测</a>", ">Evaluation (Chinese)</a>")
+    t = t.replace(">夜读</button>", ">Night</button>")
+    return add_lang(t, zh_href, "中文")
 
+
+def en_glossary():
+    return json.loads(EN_GLOSSARY.read_text(encoding="utf-8"))
+
+
+def esc(s):
+    import html as _h
+    return _h.escape(str(s or ""))
+
+
+def build_en_engines(c):
+    idx = json.loads((ROOT / "atoms/index.json").read_text(encoding="utf-8"))
+    n = {}
+    for a in idx:
+        n[a["engine"]] = n.get(a["engine"], 0) + 1
+    names = en_glossary()["engines"]
+    rows = "".join(
+        f'<tr><td>{esc(names.get(d, d))}</td><td>{g}</td><td>{s}</td><td>{n.get(d, 0)}</td>'
+        f'<td><a href="{GH}/tree/master/{d}"><code>{d}</code> ↗</a></td></tr>' for d, g, s in EN_ENGINES)
+    ready = sum(1 for _, _, s in EN_ENGINES if s == "Ready")
+    body = f"""<main class="home">
+<section class="enb first"><h2>Writing engines</h2><div>
+<p>A genre is a set of operating rules its authors never state. An engine takes a genre apart to a grain you can execute, then reassembles the parts into something that can write new pieces.</p>
+<pre>engine = atomic techniques × style fingerprint × red-line review</pre>
+<p>Atoms govern how a piece is thought up; the fingerprint, how a draft is checked; red lines, what must never appear. Each engine is a self-contained <code>SKILL.md</code> directory with no code dependencies.</p></div></section>
+<section class="enb"><h2>The engines</h2><div>
+<p>{c['engines']} engines, {c['atoms']} atoms. {ready} are ready; the rest are on trial. Atom counts come from <code>atoms/index.json</code>. Engine files are in Chinese.</p>
+<table><tr><th>Engine</th><th>Genre</th><th>Status</th><th>Atoms</th><th>Directory</th></tr>{rows}</table>
+<p><a href="../atoms/">Browse the atom library →</a></p></div></section>
+<section class="enb"><h2>How an engine is built</h2><div>
+<ol class="steps"><li><b>Sample.</b> Choose a genre with clear boundaries and collect real, high-quality texts.</li>
+<li><b>Extract atoms.</b> Take each text apart into its smallest techniques, then merge them into composable operations.</li>
+<li><b>Fix the fingerprint.</b> Turn &ldquo;sounds like it&rdquo; into features that can be counted and compared.</li>
+<li><b>Draw red lines.</b> Write down what gives the style away when misused, with a replacement for each.</li>
+<li><b>Feed back from use.</b> Write real pieces with the engine; where they fail, revise the atoms and red lines.</li></ol>
+<p>Every engine follows the same seven-section contract (<a href="{GH}/blob/master/SPEC.md">SPEC.md ↗</a>) and must pass the ten checks in <code>lint_skill.py</code>: complete frontmatter, all seven sections, no full-text corpus, and complete sample output.</p></div></section>
+<section class="enb"><h2>Install and use</h2><div>
+<p><code>SKILL.md</code> with frontmatter is a common format. With OpenClaw:</p>
+<pre>git clone {GH}.git
+# each engine directory is self-contained: copy one, or all
+cp -r writing-engines/*-writing ~/.openclaw/workspace/skills/</pre>
+<p>For Claude Code or any other host that reads <code>SKILL.md</code>, put the engine directory in its skills path. After writing, you can check the result:</p>
+<pre># score a piece for AI flavor against one engine
+python tools/ai-flavor-checker.py article.md --engine sanlian-writing
+# library-wide lint, assertions and regression tests
+python tools/lint_skill.py --all
+python tools/run_prompts.py --all</pre>
+<p><a href="{GH_EN}">Read the English README on GitHub ↗</a></p></div></section>
+</main>"""
+    ba.SECTION = "engines"
+    t = page("Writing engines", f"<style>{EN_CSS}{EN_SUB_CSS}</style>" + body, "../../")
+    (DOCS / "en/engines").mkdir(parents=True, exist_ok=True)
+    (DOCS / "en/engines/index.html").write_text(
+        en_shell(t, "../../", "../", "../../engines/", "engines"), encoding="utf-8")
+
+
+def build_en_atoms():
+    idx = json.loads((ROOT / "atoms/index.json").read_text(encoding="utf-8"))
+    g = en_glossary()
+    fam_en, eng_en, at = g["families"], g["engines"], g["atoms"]
+    groups = {}
+    for a in idx:
+        groups.setdefault(a["family"], []).append(a)
+    order = sorted(groups, key=lambda f: (f == "独有", -len(groups[f]), f))
+    secs, toc = [], []
+    for k, f in enumerate(order, 1):
+        name = fam_en.get(f, f)
+        aid = f"f{k}"
+        toc.append(f'<a href="#{aid}">{esc(name)} <small>{len(groups[f])}</small></a>')
+        items = "".join(
+            f'<li><a href="../../atoms/{re.sub(r"[^0-9A-Za-z_.-]", "_", a["id"])}.html">'
+            f'<b>{esc(at.get(a["id"], [a["name"], ""])[0])}</b></a> <span class="zh">(Chinese)</span>'
+            f'<span class="eng">{esc(eng_en.get(a["engine"], a["engine"]))}</span>'
+            f'<div class="one">{esc(at.get(a["id"], ["", ""])[1])}</div></li>' for a in groups[f])
+        note = ("Moves found in one engine only." if f == "独有"
+                else f"Shared across {len({a['engine'] for a in groups[f]})} engines.")
+        secs.append(f'<section class="enb" id="{aid}"><h2>{esc(name)}<small>{len(groups[f])} · {esc(f)}</small></h2>'
+                    f'<div><p>{note}</p><ul class="alist">{items}</ul></div></section>')
+    shared = len([f for f in groups if f != "独有"])
+    body = (f'<main class="home"><section class="enb first"><h2>Atom library</h2><div>'
+            '<p>Lay the engines side by side and many moves turn out to be the same move. An atom is one such move: '
+            'small enough to practise, general enough to recombine. Different authors are different combinations of the same atoms.</p>'
+            f'<p class="stat">{len(idx)} atoms · {shared} shared families · {len(groups.get("独有", []))} unique · '
+            f'{len({a["engine"] for a in idx})} engines</p>'
+            '<p>Names and one-line definitions are given in English. Each atom&rsquo;s full page is in Chinese.</p>'
+            f'<nav class="toc">{"".join(toc)}</nav></div></section>{"".join(secs)}</main>')
+    ba.SECTION = "engines"
+    t = page("Atom library", f"<style>{EN_CSS}{EN_SUB_CSS}</style>" + body, "../../")
+    (DOCS / "en/atoms").mkdir(parents=True, exist_ok=True)
+    (DOCS / "en/atoms/index.html").write_text(
+        en_shell(t, "../../", "../", "../../atoms/", "atoms"), encoding="utf-8")
+
+
+EN_SUB_CSS = """
+.enb.first{border-top:0;padding-top:64px}
+.enb h2 small{display:block;font:12px var(--mono);letter-spacing:.12em;color:var(--ink2);margin-top:4px}
+.enb .stat{font:12px var(--mono);letter-spacing:.14em}
+.toc{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;font-size:14px}
+.toc a{border:0}.toc a:hover{color:var(--zhu)}.toc small{font:11px var(--mono);color:var(--ink2)}
+.alist li{padding:10px 0}.alist b{font-weight:600;color:var(--ink)}
+.alist a{border:0}.alist a:hover b{color:var(--zhu)}
+.alist .zh{font:11px var(--mono);color:var(--ink2)}
+.alist .eng{float:right;font:11px var(--mono);letter-spacing:.1em;color:var(--ink2)}
+.alist .one{font-size:14.5px;line-height:1.75}
+.steps{list-style:decimal;padding-left:1.3em}.steps li{border-top:0;padding:4px 0}.steps b{font-weight:600;color:var(--ink)}
+"""
 
 def main():
     c = counts()
@@ -407,7 +540,7 @@ def main():
         patch_engines()
         e = DOCS / "engines/index.html"
         ba.SECTION = "engines"
-        e.write_text(unify_nav(e.read_text(encoding="utf-8")), encoding="utf-8")
+        e.write_text(add_lang_nav(unify_nav(e.read_text(encoding="utf-8")), "../en/engines/", "EN"), encoding="utf-8")
     print("built site:", c)
 
 

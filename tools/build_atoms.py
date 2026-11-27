@@ -162,8 +162,12 @@ def main():
                '它是什么、为什么管用、用过头会怎样、什么时候别用，以及一道五分钟的练习。</p>'
                f'<div class="stat">{len(items)} 个原子 · 核心 {cnt["核心"]} · 常用 {cnt["常用"]} · 签名 {cnt["签名"]}</div>'
                f'<div class="filt">{filt}</div>{"".join(sec)}</main>')
-    (OUT / "index.html").write_text(
-        page("原子库", content + f"<style>{CSS}</style><script>{JS}</script>", "../"), encoding="utf-8")
+    t = page("原子库", content + f"<style>{CSS}</style><script>{JS}</script>", "../")
+    # 英文版切换（与 build_site.add_lang 同款）
+    t = t.replace('<div class="tools">', '<a class="lang" href="../en/atoms/">EN</a><div class="tools">', 1)
+    t = t.replace("</style>", "nav a.lang{border:0;font:12px var(--mono);letter-spacing:.18em;color:var(--ink2);"
+                  "margin-left:22px}nav a.lang:hover{color:var(--zhu)}</style>", 1)
+    (OUT / "index.html").write_text(t, encoding="utf-8")
     print(f"built atoms: {len(items)} atom page(s); tiers {cnt}; engines {len(engs)}")
 
 
