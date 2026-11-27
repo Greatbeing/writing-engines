@@ -267,6 +267,23 @@ def fingerprint(st, atoms, llm, label):
 
 # ------------------------------------------------------------------ ⑤ 成稿
 
+SECTIONS = ["能力边界", "核心认知", "原子", "组合规则", "风格指纹", "红线", "工作流"]
+
+
+def normalize_skill(text):
+    """模型常把七节写成 `# 1 能力边界`；lint 要 `## 能力边界`。代码修，不再求模型。"""
+    if not text:
+        return text
+    text = re.sub(r"^```\w*\n|\n```$", "", text.strip())
+    out = []
+    for line in text.splitlines():
+        m = re.match(r"^#{1,3}\s*(?:第?[0-9一二三四五六七]+[\.、节:：\s]*)?(.*)$", line)
+        if m and any(k in m.group(1) for k in SECTIONS):
+            line = "## " + m.group(1).strip()
+        out.append(line)
+    return "\n".join(out).strip() + "\n"
+
+
 def scaffold(engine, label, docs, st, atoms, fp, llm, dest):
     spec = SPEC.read_text(encoding="utf-8")[:6000]
     keep = [a for a in atoms if a["status"] == "交叉验证"][:16]
@@ -280,7 +297,13 @@ def scaffold(engine, label, docs, st, atoms, fp, llm, dest):
             f"- 原子详解指向 references/atom-ops.md，红线细则指向 references/red-lines.md。\n"
             f"只输出 SKILL.md 正文（markdown），不要代码围栏。\n\n"
             f"SPEC：\n{spec}\n\n原子：{json.dumps(keep, ensure_ascii=False)}\n\n指纹：{json.dumps(fp, ensure_ascii=False)}")
-    skill = llm("你是引擎作者，严格遵守契约，不写形容词堆砌，不写鸡汤和金句。", user, "skill")
+    sys_w = "你是引擎作者，严格遵守契约，不写形容词堆砌，不写鸡汤和金句。"
+    skill = llm(sys_w, user, "skill")
+    skill = normalize_skill(skill)
+    if skill and len(skill) > 4000:      # SPEC：> 4000 警告、> 4400 失败；压一次
+        print(f"  SKILL.md {len(skill)} 字符，超长，压缩一次")
+        skill = normalize_skill(llm(sys_w, "把下面的 SKILL.md 压到 3600 字符以内：保留 frontmatter 和七个 ## 小节标题，"
+                                    "删例证和重复解释，不改原子编号。只输出正文。\n\n" + skill, "skill-compress"))
 
     user_t = (f"为引擎 {engine}（{label}）写 test-prompts.json：3 条题目，每条含可被正则或计数判定的 assertions。"
               f'格式：[{{"id":"t1","prompt":"写作题","assertions":[{{"type":"regex|max_chars|min_chars|not_regex","value":"..."}}]}}]'
