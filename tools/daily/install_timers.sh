@@ -63,8 +63,43 @@ case "$ROLE" in
     mkdir -p "$HOME_DIR/drafts/daily/logs"
     write_unit review review "*-*-* 02:00:00"
     ;;
+  distill)
+    # 每周日 03:00 UTC 回测一个引擎，结果写 eval/distill-backtest.md 并推送
+    mkdir -p "$HOME_DIR/drafts/daily/logs"
+    cat > "$UNIT_DIR/writing-daily-distill.service" <<EOF
+[Unit]
+Description=writing-engines weekly distill backtest
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=$HOME_DIR
+Environment=HOME=$HOME
+EnvironmentFile=-$ENVF
+ExecStart=/bin/bash -lc "cd $HOME_DIR && git pull -q --rebase --autostash origin master; $PY -u tools/distill_backtest.py --next && git add eval/distill-backtest.md && git -c user.name=being -c user.email=being@caifeng commit -q -m 'eval: 蒸馏回测' && git push -q origin HEAD:master"
+StandardOutput=append:$HOME_DIR/drafts/daily/logs/distill.out
+StandardError=append:$HOME_DIR/drafts/daily/logs/distill.err
+TimeoutStartSec=3600
+Nice=10
+EOF
+    cat > "$UNIT_DIR/writing-daily-distill.timer" <<EOF
+[Unit]
+Description=writing-engines weekly distill backtest timer
+
+[Timer]
+OnCalendar=Sun *-*-* 03:00:00
+Persistent=true
+Unit=writing-daily-distill.service
+
+[Install]
+WantedBy=timers.target
+EOF
+    systemctl --user daemon-reload
+    systemctl --user enable --now writing-daily-distill.timer || systemctl --user start writing-daily-distill.timer
+    echo "installed: writing-daily-distill.timer (Sun 03:00 UTC)"
+    ;;
   remove)
-    for r in write review; do
+    for r in write review distill; do
       systemctl --user disable --now "writing-daily-$r.timer" 2>/dev/null || true
       rm -f "$UNIT_DIR/writing-daily-$r.timer" "$UNIT_DIR/writing-daily-$r.service"
     done

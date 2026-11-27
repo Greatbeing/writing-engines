@@ -254,6 +254,10 @@ def eval_page(c):
 <h2>盲评</h2><p>同一道题，引擎版与裸模型版打乱顺序交给评分者，不告诉谁是谁，每题两人。胜率用 Wilson 区间判定，样本不够就不下结论。</p>
 <span class="st{' live' if ran else ''}">{'已出结果' if ran else '尚未开跑 · 结果页如实留空'}</span>
 <div class="links"><a href="{GH}/blob/master/eval/DESIGN.md">设计 ↗</a><a href="{GH}/blob/master/eval/RESULTS.md">结果 ↗</a></div></div></section>
+<section class="tool"><div class="k">04 · 造引擎</div><div>
+<h2>风格蒸馏</h2><p>把同一位作者的十几篇文章交给它，拆出一份引擎草稿：统计句长与标点，逐篇抽原子，跨篇归并，挑可数的指纹，按契约成稿。一个原子出现在几篇里，由代码数，不由模型报；只见于一篇的，标「单源待验证」另放。红线它不写，留给懂这个文体的人。</p>
+<span class="st">v0.1 · 每周回测一个现有引擎</span>
+<div class="links"><a href="{GH}/blob/master/tools/distill.py">源码 ↗</a><a href="{GH}/blob/master/CONTRIBUTING.md#三用蒸馏工具提交新引擎">怎么提交 ↗</a></div></div></section>
 </main>"""
 
 

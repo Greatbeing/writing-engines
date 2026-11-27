@@ -59,7 +59,38 @@ python3 tools/tests/test_checker.py
 PR 描述里请直接贴两段东西：**盲评结果表**，和**一篇完整产出**。
 不要贴「我觉得效果很好」。
 
-## 三、修 bug / 改词表
+## 三、用蒸馏工具提交新引擎
+
+`tools/distill.py` 能把一批语料拆成引擎草稿，省掉大半手工。它只是起草，
+上面四条准入门槛一条都不降。
+
+```bash
+# 1. 语料放本地，一篇一个文件（.md/.txt），不入库
+mkdir -p sources/local/某作者   # 已在 .gitignore
+
+# 2. 先看统计，不花模型调用
+python3 tools/distill.py --corpus sources/local/某作者 --engine mouren-writing --label 某某体 --stats-only
+
+# 3. 全流程（需要 MAGPIE_GATEWAY_KEY 或 OPENAI_API_KEY）
+python3 tools/distill.py --corpus sources/local/某作者 --engine mouren-writing --label 某某体
+
+# 4. 改了某一步，从那一步重跑
+python3 tools/distill.py ... --from merge
+```
+
+草稿落在 `drafts/distill/<engine>/`（不入库）。挪进仓库前，人要做四件事：
+
+1. **逐条核证据**：`references/atom-ops.md` 每个原子附了 ≤30 字的原文片段，对着原文看动作说得准不准。
+2. **处理查重**：标了「库内同动作」的原子，改用已有的族和名字，不新建。
+3. **写红线**：`red-lines.md` 是空模板。工具看得出作者做了什么，看不出作者绝不做什么。
+4. **写一篇完整的 `examples/`**，再按第二节跑盲评。
+
+`references/pending.md` 里是只见于一篇的原子。补语料重跑 `--from merge`，够两篇会自动升级。
+
+工具本身也要被验：`tools/distill_backtest.py` 每周拿一个现有引擎的范文跑一遍蒸馏，
+把抽出的原子和人工写的原子对照，结果在 `eval/distill-backtest.md`。
+
+## 四、修 bug / 改词表
 
 `engine_profiles.json` 的词表和权重欢迎直接改，但必须带上：
 
