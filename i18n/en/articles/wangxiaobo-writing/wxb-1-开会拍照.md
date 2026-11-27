@@ -1,0 +1,17 @@
+# On the Learning Value of Meeting Photographs
+
+*Translated from the Chinese; the techniques are annotated where English cannot carry them.*
+
+Last month my workplace held a book-sharing session, and I was the one taking the photographs. The meeting ran forty minutes and I took three hundred and twelve pictures. I remember the number distinctly, because the first thing the boss said when it ended was: are there enough photos? Nobody asked whether there had been enough reading.
+
+This is how the meeting went. The host began by asking everyone to put down their phones and talk seriously. Then he raised his phone and took a picture of everyone putting down their phones. Then somebody spoke; the speaker was nervous, because he knew the lens was on him; the listeners were nervous too, because they knew the lens might swing round at any moment. One colleague listened with unusual attentiveness. I later worked out that he was looking for an angle where his profile looked good.
+
+I am bad at arithmetic and cannot calculate how much learning one photograph is worth, so I did the honest thing and thought it through. If photographs can prove learning, then the more photographs, the better the learning. By that reasoning, the most diligent method of study is to take eight pictures a minute. Push it further: a person who is learning had better not speak, because when you speak your mouth goes crooked and you photograph badly. [Note: 不上相, "unphotogenic" — the standard excuse for dodging a camera.] Better still, do not think, because when you think your brow furrows and you look unmotivated. Push it to the end, and a perfect book club should look like this: everyone sitting in neat rows, smiling, a book in their hands, and the book preferably not opened, because an open book shows no cover in a photograph.
+
+This is like taking a thermometer to measure whether a pot of soup is salty. The instrument is precise, the reading is handsome, and it can be reported upward every time; it has simply measured the wrong thing. Whether the soup is salty, someone has to taste it; whether the book was read, someone has to think about it. But "thinking about it" cannot be photographed, so at the meeting it does not exist.
+
+I am against this kind of meeting, but not because it wastes time. I have wasted plenty of time — for instance, watching an entire season of a thoroughly bad television series. I am against it because it is so dull. A book is supposed to be a pleasure: you read an idea, turn it over, argue about it with somebody for a couple of minutes. That is one of the better-value pleasures life offers. Now that pleasure has been exchanged for posing. It is like inviting people to dinner, and when the food arrives you photograph it, then have it carried away, and say: we have already eaten.
+
+I do not wish to praise the meeting and I do not wish to condemn it. Praise and condemnation both require standing up on the platform first, and I was only the man responsible for the camera. Ashamed to say, the most attentive person that day was probably me: I focused carefully, chose angles carefully, and to this day I cannot remember the title of the book.
+
+So I have a suggestion. Next time there is a meeting of this kind, send a camera along by itself. It will not lose concentration, it will not write up reflections [Note: 心得体会, the written reflections staff must hand in after a study session], and it will not secretly find the whole thing boring. It is more efficient than the rest of us.

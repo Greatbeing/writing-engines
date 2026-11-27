@@ -1,0 +1,15 @@
+# On the Uselessness of Idle Books
+
+*Translated from the Chinese; the techniques are annotated where English cannot carry them.*
+
+People often say: reading idle books is no use; better to spend the time drilling problems. [Note: 闲书, "idle books": reading that earns no marks; 刷题, "drilling problems": grinding practice questions for exams.] Let me first put in a fair word for that view. An examination tests exactly what it tests, and marks really do decide which school you get into and which job you find. A person's time is limited, and spending it where it converts into marks is indeed a shrewd piece of accounting. Most of the people who say this mean it for the good of the child.
+
+I was educated that way too, and sincerely believed it, and had three novels confiscated for reading them on the sly. My mathematics was poor in those days, I drilled problems diligently, and my marks did not rise much, so on this subject I have no standing to be proud.
+
+Still, I want to take the argument seriously and push it a little way. If anything that cannot be converted directly into marks is useless, then idle books are useless, walking is useless, and watching clouds is more useless still. By that reasoning, the most useful person alive should spend every waking minute drilling problems. Push it further, and meals ought to be replaced with drilling too, since chewing adds no marks; and one ought to dream of multiple-choice questions, or the night has been wasted. Push it to the end, and the ideal student is an answer machine that does not need to sleep. [Note: 答题机, "answer machine," punning on 答录机, an answering machine.] But answer machines already exist, and they work faster than people, which leaves us in a slightly awkward position: all this hard work has been a training in becoming an out-of-date model of machine.
+
+It is rather like the man at the gym who trains a single muscle. His arm does get thicker, but watching him walk one keeps fearing that he will topple sideways. In mechanics this is called a shift in the centre of gravity; from the point of view of problem-drilling it is called focus. I think both descriptions are correct, only the first falls over more easily. The human brain is probably the same: drill one type of question, and in the end, meeting a question you have never seen, you are like that friend from the gym meeting a slope.
+
+I am speaking up for idle books, but I am not claiming that they raise your marks. Mostly they do not. I only think that when a person reads a good book and suddenly understands something, the pleasure of that moment cannot be exchanged for a hundred correct answers. That is the pleasure of thinking. Without that pleasure, however many problems you drill, the days are dull; and dullness is itself a perfectly good reason to object.
+
+Of course problems still have to be drilled; I do not object to that. I only suggest that after the drilling, one leave a little time to read a few pages of an idle book. If some day the answer machine takes our jobs, at least we will still know how to watch clouds, and that is one thing it has not yet learned.

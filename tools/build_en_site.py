@@ -28,6 +28,17 @@ ZH = "https://greatbeing.github.io/writing-engines/"
 OUT = ROOT.parent / "caifeng-en"
 I18N = ROOT / "i18n/en"
 
+# 英文站所有文本输出统一 LF（Windows 上默认会写 CRLF，造成假改动）
+_write_text = Path.write_text
+
+
+def _write_text_lf(self, data, encoding=None, errors=None, newline="\n"):
+    return _write_text(self, data, encoding=encoding, errors=errors, newline=newline)
+
+
+if __name__ == "__main__":
+    Path.write_text = _write_text_lf
+
 
 def en_shell(t, rel, enrel, zh_href, on=""):
     """把 page() 的中文外壳改成英文。rel 为原 docs/en 布局下的相对前缀（比新站深一层），zh_href 指中文页。"""
@@ -36,7 +47,7 @@ def en_shell(t, rel, enrel, zh_href, on=""):
     t = t.replace('<html lang="zh-CN">', '<html lang="en">', 1)
     t = t.replace(' · 采风</title>', ' · Caifeng</title>', 1)
     t = re.sub(r'<a class="brand" href="[^"]*">', f'<a class="brand" href="{nr or "./"}">', t, count=1)
-    items = [("engines", "Engines", "engines/"), ("atoms", "Atoms", "atoms/"),
+    items = [("engines", "Engines", "engines/"), ("atoms", "Atoms", "atoms/"), ("articles", "Articles", "articles/"),
              ("lectures", "Lectures", "lectures/"), ("eval", "Evaluation", "eval/")]
     nav = "".join(f'<a class="{"on" if k == on else ""}" href="{nr}{h}">{n}</a>' for k, n, h in items)
     t = re.sub(r'<div class="snav">.*?</div>', lambda m: f'<div class="snav">{nav}<a href="{GH}">GitHub ↗</a></div>',
@@ -102,7 +113,7 @@ def home_en(c):
 <section class="enb"><h2>Engines</h2><div>
 <p>{c['engines']} engines, {c['atoms']} atoms. Four are ready; the rest are on trial. Individual engine files are in Chinese.</p>
 <table><tr><th>Engine</th><th>Genre</th><th>Status</th></tr>{rows}</table>
-<p><a href="engines/">Browse all engines →</a> &nbsp; <a href="{ZH}articles/">Sample pieces (Chinese) →</a></p></div></section>
+<p><a href="engines/">Browse all engines →</a> &nbsp; <a href="articles/">Sample pieces →</a></p></div></section>
 <section class="enb"><h2>Atom library</h2><div>
 <p>Lay the engines side by side and many moves turn out to be the same move. The cross-engine library holds {c['atoms']} atoms in {c['fams']} shared families plus {c['uniq']} unique ones. Different authors are different combinations of the same atoms.</p>
 <p><a href="atoms/">Atom library →</a></p></div></section>
@@ -390,6 +401,74 @@ def build_en_lectures():
     return len(missing)
 
 
+# ---- English sample pieces (i18n/en/articles/<engine>/<same name>.md) ----
+def build_en_articles():
+    import markdown
+    out = OUT / "articles"
+    if out.exists():
+        shutil.rmtree(out)
+    out.mkdir(parents=True)
+    genre = {d: re.sub(r"<[^>]+>", "", html.unescape(g)) for d, g, _ in EN_ENGINES}
+    arts = ba.collect()
+    for a in arts:
+        ef = I18N / "articles" / a["eng"] / Path(a["src"]).name
+        a["en"] = ef if ef.exists() else None
+        a["genre"] = genre.get(a["eng"], a["eng"])
+        if a["en"]:
+            text = ef.read_text(encoding="utf-8")
+            m = re.search(r"^#\s+(.+)$", text, re.M)
+            a["en_title"] = m.group(1).strip() if m else a["title"]
+            a["en_md"] = text[m.end():] if m else text
+            words = len(re.findall(r"[A-Za-z']+", a["en_md"]))
+            a["words"], a["en_mins"] = words, max(1, round(words / 230))
+            paras = [p.strip() for p in a["en_md"].split("\n\n")
+                     if p.strip() and not p.lstrip().startswith(("#", ">", "|", "-", "*Translated", "_Translated"))]
+            plain = re.sub(r"[*_`]", "", paras[0]) if paras else ""
+            a["en_ex"] = plain[:160] + ("…" if len(plain) > 160 else "")
+    have = [a for a in arts if a["en"]]
+    missing = [a["src"] for a in arts if not a["en"]]
+    ba.SECTION = "engines"
+    for i, a in enumerate(have):
+        body = markdown.markdown(a["en_md"], extensions=["tables", "sane_lists"])
+        prev = have[i - 1] if i > 0 else None
+        nxt = have[i + 1] if i + 1 < len(have) else None
+        pager = ('<div class="pager">'
+                 + (f'<a href="{prev["slug"]}.html">← {html.escape(prev["en_title"])}</a>' if prev else "<span></span>")
+                 + (f'<a href="{nxt["slug"]}.html">{html.escape(nxt["en_title"])} →</a>' if nxt else "<span></span>")
+                 + "</div>")
+        date = f"{a['date']} · " if a["date"] else ""
+        content = f"""<article>
+<div class="head"><div class="feng">{html.escape(a['genre'])}</div>
+<h1>{html.escape(a['en_title'])}</h1>
+<div class="meta">{date}about {a['words']} words · {a['en_mins']} min read</div></div>
+<div class="body">{body}</div></article>
+<div class="note"><div class="box">A sample produced with the engine <code>{a['eng']}</code>, translated from the Chinese; not corpus text.
+Chinese original: <a href="{ZH}articles/{a['slug']}.html">{html.escape(a['title'])}</a> ·
+source: <a href="{GH}/blob/master/{a['src']}">{html.escape(a['src'])}</a></div></div>
+{pager}"""
+        t = page(a["en_title"] + " · Articles", content, "../", reader=True)
+        t = t.replace('aria-label="缩小字号"', 'aria-label="Smaller text"').replace('aria-label="放大字号"', 'aria-label="Larger text"')
+        (out / f"{a['slug']}.html").write_text(
+            en_shell(t, "../../", "../", f"{ZH}articles/{a['slug']}.html", "articles"), encoding="utf-8")
+
+    def item(a):
+        if a["en"]:
+            return (f'<a class="item" href="{a["slug"]}.html"><div class="feng">{html.escape(a["genre"])}</div>'
+                    f'<h2>{html.escape(a["en_title"])}</h2><p>{html.escape(a["en_ex"])}</p>'
+                    f'<div class="meta">{a["date"] + " · " if a["date"] else ""}{a["words"]} words · {a["en_mins"]} min</div></a>')
+        return (f'<a class="item" href="{ZH}articles/{a["slug"]}.html"><div class="feng">{html.escape(a["genre"])}</div>'
+                f'<h2>{html.escape(a["title"])} <small>(Chinese)</small></h2><p>{html.escape(a["excerpt"])}</p></a>')
+    idx = (f'<section class="list"><h1>Articles</h1><p class="intro">What the engines write. No method here, only finished pieces, '
+           f'translated from the Chinese with the techniques annotated where English cannot carry them.'
+           + (' Pieces marked (Chinese) are not translated yet.' if missing else "")
+           + f'</p>{"".join(item(a) for a in arts)}</section>')
+    t = page("Articles", idx, "../")
+    (out / "index.html").write_text(en_shell(t, "../../", "../", f"{ZH}articles/", "articles"), encoding="utf-8")
+    print(f"built en articles: {len(have)} English page(s); missing translations: {len(missing)}"
+          + (f" ({', '.join(missing)})" if missing else ""))
+    return len(missing)
+
+
 def build_en_eval(c):
     body = (I18N / "eval.html").read_text(encoding="utf-8").format(days=c["days"], GH=GH, ZH=ZH, MARK=mark(2, 110))
     ba.SECTION = "eval"
@@ -411,10 +490,12 @@ def main():
     build_en_engines(c)
     build_en_atoms()
     miss = build_en_lectures()
+    amiss = build_en_articles()
     build_en_eval(c)
-    shutil.copy(ROOT / "docs/favicon.svg", OUT / "favicon.svg")
-    (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    print(f"built en site → {OUT}; lectures missing: {miss}")
+    fav = (ROOT / "docs/favicon.svg").read_text(encoding="utf-8").replace("\r\n", "\n")
+    (OUT / "favicon.svg").write_text(fav, encoding="utf-8", newline="\n")
+    (OUT / ".nojekyll").write_text("", encoding="utf-8", newline="\n")
+    print(f"built en site → {OUT}; lectures missing: {miss}; articles missing: {amiss}")
 
 
 if __name__ == "__main__":
