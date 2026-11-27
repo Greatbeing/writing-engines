@@ -126,6 +126,23 @@ def check_examples():
     return not missing, ("缺 examples：" + "、".join(missing)) if missing else "全部有示例"
 
 
+def check_en_site():
+    """英文站：在临时目录 clone + 构建 + 比对（dry-run，不推送）。流程失败记 ❌；缺译 >0 记警告。"""
+    import tempfile
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import en_site as es
+    with tempfile.TemporaryDirectory(prefix="caifeng-en-") as tmp:
+        r = es.en_site(dry_run=True, workdir=str(Path(tmp) / "caifeng-en"))
+    if not r["ok"]:
+        return False, "；".join(r["log"])[-300:]
+    miss = r["missing"]
+    total = sum(miss.values())
+    state = "线上已最新" if not r["changed"] else "线上落后于源（待 build 推送）"
+    if total > 0:
+        return True, f"⚠️ 警告：{es.missing_detail(miss)}；{state}"
+    return True, f"{es.missing_detail(miss)}；{state}"
+
+
 CHECKS = [
     ("引擎契约 lint", check_lint),
     ("引擎断言", check_prompts),
@@ -133,11 +150,30 @@ CHECKS = [
     ("引语核对", check_quotes),
     ("站点链接", check_links),
     ("示例齐全", check_examples),
+    ("英文站", check_en_site),
 ]
+
+
+def step_en_site():
+    """build 模式的英文站步骤：失败只记日志、让退出码非 0，不中断其余维护。"""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    try:
+        import en_site as es
+        r = es.en_site()
+        return r["ok"], [f"- {x}" for x in r["log"]] + [f"- en site: {es.missing_detail(r['missing'])}"]
+    except Exception as exc:                          # noqa: BLE001
+        return False, [f"- en site: 步骤出错：{type(exc).__name__}: {exc}"]
 
 
 # ---------------------------------------------------------------- build 模式
 def mode_build():
+    """中文站重建 + 英文站生成推送。两步互不阻断；任一失败退出码非 0。"""
+    ok_zh, log, _ = mode_build_zh()
+    ok_en, log_en = step_en_site()
+    return ok_zh and ok_en, log + ["", "英文站："] + log_en, ""
+
+
+def mode_build_zh():
     """重建站点；产物与源不一致才提交。这是唯一允许自动改仓库的模式。"""
     log = []
     ok = True

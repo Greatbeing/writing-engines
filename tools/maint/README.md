@@ -24,6 +24,24 @@
 | 引语核对 | `check_quotes.py` | 疑似自造 0 处 |
 | 站点链接 | `maintain.py` 内置 | `docs/` 内本地链接 0 断裂 |
 | 示例齐全 | `maintain.py` 内置 | 每个引擎至少 1 篇 examples |
+| 英文站 | `en_site.py --dry-run`（临时目录） | clone/构建成功；缺译（原子、讲义、范文）>0 记 ⚠️ 警告 |
+
+## 英文站（caifeng-en）
+
+`build` 模式在中文站之后调用 `tools/maint/en_site.py`：
+
+1. `../caifeng-en`（或 `$CAIFENG_EN_DIR`）不存在则 clone `Greatbeing/caifeng-en`；
+2. `git pull` → `build_en_site.py --out <该目录>`；
+3. 有改动才 commit（Greatbeing / todobeing@gmail.com，提交信息含源仓库短哈希）并 push 到 `main`；
+   无改动打印 `en site: no changes`。
+
+失败不中断中文站步骤，只让退出码非 0；`audit` 的「英文站」一行会记 ❌。
+凭据：clone URL 由本仓库 `origin` 推出（同协议、同凭据形式，仓库名换成 `caifeng-en`），
+所以 being 上推 writing-engines 用什么凭据，推 caifeng-en 就用什么——该凭据须对 caifeng-en 有写权限。
+
+```bash
+python3 tools/maint/en_site.py --dry-run --dir /tmp/caifeng-en   # 构建、比对，不提交
+```
 
 ## 三条安全边界
 
