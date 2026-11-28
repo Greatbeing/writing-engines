@@ -3,12 +3,25 @@
   "engine": "feature-writing",
   "topic": "深圳电子市场里，最后修老式收音机的师傅",
   "angle": "在深圳电子市场维修老式收音机的老匠人，如何在技艺被时代淘汰的处境里，与女儿的劝退和自身的坚持之间寻找位置。",
-  "status": "drafted",
+  "status": "approved",
   "version": 1,
   "created": "2026-11-27T06:07:36",
   "history": [
-    "v1 撰稿 checker=0.0"
+    "v1 撰稿 checker=0.0",
+    "v1 评审 5/5 → approved"
   ],
-  "updated": "2026-11-27T06:09:43",
-  "checker": 0.0
+  "updated": "2026-11-28T02:00:51",
+  "checker": 0.0,
+  "reviews": [
+    {
+      "version": 1,
+      "readability": 5,
+      "most_like": "深圳某电子市场二楼东侧，一个两平米的摊位里，烙铁架上插着一支烙铁，铁头上挂着一小团没吹干的焊锡。",
+      "least_like": "他锁上铁栅栏门，骑电动车往家开。",
+      "fix_from": "他锁上铁栅栏门，骑电动车往家开。",
+      "fix_to": "他锁上铁栅栏门，骑电动车前往城中村自家。",
+      "stars": 5,
+      "note": "整体符合特稿写作核心，细节与时间变化精准，值得发表。"
+    }
+  ]
 }
